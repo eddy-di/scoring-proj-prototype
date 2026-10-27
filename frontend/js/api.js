@@ -1,7 +1,9 @@
 import { t } from './i18n.js';
+import { apiUrl } from './security.js';
 
 // Thin fetch wrapper for the Django API: JSON in and out, the session cookie,
-// the CSRF header, and readable error messages.
+// the CSRF header, and readable error messages. Requests go only to this
+// origin's /api/, and a response body is read only when it is JSON.
 
 export class ApiError extends Error {
   constructor(status, body) {
@@ -33,15 +35,26 @@ function messageOf(status, body) {
 }
 
 function csrfToken() {
-  return document.cookie.split('; ').find((c) => c.startsWith('csrftoken='))?.split('=')[1] ?? '';
+  const raw = document.cookie.split('; ').find((c) => c.startsWith('csrftoken='))?.split('=')[1] ?? '';
+  try {
+    return decodeURIComponent(raw);
+  } catch {
+    return '';
+  }
 }
 
+const isJson = (res) => /^application\/(?:[\w.+-]+\+)?json\b/i.test(res.headers.get('Content-Type') ?? '');
+
 export async function request(method, url, body) {
+  const target = apiUrl(url);
   let res;
   try {
-    res = await fetch(url, {
+    res = await fetch(target, {
       method,
+      mode: 'same-origin',
       credentials: 'same-origin',
+      redirect: 'error',
+      cache: 'no-store',
       headers: { Accept: 'application/json', 'Content-Type': 'application/json', 'X-CSRFToken': csrfToken() },
       body: body === undefined ? undefined : JSON.stringify(body),
     });
@@ -49,7 +62,7 @@ export async function request(method, url, body) {
     throw new ApiError(0, null);
   }
   if (res.status === 204) return null;
-  const data = await res.json().catch(() => null);
+  const data = isJson(res) ? await res.json().catch(() => null) : null;
   if (!res.ok) throw new ApiError(res.status, data);
   return data;
 }

@@ -60,7 +60,7 @@ export default function dataView(table = 'questions') {
         groups.map(([group, tables]) => h('div', { class: 'data-group' },
           h('p', { class: 'eyebrow' }, group),
           h('ul', {}, Object.keys(tables).map((name) => h('li', {},
-            link(`/data/${name}`, [h('code', {}, name), h('span', { class: 'count' }, String(db.all(name).length))], { class: `data-link ${name === table ? 'selected' : ''}` })))))),
+            link(`/data/${name}`, [h('code', {}, name), h('span', { class: 'count' }, String(db.all(name).length))], { class: `data-link ${name === table ? 'selected' : ''}` }))))))),
       h('div', { class: 'data-main' },
         h('h2', {}, h('code', {}, table)),
         info && h('p', { class: 'intro' }, info),
@@ -68,5 +68,5 @@ export default function dataView(table = 'questions') {
           ? h('p', { class: 'empty' }, t('No rows yet.'))
           : h('div', { class: 'tbl' }, h('table', { class: 'raw' },
             h('thead', {}, h('tr', {}, cols.map((c) => h('th', {}, c)))),
-            h('tbody', {}, rows.map((r) => h('tr', {}, cols.map((c) => h('td', {}, cell(r[c]))))))))))));
+            h('tbody', {}, rows.map((r) => h('tr', {}, cols.map((c) => h('td', {}, cell(r[c])))))))))));
 }

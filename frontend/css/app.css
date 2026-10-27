@@ -19,23 +19,97 @@
   --radius: 6px;
   color-scheme: light;
 }
+/* Dark theme: follows the system unless the theme switch picked one (html[data-theme], see js/theme.js). */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     color-scheme: dark;
     --ink: #e2e8ee; --ink-soft: #9eaab8; --paper: #11161c; --surface: #171d24; --panel: #1e252e; --rule: #2e3844;
     --accent: #7db6dc; --accent-soft: #1b2e3d; --ok: #7cc9a0; --ok-soft: #173126; --warn: #e4b768; --warn-soft: #34291a;
     --bad: #ec8a8a; --bad-soft: #3a1f22;
   }
 }
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #e2e8ee; --ink-soft: #9eaab8; --paper: #11161c; --surface: #171d24; --panel: #1e252e; --rule: #2e3844;
+  --accent: #7db6dc; --accent-soft: #1b2e3d; --ok: #7cc9a0; --ok-soft: #173126; --warn: #e4b768; --warn-soft: #34291a;
+  --bad: #ec8a8a; --bad-soft: #3a1f22;
+}
 
-* { box-sizing: border-box; }
+/* ── Cross-browser base ──────────────────────────────────────
+   Chrome, Firefox and Safari start from different user-agent styles: font
+   inflation on iOS, margins on buttons, native select/date/number/search
+   chrome, details markers, checkbox sizes. These rules reset them so every
+   engine draws the same thing; components below rely on them. */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; tab-size: 4; }
 html, body { margin: 0; }
-body { background: var(--paper); color: var(--ink); font: 15px/1.55 var(--font); }
+body {
+  background: var(--paper); color: var(--ink); font: 15px/1.55 var(--font);
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
+}
+[hidden] { display: none !important; }
 a { color: var(--accent); }
-code, .num { font-family: var(--mono); font-size: 0.88em; font-variant-numeric: tabular-nums; }
+code, kbd, pre, samp, .num { font-family: var(--mono); font-size: 0.88em; font-variant-numeric: tabular-nums; }
 h1, h2, h3, h4 { line-height: 1.25; text-wrap: balance; margin: 0; }
+h1 { font-size: 2em; } /* Chrome and Firefox shrink an h1 inside <section>; Safari doesn't. */
 p { margin: 0 0 8px; }
+b, strong { font-weight: 600; }
+small { font-size: 85%; }
+img, svg, video { max-width: 100%; height: auto; vertical-align: middle; }
+table { text-indent: 0; border-color: inherit; }
+dl, dd, figure { margin: 0; }
+:focus { outline: none; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Form controls: one look in every engine. */
+button, input, select, textarea, optgroup { font: inherit; font-size: 14px; line-height: 1.4; margin: 0; letter-spacing: inherit; }
+button { color: inherit; }
+button, select { text-transform: none; }
+button, [type="button"], [type="submit"], [type="reset"] { -webkit-appearance: button; appearance: button; }
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner { border-style: none; padding: 0; }
+button:-moz-focusring { outline: 2px solid var(--accent); }
+/* :where() keeps specificity at zero, so component rules (.has-error input…) still win. */
+:where(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]):not([type="color"]), select, textarea) {
+  -webkit-appearance: none; -moz-appearance: none; appearance: none;
+  display: block; width: 100%; min-width: 0; min-height: 34px;
+  color: var(--ink); background-color: var(--surface); border: 1px solid var(--rule); border-radius: 5px; padding: 6px 8px;
+  box-shadow: none; background-clip: padding-box;
+}
+:where(textarea) { resize: vertical; overflow: auto; vertical-align: top; }
+input::placeholder, textarea::placeholder { color: var(--ink-soft); opacity: .8; }
+/* select: the same chevron everywhere, drawn with gradients so it follows the theme colours. */
+:where(select) {
+  padding-right: 28px; cursor: pointer; text-overflow: ellipsis;
+  background-image: linear-gradient(45deg, transparent 50%, var(--ink-soft) 50%), linear-gradient(135deg, var(--ink-soft) 50%, transparent 50%);
+  background-position: right 14px center, right 9px center;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+:where(select[multiple], select[size]) { padding-right: 8px; background-image: none; height: auto; }
+option, optgroup { background-color: var(--surface); color: var(--ink); }
+/* number: no spinners (Firefox always shows them, Chrome on hover, Safari never). */
+input[type="number"] { -moz-appearance: textfield; appearance: textfield; }
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+/* search: no rounded Safari field or extra icons. */
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+/* date/time: Safari and Chrome add inner padding and centre the value. */
+input[type="date"], input[type="time"], input[type="datetime-local"] { text-align: left; line-height: 1.4; }
+::-webkit-date-and-time-value { text-align: left; min-height: 1.4em; }
+::-webkit-datetime-edit, ::-webkit-datetime-edit-fields-wrapper { padding: 0; }
+::-webkit-calendar-picker-indicator { opacity: .6; cursor: pointer; }
+/* checkbox and radio: native, same size and brand colour. */
+:where(input[type="checkbox"], input[type="radio"]) { width: 16px; height: 16px; margin: 0; flex: none; accent-color: var(--accent); vertical-align: middle; cursor: pointer; }
+input:disabled, select:disabled, textarea:disabled, button:disabled { cursor: not-allowed; }
+input:disabled, select:disabled, textarea:disabled { background-color: var(--panel); color: var(--ink-soft); -webkit-text-fill-color: var(--ink-soft); opacity: 1; }
+input:-webkit-autofill { -webkit-text-fill-color: var(--ink); box-shadow: 0 0 0 1000px var(--surface) inset; transition: background-color 9999s; }
+/* details/summary: the same marker in every engine (Safari ignores list-style, Chrome ignores ::-webkit-details-marker). */
+summary { display: list-item; list-style: none; cursor: pointer; }
+summary::-webkit-details-marker { display: none; }
+summary::marker { content: ""; }
+summary::before { content: ""; display: inline-block; width: 0; height: 0; margin-right: 8px; vertical-align: 0.1em; border-style: solid; border-width: 4.5px 0 4.5px 7px; border-color: transparent transparent transparent currentColor; transition: transform .15s; }
+details[open] > summary::before { transform: rotate(90deg); }
+@media (prefers-reduced-motion: reduce) { summary::before, .switch-track, .switch-track::after { transition: none; } }
 
 /* Top bar */
 .topbar { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; gap: 24px; flex-wrap: wrap; padding: 10px max(16px, 3vw); background: var(--surface); border-bottom: 1px solid var(--rule); }
@@ -73,7 +147,7 @@ p { margin: 0 0 8px; }
 .banner { background: var(--warn-soft); color: var(--ink); border: 1px solid var(--warn); border-radius: var(--radius); padding: 10px 14px; margin: 0; }
 
 /* Buttons and chips */
-.btn { font: inherit; font-size: 14px; padding: 6px 14px; border-radius: var(--radius); border: 1px solid var(--rule); background: var(--surface); color: var(--ink); cursor: pointer; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; font: inherit; font-size: 14px; line-height: 1.4; padding: 6px 14px; text-decoration: none; white-space: nowrap; -webkit-user-select: none; user-select: none; touch-action: manipulation; border-radius: var(--radius); border: 1px solid var(--rule); background: var(--surface); color: var(--ink); cursor: pointer; }
 .btn:hover:not(:disabled) { border-color: var(--accent); }
 .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--surface); font-weight: 500; }
 .btn.small { font-size: 12.5px; padding: 3px 9px; }
@@ -89,7 +163,7 @@ p { margin: 0 0 8px; }
 .chip.bad { background: var(--bad-soft); color: var(--bad); }
 
 /* Tables */
-.tbl { overflow-x: auto; border: 1px solid var(--rule); border-radius: var(--radius); }
+.tbl { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--rule); border-radius: var(--radius); }
 table { border-collapse: collapse; width: 100%; font-size: 14px; }
 th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
 th { background: var(--panel); font-size: 11.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-soft); font-weight: 600; white-space: nowrap; }
@@ -111,11 +185,6 @@ table.raw td { font-size: 13px; white-space: nowrap; }
 .field-label { font-size: 11.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-soft); font-weight: 600; }
 .req { color: var(--bad); }
 .hint { font-size: 12px; color: var(--ink-soft); }
-input[type="text"], input[type="number"], input[type="date"], input:not([type]), select, textarea {
-  font: inherit; font-size: 14px; color: var(--ink); background: var(--surface); border: 1px solid var(--rule); border-radius: 5px; padding: 6px 8px; width: 100%; min-width: 0;
-}
-textarea { resize: vertical; }
-input:disabled, select:disabled, textarea:disabled { background: var(--panel); color: var(--ink-soft); }
 .form-foot { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .form-msg { color: var(--bad); font-size: 13px; margin: 0; }
 fieldset.plain { border: 0; margin: 0; padding: 0; min-width: 0; display: grid; gap: 16px; }
@@ -134,7 +203,7 @@ fieldset.plain:disabled .btn, fieldset.plain:disabled .form-foot, fieldset.plain
 /* Split pane (tree + editor, data tables) */
 .split { display: grid; grid-template-columns: minmax(260px, 360px) minmax(0, 1fr); gap: 20px; align-items: start; }
 @media (max-width: 860px) { .split { grid-template-columns: minmax(0, 1fr); } }
-.tree-panel { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius); padding: 16px; position: sticky; top: 70px; max-height: calc(100vh - 90px); overflow: auto; }
+.tree-panel { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius); padding: 16px; position: sticky; top: 70px; max-height: calc(100vh - 90px); max-height: calc(100dvh - 90px); overflow: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
 @media (max-width: 860px) { .tree-panel { position: static; max-height: none; } }
 .tree-panel h2 { font-size: 16px; margin-bottom: 4px; }
 .tree, .tree ul { list-style: none; margin: 0; padding: 0; }
@@ -253,8 +322,8 @@ fieldset.plain:disabled .btn, fieldset.plain:disabled .form-foot, fieldset.plain
 .user-name { white-space: nowrap; }
 
 /* Helpers switch */
-.switch { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; font-size: 13.5px; user-select: none; }
-.switch input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.switch { position: relative; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; font-size: 13.5px; -webkit-user-select: none; user-select: none; }
+.switch input { position: absolute; top: 0; left: 0; opacity: 0; width: 1px; height: 1px; margin: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); -webkit-appearance: none; appearance: none; }
 .switch-track { width: 34px; height: 20px; border-radius: 99px; background: var(--rule); position: relative; transition: background .15s; flex: none; }
 .switch-track::after { content: ""; position: absolute; top: 3px; left: 3px; width: 14px; height: 14px; border-radius: 50%; background: var(--surface); transition: transform .15s; box-shadow: 0 1px 2px rgb(0 0 0 / .25); }
 .switch input:checked + .switch-track { background: var(--ok); }
@@ -262,7 +331,7 @@ fieldset.plain:disabled .btn, fieldset.plain:disabled .form-foot, fieldset.plain
 .switch input:focus-visible + .switch-track { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 /* ── Helpers ─────────────────────────────────────────────────── */
-.tip { background: var(--accent-soft); border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); border-left: 4px solid var(--accent); border-radius: var(--radius); padding: 12px 16px; display: grid; gap: 6px; }
+.tip { background: var(--accent-soft); border: 1px solid var(--accent); border-color: color-mix(in srgb, var(--accent) 35%, transparent); border-left: 4px solid var(--accent); border-radius: var(--radius); padding: 12px 16px; display: grid; gap: 6px; }
 .tip-head { display: flex; align-items: center; gap: 8px; }
 .tip-head strong { flex: 1; }
 .tip-icon { display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: var(--accent); color: var(--surface); font: 600 12px var(--mono); flex: none; }
@@ -274,7 +343,7 @@ fieldset.plain:disabled .btn, fieldset.plain:disabled .form-foot, fieldset.plain
 .stored { font-size: 12px; color: var(--ink-soft); margin: 0; }
 .stored code { font-size: 11.5px; }
 .help-steps { margin: 0; padding-left: 20px; display: grid; gap: 4px; }
-.term { color: inherit; text-decoration: underline dotted var(--accent); text-underline-offset: 3px; cursor: help; }
+.term { color: inherit; text-decoration-line: underline; text-decoration-style: dotted; text-decoration-color: var(--accent); -webkit-text-decoration: underline dotted var(--accent); text-underline-offset: 3px; cursor: help; }
 
 /* Feedback */
 .toasts { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 50; display: grid; gap: 8px; max-width: min(420px, calc(100vw - 32px)); }
@@ -293,9 +362,7 @@ fieldset.plain:disabled .btn, fieldset.plain:disabled .form-foot, fieldset.plain
 .field-error { color: var(--bad); font-size: 12.5px; }
 .field-error:empty { display: none; }
 .field.has-error input, .field.has-error select, .field.has-error textarea { border-color: var(--bad); }
-.field[hidden] { display: none; }
 .form-title { margin-top: 8px; }
-input[type="password"], input[type="search"], input[type="email"] { font: inherit; font-size: 14px; color: var(--ink); background: var(--surface); border: 1px solid var(--rule); border-radius: 5px; padding: 6px 8px; width: 100%; min-width: 0; }
 .cards-input { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 8px; }
 .card-opt { display: flex; gap: 8px; align-items: flex-start; border: 1px solid var(--rule); border-radius: var(--radius); padding: 9px 11px; cursor: pointer; background: var(--surface); }
 .card-opt:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); box-shadow: inset 0 0 0 1px var(--accent); }
@@ -314,10 +381,10 @@ input[type="password"], input[type="search"], input[type="email"] { font: inheri
 .tabs a.active { background: var(--surface); border-color: var(--rule); font-weight: 600; color: var(--accent); margin-bottom: -1px; }
 
 /* Login */
-.login { min-height: 100vh; display: grid; place-items: center; padding: 24px 16px; }
+.login { min-height: 100vh; min-height: 100dvh; display: grid; place-items: center; padding: 24px 16px; }
 .login-card { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 28px; width: min(420px, 100%); display: grid; gap: 12px; }
 .login-card h1 { font-size: 22px; }
-.brand.big { font-size: 18px; }
+.brand.big { display: flex; font-size: 18px; } /* not the questionnaire's .big (display: block) */
 .demo-accounts { background: var(--panel); border-radius: var(--radius); padding: 12px 14px; font-size: 13.5px; }
 .demo-accounts ul { margin: 6px 0; padding-left: 18px; display: grid; gap: 4px; }
 
@@ -344,11 +411,15 @@ input[type="password"], input[type="search"], input[type="email"] { font: inheri
 /* Methodology editor */
 .block-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: flex-start; }
 .lifecycle { list-style: none; display: flex; flex-wrap: wrap; gap: 0; margin: -6px 0 0; padding: 0; counter-reset: stage; }
-.lifecycle li { display: grid; gap: 1px; padding: 6px 22px 6px 14px; background: var(--panel); color: var(--ink-soft); font-size: 13px; clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%, 10px 50%); margin-right: -4px; }
-.lifecycle li:first-child { clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%); border-radius: var(--radius) 0 0 var(--radius); }
+.lifecycle li { display: grid; gap: 1px; padding: 6px 22px 6px 14px; background: var(--panel); color: var(--ink-soft); font-size: 13px; -webkit-clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%, 10px 50%); clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%, 10px 50%); margin-right: -4px; }
+.lifecycle li:first-child { -webkit-clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%); clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%); border-radius: var(--radius) 0 0 var(--radius); }
 .lifecycle li.past { background: var(--ok-soft); color: var(--ok); }
 .lifecycle li.now { background: var(--accent); color: var(--surface); }
-.settings > summary { cursor: pointer; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; list-style-position: inside; }
+/* <details> can't be a grid container in older Chrome and Safari: lay it out as a block everywhere. */
+details.block { display: block; }
+details.block > :not(summary) { margin-top: 12px; }
+.settings > summary { display: list-item; }
+.settings > summary > * { margin-right: 8px; }
 .settings > summary h2 { display: inline; font-size: 18px; }
 .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; flex: none; }
 .dot.bad { background: var(--bad); }
@@ -397,7 +468,15 @@ td .row-actions { flex-wrap: nowrap; }
 .lang-switch .lang + .lang { border-left: 1px solid var(--rule); }
 .lang-switch .lang:hover { background: var(--panel); }
 .lang-switch .lang.active { background: var(--accent); color: var(--surface); }
+.switches { display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+/* Theme icons drawn in CSS: the symbol glyphs aren't in IBM Plex and differ between browsers. */
+.theme-switch .lang { display: inline-grid; place-items: center; min-width: 30px; }
+.ti { display: block; width: 12px; height: 12px; border-radius: 50%; }
+.ti-auto { border: 1.5px solid currentColor; background: linear-gradient(90deg, currentColor 50%, transparent 50%); }
+.ti-light { width: 10px; height: 10px; background: currentColor; box-shadow: 0 0 0 2px transparent, 0 0 0 3px currentColor; }
+.ti-dark { box-shadow: inset -4px -2px 0 0 currentColor; transform: rotate(-20deg); }
 .login-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.login-top .brand { flex: none; white-space: nowrap; }
 .field.translated { flex-basis: 100%; grid-column: 1 / -1; }
 .lang-rows { display: grid; gap: 6px; }
 .lang-row { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 2px 8px; align-items: start; }

@@ -63,6 +63,16 @@ These aids stay on even with helpers off:
 - Errors appear next to the field they belong to. Records that are still in use explain what uses them.
   Deleting always needs a second click.
 
+## Light and dark theme
+
+The switch in the top bar, also on the sign-in page, has three choices: **Auto** (◐, follows the system
+setting), **Light** and **Dark**. The choice applies at once and is saved in this browser (`localStorage`),
+for every account. `js/theme-init.js` applies it in `<head>` before the page is drawn, so a dark choice
+never flashes light. Colours are CSS variables at the top of `css/app.css`: the dark values apply under
+`prefers-color-scheme: dark` unless `html[data-theme="light"]` is set, and always under
+`html[data-theme="dark"]`. Use the variables (`--ink`, `--surface`, `--accent`…), never fixed colours,
+so new screens work in both themes.
+
 ## Languages
 
 The **EN / RU / KY** switch in the top bar, and on the sign-in page, changes the interface language. It
@@ -86,15 +96,48 @@ the same language. English is the main language and the fallback.
 goes to the API, and then the tables are reloaded, so the screen always shows what the server stored.
 Answers typed into the questionnaire are saved shortly after you stop typing.
 
+## Security
+
+The frontend protects itself against the usual client-side attacks without extra work on the server.
+The rules live in `js/security.js`, and every module goes through them:
+
+| Risk | Protection |
+| --- | --- |
+| XSS (reflected, DOM) | Views build the DOM with `h()`, which adds data only as text. It refuses `<script>`, `<iframe>`, `<object>`… tags, string event handlers, `srcdoc`, and `style="…"` strings (use `style: { … }`). Nothing uses `innerHTML`. |
+| Unsafe links | `href`/`src` go through `safeUrl()`: `javascript:`, `data:` and `//host` become `#`. `target="_blank"` always gets `rel="noopener noreferrer"`. |
+| Open redirect | The app only navigates to its own hash routes (`routePath()`). There is no `?next=`; after sign-in it always goes to `/`. Unknown or malformed routes show “Page not found”. |
+| Content injection | A Content-Security-Policy `<meta>` in `index.html`: scripts only as files from this origin (no inline code, no `eval`), styles from this origin and Google Fonts, no frames, no plugins, API calls only to this origin. In Chrome, Trusted Types reject every HTML-string sink. |
+| Clickjacking, iframes | The server sends `X-Frame-Options: DENY`, and the app refuses to start inside a frame. |
+| JSON hijacking | `api.js` calls only same-origin `/api/` URLs and reads a response only when it is `application/json`. The server sends `nosniff`. |
+| Log forging | `logError()` writes one line per entry, with CR/LF and other control characters escaped. |
+| Tampered storage | `prefs.js` keeps only well-formed values from `localStorage`. Route parts never match inherited object keys (`own()`). |
+| HSTS, secure cookies | Set `DJANGO_HTTPS=1` in production (see `backend/config/settings.py`). |
+
+When writing new code: build elements with `h()`, never assign HTML strings; link only through `link()`/`h('a')`;
+call the API only through `api.js`; log with `logError()`.
+
+## Browsers
+
+Chrome, Firefox and Safari draw the app the same way. The top of `css/app.css` resets the parts each engine
+styles differently: form controls (select chevron, number spinners, date fields, search fields, autofill),
+checkbox size and colour, `<details>` markers, button margins, iOS text inflation, font smoothing and
+bold weights. Write component styles on top of that base. Element defaults use `:where()`, so any class
+rule overrides them.
+
+Note: WebKit logs “Refused to apply a stylesheet…” once per `<select>`. That message comes from the
+browser's own select styling under the CSP, not from the app, and changes nothing on screen.
+
 ## Code map
 
 | File | Purpose |
 | --- | --- |
-| `js/api.js` | fetch wrapper: JSON, CSRF header, readable error messages |
+| `js/security.js` | URL, route and log sanitizing, frame check: the client-side security rules |
+| `js/api.js` | fetch wrapper: same-origin JSON only, CSRF header, readable error messages |
 | `js/store.js` | Cached tables, writes, server validation and provisional scores |
 | `js/session.js` | Signed-in user, roles and permission checks |
 | `js/views/account.js` | Sign in, sign up, profile |
 | `js/i18n.js` | Interface language, `t()`, language settings from the server |
+| `js/theme.js`, `js/theme-init.js` | Light / dark / auto theme: the switch, and applying the saved choice before the first paint |
 | `js/prefs.js`, `js/help.js` | Helper switch, tips, help text, glossary |
 | `js/scoring.js` | Labels and explanations of rule and aggregation types, rule descriptions, “Try the rule” |
 | `js/methodology.js` | Tree helpers and methodology operations (add node, weights, publish, new version) |
@@ -103,4 +146,4 @@ Answers typed into the questionnaire are saved shortly after you stop typing.
 | `js/views/respondent.js` | My assessments, starting assessments, history, the questionnaire, the result |
 | `js/views/help.js` | Help page and glossary |
 | `js/views/data.js` | Raw view of every table |
-| `js/dom.js` | DOM helpers, forms, toasts, confirm buttons |
+| `js/dom.js` | DOM helpers (`h()` builds safe elements), forms, toasts, confirm buttons |

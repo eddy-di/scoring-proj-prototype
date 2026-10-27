@@ -1,9 +1,10 @@
 import * as db from './store.js';
 import * as session from './session.js';
 import * as api from './api.js';
-import { h, setRenderer, toast, navigate, languageSwitch } from './dom.js';
+import { h, setRenderer, toast, navigate, languageSwitch, themeSwitch } from './dom.js';
 import { helpOn, setHelpOn, loadPrefs } from './prefs.js';
 import { t, loadLanguage, language, setLanguage } from './i18n.js';
+import { routePath, logError, framed } from './security.js';
 import { loginView, registerView, profileView } from './views/account.js';
 import dashboard from './views/dashboard.js';
 import helpView from './views/help.js';
@@ -122,6 +123,7 @@ function layout(path, view) {
       h('div', { class: 'topbar-end' },
         h('span', { class: `saving ${db.isBusy() ? 'on' : ''}`, id: 'saving', 'aria-live': 'polite' }, db.isBusy() ? t('Saving…') : ''),
         languageSwitch(),
+        themeSwitch(),
         helpersSwitch(),
         resetButton(),
         userMenu())),
@@ -155,7 +157,8 @@ function restore(values) {
 
 function render() {
   if (!booted) return;
-  const path = location.hash.slice(1) || '/';
+  // Malformed or foreign hashes (e.g. "#javascript:…", "#//evil.example") are never routed.
+  const path = routePath(location.hash.slice(1) || '/');
   if (!session.current().authenticated) {
     const signedIn = async () => {
       const preferred = session.current().profile?.preferred_language;
@@ -175,13 +178,13 @@ function render() {
   const typed = samePage ? dirtyValues() : new Map();
   let view;
   try {
-    const route = routes.find(([re]) => re.test(path));
+    const route = path && routes.find(([re]) => re.test(path));
     view = route ? route[1](path.match(route[0])) : h('div', { class: 'page' }, h('p', {}, t('Page not found.'), ' '), h('a', { href: '#/' }, t('Go to the start page')));
   } catch (e) {
-    console.error(e);
+    logError(`render ${path}`, e);
     view = h('div', { class: 'check bad' }, h('strong', {}, t('This page failed to render:'), ' '), e.message);
   }
-  app.replaceChildren(...layout(path, view));
+  app.replaceChildren(...layout(path ?? '', view));
   restore(typed);
 
   // Re-rendering replaces the DOM; keep the reader's place when staying on the same page.
@@ -199,7 +202,19 @@ document.addEventListener('input', (e) => {
   if (e.target.matches?.('input, select, textarea') && e.target.id !== 'helpers-switch') e.target.dataset.dirty = '1';
 });
 
+// Clickjacking: don't run inside another site's frame. The server also sends
+// X-Frame-Options: DENY; this covers static hosting that doesn't.
+function frameWarning() {
+  return h('div', { class: 'page' }, h('div', { class: 'check bad' },
+    h('strong', {}, t('This app can’t be used inside a frame.'), ' '),
+    h('a', { href: location.origin + location.pathname, target: '_blank' }, t('Open it in its own window'))));
+}
+
 async function boot() {
+  if (framed()) {
+    app.replaceChildren(frameWarning());
+    return;
+  }
   app.replaceChildren(h('p', { class: 'loading' }, '…'));
   try {
     const user = await session.load();

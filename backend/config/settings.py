@@ -135,6 +135,30 @@ ROSETTA_EXCLUDED_APPLICATIONS = ['django.contrib.admin', 'django.contrib.auth', 
 # The frontend prototype, served at / (see config/urls.py).
 FRONTEND_DIR = BASE_DIR.parent / 'frontend'
 
+# ── Browser security headers ───────────────────────────────────
+# Settings only: SecurityMiddleware and XFrameOptionsMiddleware already run on every response.
+# The Content-Security-Policy is a <meta> tag in frontend/index.html (see frontend/js/security.js).
+X_FRAME_OPTIONS = 'DENY'                      # no framing (clickjacking)
+SECURE_CONTENT_TYPE_NOSNIFF = True            # JSON is never run as a script (JSON hijacking)
+SECURE_REFERRER_POLICY = 'same-origin'
+SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin'
+SESSION_COOKIE_HTTPONLY = True                # scripts can't read the session cookie
+SESSION_COOKIE_SAMESITE = 'Lax'
+CSRF_COOKIE_SAMESITE = 'Lax'
+
+# Set DJANGO_HTTPS=1 when the site is served over HTTPS: HTTP is redirected, browsers are told to
+# use HTTPS only (HSTS), and cookies are never sent over plain HTTP. Off for runserver on localhost.
+if os.environ.get('DJANGO_HTTPS') == '1':
+    SECURE_SSL_REDIRECT = True
+    SECURE_HSTS_SECONDS = 31536000
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    # Behind a reverse proxy that terminates TLS and sets X-Forwarded-Proto.
+    if os.environ.get('DJANGO_BEHIND_PROXY') == '1':
+        SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 # POST /api/demo/reset/ replaces all data with the example fixtures. Never enable in production.
 DEMO_RESET_ENABLED = os.environ.get('DEMO_RESET_ENABLED', '1' if DEBUG else '0') == '1'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

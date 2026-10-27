@@ -1,13 +1,13 @@
 // Accounts: sign in, sign up and the profile page.
 import * as session from '../session.js';
-import { h, form, link, pageHead, section, languageSwitch, toast, chip } from '../dom.js';
+import { h, form, link, pageHead, section, languageSwitch, themeSwitch, toast, chip } from '../dom.js';
 import { t, languages, language, setLanguage, formatDate } from '../i18n.js';
 import { help } from '../help.js';
 
 const card = (...children) => h('div', { class: 'login' }, h('div', { class: 'login-card' },
   h('div', { class: 'login-top' },
     h('div', { class: 'brand big' }, h('span', { class: 'brand-mark' }, 'Q'), 'Qualimetry'),
-    languageSwitch()),
+    h('div', { class: 'switches' }, languageSwitch(), themeSwitch())),
   children));
 
 export function loginView(onSignedIn) {

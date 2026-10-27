@@ -5,6 +5,7 @@
 // /rosetta/; "python manage.py frontend_messages" collects new t('…') texts).
 // The chosen language is stored in Django's django_language cookie, so the API
 // returns content and messages in the same language.
+import { get } from './api.js';
 
 let catalog = {};
 let settings = {
@@ -17,9 +18,9 @@ let settings = {
 
 // t('Saved {name}.', { name }) → the translation, with {placeholders} filled in.
 export function t(text, params) {
-  const found = catalog[text];
+  const found = Object.hasOwn(catalog, text) ? catalog[text] : null;
   const out = typeof found === 'string' && found ? found : text;
-  return params ? out.replace(/\{(\w+)\}/g, (m, key) => (params[key] ?? m)) : out;
+  return params ? out.replace(/\{(\w+)\}/g, (m, key) => (Object.hasOwn(params, key) ? params[key] ?? m : m)) : out;
 }
 
 export async function loadLanguage(me) {
@@ -29,8 +30,12 @@ export async function loadLanguage(me) {
     catalog = {};
     return;
   }
-  const res = await fetch('/api/i18n/catalog/', { credentials: 'same-origin' });
-  catalog = res.ok ? (await res.json()).catalog ?? {} : {};
+  try {
+    const found = (await get('/api/i18n/catalog/'))?.catalog;
+    catalog = found && typeof found === 'object' ? found : {};
+  } catch {
+    catalog = {}; // Untranslated English texts are still usable.
+  }
 }
 
 export const language = () => settings.language;
@@ -42,8 +47,11 @@ export const languageName = (code) => settings.languages.find((l) => l.code === 
 // { field: required } for the translated fields of a schema table, e.g. questions → { text: true, description: false }.
 export const translatedFields = (table) => settings.translated_fields[table] ?? {};
 
+// Only languages the server offers end up in the cookie.
 export function setLanguage(code) {
-  document.cookie = `django_language=${code}; path=/; max-age=31536000; SameSite=Lax`;
+  if (!settings.languages.some((l) => l.code === code)) return;
+  const secure = location.protocol === 'https:' ? '; Secure' : '';
+  document.cookie = `django_language=${encodeURIComponent(code)}; path=/; max-age=31536000; SameSite=Lax${secure}`;
   location.reload();
 }
 

@@ -16,8 +16,10 @@ export function loadPrefs(username) {
   key = `qualimetry-help:${username}`;
   state = { on: true, hidden: [] };
   try {
-    const raw = localStorage.getItem(key);
-    if (raw) state = { ...state, ...JSON.parse(raw) };
+    // Anyone with access to this browser can edit storage: keep only well-formed values.
+    const saved = JSON.parse(localStorage.getItem(key) ?? 'null');
+    if (typeof saved?.on === 'boolean') state.on = saved.on;
+    if (Array.isArray(saved?.hidden)) state.hidden = saved.hidden.filter((x) => typeof x === 'string').slice(0, 200);
   } catch {
     // Use the defaults.
   }

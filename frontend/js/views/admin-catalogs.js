@@ -3,6 +3,7 @@ import * as db from '../store.js';
 import { h, form, pageHead, table, chip, button, confirmButton, tabs, toast, rerender, fmt } from '../dom.js';
 import { tip, help, example, stored, term } from '../help.js';
 import { t } from '../i18n.js';
+import { own } from '../security.js';
 
 const muted = (v) => (v == null || v === '' ? h('span', { class: 'muted' }, '–') : v);
 const code = (v) => h('code', {}, v);
@@ -105,7 +106,7 @@ function ruler(scale, levels) {
   const pos = (v) => (hi === lo ? 0 : ((v - lo) / (hi - lo)) * 100);
   return h('div', { class: 'ruler', 'aria-hidden': 'true' },
     h('div', { class: 'ruler-line' }),
-    levels.map((l) => h('div', { class: 'ruler-tick', style: `left: ${pos(l.value)}%` },
+    levels.map((l) => h('div', { class: 'ruler-tick', style: { left: `${pos(l.value)}%` } },
       h('span', { class: 'ruler-val' }, fmt(l.value)), h('span', { class: 'ruler-label' }, l.label))),
     h('div', { class: 'ruler-ends' }, h('span', {}, scale.higher_is_better ? t('worse') : t('better')), h('span', {}, scale.higher_is_better ? t('better') : t('worse'))));
 }
@@ -270,7 +271,7 @@ function objectsTab() {
 const VIEWS = { units: unitsTab, scales: scalesTab, methods: methodsTab, 'object-types': objectTypesTab, objects: objectsTab };
 
 export default function catalogsView(tab = 'units') {
-  if (!VIEWS[tab]) tab = 'units';
+  if (!own(VIEWS, tab)) tab = 'units';
   return h('div', { class: 'page' },
     pageHead(t('Catalogs'), t('Step 1 of the setup. Shared reference lists that questions and methodologies pick from. Usually set up once and reused everywhere.')),
     help(t('Work through the tabs from left to right. Records that are in use can’t be deleted; you will see what uses them instead.'), ' ', term('scale'), ' · ', term('method'), ' · ', term('object_type'), ' · ', term('translation')),

@@ -72,7 +72,7 @@ msgstr ""
 msgid "A custom calculation. For experienced users."
 msgstr "Өз эсеби. Тажрыйбалуу колдонуучулар үчүн."
 
-#: js/views/admin-catalogs.js:201
+#: js/views/admin-catalogs.js:202
 msgid ""
 "A general description. Specific instructions are written per question in the"
 " methodology."
@@ -97,7 +97,7 @@ msgstr "Критикалык босого"
 msgid "A measured or counted value with a unit."
 msgstr "Өлчөө бирдиги менен өлчөнгөн же саналган маани."
 
-#: js/views/admin-catalogs.js:187
+#: js/views/admin-catalogs.js:188
 msgid ""
 "A method names a way of getting an answer: measuring with an instrument, "
 "inspecting on site, reading documents, calculating, or an expert’s "
@@ -175,7 +175,7 @@ msgstr ""
 "Кыска, кайталангыс идентификатор, мисалы STR_CRACK_WIDTH. Методиканын "
 "түйүндөрү аны даракта көрсөтөт."
 
-#: js/views/admin-catalogs.js:9
+#: js/views/admin-catalogs.js:10
 msgid ""
 "A short, unique name for the record, used by the API and in exports. Use "
 "letters, digits and “_”, no spaces."
@@ -199,7 +199,7 @@ msgstr ""
 msgid "A table of conditions and the score each one gives."
 msgstr "Шарттардын жана ар бири берген баллдардын таблицасы."
 
-#: js/views/admin-catalogs.js:76
+#: js/views/admin-catalogs.js:77
 msgid ""
 "A unit is the label shown next to a numeric answer, such as “mm” after a "
 "crack width. It helps the respondent enter the value in the right unit. "
@@ -221,7 +221,7 @@ msgstr "Активдүү суроолор: {count}"
 msgid "Active: can be added to methodologies"
 msgstr "Активдүү: методикаларга кошууга болот"
 
-#: js/dom.js:169
+#: js/dom.js:205
 msgid "Add"
 msgstr "Кошуу"
 
@@ -233,7 +233,7 @@ msgstr "«Ооба» жана «Жок» критерийлерин кошуу"
 msgid "Add a criterion for each option (missing: {count})"
 msgstr "Ар бир вариант үчүн критерий кошуу (жетишпейт: {count})"
 
-#: js/views/admin-catalogs.js:179
+#: js/views/admin-catalogs.js:180
 msgid ""
 "Add a level for every point that needs a name. Most scales need one level "
 "per whole number."
@@ -241,7 +241,7 @@ msgstr ""
 "Аталышы керек болгон ар бир чекит үчүн деңгээл кошуңуз. Көбүнчө ар бир бүтүн"
 " сан үчүн бир деңгээл керек."
 
-#: js/views/admin-catalogs.js:193
+#: js/views/admin-catalogs.js:194
 msgid "Add a method"
 msgstr "Ыкма кошуу"
 
@@ -249,7 +249,7 @@ msgstr "Ыкма кошуу"
 msgid "Add a question inside {name}"
 msgstr "«{name}» ичине суроо кошуу"
 
-#: js/views/admin-catalogs.js:160
+#: js/views/admin-catalogs.js:161
 msgid "Add a scale"
 msgstr "Шкала кошуу"
 
@@ -257,19 +257,19 @@ msgstr "Шкала кошуу"
 msgid "Add a sub-group inside {name}"
 msgstr "«{name}» ичине кошумча топ кошуу"
 
-#: js/views/admin-catalogs.js:81
+#: js/views/admin-catalogs.js:82
 msgid "Add a unit"
 msgstr "Өлчөө бирдигин кошуу"
 
-#: js/views/admin-catalogs.js:251
+#: js/views/admin-catalogs.js:252
 msgid "Add an object"
 msgstr "Объект кошуу"
 
-#: js/views/admin-catalogs.js:217
+#: js/views/admin-catalogs.js:218
 msgid "Add an object type"
 msgstr "Объекттин түрүн кошуу"
 
-#: js/views/admin-catalogs.js:121
+#: js/views/admin-catalogs.js:122
 msgid "Add at least two levels so scores can be named."
 msgstr "Баллдарга ат берүү үчүн кеминде эки деңгээл кошуңуз."
 
@@ -289,19 +289,19 @@ msgstr ""
 "Топторду жана суроо түйүндөрүн кошуңуз. Коңшу түйүндөргө суммасы 1 болгон "
 "салмактарды бериңиз. Маанилүү суроолорго критикалык босоголорду кошуңуз."
 
-#: js/views/admin-catalogs.js:131
+#: js/views/admin-catalogs.js:132
 msgid "Add level"
 msgstr "Деңгээл кошуу"
 
-#: js/views/admin-catalogs.js:193 js/views/admin-methodologies.js:361
+#: js/views/admin-catalogs.js:194 js/views/admin-methodologies.js:361
 msgid "Add method"
 msgstr "Ыкма кошуу"
 
-#: js/views/admin-catalogs.js:251
+#: js/views/admin-catalogs.js:252
 msgid "Add object"
 msgstr "Объект кошуу"
 
-#: js/views/admin-catalogs.js:217
+#: js/views/admin-catalogs.js:218
 msgid "Add object type"
 msgstr "Объекттин түрүн кошуу"
 
@@ -309,15 +309,15 @@ msgstr "Объекттин түрүн кошуу"
 msgid "Add option"
 msgstr "Вариант кошуу"
 
-#: js/views/admin-catalogs.js:160
+#: js/views/admin-catalogs.js:161
 msgid "Add scale"
 msgstr "Шкала кошуу"
 
-#: js/views/admin-catalogs.js:77
+#: js/views/admin-catalogs.js:78
 msgid "Add the unit before you create a numeric question that needs it."
 msgstr "Сандык суроону түзүүдөн мурун ага керектүү өлчөө бирдигин кошуңуз."
 
-#: js/views/admin-catalogs.js:81
+#: js/views/admin-catalogs.js:82
 msgid "Add unit"
 msgstr "Бирдик кошуу"
 
@@ -329,11 +329,11 @@ msgstr "Топ кошулду. Ага ат бериңиз."
 msgid "Added a question node. Link a question to it."
 msgstr "Суроо түйүнү кошулду. Ага суроо байлаңыз."
 
-#: js/views/admin-catalogs.js:46
+#: js/views/admin-catalogs.js:47
 msgid "Added: {name}."
 msgstr "Кошулду: {name}."
 
-#: js/main.js:50 js/views/help.js:63
+#: js/main.js:51 js/views/help.js:63
 msgid "Admin"
 msgstr "Администрация"
 
@@ -358,7 +358,7 @@ msgstr "Бириктирүү"
 msgid "All"
 msgstr "Баары"
 
-#: js/main.js:46 js/views/respondent.js:212 js/views/respondent.js:280
+#: js/main.js:47 js/views/respondent.js:212 js/views/respondent.js:280
 #: js/views/respondent.js:510
 msgid "All assessments"
 msgstr "Бардык баалоолор"
@@ -423,7 +423,7 @@ msgstr "Каттоо эсебиңиз барбы?"
 msgid "An expert rating from 1 to 5."
 msgstr "1ден 5ке чейин эксперттик баа."
 
-#: js/views/admin-catalogs.js:246
+#: js/views/admin-catalogs.js:247
 msgid ""
 "An object is one real building, apartment or product. Respondents pick an "
 "object when they start an assessment, and they can also register new objects"
@@ -524,11 +524,11 @@ msgstr "Түйүндөр боюнча баалоо механикасы."
 msgid "Assessment method"
 msgstr "Баалоо ыкмасы"
 
-#: js/views/admin-catalogs.js:14 js/views/dashboard.js:53
+#: js/views/admin-catalogs.js:15 js/views/dashboard.js:53
 msgid "Assessment methods"
 msgstr "Баалоо ыкмалары"
 
-#: js/views/admin-catalogs.js:186
+#: js/views/admin-catalogs.js:187
 msgid "Assessment methods: how a value is obtained"
 msgstr "Баалоо ыкмалары: маани кантип алынат"
 
@@ -540,7 +540,7 @@ msgstr "Баалоо табылган жок."
 msgid "Assessment started."
 msgstr "Баалоо башталды."
 
-#: js/views/account.js:83 js/views/admin-catalogs.js:256
+#: js/views/account.js:83 js/views/admin-catalogs.js:257
 #: js/views/dashboard.js:145
 msgid "Assessments"
 msgstr "Баалоолор"
@@ -573,7 +573,7 @@ msgstr "Тиркөө"
 msgid "Attach evidence ({count})"
 msgstr "Далил тиркөө ({count})"
 
-#: js/views/admin-catalogs.js:255 js/views/admin-catalogs.js:262
+#: js/views/admin-catalogs.js:256 js/views/admin-catalogs.js:263
 #: js/views/respondent.js:116
 msgid "Attributes"
 msgstr "Атрибуттар"
@@ -648,7 +648,7 @@ msgstr "Объект боюнча"
 msgid "By questionnaire"
 msgstr "Анкета боюнча"
 
-#: js/views/admin-catalogs.js:261 js/views/respondent.js:115
+#: js/views/admin-catalogs.js:262 js/views/respondent.js:115
 msgid "Cadastral number, inventory code…"
 msgstr "Кадастрдык номер, инвентардык код…"
 
@@ -656,16 +656,16 @@ msgstr "Кадастрдык номер, инвентардык код…"
 msgid "Calculated score of every node on completion."
 msgstr "Аяктаганда эсептелген ар бир түйүндүн баллы."
 
-#: js/dom.js:332 js/views/respondent.js:146
+#: js/dom.js:368 js/views/respondent.js:146
 msgid "Cancel"
 msgstr "Жокко чыгаруу"
 
-#: js/api.js:22
+#: js/api.js:24
 msgid "Can’t reach the server. Check that “manage.py runserver” is running."
 msgstr ""
 "Сервер менен байланыш жок. «manage.py runserver» иштеп жатканын текшериңиз."
 
-#: js/main.js:43 js/views/admin-catalogs.js:275 js/views/data.js:7
+#: js/main.js:44 js/views/admin-catalogs.js:276 js/views/data.js:7
 #: js/views/help.js:44
 msgid "Catalogs"
 msgstr "Маалымдамалар"
@@ -674,7 +674,7 @@ msgstr "Маалымдамалар"
 msgid "Categories"
 msgstr "Категориялар"
 
-#: js/views/admin-catalogs.js:95
+#: js/views/admin-catalogs.js:96
 msgid "Categories without an order. Rarely used for scores."
 msgstr "Тартипсиз категориялар. Баллдар үчүн сейрек колдонулат."
 
@@ -744,7 +744,7 @@ msgid ""
 "Choose what to assess. Start from a questionnaire or from the object itself."
 msgstr "Эмнени баалоону тандаңыз. Анкетадан же объекттин өзүнөн баштаңыз."
 
-#: js/dom.js:182 js/views/admin-methodologies.js:565
+#: js/dom.js:218 js/views/admin-methodologies.js:565
 #: js/views/admin-methodologies.js:569 js/views/admin-methodologies.js:580
 #: js/views/respondent.js:137
 msgid "Choose…"
@@ -758,7 +758,7 @@ msgstr ""
 "Суроону өзгөртүү үчүн анын кодун басыңыз. Жарыяланган методикадагы суроонун "
 "текстин тактаса болот, бирок жооптун түрү бекитилген."
 
-#: js/views/admin-catalogs.js:126 js/views/admin-methodologies.js:358
+#: js/views/admin-catalogs.js:127 js/views/admin-methodologies.js:358
 #: js/views/admin-methodologies.js:502 js/views/admin-questions.js:94
 #: js/views/admin-questions.js:226 js/views/respondent.js:393
 msgid "Click again"
@@ -768,7 +768,7 @@ msgstr "Дагы бир жолу басыңыз"
 msgid "Click again to archive"
 msgstr "Архивге жөнөтүү үчүн дагы бир жолу басыңыз"
 
-#: js/views/admin-catalogs.js:55 js/views/admin-methodologies.js:272
+#: js/views/admin-catalogs.js:56 js/views/admin-methodologies.js:272
 #: js/views/admin-questions.js:144
 msgid "Click again to delete"
 msgstr "Өчүрүү үчүн дагы бир жолу басыңыз"
@@ -777,7 +777,7 @@ msgstr "Өчүрүү үчүн дагы бир жолу басыңыз"
 msgid "Click again to delete it with its drafts"
 msgstr "Долбоорлору менен кошо өчүрүү үчүн дагы бир жолу басыңыз"
 
-#: js/main.js:81
+#: js/main.js:82
 msgid "Click again: deletes everyone’s changes"
 msgstr "Дагы бир жолу басыңыз: бардык колдонуучулардын өзгөртүүлөрү өчүрүлөт"
 
@@ -802,10 +802,10 @@ msgstr ""
 "«Жаңы баалоо» баскычын басып, анкетаны же бааланган объектти тандаңыз. "
 "Анкетанын эң жаңы жарыяланган версиясы автоматтык түрдө колдонулат."
 
-#: js/views/admin-catalogs.js:82 js/views/admin-catalogs.js:84
-#: js/views/admin-catalogs.js:162 js/views/admin-catalogs.js:167
-#: js/views/admin-catalogs.js:195 js/views/admin-catalogs.js:199
-#: js/views/admin-catalogs.js:218 js/views/admin-catalogs.js:220
+#: js/views/admin-catalogs.js:83 js/views/admin-catalogs.js:85
+#: js/views/admin-catalogs.js:163 js/views/admin-catalogs.js:168
+#: js/views/admin-catalogs.js:196 js/views/admin-catalogs.js:200
+#: js/views/admin-catalogs.js:219 js/views/admin-catalogs.js:221
 #: js/views/admin-methodologies.js:80 js/views/admin-methodologies.js:250
 #: js/views/admin-questions.js:65 js/views/admin-questions.js:172
 #: js/views/admin-questions.js:219 js/views/admin-questions.js:234
@@ -815,6 +815,10 @@ msgstr "Код"
 #: js/views/admin-questions.js:58
 msgid "Code or words in any language"
 msgstr "Код же каалаган тилдеги сөздөр"
+
+#: js/dom.js:116
+msgid "Colour theme"
+msgstr "Түс темасы"
 
 #: js/views/admin-methodologies.js:257
 msgid "Combine children with"
@@ -1017,11 +1021,11 @@ msgstr "Башка"
 msgid "Custom formula"
 msgstr "Өз формуласы"
 
-#: js/main.js:49
+#: js/main.js:50
 msgid "Dashboard"
 msgstr "Панель"
 
-#: js/main.js:52 js/views/data.js:55
+#: js/main.js:53 js/views/data.js:55
 msgid "Data tables"
 msgstr "Маалымат таблицалары"
 
@@ -1045,7 +1049,7 @@ msgstr ""
 "берет. Версияда акыркы балл үчүн жыйынтык шкаласы бар; түйүндөр да аны "
 "колдонот, эгер өздөрүнүкү жок болсо."
 
-#: js/views/admin-catalogs.js:55 js/views/admin-catalogs.js:126
+#: js/views/admin-catalogs.js:56 js/views/admin-catalogs.js:127
 #: js/views/admin-methodologies.js:59 js/views/admin-questions.js:94
 #: js/views/admin-questions.js:226
 msgid "Delete"
@@ -1063,7 +1067,7 @@ msgstr "Суроону өчүрүү"
 msgid "Deleted category {name}. Its questions are kept."
 msgstr "«{name}» категориясы өчүрүлдү. Анын суроолору сакталды."
 
-#: js/views/admin-catalogs.js:57 js/views/admin-catalogs.js:126
+#: js/views/admin-catalogs.js:58 js/views/admin-catalogs.js:127
 #: js/views/admin-methodologies.js:59 js/views/admin-methodologies.js:274
 #: js/views/admin-questions.js:146 js/views/admin-questions.js:226
 msgid "Deleted: {name}."
@@ -1073,10 +1077,10 @@ msgstr "Өчүрүлдү: {name}."
 msgid "Demo accounts"
 msgstr "Демо каттоо эсептери"
 
-#: js/views/admin-catalogs.js:82 js/views/admin-catalogs.js:86
-#: js/views/admin-catalogs.js:174 js/views/admin-catalogs.js:195
-#: js/views/admin-catalogs.js:201 js/views/admin-catalogs.js:218
-#: js/views/admin-catalogs.js:222 js/views/admin-methodologies.js:83
+#: js/views/admin-catalogs.js:83 js/views/admin-catalogs.js:87
+#: js/views/admin-catalogs.js:175 js/views/admin-catalogs.js:196
+#: js/views/admin-catalogs.js:202 js/views/admin-catalogs.js:219
+#: js/views/admin-catalogs.js:223 js/views/admin-methodologies.js:83
 #: js/views/admin-methodologies.js:262 js/views/admin-methodologies.js:494
 #: js/views/admin-methodologies.js:516 js/views/respondent.js:401
 msgid "Description"
@@ -1086,7 +1090,7 @@ msgstr "Сүрөттөмө"
 msgid "Direct expert"
 msgstr "Түз эксперттик"
 
-#: js/views/admin-catalogs.js:172
+#: js/views/admin-catalogs.js:173
 msgid "Distance between levels, for information only."
 msgstr "Деңгээлдердин ортосундагы аралык, маалымат үчүн гана."
 
@@ -1142,7 +1146,7 @@ msgstr ""
 "Ар бир балдар түйүндүн баллы × анын салмагы, баары кошулат. Күчтүү түйүндөр "
 "алсыздарын толуктай алат. Адаттагы тандоо."
 
-#: js/views/admin-catalogs.js:212
+#: js/views/admin-catalogs.js:213
 msgid ""
 "Each methodology is written for one object type. Respondents can only use a "
 "methodology for objects of that type, so a building methodology can’t be "
@@ -1170,7 +1174,7 @@ msgstr ""
 "салымы (балл × салмак). Акыркы мамычада — жооп жана баллды түшүндүргөн "
 "критерий."
 
-#: js/views/admin-catalogs.js:54 js/views/admin-catalogs.js:125
+#: js/views/admin-catalogs.js:55 js/views/admin-catalogs.js:126
 #: js/views/admin-methodologies.js:67 js/views/admin-methodologies.js:357
 #: js/views/admin-methodologies.js:501 js/views/admin-questions.js:225
 msgid "Edit"
@@ -1184,15 +1188,15 @@ msgstr "Түзөтүү жана текшерүү тизмеси боюнча о�
 msgid "Edit details"
 msgstr "Маалыматты өзгөртүү"
 
-#: js/views/admin-catalogs.js:193
+#: js/views/admin-catalogs.js:194
 msgid "Edit method {name}"
 msgstr "{name} ыкмасын өзгөртүү"
 
-#: js/views/admin-catalogs.js:217
+#: js/views/admin-catalogs.js:218
 msgid "Edit object type {name}"
 msgstr "{name} объект түрүн өзгөртүү"
 
-#: js/views/admin-catalogs.js:251
+#: js/views/admin-catalogs.js:252
 msgid "Edit object {name}"
 msgstr "{name} объектин өзгөртүү"
 
@@ -1200,11 +1204,11 @@ msgstr "{name} объектин өзгөртүү"
 msgid "Edit question {code}"
 msgstr "{code} суроосун өзгөртүү"
 
-#: js/views/admin-catalogs.js:160
+#: js/views/admin-catalogs.js:161
 msgid "Edit scale {name}"
 msgstr "{name} шкаласын өзгөртүү"
 
-#: js/views/admin-catalogs.js:81
+#: js/views/admin-catalogs.js:82
 msgid "Edit unit {name}"
 msgstr "{name} бирдигин өзгөртүү"
 
@@ -1280,7 +1284,7 @@ msgstr ""
 " үчүн маанини эң начар менен эң жакшынын ортосунда баллга которгон сызыктуу "
 "эрежени колдонсо болот."
 
-#: js/views/admin-catalogs.js:153
+#: js/views/admin-catalogs.js:154
 msgid ""
 "Every score is a number on a scale. A methodology version has a result scale"
 " for the final score; its nodes use the same scale unless you give them "
@@ -1307,7 +1311,7 @@ msgstr ""
 "Бардык колдонуучулардын баалоолору. Аларды окуу үчүн гана ачсаңыз болот; "
 "жоопторду респонденттин өзү гана өзгөртө алат."
 
-#: js/views/admin-catalogs.js:196
+#: js/views/admin-catalogs.js:197
 msgid "Evidence"
 msgstr "Далилдер"
 
@@ -1327,11 +1331,11 @@ msgstr ""
 "Так {target} — {hi} балл. Балл {min} жана {max} маанилеринде {lo} чейин түз "
 "сызык боюнча төмөндөйт жана алардан ары {lo} бойдон калат."
 
-#: js/main.js:89
+#: js/main.js:90
 msgid "Example data restored."
 msgstr "Мисал маалыматтары калыбына келтирилди."
 
-#: js/dom.js:192 js/help.js:23 js/views/admin-methodologies.js:420
+#: js/dom.js:228 js/help.js:23 js/views/admin-methodologies.js:420
 #: js/views/help.js:81
 msgid "Example:"
 msgstr "Мисал:"
@@ -1364,14 +1368,14 @@ msgstr "Критикалык көрсөткүч боюнча өтпөдү."
 msgid "File name or link"
 msgstr "Файлдын аты же шилтеме"
 
-#: js/dom.js:267
+#: js/dom.js:303
 msgid ""
 "Fill in every language marked with *. People see the text in their own "
 "language."
 msgstr ""
 "* белгиленген бардык тилдерди толтуруңуз. Ар ким текстти өз тилинде көрөт."
 
-#: js/dom.js:311
+#: js/dom.js:347
 msgid "Fill in: {fields}."
 msgstr "Толтуруңуз: {fields}."
 
@@ -1493,7 +1497,7 @@ msgstr "Бардык балдар түйүндөргө бирдей салмак
 msgid "Glossary"
 msgstr "Глоссарий"
 
-#: js/main.js:179
+#: js/main.js:182
 msgid "Go to the start page"
 msgstr "Башкы бетке"
 
@@ -1526,11 +1530,11 @@ msgstr ""
 msgid "Hello, {name}"
 msgstr "Саламатсызбы, {name}"
 
-#: js/main.js:52 js/views/help.js:16
+#: js/main.js:53 js/views/help.js:16
 msgid "Help"
 msgstr "Жардам"
 
-#: js/main.js:69 js/views/help.js:18
+#: js/main.js:70 js/views/help.js:18
 msgid "Helpers"
 msgstr "Жардамчылар"
 
@@ -1546,7 +1550,7 @@ msgstr "Жардамчылар күйүк."
 msgid "Hidden tips: {count}."
 msgstr "Жашырылган кеңештер: {count}."
 
-#: js/main.js:66
+#: js/main.js:67
 msgid "Hide the explanations and tips"
 msgstr "Түшүндүрмөлөрдү жана кеңештерди жашыруу"
 
@@ -1554,7 +1558,7 @@ msgstr "Түшүндүрмөлөрдү жана кеңештерди жашыр�
 msgid "Hide this tip"
 msgstr "Бул кеңешти жашыруу"
 
-#: js/views/admin-catalogs.js:173
+#: js/views/admin-catalogs.js:174
 msgid "Higher scores are better"
 msgstr "Балл канчалык жогору болсо, ошончолук жакшы"
 
@@ -1562,11 +1566,11 @@ msgstr "Балл канчалык жогору болсо, ошончолук ж
 msgid "Higher values are better."
 msgstr "Маани канчалык чоң болсо, ошончолук жакшы."
 
-#: js/views/admin-catalogs.js:171
+#: js/views/admin-catalogs.js:172
 msgid "Highest score"
 msgstr "Эң жогорку балл"
 
-#: js/main.js:51 js/views/help.js:58 js/views/respondent.js:212
+#: js/main.js:52 js/views/help.js:58 js/views/respondent.js:212
 #: js/views/respondent.js:280 js/views/respondent.js:510
 msgid "History"
 msgstr "Тарых"
@@ -1669,7 +1673,7 @@ msgstr ""
 " объект өтпөйт. Критикалык талаптар үчүн колдонуңуз, мисалы өрт "
 "сигнализациясы үчүн 2."
 
-#: js/views/admin-catalogs.js:188
+#: js/views/admin-catalogs.js:189
 msgid ""
 "In a methodology you attach methods to each question node and write step-by-"
 "step instructions there, so every respondent works the same way. The "
@@ -1715,7 +1719,7 @@ msgstr "Нускама"
 msgid "Integral quality"
 msgstr "Интегралдык сапат"
 
-#: js/dom.js:83
+#: js/dom.js:100
 msgid "Interface language"
 msgstr "Интерфейстин тили"
 
@@ -1755,7 +1759,7 @@ msgstr "Критикалык босого"
 msgid "Knock-out:"
 msgstr "Критикалык көрсөткүч:"
 
-#: js/views/admin-catalogs.js:122 js/views/admin-catalogs.js:135
+#: js/views/admin-catalogs.js:123 js/views/admin-catalogs.js:136
 #: js/views/admin-methodologies.js:494 js/views/admin-methodologies.js:515
 #: js/views/admin-questions.js:219 js/views/admin-questions.js:233
 msgid "Label"
@@ -1806,11 +1810,11 @@ msgstr "Тамгалар, сандар жана @ . + - _ гана."
 msgid "Level"
 msgstr "Деңгээл"
 
-#: js/views/admin-catalogs.js:164
+#: js/views/admin-catalogs.js:165
 msgid "Levels"
 msgstr "Деңгээлдер"
 
-#: js/views/admin-catalogs.js:154
+#: js/views/admin-catalogs.js:155
 msgid ""
 "Levels give names to points on the scale, so that a total of 3.9 can be "
 "shown as “Good”. A score is always shown with the nearest level."
@@ -1818,7 +1822,7 @@ msgstr ""
 "Деңгээлдер шкаладагы чекиттерге ат берет, ошондо 3,9 жыйынтыгын «Жакшы» деп "
 "көрсөтсө болот. Балл дайыма эң жакын деңгээл менен көрсөтүлөт."
 
-#: js/views/admin-catalogs.js:178
+#: js/views/admin-catalogs.js:179
 msgid "Levels of each scale"
 msgstr "Ар бир шкаланын деңгээлдери"
 
@@ -1830,7 +1834,7 @@ msgstr ""
 "Деңгээлдер сандарды сөзгө айлантат. 3,9 баллы эң жакын деңгээл — «Жакшы» "
 "менен көрсөтүлөт."
 
-#: js/views/admin-catalogs.js:127
+#: js/views/admin-catalogs.js:128
 msgid "Levels used by score criteria or results can’t be deleted."
 msgstr ""
 "Критерийлерде же жыйынтыктарда колдонулган деңгээлдерди өчүрүүгө болбойт."
@@ -1902,7 +1906,7 @@ msgstr "Кичине сандар биринчи көрсөтүлөт."
 msgid "Lower values are better."
 msgstr "Маани канчалык кичине болсо, ошончолук жакшы."
 
-#: js/views/admin-catalogs.js:170
+#: js/views/admin-catalogs.js:171
 msgid "Lowest score"
 msgstr "Эң төмөнкү балл"
 
@@ -1922,11 +1926,11 @@ msgstr "Милдеттүү: жоопсуз баалоону аяктоого б�
 msgid "Maximum"
 msgstr "Максимум"
 
-#: js/views/admin-catalogs.js:122 js/views/admin-catalogs.js:136
+#: js/views/admin-catalogs.js:123 js/views/admin-catalogs.js:137
 msgid "Meaning"
 msgstr "Мааниси"
 
-#: js/views/admin-catalogs.js:98
+#: js/views/admin-catalogs.js:99
 msgid "Measurements with a true zero, such as percent or millimetres."
 msgstr "Чыныгы нөлү бар өлчөөлөр, мисалы пайыз же миллиметр."
 
@@ -1950,7 +1954,7 @@ msgstr "Ыкма сакталды."
 msgid "Method used"
 msgstr "Колдонулган ыкма"
 
-#: js/main.js:45 js/views/admin-methodologies.js:43
+#: js/main.js:46 js/views/admin-methodologies.js:43
 #: js/views/admin-methodologies.js:164 js/views/dashboard.js:57
 msgid "Methodologies"
 msgstr "Методикалар"
@@ -1976,7 +1980,7 @@ msgstr "Методикалардын версиялары"
 msgid "Methodology versions whose tree links this question."
 msgstr "Дарагында бул суроо бар методикалардын версиялары."
 
-#: js/views/admin-catalogs.js:204
+#: js/views/admin-catalogs.js:205
 msgid "Methods attached to a methodology node can’t be deleted."
 msgstr "Методиканын түйүндөрүнө байланган ыкмаларды өчүрүүгө болбойт."
 
@@ -2000,19 +2004,19 @@ msgstr "Жогору"
 msgid "Multiple choice"
 msgstr "Бир нече вариант"
 
-#: js/main.js:51 js/views/respondent.js:188
+#: js/main.js:52 js/views/respondent.js:188
 msgid "My assessments"
 msgstr "Менин баалоолорум"
 
-#: js/main.js:51
+#: js/main.js:52
 msgid "My work"
 msgstr "Менин ишим"
 
-#: js/views/admin-catalogs.js:82 js/views/admin-catalogs.js:85
-#: js/views/admin-catalogs.js:162 js/views/admin-catalogs.js:168
-#: js/views/admin-catalogs.js:195 js/views/admin-catalogs.js:200
-#: js/views/admin-catalogs.js:218 js/views/admin-catalogs.js:221
-#: js/views/admin-catalogs.js:253 js/views/admin-catalogs.js:260
+#: js/views/admin-catalogs.js:83 js/views/admin-catalogs.js:86
+#: js/views/admin-catalogs.js:163 js/views/admin-catalogs.js:169
+#: js/views/admin-catalogs.js:196 js/views/admin-catalogs.js:201
+#: js/views/admin-catalogs.js:219 js/views/admin-catalogs.js:222
+#: js/views/admin-catalogs.js:254 js/views/admin-catalogs.js:261
 #: js/views/admin-methodologies.js:79 js/views/admin-methodologies.js:249
 #: js/views/admin-questions.js:100 js/views/respondent.js:114
 msgid "Name"
@@ -2064,7 +2068,7 @@ msgstr "Баллга эң жакын"
 msgid "Needs attention"
 msgstr "Көңүл буруу керек"
 
-#: js/main.js:51 js/views/respondent.js:73 js/views/respondent.js:188
+#: js/main.js:52 js/views/respondent.js:73 js/views/respondent.js:188
 #: js/views/respondent.js:189 js/views/respondent.js:214
 msgid "New assessment"
 msgstr "Жаңы баалоо"
@@ -2117,7 +2121,7 @@ msgstr "Азырынча категориялар жок."
 msgid "No criteria yet."
 msgstr "Азырынча критерийлер жок."
 
-#: js/views/admin-catalogs.js:128
+#: js/views/admin-catalogs.js:129
 msgid "No levels yet."
 msgstr "Азырынча деңгээлдер жок."
 
@@ -2136,11 +2140,11 @@ msgstr ""
 msgid "No methodologies yet. Create the first one below."
 msgstr "Азырынча методикалар жок. Биринчисин төмөндө түзүңүз."
 
-#: js/views/admin-catalogs.js:193
+#: js/views/admin-catalogs.js:194
 msgid "No methods yet. Add the first one below."
 msgstr "Азырынча ыкмалар жок. Биринчисин төмөндө кошуңуз."
 
-#: js/views/admin-catalogs.js:217
+#: js/views/admin-catalogs.js:218
 msgid "No object types yet. Add the first one below."
 msgstr "Азырынча объект түрлөрү жок. Биринчисин төмөндө кошуңуз."
 
@@ -2152,7 +2156,7 @@ msgstr "Объекттер табылган жок."
 msgid "No objects of this type yet"
 msgstr "Бул түрдөгү объекттер азырынча жок"
 
-#: js/views/admin-catalogs.js:251
+#: js/views/admin-catalogs.js:252
 msgid "No objects yet. Add the first one below."
 msgstr "Азырынча объекттер жок. Биринчисин төмөндө кошуңуз."
 
@@ -2195,7 +2199,7 @@ msgstr "Тамыр түйүн жок."
 msgid "No rows yet."
 msgstr "Азырынча саптар жок."
 
-#: js/views/admin-catalogs.js:160
+#: js/views/admin-catalogs.js:161
 msgid "No scales yet. Add the first one below."
 msgstr "Азырынча шкалалар жок. Биринчисин төмөндө кошуңуз."
 
@@ -2203,7 +2207,7 @@ msgstr "Азырынча шкалалар жок. Биринчисин төмө�
 msgid "No scoring rule yet."
 msgstr "Азырынча баалоо эрежеси жок."
 
-#: js/views/admin-catalogs.js:81
+#: js/views/admin-catalogs.js:82
 msgid "No units yet. Add the first one below."
 msgstr "Азырынча өлчөө бирдиктери жок. Биринчисин төмөндө кошуңуз."
 
@@ -2259,7 +2263,7 @@ msgstr "Азырынча колдонулбагандар: {count}"
 msgid "Notes"
 msgstr "Эскертүүлөр"
 
-#: js/dom.js:67
+#: js/dom.js:84
 msgid "Nothing here yet."
 msgstr "Бул жерде азырынча эч нерсе жок."
 
@@ -2275,7 +2279,7 @@ msgstr "Баары жайында."
 msgid "Number"
 msgstr "Сан"
 
-#: js/views/admin-catalogs.js:97
+#: js/views/admin-catalogs.js:98
 msgid ""
 "Numbers with equal steps but no true zero, such as a temperature in °C."
 msgstr ""
@@ -2286,7 +2290,7 @@ msgstr ""
 msgid "Object"
 msgstr "Объект"
 
-#: js/views/admin-catalogs.js:259 js/views/admin-methodologies.js:81
+#: js/views/admin-catalogs.js:260 js/views/admin-methodologies.js:81
 msgid "Object type"
 msgstr "Объекттин түрү"
 
@@ -2298,15 +2302,15 @@ msgstr "Объекттин түрү / Объект"
 msgid "Object type = the kind of thing assessed. Object = one concrete thing."
 msgstr "Объекттин түрү — эмне бааланат. Объект — бир конкреттүү нерсе."
 
-#: js/views/admin-catalogs.js:15 js/views/dashboard.js:50
+#: js/views/admin-catalogs.js:16 js/views/dashboard.js:50
 msgid "Object types"
 msgstr "Объекттердин түрлөрү"
 
-#: js/views/admin-catalogs.js:224
+#: js/views/admin-catalogs.js:225
 msgid "Object types used by objects or methodologies can’t be deleted."
 msgstr "Объекттер же методикалар колдонгон түрлөрдү өчүрүүгө болбойт."
 
-#: js/views/admin-catalogs.js:211
+#: js/views/admin-catalogs.js:212
 msgid "Object types: what kind of thing is assessed"
 msgstr "Объекттердин түрлөрү: эмне бааланат"
 
@@ -2314,15 +2318,15 @@ msgstr "Объекттердин түрлөрү: эмне бааланат"
 msgid "Object types: {count}"
 msgstr "Объекттердин түрлөрү: {count}"
 
-#: js/views/admin-catalogs.js:16 js/views/dashboard.js:144
+#: js/views/admin-catalogs.js:17 js/views/dashboard.js:144
 msgid "Objects"
 msgstr "Объекттер"
 
-#: js/views/admin-catalogs.js:265
+#: js/views/admin-catalogs.js:266
 msgid "Objects with assessments can’t be deleted."
 msgstr "Баалоолору бар объекттерди өчүрүүгө болбойт."
 
-#: js/views/admin-catalogs.js:245
+#: js/views/admin-catalogs.js:246
 msgid "Objects: the concrete things being assessed"
 msgstr "Объекттер: бааланып жаткан конкреттүү нерселер"
 
@@ -2341,7 +2345,7 @@ msgstr ""
 msgid "One methodology version applied to one object."
 msgstr "Бир объектке колдонулган методиканын бир версиясы."
 
-#: js/views/admin-catalogs.js:262 js/views/respondent.js:116
+#: js/views/admin-catalogs.js:263 js/views/respondent.js:116
 msgid "One per line, e.g. year_built = 1987"
 msgstr "Ар бир сапка бирден, мисалы year_built = 1987"
 
@@ -2357,7 +2361,11 @@ msgstr "Ачуу"
 msgid "Open in the question library"
 msgstr "Суроолор китепканасында ачуу"
 
-#: js/main.js:214
+#: js/main.js:210
+msgid "Open it in its own window"
+msgstr "Аны өзүнчө терезеде ачыңыз"
+
+#: js/main.js:229
 msgid ""
 "Open the app from the Django server (python manage.py runserver, then "
 "http://localhost:8000), not from a file or another web server."
@@ -2384,7 +2392,7 @@ msgstr ""
 "Китепкананы карап чыгуу үчүн милдеттүү эмес папкалар. Баалоого таасир "
 "этпейт."
 
-#: js/dom.js:268
+#: js/dom.js:304
 msgid "Optional. Where a translation is missing, the {lang} text is shown."
 msgstr "Милдеттүү эмес. Котормо жок жерде {lang} тексти көрсөтүлөт."
 
@@ -2415,7 +2423,7 @@ msgstr "Варианттар, ар бир сапка бирден"
 msgid "Options: {count}"
 msgstr "Варианттар: {count}"
 
-#: js/views/admin-catalogs.js:96
+#: js/views/admin-catalogs.js:97
 msgid ""
 "Ordered levels with names, such as 1 Poor … 5 Excellent. The most common "
 "choice."
@@ -2435,7 +2443,7 @@ msgstr "Башка эскертүүлөр."
 msgid "Other screens pick from these lists."
 msgstr "Башка экрандар ушул тизмелерден тандайт."
 
-#: js/main.js:179
+#: js/main.js:182
 msgid "Page not found."
 msgstr "Барак табылган жок."
 
@@ -2492,7 +2500,7 @@ msgstr ""
 "Жыйынтыкта көрсөтүлүүчү түшүнүктүү түшүндүрмө, мисалы «0,5–2 мм жаракалар: "
 "жергиликтүү оңдоо керек»."
 
-#: js/dom.js:293
+#: js/dom.js:329
 msgid "Please fix the highlighted fields."
 msgstr "Белгиленген талааларды оңдоңуз."
 
@@ -2520,7 +2528,7 @@ msgstr "Жарыялоодон мурун оңдоо керек: {count}"
 msgid "Problems: {count}"
 msgstr "Көйгөйлөр: {count}"
 
-#: js/main.js:103 js/views/account.js:71
+#: js/main.js:104 js/views/account.js:71
 msgid "Profile"
 msgstr "Профиль"
 
@@ -2646,7 +2654,7 @@ msgstr "Анкеталар"
 msgid "Questionnaires available"
 msgstr "Жеткиликтүү анкеталар"
 
-#: js/main.js:44 js/views/admin-questions.js:55 js/views/admin-questions.js:89
+#: js/main.js:45 js/views/admin-questions.js:55 js/views/admin-questions.js:89
 #: js/views/dashboard.js:55 js/views/dashboard.js:142 js/views/help.js:45
 msgid "Questions"
 msgstr "Суроолор"
@@ -2670,7 +2678,7 @@ msgstr ""
 msgid "Questions: {count}"
 msgstr "Суроолор: {count}"
 
-#: js/views/admin-catalogs.js:163
+#: js/views/admin-catalogs.js:164
 msgid "Range"
 msgstr "Аралык"
 
@@ -2690,11 +2698,11 @@ msgstr "Шкала боюнча баа"
 msgid "Rating scale"
 msgstr "Баалоо шкаласы"
 
-#: js/views/admin-catalogs.js:13 js/views/dashboard.js:51
+#: js/views/admin-catalogs.js:14 js/views/dashboard.js:51
 msgid "Rating scales"
 msgstr "Баалоо шкалалары"
 
-#: js/views/admin-catalogs.js:152
+#: js/views/admin-catalogs.js:153
 msgid "Rating scales: the measuring stick for scores"
 msgstr "Баалоо шкалалары: баллдар үчүн өлчөм"
 
@@ -2714,7 +2722,7 @@ msgstr "Жыйынтыкты кантип окуу керек"
 msgid "Ready to publish: no problems found."
 msgstr "Жарыялоого даяр: көйгөйлөр табылган жок."
 
-#: js/views/admin-catalogs.js:254 js/views/admin-catalogs.js:261
+#: js/views/admin-catalogs.js:255 js/views/admin-catalogs.js:262
 #: js/views/respondent.js:115 js/views/respondent.js:168
 msgid "Reference"
 msgstr "Идентификатор"
@@ -2756,31 +2764,31 @@ msgstr "Жаңы сырсөздү кайталаңыз"
 msgid "Repeat the password"
 msgstr "Сырсөздү кайталаңыз"
 
-#: js/main.js:76
+#: js/main.js:77
 msgid "Replace all data on the server with the example data"
 msgstr "Сервердеги бардык маалыматтарды мисал маалыматтары менен алмаштыруу"
 
-#: js/api.js:32
+#: js/api.js:34
 msgid "Request failed ({status})."
 msgstr "Суроо-талап аткарылган жок ({status})."
 
-#: js/dom.js:234 js/dom.js:256 js/dom.js:262
+#: js/dom.js:270 js/dom.js:292 js/dom.js:298
 msgid "Required"
 msgstr "Милдеттүү"
 
-#: js/dom.js:309
+#: js/dom.js:345
 msgid "Required."
 msgstr "Милдеттүү талаа."
 
-#: js/views/admin-catalogs.js:202
+#: js/views/admin-catalogs.js:203
 msgid "Requires evidence"
 msgstr "Далил талап кылынат"
 
-#: js/main.js:95
+#: js/main.js:96
 msgid "Reset demo data"
 msgstr "Демо маалыматтарды калыбына келтирүү"
 
-#: js/views/admin-catalogs.js:213
+#: js/views/admin-catalogs.js:214
 msgid "Residential building, Office building."
 msgstr "Турак жай имараты, Кеңсе имараты."
 
@@ -2860,7 +2868,7 @@ msgstr "Сактоо"
 msgid "Save category"
 msgstr "Категорияны сактоо"
 
-#: js/views/admin-catalogs.js:63
+#: js/views/admin-catalogs.js:64
 msgid "Save changes"
 msgstr "Өзгөртүүлөрдү сактоо"
 
@@ -2868,7 +2876,7 @@ msgstr "Өзгөртүүлөрдү сактоо"
 msgid "Save criterion"
 msgstr "Критерийди сактоо"
 
-#: js/views/admin-catalogs.js:131
+#: js/views/admin-catalogs.js:132
 msgid "Save level"
 msgstr "Деңгээлди сактоо"
 
@@ -2900,13 +2908,13 @@ msgstr "Жөндөөлөрдү сактоо"
 msgid "Saved in"
 msgstr "Сакталат:"
 
-#: js/views/admin-catalogs.js:42 js/views/admin-catalogs.js:143
+#: js/views/admin-catalogs.js:43 js/views/admin-catalogs.js:144
 #: js/views/admin-methodologies.js:89 js/views/admin-questions.js:106
 #: js/views/admin-questions.js:185 js/views/admin-questions.js:242
 msgid "Saved: {name}."
 msgstr "Сакталды: {name}."
 
-#: js/dom.js:317 js/main.js:123 js/main.js:226
+#: js/dom.js:353 js/main.js:124 js/main.js:241
 msgid "Saving…"
 msgstr "Сакталууда…"
 
@@ -2938,7 +2946,7 @@ msgstr "Шкалалардын деңгээлдери"
 msgid "Scale to 1"
 msgstr "1ге келтирүү"
 
-#: js/views/admin-catalogs.js:169
+#: js/views/admin-catalogs.js:170
 msgid "Scale type"
 msgstr "Шкаланын түрү"
 
@@ -2946,7 +2954,7 @@ msgstr "Шкаланын түрү"
 msgid "Scales for answers, node scores and results."
 msgstr "Жооптор, түйүндөрдүн баллдары жана жыйынтыктар үчүн шкалалар."
 
-#: js/views/admin-catalogs.js:176
+#: js/views/admin-catalogs.js:177
 msgid "Scales used by questions, methodologies or criteria can’t be deleted."
 msgstr ""
 "Суроолордо, методикаларда же критерийлерде колдонулган шкалаларды өчүрүүгө "
@@ -2990,7 +2998,7 @@ msgstr "Баалоо эрежелери"
 msgid "Search"
 msgstr "Издөө"
 
-#: js/dom.js:152
+#: js/dom.js:188
 msgid "Sections"
 msgstr "Бөлүмдөр"
 
@@ -3050,7 +3058,7 @@ msgstr "Көрсөтүү"
 msgid "Show all tips again"
 msgstr "Бардык кеңештерди кайра көрсөтүү"
 
-#: js/main.js:66
+#: js/main.js:67
 msgid "Show explanations and tips"
 msgstr "Түшүндүрмөлөрдү жана кеңештерди көрсөтүү"
 
@@ -3072,7 +3080,7 @@ msgstr "Коңшу түйүндөрдүн суммасы: {sum}."
 msgid "Sign in"
 msgstr "Кирүү"
 
-#: js/main.js:112
+#: js/main.js:113
 msgid "Sign out"
 msgstr "Чыгуу"
 
@@ -3121,11 +3129,11 @@ msgstr "Башталды"
 msgid "Status"
 msgstr "Абалы"
 
-#: js/views/admin-catalogs.js:172
+#: js/views/admin-catalogs.js:173
 msgid "Step"
 msgstr "Кадам"
 
-#: js/views/admin-catalogs.js:275
+#: js/views/admin-catalogs.js:276
 msgid ""
 "Step 1 of the setup. Shared reference lists that questions and methodologies"
 " pick from. Usually set up once and reused everywhere."
@@ -3263,7 +3271,7 @@ msgstr ""
 "керек. Тандоо жана ооба/жок суроолору үчүн ар бир мүмкүн болгон жоопко бир "
 "критерий керек."
 
-#: js/main.js:213
+#: js/main.js:228
 msgid "The app could not start."
 msgstr "Тиркеме иштеп баштаган жок."
 
@@ -3380,7 +3388,7 @@ msgstr ""
 "Бул түйүн берген китепканадагы суроо. Аны алмаштырганда түйүндүн "
 "критерийлери өчүрүлөт, анткени алар эски суроого тиешелүү."
 
-#: js/views/admin-catalogs.js:155
+#: js/views/admin-catalogs.js:156
 msgid ""
 "The lowest and highest scores are used by linear scoring rules: the worst "
 "answer gets the lowest score, the best answer the highest."
@@ -3406,7 +3414,7 @@ msgstr ""
 msgid "The number entered is used as the score as it is."
 msgstr "Киргизилген сан өзгөрүүсүз балл катары колдонулат."
 
-#: js/views/admin-catalogs.js:134
+#: js/views/admin-catalogs.js:135
 msgid ""
 "The number this level stands for. Scores are shown with the nearest level."
 msgstr ""
@@ -3447,7 +3455,7 @@ msgid ""
 "The raw number is the score. Only for answers already on the score scale."
 msgstr "Баштапкы сан — бул балл. Балл шкаласында берилген жооптор үчүн гана."
 
-#: js/views/admin-catalogs.js:247
+#: js/views/admin-catalogs.js:248
 msgid ""
 "The reference is your own identifier, such as a cadastral number. Attributes"
 " are free notes like the year built. Object names are not translated."
@@ -3503,7 +3511,7 @@ msgstr ""
 msgid "The score is calculated as {formula}, kept within {lo}–{hi}."
 msgstr "Балл {formula} катары {lo}–{hi} чегинде эсептелет."
 
-#: js/api.js:25
+#: js/api.js:27
 msgid ""
 "The server hit an error ({status}). Check the runserver console for details."
 msgstr ""
@@ -3540,6 +3548,22 @@ msgstr ""
 "Эң начар маани эң төмөнкү, эң жакшысы эң жогорку балл алат, ортосунда — "
 "пропорционалдуу."
 
+#: js/dom.js:115
+msgid "Theme: dark"
+msgstr "Тема: караңгы"
+
+#: js/dom.js:115
+msgid "Theme: follow the system"
+msgstr "Тема: системадагыдай"
+
+#: js/dom.js:115
+msgid "Theme: light"
+msgstr "Тема: ачык"
+
+#: js/main.js:209
+msgid "This app can’t be used inside a frame."
+msgstr "Бул тиркемени фреймдин ичинде колдонууга болбойт."
+
 #: js/views/admin-methodologies.js:124
 msgid ""
 "This checklist is re-checked by the server after every change. Click a code "
@@ -3548,7 +3572,7 @@ msgstr ""
 "Сервер бул тизмени ар бир өзгөртүүдөн кийин кайра текшерет. Түйүндү ачуу "
 "үчүн кодду басыңыз."
 
-#: js/views/admin-catalogs.js:84
+#: js/views/admin-catalogs.js:85
 msgid ""
 "This is exactly what respondents see next to the input field, in every "
 "language."
@@ -3568,7 +3592,7 @@ msgstr ""
 msgid "This node has no scoring rule."
 msgstr "Бул түйүндүн баалоо эрежеси жок."
 
-#: js/main.js:182
+#: js/main.js:185
 msgid "This page failed to render:"
 msgstr "Баракты көрсөтүү мүмкүн болбоду:"
 
@@ -3665,11 +3689,11 @@ msgstr "Жардамчыларды өчүрүү"
 msgid "Turn helpers on"
 msgstr "Жардамчыларды күйгүзүү"
 
-#: js/views/admin-catalogs.js:94
+#: js/views/admin-catalogs.js:95
 msgid "Two outcomes only, such as Pass / Fail."
 msgstr "Эки гана натыйжа, мисалы Өттү / Өтпөдү."
 
-#: js/views/admin-catalogs.js:162 js/views/admin-catalogs.js:253
+#: js/views/admin-catalogs.js:163 js/views/admin-catalogs.js:254
 #: js/views/respondent.js:113 js/views/respondent.js:168
 msgid "Type"
 msgstr "Түрү"
@@ -3691,7 +3715,7 @@ msgstr "Өлчөө бирдиги"
 msgid "Unit / scale"
 msgstr "Бирдик / шкала"
 
-#: js/views/admin-catalogs.js:12 js/views/dashboard.js:49
+#: js/views/admin-catalogs.js:13 js/views/dashboard.js:49
 msgid "Units"
 msgstr "Бирдиктер"
 
@@ -3707,7 +3731,7 @@ msgstr ""
 "Өлчөө бирдиктери, деңгээлдери бар шкалалар, баалоо ыкмалары жана "
 "объекттердин түрлөрү."
 
-#: js/views/admin-catalogs.js:88
+#: js/views/admin-catalogs.js:89
 msgid "Units used by a question can’t be deleted."
 msgstr "Суроодо колдонулган бирдиктерди өчүрүүгө болбойт."
 
@@ -3748,7 +3772,7 @@ msgid "Use “Try the rule” to check that answers get the scores you expect."
 msgstr ""
 "«Эрежени текшерүү» аркылуу жооптор күтүлгөн баллдарды аларын текшериңиз."
 
-#: js/api.js:26
+#: js/api.js:28
 msgid "Used by: {list}."
 msgstr "Колдонулат: {list}."
 
@@ -3760,11 +3784,11 @@ msgstr "Кайда колдонулат"
 msgid "Username"
 msgstr "Колдонуучунун аты"
 
-#: js/main.js:102
+#: js/main.js:103
 msgid "Users and roles"
 msgstr "Колдонуучулар жана ролдор"
 
-#: js/main.js:102
+#: js/main.js:103
 msgid "Users and roles are managed in Django admin"
 msgstr "Колдонуучулар жана ролдор Django admin де башкарылат"
 
@@ -3772,7 +3796,7 @@ msgstr "Колдонуучулар жана ролдор Django admin де ба�
 msgid "Usually a short version of the question."
 msgstr "Адатта суроонун кыска түрү."
 
-#: js/views/admin-catalogs.js:122 js/views/admin-catalogs.js:134
+#: js/views/admin-catalogs.js:123 js/views/admin-catalogs.js:135
 msgid "Value"
 msgstr "Мааниси"
 
@@ -3859,7 +3883,7 @@ msgstr "Салмактар жуптап салыштыруудан алынга�
 msgid "Weights were derived from a ranking of importance."
 msgstr "Салмактар маанилүүлүгү боюнча рейтингден алынган."
 
-#: js/views/admin-catalogs.js:75
+#: js/views/admin-catalogs.js:76
 msgid "What are units for?"
 msgstr "Өлчөө бирдиктери эмне үчүн керек?"
 
@@ -3894,7 +3918,7 @@ msgstr ""
 msgid "What this group measures, e.g. “Structural condition”."
 msgstr "Бул топ эмнени өлчөйт, мисалы «Конструкциялардын абалы»."
 
-#: js/views/admin-catalogs.js:136
+#: js/views/admin-catalogs.js:137
 msgid ""
 "What this level means in practice, e.g. “Minor defects; no repair needed "
 "now”."
@@ -3946,7 +3970,7 @@ msgstr ""
 msgid "With several options ticked, the lowest of their scores counts."
 msgstr "Бир нече вариант белгиленсе, алардын эң төмөнкү баллы эсептелет."
 
-#: js/views/admin-catalogs.js:276
+#: js/views/admin-catalogs.js:277
 msgid ""
 "Work through the tabs from left to right. Records that are in use can’t be "
 "deleted; you will see what uses them instead."
@@ -4013,7 +4037,7 @@ msgstr ""
 "Сиз жөнөкөй колдонуучусуз: баалоолорду толтуруп, өз тарыхыңызды көрө аласыз."
 " Администратордун панелине кирүү керек болсо, администраторго кайрылыңыз."
 
-#: js/api.js:23
+#: js/api.js:25
 msgid "You are signed out. Sign in again."
 msgstr "Сиз системадан чыктыңыз. Кайра кириңиз."
 
@@ -4029,7 +4053,7 @@ msgstr ""
 "Каалаган убакта токтосоңуз болот: жооптор дароо сакталат. Толтурулгандын "
 "баары тарыхыңызда калат."
 
-#: js/api.js:24
+#: js/api.js:26
 msgid ""
 "You don’t have permission to do this. Only admins can change this data."
 msgstr ""
@@ -4052,7 +4076,7 @@ msgstr ""
 msgid "Your details, language and password."
 msgstr "Сиздин маалыматыңыз, тилиңиз жана сырсөзүңүз."
 
-#: js/main.js:19
+#: js/main.js:20
 msgid ""
 "Your role doesn’t give access to this page. Ask a superuser if you need it."
 msgstr ""
@@ -4083,7 +4107,7 @@ msgstr ""
 msgid "any object type"
 msgstr "объекттин каалаган түрү"
 
-#: js/dom.js:47
+#: js/dom.js:64
 msgid "archived"
 msgstr "архивде"
 
@@ -4091,19 +4115,19 @@ msgstr "архивде"
 msgid "below {threshold}"
 msgstr "{threshold} төмөн"
 
-#: js/views/admin-catalogs.js:110 js/views/admin-catalogs.js:110
+#: js/views/admin-catalogs.js:111 js/views/admin-catalogs.js:111
 msgid "better"
 msgstr "жакшыраак"
 
-#: js/views/admin-catalogs.js:100
+#: js/views/admin-catalogs.js:101
 msgid "binary"
 msgstr "бинардык"
 
-#: js/dom.js:47
+#: js/dom.js:64
 msgid "cancelled"
 msgstr "жокко чыгарылды"
 
-#: js/dom.js:47 js/views/respondent.js:511
+#: js/dom.js:64 js/views/respondent.js:511
 msgid "completed"
 msgstr "аяктады"
 
@@ -4115,27 +4139,27 @@ msgstr "документ"
 msgid "done"
 msgstr "даяр"
 
-#: js/dom.js:46
+#: js/dom.js:63
 msgid "draft"
 msgstr "долбоор"
 
-#: js/views/admin-catalogs.js:170
+#: js/views/admin-catalogs.js:171
 msgid "e.g. 1"
 msgstr "мисалы, 1"
 
-#: js/views/admin-catalogs.js:171
+#: js/views/admin-catalogs.js:172
 msgid "e.g. 5"
 msgstr "мисалы, 5"
 
-#: js/views/admin-catalogs.js:168
+#: js/views/admin-catalogs.js:169
 msgid "e.g. 5-point quality"
 msgstr "мисалы, 5 баллдык сапат"
 
-#: js/views/admin-catalogs.js:260 js/views/respondent.js:114
+#: js/views/admin-catalogs.js:261 js/views/respondent.js:114
 msgid "e.g. Block A, Riverside residential complex"
 msgstr "мисалы, А корпусу, Riverside турак жай комплекси"
 
-#: js/views/admin-catalogs.js:135
+#: js/views/admin-catalogs.js:136
 msgid "e.g. Good"
 msgstr "мисалы, Жакшы"
 
@@ -4143,7 +4167,7 @@ msgstr "мисалы, Жакшы"
 msgid "e.g. Local cracks"
 msgstr "мисалы, Жергиликтүү жаракалар"
 
-#: js/views/admin-catalogs.js:85
+#: js/views/admin-catalogs.js:86
 msgid "e.g. Millimetre"
 msgstr "мисалы, Миллиметр"
 
@@ -4159,11 +4183,11 @@ msgstr "мисалы, Конструкциялар"
 msgid "e.g. TECH_RES"
 msgstr "мисалы, TECH_RES"
 
-#: js/views/admin-catalogs.js:200
+#: js/views/admin-catalogs.js:201
 msgid "e.g. Visual inspection"
 msgstr "мисалы, Визуалдык текшерүү"
 
-#: js/views/admin-catalogs.js:84
+#: js/views/admin-catalogs.js:85
 msgid "e.g. mm, m², %"
 msgstr "мисалы, mm, m², %"
 
@@ -4179,11 +4203,11 @@ msgstr "топ"
 msgid "has problems"
 msgstr "көйгөйлөр бар"
 
-#: js/views/admin-catalogs.js:120
+#: js/views/admin-catalogs.js:121
 msgid "higher is better"
 msgstr "көбүрөөк — жакшыраак"
 
-#: js/dom.js:46
+#: js/dom.js:63
 msgid "in progress"
 msgstr "аткарылууда"
 
@@ -4191,7 +4215,7 @@ msgstr "аткарылууда"
 msgid "inactive"
 msgstr "активдүү эмес"
 
-#: js/views/admin-catalogs.js:100
+#: js/views/admin-catalogs.js:101
 msgid "interval"
 msgstr "интервалдык"
 
@@ -4203,7 +4227,7 @@ msgstr "критикалык өтпөө"
 msgid "link"
 msgstr "шилтеме"
 
-#: js/views/admin-catalogs.js:120
+#: js/views/admin-catalogs.js:121
 msgid "lower is better"
 msgstr "азыраак — жакшыраак"
 
@@ -4231,7 +4255,7 @@ msgstr "кийинки"
 msgid "no scale"
 msgstr "шкаласыз"
 
-#: js/views/admin-catalogs.js:100
+#: js/views/admin-catalogs.js:101
 msgid "nominal"
 msgstr "номиналдык"
 
@@ -4239,19 +4263,19 @@ msgstr "номиналдык"
 msgid "not used"
 msgstr "колдонулбайт"
 
-#: js/main.js:69
+#: js/main.js:70
 msgid "off"
 msgstr "өчүк"
 
-#: js/main.js:69
+#: js/main.js:70
 msgid "on"
 msgstr "күйүк"
 
-#: js/views/admin-catalogs.js:196 js/views/respondent.js:362
+#: js/views/admin-catalogs.js:197 js/views/respondent.js:362
 msgid "optional"
 msgstr "милдеттүү эмес"
 
-#: js/views/admin-catalogs.js:100
+#: js/views/admin-catalogs.js:101
 msgid "ordinal"
 msgstr "тартиптик"
 
@@ -4263,7 +4287,7 @@ msgstr "сүрөт"
 msgid "primary"
 msgstr "негизги"
 
-#: js/dom.js:46
+#: js/dom.js:63
 msgid "published"
 msgstr "жарыяланган"
 
@@ -4271,11 +4295,11 @@ msgstr "жарыяланган"
 msgid "question"
 msgstr "суроо"
 
-#: js/views/admin-catalogs.js:100
+#: js/views/admin-catalogs.js:101
 msgid "ratio"
 msgstr "катыштар"
 
-#: js/views/admin-catalogs.js:196 js/views/respondent.js:362
+#: js/views/admin-catalogs.js:197 js/views/respondent.js:362
 msgid "required"
 msgstr "милдеттүү"
 
@@ -4287,7 +4311,7 @@ msgstr "шкала"
 msgid "sign up themselves, fill in assessments and see their own history."
 msgstr "өздөрү катталышат, баалоолорду толтурушат жана өз тарыхын көрүшөт."
 
-#: js/main.js:100 js/views/account.js:80
+#: js/main.js:101 js/views/account.js:80
 msgid "standard user"
 msgstr "жөнөкөй колдонуучу"
 
@@ -4295,11 +4319,11 @@ msgstr "жөнөкөй колдонуучу"
 msgid "standard user: fills in assessments"
 msgstr "жөнөкөй колдонуучу: баалоолорду толтурат"
 
-#: js/views/admin-catalogs.js:120
+#: js/views/admin-catalogs.js:121
 msgid "step"
 msgstr "кадам"
 
-#: js/main.js:100 js/views/account.js:79
+#: js/main.js:101 js/views/account.js:79
 msgid "superuser"
 msgstr "суперколдонуучу"
 
@@ -4328,7 +4352,7 @@ msgstr "салмак"
 msgid "weights add up to {sum}"
 msgstr "салмактардын суммасы {sum}"
 
-#: js/views/admin-catalogs.js:110 js/views/admin-catalogs.js:110
+#: js/views/admin-catalogs.js:111 js/views/admin-catalogs.js:111
 msgid "worse"
 msgstr "начарыраак"
 
@@ -4355,7 +4379,7 @@ msgstr "— жок —"
 msgid "— top level —"
 msgstr "— жогорку деңгээл —"
 
-#: js/views/admin-catalogs.js:156
+#: js/views/admin-catalogs.js:157
 msgid ""
 "“5-point quality” runs from 1 to 5 with levels 1 Unacceptable, 2 Poor, 3 "
 "Satisfactory, 4 Good, 5 Excellent."
@@ -4371,7 +4395,7 @@ msgstr "«Баштап» мааниси «Чейин» мааниден кичи
 msgid "“Not admitted” for a critical failure"
 msgstr "Критикалык ката үчүн «Жол берилбейт»"
 
-#: js/views/admin-catalogs.js:189
+#: js/views/admin-catalogs.js:190
 msgid ""
 "“Requires evidence” reminds respondents to attach photos or documents when "
 "they use this method."

@@ -3,19 +3,35 @@
 import { helpOn } from './prefs.js';
 import { t, languages, requiredLanguages, defaultLanguage, language, setLanguage } from './i18n.js';
 import * as session from './session.js';
+import { theme, setTheme } from './theme.js';
+import { BLOCKED_TAGS, BLOCKED_ATTRS, URL_ATTRS, safeUrl, routePath } from './security.js';
 
 const PROPS = new Set(['value', 'checked', 'disabled', 'selected', 'open']);
 
+// Children are always added as text, never parsed as HTML, so data from the
+// server or the URL can't inject markup. See security.js for the other rules.
+// style takes an object ({ left: '40%' }); the CSP blocks style="" strings.
 export function h(tag, props, ...children) {
+  if (BLOCKED_TAGS.has(String(tag).toLowerCase())) throw new TypeError(`h(): <${tag}> is not allowed`);
   const el = document.createElement(tag);
   const late = [];
   for (const [k, v] of Object.entries(props ?? {})) {
     if (v == null || v === false) continue;
-    if (k.startsWith('on')) el.addEventListener(k.slice(2), v);
-    else if (k === 'class') el.className = v;
-    else if (PROPS.has(k)) late.push([k, v]);
+    const key = k.toLowerCase();
+    if (BLOCKED_ATTRS.has(key)) throw new TypeError(`h(): "${k}" is not allowed`);
+    if (key.startsWith('on')) {
+      if (typeof v !== 'function') throw new TypeError(`h(): ${k} must be a function`);
+      el.addEventListener(key.slice(2), v);
+    } else if (k === 'class') el.className = v;
+    else if (k === 'style') {
+      if (typeof v !== 'object') throw new TypeError('h(): style must be an object');
+      Object.assign(el.style, v);
+    } else if (PROPS.has(k)) late.push([k, v]);
+    else if (URL_ATTRS.has(key)) el.setAttribute(k, safeUrl(v));
     else el.setAttribute(k, v === true ? '' : v);
   }
+  // A new tab must not get a handle on this one (reverse tabnabbing).
+  if (el.getAttribute('target') === '_blank') el.setAttribute('rel', 'noopener noreferrer');
   for (const c of children.flat(Infinity)) {
     if (c == null || c === false || c === true) continue;
     el.append(c instanceof Node ? c : String(c));
@@ -32,7 +48,8 @@ export function fmt(n, digits = 2) {
   return String(Math.round(n * 10 ** digits) / 10 ** digits);
 }
 
-export const navigate = (path) => { location.hash = path; };
+// Only the app's own routes; anything else goes to the start page.
+export const navigate = (path) => { location.hash = routePath(path) ?? '/'; };
 
 export const button = (label, onclick, props = {}) =>
   h('button', { type: 'button', class: 'btn', onclick, ...props }, label);
@@ -91,6 +108,25 @@ export function languageSwitch() {
         setLanguage(l.code);
       },
     }, l.code.toUpperCase())));
+}
+
+// Auto / Light / Dark. Applies at once, no reload.
+export function themeSwitch() {
+  const options = [['auto', t('Theme: follow the system')], ['light', t('Theme: light')], ['dark', t('Theme: dark')]];
+  const group = h('div', { class: 'lang-switch theme-switch', role: 'group', 'aria-label': t('Colour theme') },
+    options.map(([value, label]) => h('button', {
+      type: 'button', class: `lang ${value === theme() ? 'active' : ''}`, title: label, 'aria-label': label,
+      'aria-pressed': value === theme() ? 'true' : 'false', 'data-theme-value': value,
+      onclick: () => {
+        setTheme(value);
+        group.querySelectorAll('button').forEach((b) => {
+          const on = b.dataset.themeValue === value;
+          b.classList.toggle('active', on);
+          b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+      },
+    }, h('span', { class: `ti ti-${value}`, 'aria-hidden': 'true' }))));
+  return group;
 }
 
 // ── Feedback ──────────────────────────────────────────────────
