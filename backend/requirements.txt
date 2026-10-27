@@ -1,0 +1,6 @@
+Django>=5.2,<6.0
+djangorestframework>=3.16
+drf-spectacular>=0.28
+django-modeltranslation>=0.19
+django-rosetta>=0.10
+# For PostgreSQL (set POSTGRES_DB): psycopg[binary]>=3.2

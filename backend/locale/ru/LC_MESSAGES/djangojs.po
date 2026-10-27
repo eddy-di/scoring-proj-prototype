@@ -1,0 +1,4373 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: qualimetry-frontend\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: js/views/admin-methodologies.js:126
+msgid "(publishing is still allowed):"
+msgstr "(опубликовать всё равно можно):"
+
+#: js/views/admin-methodologies.js:225
+msgid "(should be 1)"
+msgstr "(должно быть 1)"
+
+#: js/views/admin-methodologies.js:230
+msgid "+ group"
+msgstr "+ группа"
+
+#: js/views/admin-methodologies.js:231
+msgid "+ question"
+msgstr "+ вопрос"
+
+#: js/views/respondent.js:76
+msgid ""
+"1. Click “New assessment” and choose a questionnaire or the object you are "
+"assessing. The newest version of the questionnaire is used automatically. 2."
+" Answer every question, following its “How to assess” instructions. 3. Click"
+" “Complete assessment” to calculate the result."
+msgstr ""
+"1. Нажмите «Новая оценка» и выберите анкету или оцениваемый объект. "
+"Автоматически используется самая новая версия анкеты. 2. Ответьте на все "
+"вопросы, следуя инструкциям «Как оценивать». 3. Нажмите «Завершить оценку», "
+"чтобы рассчитать результат."
+
+#: js/help.js:103
+msgid ""
+"5-point quality: 1 Unacceptable, 2 Poor, 3 Satisfactory, 4 Good, 5 "
+"Excellent."
+msgstr ""
+"5-балльное качество: 1 Недопустимо, 2 Плохо, 3 Удовлетворительно, 4 Хорошо, "
+"5 Отлично."
+
+#: js/scoring.js:43
+msgid ""
+"A Python expression with s (child scores) and w (weights). For experienced "
+"users."
+msgstr ""
+"Выражение на Python с s (баллы дочерних узлов) и w (веса). Для опытных "
+"пользователей."
+
+#: js/views/admin-questions.js:228
+msgid "A choice question needs at least two options."
+msgstr "Вопросу с выбором нужно минимум два варианта."
+
+#: js/scoring.js:52
+msgid "A comment. Stored but never scored."
+msgstr "Комментарий. Сохраняется, но не оценивается."
+
+#: js/help.js:44
+msgid ""
+"A complete scoring scheme: which questions are asked, how important each is "
+"and how answers become scores."
+msgstr ""
+"Полная схема оценки: какие вопросы задаются, насколько важен каждый и как "
+"ответы превращаются в баллы."
+
+#: js/scoring.js:26
+msgid "A custom calculation. For experienced users."
+msgstr "Свой расчёт. Для опытных пользователей."
+
+#: js/views/admin-catalogs.js:201
+msgid ""
+"A general description. Specific instructions are written per question in the"
+" methodology."
+msgstr ""
+"Общее описание. Конкретные инструкции пишутся для каждого вопроса в "
+"методике."
+
+#: js/help.js:68
+msgid ""
+"A group node combines the scores of the nodes inside it. A question node is "
+"a leaf: it links one question from the library and scores its answer. The "
+"single node at the top is the root; its score is the final result."
+msgstr ""
+"Узел-группа объединяет баллы вложенных в него узлов. Узел-вопрос — это лист:"
+" он связан с одним вопросом из библиотеки и оценивает ответ на него. "
+"Единственный узел наверху — корень; его балл и есть итоговый результат."
+
+#: js/views/help.js:38
+msgid "A knock-out threshold"
+msgstr "Критический порог"
+
+#: js/scoring.js:47
+msgid "A measured or counted value with a unit."
+msgstr "Измеренное или подсчитанное значение с единицей измерения."
+
+#: js/views/admin-catalogs.js:187
+msgid ""
+"A method names a way of getting an answer: measuring with an instrument, "
+"inspecting on site, reading documents, calculating, or an expert’s "
+"judgement."
+msgstr ""
+"Метод называет способ получить ответ: измерение прибором, осмотр на месте, "
+"анализ документов, расчёт или мнение эксперта."
+
+#: js/help.js:119
+msgid ""
+"A methodology is written for one object type, e.g. residential buildings. "
+"Objects are the actual things respondents assess, e.g. “Block A, Riverside "
+"residential complex”."
+msgstr ""
+"Методика пишется для одного типа объектов, например жилых зданий. Объекты — "
+"это конкретные вещи, которые оценивают респонденты, например «Корпус А, ЖК "
+"„Riverside“»."
+
+#: js/views/help.js:33
+msgid "A methodology works like an exam."
+msgstr "Методика устроена как экзамен."
+
+#: js/views/help.js:36
+msgid "A methodology: the property tree with weights"
+msgstr "Методика: дерево свойств с весами"
+
+#: js/help.js:84
+msgid ""
+"A minimum score. Below it, the whole object fails regardless of its total."
+msgstr ""
+"Минимальный балл. Если ниже — весь объект не проходит, каким бы ни был итог."
+
+#: js/help.js:107
+msgid "A named point on a scale, e.g. 4 = Good."
+msgstr "Именованная точка шкалы, например 4 = Хорошо."
+
+#: js/views/admin-questions.js:52
+msgid ""
+"A question in the library only says what is asked and how it is answered (a "
+"number, a choice, yes/no…). How important it is and which answer earns which"
+" score is decided inside each methodology. That way one question can be "
+"reused by many methodologies, each scoring it in its own way."
+msgstr ""
+"Вопрос в библиотеке говорит только о том, что спрашивается и как на это "
+"отвечают (число, выбор, да/нет…). Насколько он важен и какой ответ сколько "
+"баллов даёт, решается внутри каждой методики. Так один вопрос можно "
+"использовать во многих методиках, и каждая оценивает его по-своему."
+
+#: js/views/data.js:57
+msgid ""
+"A read-only look at the raw database rows behind the screens, with the same "
+"table and column names as schema.dbml. Useful to understand where each piece"
+" of information is stored. Columns ending in “_id” point to a row in another"
+" table."
+msgstr ""
+"Просмотр (только чтение) исходных строк базы данных за экранами, с теми же "
+"именами таблиц и столбцов, что и в schema.dbml. Помогает понять, где "
+"хранится каждая часть информации. Столбцы с окончанием «_id» ссылаются на "
+"строку другой таблицы."
+
+#: js/views/admin-questions.js:266
+msgid ""
+"A respondent fills this in inside an assessment, together with the “How to "
+"assess” instructions from the methodology."
+msgstr ""
+"Респондент заполняет это внутри оценки вместе с инструкциями «Как оценивать»"
+" из методики."
+
+#: js/views/admin-questions.js:172
+msgid ""
+"A short, unique identifier, e.g. STR_CRACK_WIDTH. Methodology nodes show it "
+"in the tree."
+msgstr ""
+"Короткий уникальный идентификатор, например STR_CRACK_WIDTH. Узлы методики "
+"показывают его в дереве."
+
+#: js/views/admin-catalogs.js:9
+msgid ""
+"A short, unique name for the record, used by the API and in exports. Use "
+"letters, digits and “_”, no spaces."
+msgstr ""
+"Короткое уникальное имя записи для API и выгрузок. Используйте латинские "
+"буквы, цифры и «_», без пробелов."
+
+#: js/scoring.js:50
+msgid "A simple yes or no."
+msgstr "Простой ответ «да» или «нет»."
+
+#: js/help.js:50
+msgid ""
+"A snapshot of a methodology. Drafts can be edited; published versions are "
+"locked."
+msgstr ""
+"Снимок методики. Черновики можно править, опубликованные версии "
+"заблокированы."
+
+#: js/scoring.js:11
+msgid "A table of conditions and the score each one gives."
+msgstr "Таблица условий и баллов, которые даёт каждое из них."
+
+#: js/views/admin-catalogs.js:76
+msgid ""
+"A unit is the label shown next to a numeric answer, such as “mm” after a "
+"crack width. It helps the respondent enter the value in the right unit. "
+"Units don’t convert anything."
+msgstr ""
+"Единица измерения — это подпись рядом с числовым ответом, например «мм» "
+"после ширины трещины. Она помогает респонденту ввести значение в нужных "
+"единицах. Единицы ничего не пересчитывают."
+
+#: js/views/help.js:60
+msgid "Accounts and roles"
+msgstr "Учётные записи и роли"
+
+#: js/views/dashboard.js:30
+msgid "Active questions: {count}"
+msgstr "Активных вопросов: {count}"
+
+#: js/views/admin-questions.js:174
+msgid "Active: can be added to methodologies"
+msgstr "Активен: можно добавлять в методики"
+
+#: js/dom.js:169
+msgid "Add"
+msgstr "Добавить"
+
+#: js/views/admin-methodologies.js:505
+msgid "Add Yes and No criteria"
+msgstr "Добавить критерии «Да» и «Нет»"
+
+#: js/views/admin-methodologies.js:505
+msgid "Add a criterion for each option (missing: {count})"
+msgstr "Добавить критерий для каждого варианта (не хватает: {count})"
+
+#: js/views/admin-catalogs.js:179
+msgid ""
+"Add a level for every point that needs a name. Most scales need one level "
+"per whole number."
+msgstr ""
+"Добавьте уровень для каждой точки, которой нужно название. Обычно нужен "
+"уровень на каждое целое число."
+
+#: js/views/admin-catalogs.js:193
+msgid "Add a method"
+msgstr "Добавить метод"
+
+#: js/views/admin-methodologies.js:231
+msgid "Add a question inside {name}"
+msgstr "Добавить вопрос в «{name}»"
+
+#: js/views/admin-catalogs.js:160
+msgid "Add a scale"
+msgstr "Добавить шкалу"
+
+#: js/views/admin-methodologies.js:230
+msgid "Add a sub-group inside {name}"
+msgstr "Добавить подгруппу в «{name}»"
+
+#: js/views/admin-catalogs.js:81
+msgid "Add a unit"
+msgstr "Добавить единицу измерения"
+
+#: js/views/admin-catalogs.js:251
+msgid "Add an object"
+msgstr "Добавить объект"
+
+#: js/views/admin-catalogs.js:217
+msgid "Add an object type"
+msgstr "Добавить тип объекта"
+
+#: js/views/admin-catalogs.js:121
+msgid "Add at least two levels so scores can be named."
+msgstr "Добавьте хотя бы два уровня, чтобы баллы получили названия."
+
+#: js/views/admin-questions.js:97
+msgid "Add category"
+msgstr "Добавить категорию"
+
+#: js/views/admin-methodologies.js:509
+msgid "Add criterion"
+msgstr "Добавить критерий"
+
+#: js/views/help.js:47
+msgid ""
+"Add groups and question nodes. Give siblings weights that add up to 1. Add "
+"knock-out thresholds for critical questions."
+msgstr ""
+"Добавьте группы и узлы-вопросы. Задайте соседним узлам веса с суммой 1. "
+"Добавьте критические пороги для важнейших вопросов."
+
+#: js/views/admin-catalogs.js:131
+msgid "Add level"
+msgstr "Добавить уровень"
+
+#: js/views/admin-catalogs.js:193 js/views/admin-methodologies.js:361
+msgid "Add method"
+msgstr "Добавить метод"
+
+#: js/views/admin-catalogs.js:251
+msgid "Add object"
+msgstr "Добавить объект"
+
+#: js/views/admin-catalogs.js:217
+msgid "Add object type"
+msgstr "Добавить тип объекта"
+
+#: js/views/admin-questions.js:230
+msgid "Add option"
+msgstr "Добавить вариант"
+
+#: js/views/admin-catalogs.js:160
+msgid "Add scale"
+msgstr "Добавить шкалу"
+
+#: js/views/admin-catalogs.js:77
+msgid "Add the unit before you create a numeric question that needs it."
+msgstr ""
+"Добавьте единицу измерения до того, как создадите числовой вопрос с ней."
+
+#: js/views/admin-catalogs.js:81
+msgid "Add unit"
+msgstr "Добавить единицу"
+
+#: js/views/admin-methodologies.js:211
+msgid "Added a group. Give it a name."
+msgstr "Группа добавлена. Дайте ей название."
+
+#: js/views/admin-methodologies.js:211
+msgid "Added a question node. Link a question to it."
+msgstr "Узел-вопрос добавлен. Привяжите к нему вопрос."
+
+#: js/views/admin-catalogs.js:46
+msgid "Added: {name}."
+msgstr "Добавлено: {name}."
+
+#: js/main.js:50 js/views/help.js:63
+msgid "Admin"
+msgstr "Администрирование"
+
+#: js/views/dashboard.js:117
+msgid "Admin dashboard"
+msgstr "Панель администратора"
+
+#: js/views/account.js:33
+msgid "Admin role: catalogs, questions, methodologies, all assessments"
+msgstr "роль Admin: справочники, вопросы, методики, все оценки"
+
+#: js/views/help.js:42
+msgid "Admin: the usual order of work"
+msgstr "Администратор: обычный порядок работы"
+
+#: js/help.js:77
+msgid "Aggregation"
+msgstr "Свёртка"
+
+#: js/views/respondent.js:218 js/views/respondent.js:220
+#: js/views/respondent.js:222
+msgid "All"
+msgstr "Все"
+
+#: js/main.js:46 js/views/respondent.js:212 js/views/respondent.js:280
+#: js/views/respondent.js:510
+msgid "All assessments"
+msgstr "Все оценки"
+
+#: js/views/admin-questions.js:62
+msgid "All categories"
+msgstr "Все категории"
+
+#: js/views/admin-questions.js:64
+msgid "All questions"
+msgstr "Все вопросы"
+
+#: js/views/admin-methodologies.js:17
+msgid "All siblings weigh the same."
+msgstr "У всех соседних узлов одинаковый вес."
+
+#: js/views/dashboard.js:127
+msgid ""
+"All steps are done. You can still go back and change anything; published "
+"versions need a new version first."
+msgstr ""
+"Все шаги выполнены. Вы можете вернуться и что-то изменить; для "
+"опубликованных версий сначала создайте новую версию."
+
+#: js/help.js:51
+msgid ""
+"All the content of a methodology lives in a version. A draft can be changed "
+"freely. Publishing locks it so that every assessment made with it can always"
+" be recalculated and explained. To change a published version, create a new "
+"version: it starts as an editable copy."
+msgstr ""
+"Всё содержимое методики хранится в версии. Черновик можно свободно менять. "
+"Публикация блокирует версию, чтобы любую оценку по ней всегда можно было "
+"пересчитать и объяснить. Чтобы изменить опубликованную версию, создайте "
+"новую: она начинается как редактируемая копия."
+
+#: js/views/admin-methodologies.js:46
+msgid ""
+"All the content of a methodology – its tree, weights, rules and criteria – "
+"lives in a version. You work in a draft and publish it when the checklist is"
+" empty. A published version is locked, so assessments made with it can "
+"always be explained."
+msgstr ""
+"Всё содержимое методики — дерево, веса, правила и критерии — хранится в "
+"версии. Вы работаете в черновике и публикуете его, когда список проверки "
+"пуст. Опубликованная версия заблокирована, поэтому оценки по ней всегда "
+"можно объяснить."
+
+#: js/views/help.js:23
+msgid "All tips will be shown again."
+msgstr "Все подсказки снова будут показаны."
+
+#: js/views/admin-questions.js:60
+msgid "All types"
+msgstr "Все типы"
+
+#: js/views/account.js:64
+msgid "Already have an account?"
+msgstr "Уже есть учётная запись?"
+
+#: js/scoring.js:32
+msgid "An expert rating from 1 to 5."
+msgstr "Экспертная оценка от 1 до 5."
+
+#: js/views/admin-catalogs.js:246
+msgid ""
+"An object is one real building, apartment or product. Respondents pick an "
+"object when they start an assessment, and they can also register new objects"
+" themselves."
+msgstr ""
+"Объект — это одно реальное здание, квартира или изделие. Респонденты "
+"выбирают объект, когда начинают оценку, и могут сами регистрировать новые "
+"объекты."
+
+#: js/views/admin-methodologies.js:21
+msgid "Another method; describe it in the notes."
+msgstr "Другой способ; опишите его в заметках."
+
+#: js/views/admin-methodologies.js:486 js/views/help.js:55 js/views/help.js:67
+msgid "Answer"
+msgstr "Ответ"
+
+#: js/views/respondent.js:529
+msgid "Answer and reason"
+msgstr "Ответ и обоснование"
+
+#: js/views/admin-questions.js:217 js/views/dashboard.js:56
+msgid "Answer options"
+msgstr "Варианты ответа"
+
+#: js/help.js:127 js/views/admin-questions.js:59
+#: js/views/admin-questions.js:65
+msgid "Answer type"
+msgstr "Тип ответа"
+
+#: js/views/respondent.js:86 js/views/respondent.js:90
+#: js/views/respondent.js:223 js/views/respondent.js:313
+msgid "Answered"
+msgstr "Отвечено"
+
+#: js/views/respondent.js:308
+msgid "Answering"
+msgstr "Ответы"
+
+#: js/views/admin-methodologies.js:160
+msgid "Archive"
+msgstr "В архив"
+
+#: js/views/admin-methodologies.js:104
+msgid "Archived"
+msgstr "В архиве"
+
+#: js/views/admin-methodologies.js:160
+msgid "Archived."
+msgstr "Перенесено в архив."
+
+#: js/views/admin-methodologies.js:26
+msgid ""
+"Archived: no longer offered for new assessments. Existing assessments still "
+"point to it."
+msgstr ""
+"В архиве: больше не предлагается для новых оценок. Существующие оценки по-"
+"прежнему ссылаются на неё."
+
+#: js/views/dashboard.js:34
+msgid ""
+"Arrange questions into a property tree, set weights, say how each question "
+"is assessed and scored."
+msgstr ""
+"Расставьте вопросы в дерево свойств, задайте веса, опишите, как оценивается "
+"и в баллах считается каждый вопрос."
+
+#: js/views/admin-questions.js:152
+msgid ""
+"Ask about one thing only. “Width of the widest crack” is better than “Cracks"
+" and their size”."
+msgstr ""
+"Спрашивайте только об одном. «Ширина самой широкой трещины» лучше, чем "
+"«Трещины и их размер»."
+
+#: js/help.js:132 js/views/data.js:28 js/views/respondent.js:86
+#: js/views/respondent.js:90 js/views/respondent.js:223
+msgid "Assessment"
+msgstr "Оценка"
+
+#: js/views/dashboard.js:150 js/views/respondent.js:53
+#: js/views/respondent.js:301
+msgid "Assessment #{id}"
+msgstr "Оценка №{id}"
+
+#: js/views/respondent.js:290
+msgid "Assessment completed."
+msgstr "Оценка завершена."
+
+#: js/views/dashboard.js:60
+msgid "Assessment instructions"
+msgstr "Инструкции по оценке"
+
+#: js/views/data.js:24
+msgid "Assessment mechanics per node."
+msgstr "Механика оценки по узлам."
+
+#: js/help.js:111
+msgid "Assessment method"
+msgstr "Метод оценки"
+
+#: js/views/admin-catalogs.js:14 js/views/dashboard.js:53
+msgid "Assessment methods"
+msgstr "Методы оценки"
+
+#: js/views/admin-catalogs.js:186
+msgid "Assessment methods: how a value is obtained"
+msgstr "Методы оценки: как получается значение"
+
+#: js/views/respondent.js:272 js/views/respondent.js:465
+msgid "Assessment not found."
+msgstr "Оценка не найдена."
+
+#: js/views/respondent.js:105
+msgid "Assessment started."
+msgstr "Оценка начата."
+
+#: js/views/account.js:83 js/views/admin-catalogs.js:256
+#: js/views/dashboard.js:145
+msgid "Assessments"
+msgstr "Оценки"
+
+#: js/views/account.js:53 js/views/account.js:115
+msgid "At least 8 characters; not only digits and not a common password."
+msgstr "Не менее 8 символов; не только цифры и не распространённый пароль."
+
+#: js/views/respondent.js:523
+msgid ""
+"At least one critical question scored below its threshold, so the object "
+"fails regardless of the total."
+msgstr ""
+"Хотя бы один критический вопрос получил балл ниже порога, поэтому объект не "
+"проходит независимо от итога."
+
+#: js/views/admin-methodologies.js:393
+msgid "At or above this value, the lowest score."
+msgstr "При этом значении и выше — минимальный балл."
+
+#: js/views/admin-methodologies.js:391
+msgid "At or below this value, the lowest score."
+msgstr "При этом значении и ниже — минимальный балл."
+
+#: js/views/respondent.js:397
+msgid "Attach"
+msgstr "Прикрепить"
+
+#: js/views/respondent.js:395
+msgid "Attach evidence ({count})"
+msgstr "Прикрепить подтверждение ({count})"
+
+#: js/views/admin-catalogs.js:255 js/views/admin-catalogs.js:262
+#: js/views/respondent.js:116
+msgid "Attributes"
+msgstr "Атрибуты"
+
+#: js/views/respondent.js:272 js/views/respondent.js:465
+msgid "Back to assessments"
+msgstr "Назад к оценкам"
+
+#: js/views/admin-methodologies.js:131
+msgid "Back to methodologies"
+msgstr "Назад к методикам"
+
+#: js/views/admin-questions.js:135
+msgid "Back to the library"
+msgstr "Назад в библиотеку"
+
+#: js/views/respondent.js:473
+msgid "Back to the questionnaire"
+msgstr "Назад к анкете"
+
+#: js/views/shared.js:19
+msgid "Below the knock-out threshold of {threshold}: the parent fails."
+msgstr "Ниже критического порога {threshold}: родительский узел не проходит."
+
+#: js/scoring.js:21
+msgid ""
+"Best at a target value, falling to the lowest score at a lower and an upper "
+"limit."
+msgstr ""
+"Лучше всего при целевом значении, к нижней и верхней границе балл падает до "
+"минимального."
+
+#: js/views/admin-methodologies.js:387
+msgid "Best value"
+msgstr "Лучшее значение"
+
+#: js/views/admin-methodologies.js:513
+msgid "Between {lo} and {hi}"
+msgstr "От {lo} до {hi}"
+
+#: js/help.js:135
+msgid "Block A, October 2026 inspection: total 3.9, “Good”."
+msgstr "Корпус А, проверка в октябре 2026: итог 3,9, «Хорошо»."
+
+#: js/views/respondent.js:528
+msgid "Breakdown"
+msgstr "Разбивка"
+
+#: js/views/data.js:16
+msgid "Browsing groups for questions."
+msgstr "Группы для просмотра вопросов."
+
+#: js/views/dashboard.js:33
+msgid "Build a methodology"
+msgstr "Создайте методику"
+
+#: js/views/admin-methodologies.js:171
+msgid "Build the tree on the left: add groups, then questions inside them."
+msgstr "Постройте дерево слева: добавьте группы, затем вопросы внутри них."
+
+#: js/help.js:63
+msgid "Building quality → Structural condition → Crack width."
+msgstr "Качество здания → Состояние конструкций → Ширина трещин."
+
+#: js/views/respondent.js:190
+msgid "By object"
+msgstr "По объекту"
+
+#: js/views/respondent.js:190
+msgid "By questionnaire"
+msgstr "По анкете"
+
+#: js/views/admin-catalogs.js:261 js/views/respondent.js:115
+msgid "Cadastral number, inventory code…"
+msgstr "Кадастровый номер, инвентарный код…"
+
+#: js/views/data.js:33
+msgid "Calculated score of every node on completion."
+msgstr "Рассчитанный балл каждого узла при завершении."
+
+#: js/dom.js:332 js/views/respondent.js:146
+msgid "Cancel"
+msgstr "Отмена"
+
+#: js/api.js:22
+msgid "Can’t reach the server. Check that “manage.py runserver” is running."
+msgstr "Нет связи с сервером. Проверьте, что запущен «manage.py runserver»."
+
+#: js/main.js:43 js/views/admin-catalogs.js:275 js/views/data.js:7
+#: js/views/help.js:44
+msgid "Catalogs"
+msgstr "Справочники"
+
+#: js/views/admin-questions.js:88
+msgid "Categories"
+msgstr "Категории"
+
+#: js/views/admin-catalogs.js:95
+msgid "Categories without an order. Rarely used for scores."
+msgstr "Категории без порядка. Для баллов используется редко."
+
+#: js/views/admin-questions.js:61 js/views/admin-questions.js:65
+#: js/views/admin-questions.js:89 js/views/admin-questions.js:173
+msgid "Category"
+msgstr "Категория"
+
+#: js/views/account.js:112
+msgid "Change password"
+msgstr "Сменить пароль"
+
+#: js/views/dashboard.js:38 js/views/help.js:50
+msgid "Check and publish"
+msgstr "Проверьте и опубликуйте"
+
+#: js/views/admin-methodologies.js:116
+msgid "Checking the version…"
+msgstr "Проверяем версию…"
+
+#: js/views/dashboard.js:92
+msgid "Checking…"
+msgstr "Проверяем…"
+
+#: js/scoring.js:40
+msgid ""
+"Child score × weight, added up without rescaling. Use when weights are "
+"points, not shares."
+msgstr ""
+"Балл дочернего узла × вес, сложенные без пересчёта. Используйте, когда веса "
+"— это очки, а не доли."
+
+#: js/views/dashboard.js:101
+msgid "Choice question with {count} options; it needs at least two."
+msgstr "Вопрос с выбором, вариантов: {count}; нужно минимум два."
+
+#: js/views/data.js:18
+msgid "Choices for choice questions."
+msgstr "Варианты для вопросов с выбором."
+
+#: js/views/respondent.js:149
+msgid "Choose"
+msgstr "Выбрать"
+
+#: js/views/admin-methodologies.js:317
+msgid "Choose a question…"
+msgstr "Выберите вопрос…"
+
+#: js/views/admin-questions.js:154
+msgid ""
+"Choose the answer type that matches how the value is obtained. Prefer a "
+"number when something can be measured."
+msgstr ""
+"Выберите тип ответа, который соответствует способу получения значения. Если "
+"что-то можно измерить, выбирайте число."
+
+#: js/views/admin-questions.js:176
+msgid "Choose the kind of answer."
+msgstr "Выберите тип ответа."
+
+#: js/views/respondent.js:143
+msgid "Choose the object first."
+msgstr "Сначала выберите объект."
+
+#: js/views/respondent.js:189
+msgid ""
+"Choose what to assess. Start from a questionnaire or from the object itself."
+msgstr "Выберите, что оценивать. Начните с анкеты или с самого объекта."
+
+#: js/dom.js:182 js/views/admin-methodologies.js:565
+#: js/views/admin-methodologies.js:569 js/views/admin-methodologies.js:580
+#: js/views/respondent.js:137
+msgid "Choose…"
+msgstr "Выберите…"
+
+#: js/views/admin-questions.js:53
+msgid ""
+"Click a question code to edit it. A question that a published methodology "
+"uses can still get clearer wording, but its answer type is locked."
+msgstr ""
+"Нажмите на код вопроса, чтобы изменить его. Формулировку вопроса из "
+"опубликованной методики можно уточнить, но тип ответа заблокирован."
+
+#: js/views/admin-catalogs.js:126 js/views/admin-methodologies.js:358
+#: js/views/admin-methodologies.js:502 js/views/admin-questions.js:94
+#: js/views/admin-questions.js:226 js/views/respondent.js:393
+msgid "Click again"
+msgstr "Нажмите ещё раз"
+
+#: js/views/admin-methodologies.js:160
+msgid "Click again to archive"
+msgstr "Нажмите ещё раз, чтобы перенести в архив"
+
+#: js/views/admin-catalogs.js:55 js/views/admin-methodologies.js:272
+#: js/views/admin-questions.js:144
+msgid "Click again to delete"
+msgstr "Нажмите ещё раз, чтобы удалить"
+
+#: js/views/admin-methodologies.js:59
+msgid "Click again to delete it with its drafts"
+msgstr "Нажмите ещё раз, чтобы удалить вместе с черновиками"
+
+#: js/main.js:81
+msgid "Click again: deletes everyone’s changes"
+msgstr "Нажмите ещё раз: изменения всех пользователей будут удалены"
+
+#: js/views/admin-methodologies.js:272
+msgid "Click again: deletes the group and everything inside it"
+msgstr "Нажмите ещё раз: группа удалится вместе со всем содержимым"
+
+#: js/views/admin-methodologies.js:172
+msgid ""
+"Click each node and fill in its settings. Siblings’ weights must add up to "
+"1."
+msgstr ""
+"Нажмите на каждый узел и заполните его настройки. Сумма весов соседних узлов"
+" должна быть 1."
+
+#: js/views/help.js:54
+msgid ""
+"Click “New assessment” and choose a questionnaire or the object you are "
+"assessing. The newest published version of the questionnaire is used "
+"automatically."
+msgstr ""
+"Нажмите «Новая оценка» и выберите анкету или оцениваемый объект. "
+"Автоматически используется самая новая опубликованная версия анкеты."
+
+#: js/views/admin-catalogs.js:82 js/views/admin-catalogs.js:84
+#: js/views/admin-catalogs.js:162 js/views/admin-catalogs.js:167
+#: js/views/admin-catalogs.js:195 js/views/admin-catalogs.js:199
+#: js/views/admin-catalogs.js:218 js/views/admin-catalogs.js:220
+#: js/views/admin-methodologies.js:80 js/views/admin-methodologies.js:250
+#: js/views/admin-questions.js:65 js/views/admin-questions.js:172
+#: js/views/admin-questions.js:219 js/views/admin-questions.js:234
+msgid "Code"
+msgstr "Код"
+
+#: js/views/admin-questions.js:58
+msgid "Code or words in any language"
+msgstr "Код или слова на любом языке"
+
+#: js/views/admin-methodologies.js:257
+msgid "Combine children with"
+msgstr "Как объединять дочерние узлы"
+
+#: js/views/respondent.js:387
+msgid "Comment"
+msgstr "Комментарий"
+
+#: js/views/help.js:56
+msgid "Complete"
+msgstr "Завершите"
+
+#: js/views/respondent.js:328
+msgid "Complete assessment"
+msgstr "Завершить оценку"
+
+#: js/views/account.js:84 js/views/respondent.js:81
+msgid "Completed"
+msgstr "Завершено"
+
+#: js/views/respondent.js:319
+msgid "Completed. Answers are locked; reopen the assessment to change them."
+msgstr ""
+"Завершено. Ответы заблокированы; откройте оценку заново, чтобы их изменить."
+
+#: js/views/dashboard.js:145
+msgid "Completed: {count}"
+msgstr "Завершено: {count}"
+
+#: js/views/help.js:56
+msgid ""
+"Completing checks that mandatory questions are answered, then calculates "
+"every group and the total."
+msgstr ""
+"При завершении проверяется, что на обязательные вопросы есть ответы, затем "
+"рассчитываются все группы и итог."
+
+#: js/views/respondent.js:327
+msgid ""
+"Completing checks the mandatory questions, then calculates every group and "
+"saves the total."
+msgstr ""
+"Завершение проверяет обязательные вопросы, затем рассчитывает все группы и "
+"сохраняет итог."
+
+#: js/views/data.js:13
+msgid "Concrete objects being assessed."
+msgstr "Конкретные оцениваемые объекты."
+
+#: js/views/data.js:26
+msgid "Conditions on the answer and the score each gives."
+msgstr "Условия на ответ и балл, который даёт каждое."
+
+#: js/help.js:139
+msgid ""
+"Content is stored in every interface language; English is the main one."
+msgstr "Содержимое хранится на всех языках интерфейса; основной — английский."
+
+#: js/views/help.js:29
+msgid ""
+"Content such as questions, options and criteria must be entered in: {list}."
+msgstr ""
+"Содержимое — вопросы, варианты, критерии — нужно вводить на языках: {list}."
+
+#: js/views/respondent.js:61 js/views/respondent.js:84
+msgid "Continue"
+msgstr "Продолжить"
+
+#: js/scoring.js:12
+msgid "Crack 0.5–2 mm → 3, roof “Leaking” → 1, alarm “No” → 1."
+msgstr "Трещина 0,5–2 мм → 3, кровля «Протекает» → 1, сигнализация «Нет» → 1."
+
+#: js/views/help.js:68
+msgid "Crack width"
+msgstr "Ширина трещин"
+
+#: js/help.js:97
+msgid "Crack width 0.5–2 mm → score 3, “Local cracks: local repair required”."
+msgstr ""
+"Ширина трещины 0,5–2 мм → балл 3, «Местные трещины: нужен местный ремонт»."
+
+#: js/scoring.js:47
+msgid "Crack width in mm."
+msgstr "Ширина трещины в мм."
+
+#: js/views/admin-methodologies.js:491
+msgid ""
+"Crack width: 0–0.1 → 5, 0.1–0.5 → 4, 0.5–2 → 3, 2–5 → 2, 5 and more → 1. "
+"Each range starts where the previous one ends."
+msgstr ""
+"Ширина трещины: 0–0,1 → 5, 0,1–0,5 → 4, 0,5–2 → 3, 2–5 → 2, 5 и больше → 1. "
+"Каждый диапазон начинается там, где кончился предыдущий."
+
+#: js/help.js:114
+msgid ""
+"Crack width: measure with a crack-width gauge; evidence: photo of the gauge "
+"at the widest crack."
+msgstr ""
+"Ширина трещины: измерить щупом; подтверждение — фото щупа у самой широкой "
+"трещины."
+
+#: js/views/account.js:45
+msgid "Create account"
+msgstr "Создать учётную запись"
+
+#: js/views/account.js:28 js/views/account.js:42
+msgid "Create an account"
+msgstr "Создайте учётную запись"
+
+#: js/views/help.js:46
+msgid ""
+"Create it for an object type with a result scale. Version 1.0 starts as a "
+"draft with an empty root group."
+msgstr ""
+"Создайте её для типа объектов со шкалой результата. Версия 1.0 начинается "
+"как черновик с пустой корневой группой."
+
+#: js/views/admin-methodologies.js:76
+msgid "Create methodology"
+msgstr "Создать методику"
+
+#: js/views/admin-methodologies.js:159
+msgid "Create new version"
+msgstr "Создать новую версию"
+
+#: js/views/admin-questions.js:160
+msgid "Create question"
+msgstr "Создать вопрос"
+
+#: js/views/admin-methodologies.js:428
+msgid "Create scoring rule"
+msgstr "Создать правило оценки"
+
+#: js/views/admin-methodologies.js:151
+msgid "Created a new draft version. Edit it here."
+msgstr "Создан новый черновик версии. Редактируйте его здесь."
+
+#: js/views/admin-questions.js:190
+msgid "Created question {code}."
+msgstr "Создан вопрос {code}."
+
+#: js/views/account.js:35
+msgid "Created with “python manage.py setup_demo”."
+msgstr "Создаются командой «python manage.py setup_demo»."
+
+#: js/views/admin-methodologies.js:95
+msgid "Created {code} with draft version 1.0."
+msgstr "Создана методика {code} с черновиком версии 1.0."
+
+#: js/views/admin-methodologies.js:74
+msgid ""
+"Creates version 1.0 as a draft with an empty root group. You build the tree "
+"on the next page."
+msgstr ""
+"Создаёт версию 1.0 как черновик с пустой корневой группой. Дерево вы "
+"построите на следующей странице."
+
+#: js/views/admin-methodologies.js:466
+msgid "Criteria added: {count}. Check the scores and adjust them."
+msgstr ""
+"Добавлено критериев: {count}. Проверьте баллы и при необходимости поправьте."
+
+#: js/scoring.js:10
+msgid "Criteria lookup"
+msgstr "По таблице критериев"
+
+#: js/views/help.js:68
+msgid "Criterion 0.5–2 mm: local cracks"
+msgstr "Критерий 0,5–2 мм: местные трещины"
+
+#: js/views/help.js:69
+msgid "Criterion for this option"
+msgstr "Критерий для этого варианта"
+
+#: js/views/admin-methodologies.js:502
+msgid "Criterion removed."
+msgstr "Критерий удалён."
+
+#: js/views/admin-methodologies.js:531
+msgid "Criterion saved."
+msgstr "Критерий сохранён."
+
+#: js/views/shared.js:17
+msgid "Criterion:"
+msgstr "Критерий:"
+
+#: js/views/account.js:114
+msgid "Current password"
+msgstr "Текущий пароль"
+
+#: js/views/admin-methodologies.js:21
+msgid "Custom"
+msgstr "Другой"
+
+#: js/scoring.js:43
+msgid "Custom formula"
+msgstr "Своя формула"
+
+#: js/main.js:49
+msgid "Dashboard"
+msgstr "Панель"
+
+#: js/main.js:52 js/views/data.js:55
+msgid "Data tables"
+msgstr "Таблицы данных"
+
+#: js/help.js:129
+msgid ""
+"Decides which input the respondent sees and which kinds of score criteria "
+"are possible. It can’t be changed once a published methodology uses the "
+"question."
+msgstr ""
+"Определяет, какое поле ввода видит респондент и какие критерии оценки "
+"возможны. Его нельзя изменить, если вопрос используется в опубликованной "
+"методике."
+
+#: js/help.js:102
+msgid ""
+"Defines the range of scores and names the important points on it (levels). "
+"The version has a result scale for the final score; nodes use it too unless "
+"they have their own."
+msgstr ""
+"Задаёт диапазон баллов и называет важные точки на нём (уровни). У версии "
+"есть шкала результата для итогового балла; узлы тоже используют её, если у "
+"них нет своей."
+
+#: js/views/admin-catalogs.js:55 js/views/admin-catalogs.js:126
+#: js/views/admin-methodologies.js:59 js/views/admin-questions.js:94
+#: js/views/admin-questions.js:226
+msgid "Delete"
+msgstr "Удалить"
+
+#: js/views/admin-methodologies.js:272
+msgid "Delete node"
+msgstr "Удалить узел"
+
+#: js/views/admin-questions.js:144
+msgid "Delete question"
+msgstr "Удалить вопрос"
+
+#: js/views/admin-questions.js:94
+msgid "Deleted category {name}. Its questions are kept."
+msgstr "Категория «{name}» удалена. Её вопросы сохранены."
+
+#: js/views/admin-catalogs.js:57 js/views/admin-catalogs.js:126
+#: js/views/admin-methodologies.js:59 js/views/admin-methodologies.js:274
+#: js/views/admin-questions.js:146 js/views/admin-questions.js:226
+msgid "Deleted: {name}."
+msgstr "Удалено: {name}."
+
+#: js/views/account.js:30
+msgid "Demo accounts"
+msgstr "Демо-учётные записи"
+
+#: js/views/admin-catalogs.js:82 js/views/admin-catalogs.js:86
+#: js/views/admin-catalogs.js:174 js/views/admin-catalogs.js:195
+#: js/views/admin-catalogs.js:201 js/views/admin-catalogs.js:218
+#: js/views/admin-catalogs.js:222 js/views/admin-methodologies.js:83
+#: js/views/admin-methodologies.js:262 js/views/admin-methodologies.js:494
+#: js/views/admin-methodologies.js:516 js/views/respondent.js:401
+msgid "Description"
+msgstr "Описание"
+
+#: js/views/admin-methodologies.js:18
+msgid "Direct expert"
+msgstr "Прямая экспертная"
+
+#: js/views/admin-catalogs.js:172
+msgid "Distance between levels, for information only."
+msgstr "Расстояние между уровнями, только для справки."
+
+#: js/views/admin-methodologies.js:104
+msgid "Draft"
+msgstr "Черновик"
+
+#: js/help.js:55
+msgid "Draft / Published / Archived"
+msgstr "Черновик / Опубликована / В архиве"
+
+#: js/help.js:56
+msgid ""
+"Draft = editable, not usable. Published = locked, usable for assessments. "
+"Archived = retired."
+msgstr ""
+"Черновик — можно править, нельзя использовать. Опубликована — заблокирована,"
+" используется для оценок. В архиве — выведена из работы."
+
+#: js/views/dashboard.js:94
+msgid "Draft is ready to publish."
+msgstr "Черновик готов к публикации."
+
+#: js/views/dashboard.js:93
+msgid "Draft with problems to fix before it can be published: {count}."
+msgstr "Черновик: перед публикацией нужно исправить проблем: {count}."
+
+#: js/help.js:57
+msgid ""
+"Draft: you are still working on it; respondents can’t use it. Published: "
+"read-only; respondents can start assessments with it. Archived: no longer "
+"offered for new assessments, but old assessments keep pointing to it."
+msgstr ""
+"Черновик: вы ещё работаете над ним, респонденты не могут его использовать. "
+"Опубликована: только чтение, респонденты могут начинать по ней оценки. В "
+"архиве: больше не предлагается для новых оценок, но старые оценки по-"
+"прежнему ссылаются на неё."
+
+#: js/views/admin-methodologies.js:24
+msgid "Draft: you can change everything. Respondents can’t use it yet."
+msgstr ""
+"Черновик: можно менять всё. Респонденты пока не могут его использовать."
+
+#: js/views/admin-methodologies.js:189
+msgid "E.g. who agreed the weights and when."
+msgstr "Например, кто и когда согласовал веса."
+
+#: js/scoring.js:37
+msgid ""
+"Each child score × its weight, added up. Strong children can make up for "
+"weak ones. The usual choice."
+msgstr ""
+"Балл каждого дочернего узла × его вес, всё складывается. Сильные узлы могут "
+"компенсировать слабые. Обычный выбор."
+
+#: js/views/admin-catalogs.js:212
+msgid ""
+"Each methodology is written for one object type. Respondents can only use a "
+"methodology for objects of that type, so a building methodology can’t be "
+"applied to a product by mistake."
+msgstr ""
+"Каждая методика пишется для одного типа объектов. Респонденты могут "
+"применять методику только к объектам этого типа, поэтому методику для зданий"
+" нельзя по ошибке применить к изделию."
+
+#: js/views/respondent.js:154
+msgid ""
+"Each questionnaire is the newest published version of a methodology. Choose "
+"one, then the object you are assessing."
+msgstr ""
+"Каждая анкета — это самая новая опубликованная версия методики. Выберите "
+"анкету, затем оцениваемый объект."
+
+#: js/views/respondent.js:526
+msgid ""
+"Each row is a node of the tree. “Weighted” is the node’s contribution to its"
+" parent (score × weight). The last column shows the answer and the criterion"
+" that explains the score."
+msgstr ""
+"Каждая строка — узел дерева. «Взвешенный» — вклад узла в родительский (балл "
+"× вес). В последнем столбце — ответ и критерий, объясняющий балл."
+
+#: js/views/admin-catalogs.js:54 js/views/admin-catalogs.js:125
+#: js/views/admin-methodologies.js:67 js/views/admin-methodologies.js:357
+#: js/views/admin-methodologies.js:501 js/views/admin-questions.js:225
+msgid "Edit"
+msgstr "Изменить"
+
+#: js/views/admin-methodologies.js:104
+msgid "Edit and fix the checklist"
+msgstr "Правка и исправление по списку проверки"
+
+#: js/views/admin-methodologies.js:58
+msgid "Edit details"
+msgstr "Изменить данные"
+
+#: js/views/admin-catalogs.js:193
+msgid "Edit method {name}"
+msgstr "Изменить метод {name}"
+
+#: js/views/admin-catalogs.js:217
+msgid "Edit object type {name}"
+msgstr "Изменить тип объекта {name}"
+
+#: js/views/admin-catalogs.js:251
+msgid "Edit object {name}"
+msgstr "Изменить объект {name}"
+
+#: js/views/admin-questions.js:143
+msgid "Edit question {code}"
+msgstr "Изменить вопрос {code}"
+
+#: js/views/admin-catalogs.js:160
+msgid "Edit scale {name}"
+msgstr "Изменить шкалу {name}"
+
+#: js/views/admin-catalogs.js:81
+msgid "Edit unit {name}"
+msgstr "Изменить единицу {name}"
+
+#: js/views/admin-methodologies.js:73
+msgid "Edit {name}"
+msgstr "Изменить: {name}"
+
+#: js/views/account.js:48 js/views/account.js:96
+msgid "Email"
+msgstr "Email"
+
+#: js/views/admin-methodologies.js:482
+msgid "Empty = no lower limit"
+msgstr "Пусто — без нижней границы"
+
+#: js/views/admin-methodologies.js:483
+msgid "Empty = no upper limit"
+msgstr "Пусто — без верхней границы"
+
+#: js/views/admin-methodologies.js:297
+msgid ""
+"Enter a sample answer to see the score it gets. Nothing is saved. Works on "
+"published versions too."
+msgstr ""
+"Введите пробный ответ, чтобы увидеть его балл. Ничего не сохраняется. "
+"Работает и для опубликованных версий."
+
+#: js/views/admin-methodologies.js:540
+msgid "Enter a sample answer."
+msgstr "Введите пробный ответ."
+
+#: js/views/admin-methodologies.js:17
+msgid "Equal"
+msgstr "Равные"
+
+#: js/scoring.js:39
+msgid "Even stricter than geometric: dominated by the weakest children."
+msgstr "Ещё строже геометрического: определяется самыми слабыми узлами."
+
+#: js/views/help.js:58
+msgid ""
+"Every assessment you have started stays in your history, with your answers "
+"and results."
+msgstr ""
+"Каждая начатая оценка остаётся в вашей истории вместе с ответами и "
+"результатами."
+
+#: js/views/respondent.js:213
+msgid ""
+"Every assessment you have started, newest first. Open one to see your "
+"answers and the result."
+msgstr ""
+"Все начатые вами оценки, сначала новые. Откройте оценку, чтобы увидеть "
+"ответы и результат."
+
+#: js/views/admin-questions.js:121
+msgid ""
+"Every language needs the same number of option lines ({count}), in the same "
+"order."
+msgstr ""
+"На каждом языке должно быть одинаковое число строк вариантов ({count}) в том"
+" же порядке."
+
+#: js/help.js:91
+msgid ""
+"Every question node has one rule. The most common is a criteria lookup: a "
+"table of conditions (“from 0.5 to 2 mm”) and the score each gives. For "
+"measured values you can also use a linear rule that scales the value between"
+" a worst and a best value."
+msgstr ""
+"У каждого узла-вопроса одно правило. Чаще всего это таблица критериев: "
+"условия («от 0,5 до 2 мм») и балл, который даёт каждое. Для измеряемых "
+"значений можно использовать линейное правило, которое переводит значение в "
+"балл между худшим и лучшим значением."
+
+#: js/views/admin-catalogs.js:153
+msgid ""
+"Every score is a number on a scale. A methodology version has a result scale"
+" for the final score; its nodes use the same scale unless you give them "
+"their own."
+msgstr ""
+"Любой балл — это число на шкале. У версии методики есть шкала результата для"
+" итогового балла; её узлы используют ту же шкалу, если не задать им свою."
+
+#: js/views/data.js:55
+msgid ""
+"Every table from schema.dbml, as stored in the database. Watch the rows "
+"change while you work through the admin and respondent screens."
+msgstr ""
+"Все таблицы из schema.dbml в том виде, как они хранятся в базе. Смотрите, "
+"как меняются строки, пока вы работаете на экранах администратора и "
+"респондента."
+
+#: js/views/respondent.js:213
+msgid ""
+"Every user’s assessments. You can open them read-only; only their respondent"
+" can change answers."
+msgstr ""
+"Оценки всех пользователей. Их можно открыть только для чтения; менять ответы"
+" может только респондент."
+
+#: js/views/admin-catalogs.js:196
+msgid "Evidence"
+msgstr "Подтверждения"
+
+#: js/views/admin-methodologies.js:351 js/views/admin-methodologies.js:366
+msgid "Evidence to collect"
+msgstr "Что нужно собрать"
+
+#: js/views/respondent.js:375
+msgid "Evidence:"
+msgstr "Подтверждения:"
+
+#: js/scoring.js:130
+msgid ""
+"Exactly {target} scores {hi}. The score falls in a straight line to {lo} at "
+"{min} and at {max}, and stays {lo} beyond them."
+msgstr ""
+"Ровно {target} даёт {hi}. Балл линейно снижается до {lo} при {min} и при "
+"{max} и остаётся {lo} за их пределами."
+
+#: js/main.js:89
+msgid "Example data restored."
+msgstr "Демо-данные восстановлены."
+
+#: js/dom.js:192 js/help.js:23 js/views/admin-methodologies.js:420
+#: js/views/help.js:81
+msgid "Example:"
+msgstr "Пример:"
+
+#: js/views/admin-methodologies.js:18
+msgid "Experts assigned each weight directly. The usual choice."
+msgstr "Эксперты задали каждый вес напрямую. Обычный выбор."
+
+#: js/views/help.js:18
+msgid ""
+"Explanations, examples and tips are shown on every page while helpers are "
+"on."
+msgstr ""
+"Пока подсказки включены, на каждой странице показываются пояснения, примеры "
+"и советы."
+
+#: js/scoring.js:51
+msgid "Facade appearance from 1 Unacceptable to 5 Excellent."
+msgstr "Внешний вид фасада от 1 «Недопустимо» до 5 «Отлично»."
+
+#: js/scoring.js:49
+msgid "Facade defects: stains, peeling, missing elements."
+msgstr "Дефекты фасада: пятна, отслоения, отсутствующие элементы."
+
+#: js/views/respondent.js:523
+msgid "Failed on a knock-out criterion."
+msgstr "Не прошёл по критическому показателю."
+
+#: js/views/respondent.js:400
+msgid "File name or link"
+msgstr "Имя файла или ссылка"
+
+#: js/dom.js:267
+msgid ""
+"Fill in every language marked with *. People see the text in their own "
+"language."
+msgstr ""
+"Заполните все языки, отмеченные *. Каждый увидит текст на своём языке."
+
+#: js/dom.js:311
+msgid "Fill in: {fields}."
+msgstr "Заполните: {fields}."
+
+#: js/views/admin-methodologies.js:514
+msgid "Filled in automatically from the score if left empty."
+msgstr "Если оставить пустым, заполняется автоматически по баллу."
+
+#: js/views/admin-methodologies.js:313
+msgid "Filter questions…"
+msgstr "Фильтр вопросов…"
+
+#: js/views/respondent.js:165
+msgid ""
+"Find the object you are assessing. The questionnaires that apply to its type"
+" are shown next to it, always in their newest version."
+msgstr ""
+"Найдите оцениваемый объект. Рядом показаны анкеты для его типа — всегда в "
+"самой новой версии."
+
+#: js/views/help.js:70
+msgid "Fire alarm"
+msgstr "Пожарная сигнализация"
+
+#: js/help.js:86
+msgid ""
+"Fire alarm has a threshold of 2. A missing alarm scores 1, so the building "
+"fails even with a total of 2.7."
+msgstr ""
+"У пожарной сигнализации порог 2. Отсутствие сигнализации даёт 1 балл, "
+"поэтому здание не проходит даже с итогом 2,7."
+
+#: js/views/account.js:49 js/views/account.js:94
+msgid "First name"
+msgstr "Имя"
+
+#: js/views/dashboard.js:39
+msgid ""
+"Fix everything the checklist reports, then publish. Respondents can only use"
+" published versions."
+msgstr ""
+"Исправьте всё, о чём сообщает список проверки, затем опубликуйте. "
+"Респонденты могут использовать только опубликованные версии."
+
+#: js/views/admin-methodologies.js:157
+msgid "Fix the checklist first"
+msgstr "Сначала исправьте замечания из списка проверки"
+
+#: js/views/help.js:55
+msgid ""
+"Follow the “How to assess” instructions, enter the answer, the method used "
+"and evidence. Each answer is scored right away."
+msgstr ""
+"Следуйте инструкциям «Как оценивать», введите ответ, использованный метод и "
+"подтверждения. Каждый ответ сразу получает балл."
+
+#: js/views/admin-questions.js:155
+msgid "For choice questions, write every possible option, from best to worst."
+msgstr ""
+"Для вопросов с выбором перечислите все возможные варианты — от лучшего к "
+"худшему."
+
+#: js/views/admin-methodologies.js:187
+msgid "For documentation only. It doesn’t change any calculation."
+msgstr "Только для документации. На расчёты не влияет."
+
+#: js/views/help.js:48
+msgid ""
+"For every question node, attach at least one assessment method with "
+"instructions and the evidence to collect."
+msgstr ""
+"Для каждого узла-вопроса добавьте хотя бы один метод оценки с инструкцией и "
+"списком подтверждений."
+
+#: js/views/admin-methodologies.js:173
+msgid ""
+"For every question node: link a library question, add an assessment method "
+"and define the scoring rule."
+msgstr ""
+"Для каждого узла-вопроса: привяжите вопрос из библиотеки, добавьте метод "
+"оценки и задайте правило оценки."
+
+#: js/views/admin-methodologies.js:56 js/views/respondent.js:132
+msgid "For: {type}"
+msgstr "Для: {type}"
+
+#: js/scoring.js:25 js/views/admin-methodologies.js:258
+#: js/views/admin-methodologies.js:396
+msgid "Formula"
+msgstr "Формула"
+
+#: js/scoring.js:52
+msgid "Free text"
+msgstr "Свободный текст"
+
+#: js/views/admin-methodologies.js:482
+msgid "From, included"
+msgstr "От (включительно)"
+
+#: js/views/admin-questions.js:234
+msgid "Generated from the English label"
+msgstr "Генерируется из английской подписи"
+
+#: js/views/admin-methodologies.js:519
+msgid "Give a score or choose a level."
+msgstr "Укажите балл или выберите уровень."
+
+#: js/views/admin-methodologies.js:520
+msgid ""
+"Give at least one limit: a range without limits would match every answer."
+msgstr ""
+"Укажите хотя бы одну границу: диапазон без границ подойдёт к любому ответу."
+
+#: js/views/admin-methodologies.js:227
+msgid "Give every child the same weight"
+msgstr "Дать всем дочерним узлам одинаковый вес"
+
+#: js/views/help.js:78
+msgid "Glossary"
+msgstr "Глоссарий"
+
+#: js/main.js:179
+msgid "Go to the start page"
+msgstr "На главную"
+
+#: js/views/admin-methodologies.js:217 js/views/admin-methodologies.js:270
+msgid "Group"
+msgstr "Группа"
+
+#: js/views/admin-methodologies.js:197
+msgid ""
+"Groups (G) combine the scores of what is inside them; questions (Q) are "
+"scored from answers. Click a node to edit it."
+msgstr ""
+"Группы (G) объединяют баллы того, что внутри них; вопросы (Q) оцениваются по"
+" ответам. Нажмите на узел, чтобы изменить его."
+
+#: js/views/admin-questions.js:163
+msgid "Guidance for the respondent"
+msgstr "Пояснение для респондента"
+
+#: js/views/help.js:71
+msgid "Heat consumption"
+msgstr "Потребление тепла"
+
+#: js/scoring.js:17
+msgid "Heat use: 250 or more → 1, 90 or less → 5, 170 → 3."
+msgstr "Потребление тепла: 250 и больше → 1, 90 и меньше → 5, 170 → 3."
+
+#: js/views/respondent.js:72
+msgid "Hello, {name}"
+msgstr "Здравствуйте, {name}"
+
+#: js/main.js:52 js/views/help.js:16
+msgid "Help"
+msgstr "Справка"
+
+#: js/main.js:69 js/views/help.js:18
+msgid "Helpers"
+msgstr "Подсказки"
+
+#: js/views/help.js:20
+msgid "Helpers are off."
+msgstr "Подсказки выключены."
+
+#: js/views/help.js:20
+msgid "Helpers are on."
+msgstr "Подсказки включены."
+
+#: js/views/help.js:20
+msgid "Hidden tips: {count}."
+msgstr "Скрытых подсказок: {count}."
+
+#: js/main.js:66
+msgid "Hide the explanations and tips"
+msgstr "Скрыть пояснения и подсказки"
+
+#: js/help.js:15
+msgid "Hide this tip"
+msgstr "Скрыть подсказку"
+
+#: js/views/admin-catalogs.js:173
+msgid "Higher scores are better"
+msgstr "Чем больше балл, тем лучше"
+
+#: js/scoring.js:123
+msgid "Higher values are better."
+msgstr "Чем больше значение, тем лучше."
+
+#: js/views/admin-catalogs.js:171
+msgid "Highest score"
+msgstr "Максимальный балл"
+
+#: js/main.js:51 js/views/help.js:58 js/views/respondent.js:212
+#: js/views/respondent.js:280 js/views/respondent.js:510
+msgid "History"
+msgstr "История"
+
+#: js/views/help.js:75
+msgid ""
+"House 7 has the same answers but no fire alarm. The alarm scores 1, below "
+"its knock-out threshold of 2, so the building fails even though its total is"
+" 2.7."
+msgstr ""
+"У дома 7 те же ответы, но нет пожарной сигнализации. Сигнализация получает 1"
+" балл — ниже критического порога 2, поэтому здание не проходит, хотя итог "
+"2,7."
+
+#: js/help.js:78
+msgid ""
+"How a group combines the scores of its children, usually a weighted average."
+msgstr ""
+"Как группа объединяет баллы дочерних узлов, обычно — взвешенным средним."
+
+#: js/views/data.js:25
+msgid "How a raw answer is normalized."
+msgstr "Как исходный ответ переводится в балл."
+
+#: js/help.js:112
+msgid "How a value is obtained: measuring, inspecting, reading documents…"
+msgstr "Как получается значение: измерение, осмотр, анализ документов…"
+
+#: js/views/respondent.js:75
+msgid "How an assessment works"
+msgstr "Как проходит оценка"
+
+#: js/help.js:72
+msgid ""
+"How important a node is compared with its siblings. Siblings’ weights add up"
+" to 1."
+msgstr ""
+"Насколько узел важен по сравнению с соседними. Сумма весов соседних узлов — "
+"1."
+
+#: js/views/admin-methodologies.js:406
+msgid "How the answer becomes a score"
+msgstr "Как ответ превращается в балл"
+
+#: js/views/admin-methodologies.js:433
+msgid "How the answer becomes a score on {scale}."
+msgstr "Как ответ превращается в балл по шкале {scale}."
+
+#: js/help.js:90
+msgid "How the raw answer of a question node becomes a score."
+msgstr "Как исходный ответ узла-вопроса становится баллом."
+
+#: js/views/help.js:16
+msgid ""
+"How the system works, the usual order of work, and what every term means."
+msgstr ""
+"Как устроена система, обычный порядок работы и что означает каждый термин."
+
+#: js/views/admin-methodologies.js:187
+msgid "How the weights were set"
+msgstr "Как назначены веса"
+
+#: js/views/admin-methodologies.js:350 js/views/help.js:48
+msgid "How to assess"
+msgstr "Как оценивать"
+
+#: js/views/respondent.js:371
+msgid "How to assess:"
+msgstr "Как оценивать:"
+
+#: js/views/admin-methodologies.js:169
+msgid "How to finish a draft"
+msgstr "Как довести черновик до публикации"
+
+#: js/views/admin-questions.js:150
+msgid "How to write a good question"
+msgstr "Как написать хороший вопрос"
+
+#: js/views/data.js:11
+msgid "How values can be obtained."
+msgstr "Как можно получить значения."
+
+#: js/scoring.js:22
+msgid "Humidity: 45 % → 5, 20 % or 70 % → 1."
+msgstr "Влажность: 45 % → 5, 20 % или 70 % → 1."
+
+#: js/views/admin-methodologies.js:494
+msgid "If the answer is"
+msgstr "Если ответ"
+
+#: js/views/admin-methodologies.js:260
+msgid ""
+"If this node scores below the threshold, the parent and the whole object "
+"fail, whatever the total. Use it for critical requirements, e.g. 2 for a "
+"fire alarm."
+msgstr ""
+"Если балл узла ниже порога, родитель и весь объект не проходят, каким бы ни "
+"был итог. Используйте для критических требований, например 2 для пожарной "
+"сигнализации."
+
+#: js/views/admin-catalogs.js:188
+msgid ""
+"In a methodology you attach methods to each question node and write step-by-"
+"step instructions there, so every respondent works the same way. The "
+"respondent then records which method they actually used."
+msgstr ""
+"В методике вы добавляете методы к каждому узлу-вопросу и пишете там "
+"пошаговые инструкции, чтобы все респонденты работали одинаково. Затем "
+"респондент отмечает, какой метод он фактически использовал."
+
+#: js/views/help.js:34
+msgid "In an exam"
+msgstr "На экзамене"
+
+#: js/views/admin-methodologies.js:439
+msgid "In plain words"
+msgstr "Простыми словами"
+
+#: js/views/respondent.js:80
+msgid "In progress"
+msgstr "В работе"
+
+#: js/views/help.js:34
+msgid "In this system"
+msgstr "В этой системе"
+
+#: js/views/admin-questions.js:64
+msgid "Inactive only"
+msgstr "Только неактивные"
+
+#: js/views/admin-questions.js:101
+msgid "Inside category"
+msgstr "Внутри категории"
+
+#: js/views/help.js:70
+msgid "Installed and working"
+msgstr "Установлена и работает"
+
+#: js/views/admin-methodologies.js:351 js/views/admin-methodologies.js:365
+msgid "Instructions"
+msgstr "Инструкция"
+
+#: js/views/respondent.js:516
+msgid "Integral quality"
+msgstr "Интегральное качество"
+
+#: js/dom.js:83
+msgid "Interface language"
+msgstr "Язык интерфейса"
+
+#: js/views/help.js:28
+msgid "Interface languages: {list}."
+msgstr "Языки интерфейса: {list}."
+
+#: js/views/help.js:31
+msgid "Interface texts are translated in Rosetta:"
+msgstr "Тексты интерфейса переводятся в Rosetta:"
+
+#: js/scoring.js:50
+msgid "Is a working fire alarm installed?"
+msgstr "Установлена ли исправная пожарная сигнализация?"
+
+#: js/views/admin-methodologies.js:228
+msgid "Keep the proportions, make the sum 1"
+msgstr "Сохранить пропорции, сделать сумму равной 1"
+
+#: js/views/respondent.js:399
+msgid "Kind"
+msgstr "Вид"
+
+#: js/views/admin-questions.js:165
+msgid "Kind of answer"
+msgstr "Тип ответа"
+
+#: js/views/data.js:12
+msgid "Kinds of objects assessed."
+msgstr "Виды оцениваемых объектов."
+
+#: js/help.js:83 js/views/admin-methodologies.js:260
+msgid "Knock-out threshold"
+msgstr "Критический порог"
+
+#: js/views/respondent.js:317
+msgid "Knock-out:"
+msgstr "Критический показатель:"
+
+#: js/views/admin-catalogs.js:122 js/views/admin-catalogs.js:135
+#: js/views/admin-methodologies.js:494 js/views/admin-methodologies.js:515
+#: js/views/admin-questions.js:219 js/views/admin-questions.js:233
+msgid "Label"
+msgstr "Подпись"
+
+#: js/views/account.js:52 js/views/account.js:100
+msgid "Language"
+msgstr "Язык"
+
+#: js/views/help.js:26
+msgid "Languages"
+msgstr "Языки"
+
+#: js/views/account.js:50 js/views/account.js:95
+msgid "Last name"
+msgstr "Фамилия"
+
+#: js/views/dashboard.js:148
+msgid "Latest assessments"
+msgstr "Последние оценки"
+
+#: js/views/respondent.js:89
+msgid "Latest results"
+msgstr "Последние результаты"
+
+#: js/views/admin-methodologies.js:261
+msgid "Leave as is unless this node is scored on a different scale."
+msgstr "Оставьте как есть, если узел не оценивается по другой шкале."
+
+#: js/views/admin-methodologies.js:260
+msgid "Leave empty for none."
+msgstr "Оставьте пустым, если порога нет."
+
+#: js/views/admin-questions.js:172
+msgid "Leave empty to generate it"
+msgstr "Оставьте пустым — сгенерируется"
+
+#: js/views/admin-methodologies.js:513
+msgid "Leave empty to use the value of the level you choose."
+msgstr "Оставьте пустым, чтобы взять значение выбранного уровня."
+
+#: js/views/account.js:47
+msgid "Letters, digits and @ . + - _ only."
+msgstr "Только буквы, цифры и @ . + - _"
+
+#: js/views/admin-methodologies.js:494 js/views/admin-methodologies.js:514
+#: js/views/respondent.js:520 js/views/respondent.js:529
+msgid "Level"
+msgstr "Уровень"
+
+#: js/views/admin-catalogs.js:164
+msgid "Levels"
+msgstr "Уровни"
+
+#: js/views/admin-catalogs.js:154
+msgid ""
+"Levels give names to points on the scale, so that a total of 3.9 can be "
+"shown as “Good”. A score is always shown with the nearest level."
+msgstr ""
+"Уровни дают названия точкам шкалы, чтобы итог 3,9 можно было показать как "
+"«Хорошо». Балл всегда показывается с ближайшим уровнем."
+
+#: js/views/admin-catalogs.js:178
+msgid "Levels of each scale"
+msgstr "Уровни каждой шкалы"
+
+#: js/help.js:108
+msgid ""
+"Levels turn numbers into words. A score of 3.9 is shown with the nearest "
+"level, “Good”."
+msgstr ""
+"Уровни превращают числа в слова. Балл 3,9 показывается с ближайшим уровнем —"
+" «Хорошо»."
+
+#: js/views/admin-catalogs.js:127
+msgid "Levels used by score criteria or results can’t be deleted."
+msgstr ""
+"Уровни, которые используются в критериях или результатах, удалить нельзя."
+
+#: js/scoring.js:38
+msgid "Like an average, but one very low child pulls the group down more."
+msgstr ""
+"Как среднее, но один очень низкий дочерний балл сильнее тянет группу вниз."
+
+#: js/views/admin-questions.js:171
+msgid ""
+"Line 1 in every language is the same option, line 2 the next, and so on. You"
+" can edit and reorder options after saving."
+msgstr ""
+"Строка 1 на всех языках — один и тот же вариант, строка 2 — следующий и т. "
+"д. После сохранения варианты можно править и переставлять."
+
+#: js/scoring.js:15
+msgid "Linear between worst and best"
+msgstr "Линейно от худшего к лучшему"
+
+#: js/scoring.js:20
+msgid "Linear towards a target"
+msgstr "Линейно к целевому значению"
+
+#: js/views/help.js:71
+msgid "Linear: 250 → 1, 90 → 5"
+msgstr "Линейно: 250 → 1, 90 → 5"
+
+#: js/views/respondent.js:192
+msgid "Loading…"
+msgstr "Загрузка…"
+
+#: js/views/admin-methodologies.js:157
+msgid "Lock this version and make it available"
+msgstr "Заблокировать версию и сделать её доступной"
+
+#: js/views/data.js:22
+msgid "Locked snapshot of weights and rules once published."
+msgstr "Заблокированный после публикации снимок весов и правил."
+
+#: js/views/admin-methodologies.js:104
+msgid "Locked, used for assessments"
+msgstr "Заблокирована, используется для оценок"
+
+#: js/views/admin-methodologies.js:30
+msgid "Locked. Respondents can start assessments with it."
+msgstr "Заблокирована. Респонденты могут начинать по ней оценки."
+
+#: js/views/admin-questions.js:167
+msgid ""
+"Locked: a published methodology uses this question. Create a new question to"
+" ask it differently."
+msgstr ""
+"Заблокировано: вопрос используется в опубликованной методике. Чтобы спросить"
+" иначе, создайте новый вопрос."
+
+#: js/views/admin-methodologies.js:391
+msgid "Lower limit"
+msgstr "Нижняя граница"
+
+#: js/views/admin-methodologies.js:256
+msgid "Lower numbers are shown first."
+msgstr "Меньшие числа показываются первыми."
+
+#: js/scoring.js:123
+msgid "Lower values are better."
+msgstr "Чем меньше значение, тем лучше."
+
+#: js/views/admin-catalogs.js:170
+msgid "Lowest score"
+msgstr "Минимальный балл"
+
+#: js/views/admin-methodologies.js:227
+msgid "Make equal"
+msgstr "Сделать равными"
+
+#: js/views/admin-methodologies.js:353
+msgid "Make primary"
+msgstr "Сделать основным"
+
+#: js/views/admin-methodologies.js:259
+msgid "Mandatory: must be answered before the assessment can be completed"
+msgstr "Обязательный: без ответа оценку нельзя завершить"
+
+#: js/scoring.js:42
+msgid "Maximum"
+msgstr "Максимум"
+
+#: js/views/admin-catalogs.js:122 js/views/admin-catalogs.js:136
+msgid "Meaning"
+msgstr "Значение"
+
+#: js/views/admin-catalogs.js:98
+msgid "Measurements with a true zero, such as percent or millimetres."
+msgstr "Измерения с настоящим нулём, например проценты или миллиметры."
+
+#: js/views/account.js:81
+msgid "Member since {date}"
+msgstr "Участник с {date}"
+
+#: js/views/admin-methodologies.js:351 js/views/admin-methodologies.js:364
+msgid "Method"
+msgstr "Метод"
+
+#: js/views/admin-methodologies.js:358
+msgid "Method removed."
+msgstr "Метод удалён."
+
+#: js/views/admin-methodologies.js:372
+msgid "Method saved."
+msgstr "Метод сохранён."
+
+#: js/views/respondent.js:383
+msgid "Method used"
+msgstr "Использованный метод"
+
+#: js/main.js:45 js/views/admin-methodologies.js:43
+#: js/views/admin-methodologies.js:164 js/views/dashboard.js:57
+msgid "Methodologies"
+msgstr "Методики"
+
+#: js/views/admin-methodologies.js:45
+msgid "Methodologies and versions"
+msgstr "Методики и версии"
+
+#: js/views/dashboard.js:35
+msgid "Methodologies: {count}"
+msgstr "Методик: {count}"
+
+#: js/help.js:43 js/views/admin-questions.js:198 js/views/data.js:20
+#: js/views/help.js:46
+msgid "Methodology"
+msgstr "Методика"
+
+#: js/views/dashboard.js:143
+msgid "Methodology versions"
+msgstr "Версии методик"
+
+#: js/views/admin-questions.js:197
+msgid "Methodology versions whose tree links this question."
+msgstr "Версии методик, в дереве которых есть этот вопрос."
+
+#: js/views/admin-catalogs.js:204
+msgid "Methods attached to a methodology node can’t be deleted."
+msgstr "Методы, привязанные к узлам методики, удалить нельзя."
+
+#: js/scoring.js:41
+msgid "Minimum"
+msgstr "Минимум"
+
+#: js/views/help.js:69
+msgid "Minor wear"
+msgstr "Небольшой износ"
+
+#: js/views/admin-questions.js:222 js/views/admin-questions.js:222
+msgid "Move down"
+msgstr "Ниже"
+
+#: js/views/admin-questions.js:221 js/views/admin-questions.js:221
+msgid "Move up"
+msgstr "Выше"
+
+#: js/scoring.js:49
+msgid "Multiple choice"
+msgstr "Несколько вариантов"
+
+#: js/main.js:51 js/views/respondent.js:188
+msgid "My assessments"
+msgstr "Мои оценки"
+
+#: js/main.js:51
+msgid "My work"
+msgstr "Моя работа"
+
+#: js/views/admin-catalogs.js:82 js/views/admin-catalogs.js:85
+#: js/views/admin-catalogs.js:162 js/views/admin-catalogs.js:168
+#: js/views/admin-catalogs.js:195 js/views/admin-catalogs.js:200
+#: js/views/admin-catalogs.js:218 js/views/admin-catalogs.js:221
+#: js/views/admin-catalogs.js:253 js/views/admin-catalogs.js:260
+#: js/views/admin-methodologies.js:79 js/views/admin-methodologies.js:249
+#: js/views/admin-questions.js:100 js/views/respondent.js:114
+msgid "Name"
+msgstr "Название"
+
+#: js/views/respondent.js:167
+msgid "Name or reference"
+msgstr "Название или идентификатор"
+
+#: js/views/admin-methodologies.js:74
+msgid ""
+"Name, description and object type of the methodology. Its versions are "
+"edited on their own pages."
+msgstr ""
+"Название, описание и тип объектов методики. Её версии редактируются на "
+"отдельных страницах."
+
+#: js/views/admin-methodologies.js:285
+msgid "Name, weight and how the node is scored or combined."
+msgstr "Название, вес и способ оценки или объединения узла."
+
+#: js/views/data.js:10
+msgid "Named points on a scale."
+msgstr "Именованные точки шкалы."
+
+#: js/views/admin-methodologies.js:175
+msgid ""
+"Names and texts are entered in every language. Missing required translations"
+" appear in the forms."
+msgstr ""
+"Названия и тексты вводятся на всех языках. Недостающие обязательные переводы"
+" отмечаются в формах."
+
+#: js/help.js:140
+msgid ""
+"Names, questions, options, levels, criteria and instructions are entered in "
+"every language the system uses. Languages marked with * are required. When "
+"an optional translation is missing, the English text is shown instead."
+msgstr ""
+"Названия, вопросы, варианты, уровни, критерии и инструкции вводятся на всех "
+"языках системы. Языки со звёздочкой * обязательны. Если необязательного "
+"перевода нет, показывается английский текст."
+
+#: js/views/admin-methodologies.js:514
+msgid "Nearest to the score"
+msgstr "Ближайший к баллу"
+
+#: js/views/dashboard.js:136
+msgid "Needs attention"
+msgstr "Требует внимания"
+
+#: js/main.js:51 js/views/respondent.js:73 js/views/respondent.js:188
+#: js/views/respondent.js:189 js/views/respondent.js:214
+msgid "New assessment"
+msgstr "Новая оценка"
+
+#: js/views/account.js:28
+msgid "New here?"
+msgstr "Впервые здесь?"
+
+#: js/views/dashboard.js:119
+msgid "New here? Start with this page"
+msgstr "Впервые здесь? Начните с этой страницы"
+
+#: js/views/admin-methodologies.js:73
+msgid "New methodology"
+msgstr "Новая методика"
+
+#: js/views/account.js:115
+msgid "New password"
+msgstr "Новый пароль"
+
+#: js/views/admin-questions.js:49 js/views/admin-questions.js:142
+#: js/views/admin-questions.js:143
+msgid "New question"
+msgstr "Новый вопрос"
+
+#: js/views/dashboard.js:127
+msgid "Next step:"
+msgstr "Следующий шаг:"
+
+#: js/scoring.js:99 js/views/admin-methodologies.js:486
+#: js/views/admin-methodologies.js:564 js/views/admin-questions.js:255
+#: js/views/respondent.js:427 js/views/respondent.js:455
+msgid "No"
+msgstr "Нет"
+
+#: js/views/respondent.js:225
+msgid "No assessments yet."
+msgstr "Оценок пока нет."
+
+#: js/views/respondent.js:225
+msgid "No assessments yet. Start one with “New assessment”."
+msgstr "Оценок пока нет. Начните первую кнопкой «Новая оценка»."
+
+#: js/views/admin-questions.js:95
+msgid "No categories yet."
+msgstr "Категорий пока нет."
+
+#: js/views/admin-methodologies.js:503
+msgid "No criteria yet."
+msgstr "Критериев пока нет."
+
+#: js/views/admin-catalogs.js:128
+msgid "No levels yet."
+msgstr "Уровней пока нет."
+
+#: js/views/admin-methodologies.js:31
+msgid "No longer offered for new assessments."
+msgstr "Больше не предлагается для новых оценок."
+
+#: js/views/admin-methodologies.js:359
+msgid ""
+"No method yet. Add at least one so respondents know how to get the value."
+msgstr ""
+"Методов пока нет. Добавьте хотя бы один, чтобы респонденты знали, как "
+"получить значение."
+
+#: js/views/admin-methodologies.js:71
+msgid "No methodologies yet. Create the first one below."
+msgstr "Методик пока нет. Создайте первую ниже."
+
+#: js/views/admin-catalogs.js:193
+msgid "No methods yet. Add the first one below."
+msgstr "Методов пока нет. Добавьте первый ниже."
+
+#: js/views/admin-catalogs.js:217
+msgid "No object types yet. Add the first one below."
+msgstr "Типов объектов пока нет. Добавьте первый ниже."
+
+#: js/views/respondent.js:179
+msgid "No objects found."
+msgstr "Объекты не найдены."
+
+#: js/views/respondent.js:137
+msgid "No objects of this type yet"
+msgstr "Объектов этого типа пока нет"
+
+#: js/views/admin-catalogs.js:251
+msgid "No objects yet. Add the first one below."
+msgstr "Объектов пока нет. Добавьте первый ниже."
+
+#: js/views/admin-questions.js:227
+msgid "No options yet. Add at least two."
+msgstr "Вариантов пока нет. Добавьте минимум два."
+
+#: js/views/admin-methodologies.js:317
+msgid "No question matches"
+msgstr "Подходящих вопросов нет"
+
+#: js/views/respondent.js:176
+msgid "No questionnaire for this type yet"
+msgstr "Для этого типа пока нет анкеты"
+
+#: js/views/respondent.js:155
+msgid "No questionnaires are published yet. Ask an admin to publish one."
+msgstr ""
+"Опубликованных анкет пока нет. Попросите администратора опубликовать анкету."
+
+#: js/views/admin-questions.js:78
+msgid "No questions match the filters."
+msgstr "Нет вопросов, подходящих под фильтры."
+
+#: js/views/admin-questions.js:78
+msgid "No questions yet. Click “New question” to write the first one."
+msgstr "Вопросов пока нет. Нажмите «Новый вопрос», чтобы написать первый."
+
+#: js/views/respondent.js:400
+msgid "No real upload in this prototype"
+msgstr "В прототипе файлы не загружаются"
+
+#: js/views/admin-methodologies.js:198
+msgid "No root node."
+msgstr "Нет корневого узла."
+
+#: js/views/data.js:68
+msgid "No rows yet."
+msgstr "Строк пока нет."
+
+#: js/views/admin-catalogs.js:160
+msgid "No scales yet. Add the first one below."
+msgstr "Шкал пока нет. Добавьте первую ниже."
+
+#: js/scoring.js:107
+msgid "No scoring rule yet."
+msgstr "Правила оценки пока нет."
+
+#: js/views/admin-catalogs.js:81
+msgid "No units yet. Add the first one below."
+msgstr "Единиц измерения пока нет. Добавьте первую ниже."
+
+#: js/help.js:66 js/views/respondent.js:529
+msgid "Node"
+msgstr "Узел"
+
+#: js/views/admin-methodologies.js:288
+msgid "Node saved."
+msgstr "Узел сохранён."
+
+#: js/views/admin-methodologies.js:285
+msgid "Node settings"
+msgstr "Настройки узла"
+
+#: js/views/admin-methodologies.js:61
+msgid "Nodes"
+msgstr "Узлы"
+
+#: js/views/respondent.js:450
+msgid "Not answered"
+msgstr "Нет ответа"
+
+#: js/views/respondent.js:353
+msgid "Not answered yet."
+msgstr "Ответа пока нет."
+
+#: js/views/respondent.js:382 js/views/respondent.js:451
+msgid "Not applicable"
+msgstr "Неприменимо"
+
+#: js/views/respondent.js:353
+msgid "Not applicable: left out."
+msgstr "Неприменимо: не учитывается."
+
+#: js/views/admin-methodologies.js:146
+msgid "Not published: fix the problems in the checklist first."
+msgstr "Не опубликовано: сначала исправьте проблемы из списка проверки."
+
+#: js/views/admin-questions.js:64
+msgid "Not used in any methodology"
+msgstr "Не используется ни в одной методике"
+
+#: js/views/admin-questions.js:202
+msgid "Not used yet. Add it to a methodology from the methodology’s tree."
+msgstr "Пока не используется. Добавьте его в методику через её дерево."
+
+#: js/views/dashboard.js:142
+msgid "Not used yet: {count}"
+msgstr "Пока не используются: {count}"
+
+#: js/views/admin-methodologies.js:189
+msgid "Notes"
+msgstr "Заметки"
+
+#: js/dom.js:67
+msgid "Nothing here yet."
+msgstr "Здесь пока пусто."
+
+#: js/views/respondent.js:87
+msgid "Nothing in progress. Start a new assessment."
+msgstr "Незавершённых оценок нет. Начните новую."
+
+#: js/views/dashboard.js:139
+msgid "Nothing needs attention."
+msgstr "Всё в порядке."
+
+#: js/scoring.js:47
+msgid "Number"
+msgstr "Число"
+
+#: js/views/admin-catalogs.js:97
+msgid ""
+"Numbers with equal steps but no true zero, such as a temperature in °C."
+msgstr ""
+"Числа с равным шагом, но без настоящего нуля, например температура в °C."
+
+#: js/views/respondent.js:86 js/views/respondent.js:90
+#: js/views/respondent.js:168 js/views/respondent.js:223
+msgid "Object"
+msgstr "Объект"
+
+#: js/views/admin-catalogs.js:259 js/views/admin-methodologies.js:81
+msgid "Object type"
+msgstr "Тип объекта"
+
+#: js/help.js:117
+msgid "Object type / Object"
+msgstr "Тип объекта / Объект"
+
+#: js/help.js:118
+msgid "Object type = the kind of thing assessed. Object = one concrete thing."
+msgstr "Тип объекта — что именно оценивается. Объект — одна конкретная вещь."
+
+#: js/views/admin-catalogs.js:15 js/views/dashboard.js:50
+msgid "Object types"
+msgstr "Типы объектов"
+
+#: js/views/admin-catalogs.js:224
+msgid "Object types used by objects or methodologies can’t be deleted."
+msgstr "Типы, которые используются объектами или методиками, удалить нельзя."
+
+#: js/views/admin-catalogs.js:211
+msgid "Object types: what kind of thing is assessed"
+msgstr "Типы объектов: что именно оценивается"
+
+#: js/views/dashboard.js:144
+msgid "Object types: {count}"
+msgstr "Типов объектов: {count}"
+
+#: js/views/admin-catalogs.js:16 js/views/dashboard.js:144
+msgid "Objects"
+msgstr "Объекты"
+
+#: js/views/admin-catalogs.js:265
+msgid "Objects with assessments can’t be deleted."
+msgstr "Объекты, по которым есть оценки, удалить нельзя."
+
+#: js/views/admin-catalogs.js:245
+msgid "Objects: the concrete things being assessed"
+msgstr "Объекты: конкретные оцениваемые вещи"
+
+#: js/help.js:67
+msgid "One element of the tree: either a group or a question."
+msgstr "Один элемент дерева: группа или вопрос."
+
+#: js/help.js:133
+msgid ""
+"One methodology version applied to one object, with its answers and results."
+msgstr ""
+"Одна версия методики, применённая к одному объекту, с ответами и "
+"результатами."
+
+#: js/views/data.js:29
+msgid "One methodology version applied to one object."
+msgstr "Одна версия методики, применённая к одному объекту."
+
+#: js/views/admin-catalogs.js:262 js/views/respondent.js:116
+msgid "One per line, e.g. year_built = 1987"
+msgstr "По одному на строку, например year_built = 1987"
+
+#: js/views/admin-methodologies.js:81
+msgid "Only objects of this type can be assessed with the methodology."
+msgstr "По методике можно оценивать только объекты этого типа."
+
+#: js/views/admin-methodologies.js:67
+msgid "Open"
+msgstr "Открыть"
+
+#: js/views/admin-methodologies.js:331
+msgid "Open in the question library"
+msgstr "Открыть в библиотеке вопросов"
+
+#: js/main.js:214
+msgid ""
+"Open the app from the Django server (python manage.py runserver, then "
+"http://localhost:8000), not from a file or another web server."
+msgstr ""
+"Открывайте приложение через сервер Django (python manage.py runserver, затем"
+" http://localhost:8000), а не из файла или с другого веб-сервера."
+
+#: js/views/respondent.js:309
+msgid ""
+"Open “How to assess” on each question for the instructions. Each answer is "
+"saved and scored shortly after you enter it."
+msgstr ""
+"Откройте «Как оценивать» у каждого вопроса, чтобы увидеть инструкции. Каждый"
+" ответ сохраняется и оценивается вскоре после ввода."
+
+#: js/views/admin-methodologies.js:487
+msgid "Option"
+msgstr "Вариант"
+
+#: js/views/admin-questions.js:88
+msgid ""
+"Optional folders for browsing the library. They have no effect on scoring."
+msgstr "Необязательные папки для просмотра библиотеки. На оценку не влияют."
+
+#: js/dom.js:268
+msgid "Optional. Where a translation is missing, the {lang} text is shown."
+msgstr "Необязательно. Где перевода нет, показывается текст на {lang}."
+
+#: js/views/admin-questions.js:163
+msgid "Optional. Where to look, what to ignore, how to measure."
+msgstr "Необязательно. Где смотреть, что не учитывать, как измерять."
+
+#: js/views/admin-questions.js:218
+msgid ""
+"Options carry no score. Each methodology gives every option a score in its "
+"score criteria."
+msgstr ""
+"Варианты не несут баллов. Каждая методика назначает баллы вариантам в своих "
+"критериях."
+
+#: js/views/admin-questions.js:218
+msgid ""
+"Options used by score criteria or answers can’t be deleted, only renamed."
+msgstr ""
+"Варианты, используемые в критериях или ответах, нельзя удалить — только "
+"переименовать."
+
+#: js/views/admin-questions.js:171
+msgid "Options, one per line"
+msgstr "Варианты, по одному на строку"
+
+#: js/views/admin-questions.js:73
+msgid "Options: {count}"
+msgstr "Вариантов: {count}"
+
+#: js/views/admin-catalogs.js:96
+msgid ""
+"Ordered levels with names, such as 1 Poor … 5 Excellent. The most common "
+"choice."
+msgstr ""
+"Упорядоченные уровни с названиями, например 1 Плохо … 5 Отлично. Самый "
+"частый выбор."
+
+#: js/views/account.js:51 js/views/account.js:97
+msgid "Organization"
+msgstr "Организация"
+
+#: js/scoring.js:52
+msgid "Other remarks."
+msgstr "Другие замечания."
+
+#: js/views/dashboard.js:22
+msgid "Other screens pick from these lists."
+msgstr "Другие экраны выбирают значения из этих списков."
+
+#: js/main.js:179
+msgid "Page not found."
+msgstr "Страница не найдена."
+
+#: js/views/admin-methodologies.js:20
+msgid "Pairwise comparison (AHP)"
+msgstr "Попарное сравнение (МАИ)"
+
+#: js/views/account.js:21 js/views/account.js:53 js/views/account.js:110
+msgid "Password"
+msgstr "Пароль"
+
+#: js/views/account.js:122
+msgid "Password changed."
+msgstr "Пароль изменён."
+
+#: js/views/account.js:90
+msgid "Personal details"
+msgstr "Личные данные"
+
+#: js/views/account.js:99
+msgid "Phone"
+msgstr "Телефон"
+
+#: js/views/data.js:32
+msgid "Photos and documents backing an answer."
+msgstr "Фото и документы, подтверждающие ответ."
+
+#: js/scoring.js:51
+msgid "Pick a level of a rating scale."
+msgstr "Выберите уровень шкалы."
+
+#: js/scoring.js:48
+msgid "Pick exactly one option from a list."
+msgstr "Выберите ровно один вариант из списка."
+
+#: js/views/admin-methodologies.js:310
+msgid ""
+"Pick the question this node should ask. Name and code are filled in from it."
+msgstr "Выберите вопрос для этого узла. Название и код заполнятся из него."
+
+#: js/views/help.js:49
+msgid ""
+"Pick the scoring rule and add score criteria. Check them with “Try the "
+"rule”."
+msgstr ""
+"Выберите правило оценки и добавьте критерии. Проверьте их через «Проверить "
+"правило»."
+
+#: js/views/admin-methodologies.js:516
+msgid ""
+"Plain-language explanation shown in the result, e.g. “Cracks 0.5–2 mm: local"
+" repair required”."
+msgstr ""
+"Понятное пояснение для результата, например «Трещины 0,5–2 мм: нужен местный"
+" ремонт»."
+
+#: js/dom.js:293
+msgid "Please fix the highlighted fields."
+msgstr "Исправьте выделенные поля."
+
+#: js/views/account.js:98 js/views/admin-methodologies.js:256
+msgid "Position"
+msgstr "Позиция"
+
+#: js/views/dashboard.js:117
+msgid ""
+"Prepare everything respondents need to assess objects: reference lists, "
+"questions and published methodologies."
+msgstr ""
+"Подготовьте всё, что нужно респондентам для оценки объектов: справочники, "
+"вопросы и опубликованные методики."
+
+#: js/views/admin-questions.js:261
+msgid "Preview"
+msgstr "Предпросмотр"
+
+#: js/views/admin-methodologies.js:123
+msgid "Problems to fix before publishing: {count}"
+msgstr "Нужно исправить до публикации: {count}"
+
+#: js/views/admin-methodologies.js:221
+msgid "Problems: {count}"
+msgstr "Проблем: {count}"
+
+#: js/main.js:103 js/views/account.js:71
+msgid "Profile"
+msgstr "Профиль"
+
+#: js/views/account.js:105
+msgid "Profile saved."
+msgstr "Профиль сохранён."
+
+#: js/help.js:60 js/views/admin-methodologies.js:196 js/views/help.js:47
+msgid "Property tree"
+msgstr "Дерево свойств"
+
+#: js/views/respondent.js:314
+msgid "Provisional total"
+msgstr "Предварительный итог"
+
+#: js/views/admin-methodologies.js:157
+msgid "Publish"
+msgstr "Опубликовать"
+
+#: js/views/admin-methodologies.js:61 js/views/admin-methodologies.js:104
+msgid "Published"
+msgstr "Опубликована"
+
+#: js/views/admin-methodologies.js:143
+msgid "Published v{version}. Respondents can now use it."
+msgstr ""
+"Версия v{version} опубликована. Теперь респонденты могут её использовать."
+
+#: js/views/respondent.js:132
+msgid "Published {date}"
+msgstr "Опубликована {date}"
+
+#: js/views/admin-methodologies.js:25
+msgid ""
+"Published: locked so past scores stay reproducible. Respondents can start "
+"assessments with it."
+msgstr ""
+"Опубликована: заблокирована, чтобы прошлые баллы можно было воспроизвести. "
+"Респонденты могут начинать по ней оценки."
+
+#: js/views/dashboard.js:143
+msgid "Published: {count}"
+msgstr "Опубликовано: {count}"
+
+#: js/views/dashboard.js:40
+msgid "Published: {published} · drafts: {drafts}"
+msgstr "Опубликовано: {published} · черновиков: {drafts}"
+
+#: js/views/admin-methodologies.js:258
+msgid ""
+"Python expression. s = child scores, w = weights that add up to 1. Example: "
+"min(s) * 0.5 + sum(a * b for a, b in zip(s, w)) * 0.5"
+msgstr ""
+"Выражение на Python. s — баллы дочерних узлов, w — веса с суммой 1. Пример: "
+"min(s) * 0.5 + sum(a * b for a, b in zip(s, w)) * 0.5"
+
+#: js/views/admin-methodologies.js:396
+msgid ""
+"Python expression. x = the answer (Yes = 1, No = 0), lo / hi = the scale’s "
+"lowest and highest score. Examples: hi - x / 2 · hi if x > 10 else lo"
+msgstr ""
+"Выражение на Python. x — ответ (Да = 1, Нет = 0), lo / hi — минимальный и "
+"максимальный балл шкалы. Примеры: hi - x / 2 · hi if x > 10 else lo"
+
+#: js/help.js:62
+msgid ""
+"Quality is broken down step by step: the whole building → groups like "
+"“Structural condition” → the individual questions. Scores are calculated "
+"from the bottom up: questions first, then their groups, then the root."
+msgstr ""
+"Качество раскладывается по шагам: всё здание → группы вроде «Состояние "
+"конструкций» → отдельные вопросы. Баллы считаются снизу вверх: сначала "
+"вопросы, затем их группы, затем корень."
+
+#: js/views/admin-methodologies.js:217 js/views/admin-methodologies.js:309
+#: js/views/admin-questions.js:65 js/views/admin-questions.js:162
+#: js/views/help.js:67
+msgid "Question"
+msgstr "Вопрос"
+
+#: js/help.js:122
+msgid "Question (library)"
+msgstr "Вопрос (библиотека)"
+
+#: js/views/dashboard.js:54
+msgid "Question categories"
+msgstr "Категории вопросов"
+
+#: js/views/admin-questions.js:48 js/views/admin-questions.js:142
+#: js/views/data.js:15
+msgid "Question library"
+msgstr "Библиотека вопросов"
+
+#: js/views/admin-methodologies.js:321
+msgid "Question linked."
+msgstr "Вопрос привязан."
+
+#: js/views/admin-methodologies.js:270
+msgid "Question node"
+msgstr "Узел-вопрос"
+
+#: js/views/admin-questions.js:135
+msgid "Question not found."
+msgstr "Вопрос не найден."
+
+#: js/help.js:141
+msgid ""
+"Question text: EN “Is an automatic fire alarm installed?”, RU and KY in "
+"their own words."
+msgstr ""
+"Текст вопроса: EN «Is an automatic fire alarm installed?», RU и KY — своими "
+"словами."
+
+#: js/views/respondent.js:86 js/views/respondent.js:90
+#: js/views/respondent.js:219 js/views/respondent.js:223
+msgid "Questionnaire"
+msgstr "Анкета"
+
+#: js/views/respondent.js:168
+msgid "Questionnaires"
+msgstr "Анкеты"
+
+#: js/views/respondent.js:82
+msgid "Questionnaires available"
+msgstr "Доступно анкет"
+
+#: js/main.js:44 js/views/admin-questions.js:55 js/views/admin-questions.js:89
+#: js/views/dashboard.js:55 js/views/dashboard.js:142 js/views/help.js:45
+msgid "Questions"
+msgstr "Вопросы"
+
+#: js/views/admin-questions.js:51
+msgid "Questions don’t have scores – methodologies do"
+msgstr "Баллы задаются не в вопросах, а в методиках"
+
+#: js/help.js:124
+msgid ""
+"Questions live in a shared library so they can be reused by many "
+"methodologies. A question only defines the wording and the answer type "
+"(number, choice, yes/no…). How important it is and how it is scored is "
+"decided inside each methodology."
+msgstr ""
+"Вопросы хранятся в общей библиотеке, чтобы их можно было использовать во "
+"многих методиках. Вопрос задаёт только формулировку и тип ответа (число, "
+"выбор, да/нет…). Насколько он важен и как оценивается, решается в каждой "
+"методике."
+
+#: js/views/respondent.js:132
+msgid "Questions: {count}"
+msgstr "Вопросов: {count}"
+
+#: js/views/admin-catalogs.js:163
+msgid "Range"
+msgstr "Диапазон"
+
+#: js/views/admin-methodologies.js:493
+msgid "Ranges are matched against the value of the chosen level."
+msgstr "Диапазоны сравниваются со значением выбранного уровня."
+
+#: js/views/admin-methodologies.js:19
+msgid "Ranking"
+msgstr "Ранжирование"
+
+#: js/scoring.js:51
+msgid "Rating on a scale"
+msgstr "Оценка по шкале"
+
+#: js/help.js:100
+msgid "Rating scale"
+msgstr "Шкала оценки"
+
+#: js/views/admin-catalogs.js:13 js/views/dashboard.js:51
+msgid "Rating scales"
+msgstr "Шкалы оценки"
+
+#: js/views/admin-catalogs.js:152
+msgid "Rating scales: the measuring stick for scores"
+msgstr "Шкалы оценки: мерило для баллов"
+
+#: js/views/data.js:30
+msgid "Raw answer, method used, score and matched criterion."
+msgstr "Исходный ответ, использованный метод, балл и сработавший критерий."
+
+#: js/views/help.js:57
+msgid "Read the result"
+msgstr "Изучите результат"
+
+#: js/views/respondent.js:525
+msgid "Reading the result"
+msgstr "Как читать результат"
+
+#: js/views/admin-methodologies.js:123
+msgid "Ready to publish: no problems found."
+msgstr "Готово к публикации: проблем не найдено."
+
+#: js/views/admin-catalogs.js:254 js/views/admin-catalogs.js:261
+#: js/views/respondent.js:115 js/views/respondent.js:168
+msgid "Reference"
+msgstr "Идентификатор"
+
+#: js/views/respondent.js:180
+msgid "Register an object"
+msgstr "Зарегистрировать объект"
+
+#: js/views/respondent.js:111
+msgid "Register object"
+msgstr "Зарегистрировать объект"
+
+#: js/views/respondent.js:120
+msgid "Registered {name}."
+msgstr "Зарегистрирован объект {name}."
+
+#: js/views/admin-methodologies.js:358 js/views/admin-methodologies.js:502
+#: js/views/respondent.js:393
+msgid "Remove"
+msgstr "Убрать"
+
+#: js/views/admin-questions.js:93
+msgid "Rename"
+msgstr "Переименовать"
+
+#: js/views/respondent.js:304
+msgid "Reopen"
+msgstr "Открыть заново"
+
+#: js/views/respondent.js:304
+msgid "Reopened: you can change answers again."
+msgstr "Открыто заново: ответы снова можно менять."
+
+#: js/views/account.js:116
+msgid "Repeat the new password"
+msgstr "Повторите новый пароль"
+
+#: js/views/account.js:54
+msgid "Repeat the password"
+msgstr "Повторите пароль"
+
+#: js/main.js:76
+msgid "Replace all data on the server with the example data"
+msgstr "Заменить все данные на сервере демо-данными"
+
+#: js/api.js:32
+msgid "Request failed ({status})."
+msgstr "Запрос не выполнен ({status})."
+
+#: js/dom.js:234 js/dom.js:256 js/dom.js:262
+msgid "Required"
+msgstr "Обязательно"
+
+#: js/dom.js:309
+msgid "Required."
+msgstr "Обязательное поле."
+
+#: js/views/admin-catalogs.js:202
+msgid "Requires evidence"
+msgstr "Нужны подтверждения"
+
+#: js/main.js:95
+msgid "Reset demo data"
+msgstr "Сбросить демо-данные"
+
+#: js/views/admin-catalogs.js:213
+msgid "Residential building, Office building."
+msgstr "Жилое здание, Офисное здание."
+
+#: js/views/respondent.js:221 js/views/respondent.js:223
+#: js/views/respondent.js:512
+msgid "Respondent"
+msgstr "Респондент"
+
+#: js/views/help.js:52
+msgid "Respondent: filling in an assessment"
+msgstr "Респондент: заполнение оценки"
+
+#: js/help.js:134
+msgid ""
+"Respondents fill in assessments. Each answer is scored immediately; "
+"completing the assessment calculates every group and the final score."
+msgstr ""
+"Респонденты заполняют оценки. Каждый ответ сразу получает балл; при "
+"завершении рассчитываются все группы и итоговый балл."
+
+#: js/views/admin-methodologies.js:79
+msgid "Respondents see this name when they start an assessment."
+msgstr "Респонденты видят это название, когда начинают оценку."
+
+#: js/views/respondent.js:61 js/views/respondent.js:510
+#: js/views/respondent.js:511
+msgid "Result"
+msgstr "Результат"
+
+#: js/views/respondent.js:472
+msgid "Result not ready"
+msgstr "Результат ещё не готов"
+
+#: js/views/admin-methodologies.js:82 js/views/admin-methodologies.js:182
+#: js/views/admin-methodologies.js:188
+msgid "Result scale"
+msgstr "Шкала результата"
+
+#: js/views/respondent.js:472
+msgid "Results are calculated when the assessment is completed."
+msgstr "Результаты рассчитываются при завершении оценки."
+
+#: js/views/admin-methodologies.js:104
+msgid "Retired"
+msgstr "Выведена из работы"
+
+#: js/views/help.js:69
+msgid "Roof condition"
+msgstr "Состояние кровли"
+
+#: js/scoring.js:48
+msgid "Roof condition: good / minor wear / local damage / leaking."
+msgstr ""
+"Состояние кровли: хорошее / небольшой износ / местные повреждения / "
+"протекает."
+
+#: js/views/admin-methodologies.js:270
+msgid "Root group – its score is the final result"
+msgstr "Корневая группа — её балл и есть итоговый результат"
+
+#: js/help.js:95
+msgid "Rows of “if the answer is …, the score is …”."
+msgstr "Строки вида «если ответ …, балл …»."
+
+#: js/views/admin-methodologies.js:437
+msgid "Rule saved."
+msgstr "Правило сохранено."
+
+#: js/views/admin-methodologies.js:261
+msgid "Same as the version ({scale})"
+msgstr "Как у версии ({scale})"
+
+#: js/views/account.js:92 js/views/admin-methodologies.js:76
+msgid "Save"
+msgstr "Сохранить"
+
+#: js/views/admin-questions.js:97
+msgid "Save category"
+msgstr "Сохранить категорию"
+
+#: js/views/admin-catalogs.js:63
+msgid "Save changes"
+msgstr "Сохранить изменения"
+
+#: js/views/admin-methodologies.js:509
+msgid "Save criterion"
+msgstr "Сохранить критерий"
+
+#: js/views/admin-catalogs.js:131
+msgid "Save level"
+msgstr "Сохранить уровень"
+
+#: js/views/admin-methodologies.js:361
+msgid "Save method"
+msgstr "Сохранить метод"
+
+#: js/views/admin-methodologies.js:287
+msgid "Save node"
+msgstr "Сохранить узел"
+
+#: js/views/admin-questions.js:230
+msgid "Save option"
+msgstr "Сохранить вариант"
+
+#: js/views/admin-questions.js:160
+msgid "Save question"
+msgstr "Сохранить вопрос"
+
+#: js/views/admin-methodologies.js:436
+msgid "Save rule"
+msgstr "Сохранить правило"
+
+#: js/views/admin-methodologies.js:185
+msgid "Save settings"
+msgstr "Сохранить настройки"
+
+#: js/help.js:38
+msgid "Saved in"
+msgstr "Хранится в"
+
+#: js/views/admin-catalogs.js:42 js/views/admin-catalogs.js:143
+#: js/views/admin-methodologies.js:89 js/views/admin-questions.js:106
+#: js/views/admin-questions.js:185 js/views/admin-questions.js:242
+msgid "Saved: {name}."
+msgstr "Сохранено: {name}."
+
+#: js/dom.js:317 js/main.js:123 js/main.js:226
+msgid "Saving…"
+msgstr "Сохранение…"
+
+#: js/views/admin-questions.js:153
+msgid ""
+"Say where and how to look in the guidance, e.g. “Measure at the widest "
+"point”."
+msgstr ""
+"В пояснении укажите, где и как смотреть, например «Измеряйте в самом широком"
+" месте»."
+
+#: js/views/admin-questions.js:170
+msgid "Scale"
+msgstr "Шкала"
+
+#: js/views/dashboard.js:97
+msgid "Scale has fewer than two levels."
+msgstr "У шкалы меньше двух уровней."
+
+#: js/help.js:106
+msgid "Scale level"
+msgstr "Уровень шкалы"
+
+#: js/views/dashboard.js:52
+msgid "Scale levels"
+msgstr "Уровни шкал"
+
+#: js/views/admin-methodologies.js:228
+msgid "Scale to 1"
+msgstr "Привести к 1"
+
+#: js/views/admin-catalogs.js:169
+msgid "Scale type"
+msgstr "Тип шкалы"
+
+#: js/views/data.js:9
+msgid "Scales for answers, node scores and results."
+msgstr "Шкалы для ответов, баллов узлов и результатов."
+
+#: js/views/admin-catalogs.js:176
+msgid "Scales used by questions, methodologies or criteria can’t be deleted."
+msgstr ""
+"Шкалы, которые используются в вопросах, методиках или критериях, удалить "
+"нельзя."
+
+#: js/views/admin-methodologies.js:494 js/views/admin-methodologies.js:513
+#: js/views/help.js:67 js/views/respondent.js:529
+msgid "Score"
+msgstr "Балл"
+
+#: js/help.js:94 js/views/admin-methodologies.js:490 js/views/dashboard.js:62
+msgid "Score criteria"
+msgstr "Критерии оценки"
+
+#: js/views/help.js:37
+msgid "Score criteria: which answer earns which score"
+msgstr "Критерии оценки: какой ответ сколько баллов даёт"
+
+#: js/views/admin-methodologies.js:261
+msgid "Score scale"
+msgstr "Шкала балла"
+
+#: js/views/admin-methodologies.js:427 js/views/admin-methodologies.js:430
+#: js/views/admin-methodologies.js:433 js/views/help.js:49
+msgid "Scoring"
+msgstr "Оценка в баллах"
+
+#: js/views/admin-methodologies.js:415
+msgid "Scoring changed to “{name}”."
+msgstr "Способ оценки изменён на «{name}»."
+
+#: js/help.js:89
+msgid "Scoring rule"
+msgstr "Правило оценки"
+
+#: js/views/dashboard.js:61
+msgid "Scoring rules"
+msgstr "Правила оценки"
+
+#: js/views/admin-questions.js:57 js/views/respondent.js:166
+msgid "Search"
+msgstr "Поиск"
+
+#: js/dom.js:152
+msgid "Sections"
+msgstr "Разделы"
+
+#: js/views/respondent.js:91
+msgid "See your full history"
+msgstr "Вся история"
+
+#: js/views/data.js:31
+msgid "Selected options of multi-choice answers."
+msgstr "Выбранные варианты в ответах с несколькими вариантами."
+
+#: js/scoring.js:129
+msgid "Set the lower limit, the target and the upper limit."
+msgstr "Укажите нижнюю границу, цель и верхнюю границу."
+
+#: js/scoring.js:121
+msgid "Set the worst and the best value."
+msgstr "Укажите худшее и лучшее значения."
+
+#: js/views/dashboard.js:21
+msgid "Set up the catalogs"
+msgstr "Заполните справочники"
+
+#: js/views/dashboard.js:120
+msgid ""
+"Setting up an assessment goes in four steps, shown below in the usual order."
+" Each step opens a page that explains what to do. Words with a dotted "
+"underline show a short definition when you point at them and open the "
+"glossary when you click."
+msgstr ""
+"Подготовка оценки проходит в четыре шага, ниже они показаны в обычном "
+"порядке. Каждый шаг открывает страницу с пояснениями. Слова с пунктирным "
+"подчёркиванием показывают краткое определение при наведении и открывают "
+"глоссарий по щелчку."
+
+#: js/views/admin-methodologies.js:191
+msgid "Settings saved."
+msgstr "Настройки сохранены."
+
+#: js/views/dashboard.js:126
+msgid "Setup steps"
+msgstr "Шаги подготовки"
+
+#: js/views/admin-methodologies.js:254
+msgid "Share of the parent’s score. Siblings: {list}."
+msgstr "Доля в балле родительского узла. Соседние узлы: {list}."
+
+#: js/views/admin-methodologies.js:80
+msgid "Short and unique. Used in exports and the API."
+msgstr "Короткий и уникальный. Используется в выгрузках и API."
+
+#: js/views/admin-questions.js:63
+msgid "Show"
+msgstr "Показать"
+
+#: js/views/help.js:23
+msgid "Show all tips again"
+msgstr "Снова показать все подсказки"
+
+#: js/main.js:66
+msgid "Show explanations and tips"
+msgstr "Показать пояснения и подсказки"
+
+#: js/views/admin-questions.js:169
+msgid "Shown next to the input. Missing one? Add it under Catalogs → Units."
+msgstr ""
+"Показывается рядом с полем ввода. Нужной нет? Добавьте в Справочники → "
+"Единицы."
+
+#: js/views/admin-methodologies.js:253
+msgid "Siblings add up to {sum} – should be 1."
+msgstr "Сумма весов соседних узлов {sum} — должна быть 1."
+
+#: js/views/admin-methodologies.js:253
+msgid "Siblings add up to {sum}."
+msgstr "Сумма весов соседних узлов: {sum}."
+
+#: js/views/account.js:15 js/views/account.js:18 js/views/account.js:64
+msgid "Sign in"
+msgstr "Войти"
+
+#: js/main.js:112
+msgid "Sign out"
+msgstr "Выйти"
+
+#: js/scoring.js:48
+msgid "Single choice"
+msgstr "Один вариант"
+
+#: js/help.js:85
+msgid ""
+"Some requirements are critical: no average can make up for them. If a node "
+"scores below its knock-out threshold, its parent group is marked as failed, "
+"and the failure travels up to the root."
+msgstr ""
+"Некоторые требования критичны: никакое среднее их не компенсирует. Если балл"
+" узла ниже критического порога, родительская группа отмечается как "
+"непрошедшая, и это поднимается до корня."
+
+#: js/views/data.js:21
+msgid "Stable identity of a methodology."
+msgstr "Постоянная идентичность методики."
+
+#: js/views/help.js:62
+msgid "Standard users"
+msgstr "Обычные пользователи"
+
+#: js/views/help.js:54
+msgid "Start"
+msgstr "Начните"
+
+#: js/views/respondent.js:141
+msgid "Start assessment"
+msgstr "Начать оценку"
+
+#: js/views/respondent.js:175
+msgid "Start “{name}”"
+msgstr "Начать «{name}»"
+
+#: js/views/respondent.js:86 js/views/respondent.js:90
+#: js/views/respondent.js:223
+msgid "Started"
+msgstr "Начата"
+
+#: js/views/admin-methodologies.js:61 js/views/admin-questions.js:198
+#: js/views/respondent.js:86 js/views/respondent.js:90
+#: js/views/respondent.js:217 js/views/respondent.js:223
+msgid "Status"
+msgstr "Статус"
+
+#: js/views/admin-catalogs.js:172
+msgid "Step"
+msgstr "Шаг"
+
+#: js/views/admin-catalogs.js:275
+msgid ""
+"Step 1 of the setup. Shared reference lists that questions and methodologies"
+" pick from. Usually set up once and reused everywhere."
+msgstr ""
+"Шаг 1 подготовки. Общие справочники, из которых выбирают вопросы и методики."
+" Обычно заполняются один раз и используются везде."
+
+#: js/views/admin-questions.js:48
+msgid ""
+"Step 2 of the setup. A question says what is asked and which kind of answer "
+"is valid."
+msgstr ""
+"Шаг 2 подготовки. Вопрос определяет, что спрашивается и какой ответ "
+"допустим."
+
+#: js/views/admin-methodologies.js:365
+msgid ""
+"Step by step: tools, where to look, how many samples. Write it so a new "
+"colleague could follow it."
+msgstr ""
+"По шагам: инструменты, где смотреть, сколько замеров. Пишите так, чтобы "
+"новый коллега смог повторить."
+
+#: js/views/admin-methodologies.js:43
+msgid ""
+"Steps 3 and 4 of the setup. A methodology arranges library questions into a "
+"weighted tree and says how each one is assessed and scored."
+msgstr ""
+"Шаги 3 и 4 подготовки. Методика расставляет вопросы библиотеки во взвешенное"
+" дерево и описывает, как каждый из них оценивается и переводится в баллы."
+
+#: js/views/admin-methodologies.js:290
+msgid ""
+"Structural condition (weight 0.5) contains Crack width (0.6) and Roof "
+"condition (0.4). With scores 3 and 4 the group scores 0.6 × 3 + 0.4 × 4 = "
+"3.4."
+msgstr ""
+"«Состояние конструкций» (вес 0,5) включает «Ширину трещин» (0,6) и "
+"«Состояние кровли» (0,4). При баллах 3 и 4 группа получает 0,6 × 3 + 0,4 × 4"
+" = 3,4."
+
+#: js/help.js:74
+msgid ""
+"Structural condition 0.5 + Fire safety 0.3 + Energy efficiency 0.2 = 1."
+msgstr ""
+"Состояние конструкций 0,5 + Пожарная безопасность 0,3 + Энергоэффективность "
+"0,2 = 1."
+
+#: js/help.js:80
+msgid "Structural condition = 0.6 × 3 (cracks) + 0.4 × 4 (roof) = 3.4."
+msgstr "Состояние конструкций = 0,6 × 3 (трещины) + 0,4 × 4 (кровля) = 3,4."
+
+#: js/views/help.js:73
+msgid ""
+"Structural condition = 0.6 × 3 + 0.4 × 4 = 3.4. Fire safety = 5. Energy "
+"efficiency = 3.5."
+msgstr ""
+"Состояние конструкций = 0,6 × 3 + 0,4 × 4 = 3,4. Пожарная безопасность = 5. "
+"Энергоэффективность = 3,5."
+
+#: js/views/help.js:64
+msgid "Superuser"
+msgstr "Суперпользователь"
+
+#: js/views/help.js:26
+msgid ""
+"Switch the interface language with the EN / RU / KY buttons at the top. Data"
+" is shown in the same language."
+msgstr ""
+"Язык интерфейса переключается кнопками EN / RU / KY вверху. Данные "
+"показываются на том же языке."
+
+#: js/help.js:52
+msgid ""
+"TECH_RES v1.0 is published. “Create new version” makes v1.1 as a draft."
+msgstr ""
+"TECH_RES v1.0 опубликована. «Создать новую версию» делает черновик v1.1."
+
+#: js/views/admin-methodologies.js:392
+msgid "Target"
+msgstr "Цель"
+
+#: js/views/admin-methodologies.js:583
+msgid "Text answers are not scored."
+msgstr "Текстовые ответы не оцениваются."
+
+#: js/views/admin-methodologies.js:430
+msgid "Text answers are stored but never scored."
+msgstr "Текстовые ответы сохраняются, но не оцениваются."
+
+#: js/views/dashboard.js:122
+msgid ""
+"Texts such as names and questions are entered in every language: English, "
+"Russian and Kyrgyz."
+msgstr ""
+"Тексты — названия, вопросы и т. п. — вводятся на всех языках: английском, "
+"русском и кыргызском."
+
+#: js/views/dashboard.js:81
+msgid ""
+"Texts without a translation: {count} (missing: {langs}). The {main} text is "
+"shown instead."
+msgstr ""
+"Текстов без перевода: {count} (нет: {langs}). Вместо них показывается текст "
+"на {main}."
+
+#: js/scoring.js:117
+msgid ""
+"The answer is looked up in the score criteria ({count}); the first matching "
+"one gives the score."
+msgstr ""
+"Ответ ищется в критериях оценки ({count}); балл даёт первый подходящий."
+
+#: js/scoring.js:116
+msgid ""
+"The answer is looked up in the score criteria below, but there are none yet."
+msgstr "Ответ ищется в критериях ниже, но их пока нет."
+
+#: js/views/help.js:37
+msgid "The answer key"
+msgstr "Ключ ответов"
+
+#: js/help.js:96
+msgid ""
+"The answer key of a criteria-lookup rule. Numeric ranges include the lower "
+"bound and exclude the upper bound, so 0.5–2 matches 0.5 but not 2. Ranges "
+"must not overlap or leave gaps. Choice and yes/no questions need one "
+"criterion per possible answer."
+msgstr ""
+"Ключ ответов для правила «по таблице критериев». Числовые диапазоны включают"
+" нижнюю границу и не включают верхнюю, поэтому 0,5–2 подходит для 0,5, но не"
+" для 2. Диапазоны не должны пересекаться или оставлять пропуски. Для "
+"вопросов с выбором и да/нет нужен критерий на каждый возможный ответ."
+
+#: js/main.js:213
+msgid "The app could not start."
+msgstr "Приложение не запустилось."
+
+#: js/views/respondent.js:326
+msgid "The assessment can’t be completed yet:"
+msgstr "Оценку пока нельзя завершить:"
+
+#: js/views/admin-methodologies.js:350
+msgid ""
+"The assessment methods respondents may use for this question, with "
+"instructions. The primary method is preselected for them."
+msgstr ""
+"Методы оценки, которые респонденты могут использовать для этого вопроса, с "
+"инструкциями. Основной метод выбран заранее."
+
+#: js/views/help.js:35
+msgid "The bank of exam questions"
+msgstr "Банк экзаменационных вопросов"
+
+#: js/views/help.js:57
+msgid ""
+"The breakdown shows every node with the answer and the criterion that "
+"explains its score."
+msgstr ""
+"В разбивке показан каждый узел с ответом и критерием, который объясняет его "
+"балл."
+
+#: js/views/help.js:50
+msgid ""
+"The checklist on the version page lists every problem. When it is empty, "
+"publish. Published versions are read-only; “Create new version” makes an "
+"editable copy."
+msgstr ""
+"Список проверки на странице версии перечисляет все проблемы. Когда он пуст, "
+"публикуйте. Опубликованные версии только для чтения; «Создать новую версию» "
+"делает редактируемую копию."
+
+#: js/views/admin-questions.js:217
+msgid "The choices the respondent picks from, in this order."
+msgstr "Варианты, из которых выбирает респондент, в этом порядке."
+
+#: js/views/help.js:36
+msgid "The exam programme: which questions, how many points each"
+msgstr "Программа экзамена: какие вопросы и сколько баллов за каждый"
+
+#: js/views/dashboard.js:121
+msgid ""
+"The example data already contains a complete, published methodology. Open it"
+" to see how a finished one looks before you build your own."
+msgstr ""
+"В демо-данных уже есть полная опубликованная методика. Откройте её, чтобы "
+"увидеть, как выглядит готовая, прежде чем создавать свою."
+
+#: js/views/help.js:66
+msgid "The example data contains this completed assessment of Block A."
+msgstr "В демо-данных есть эта завершённая оценка корпуса А."
+
+#: js/views/admin-methodologies.js:507
+msgid ""
+"The first option gets the highest score and the last the lowest; adjust the "
+"scores afterwards. Labels are copied from the options in every language."
+msgstr ""
+"Первый вариант получает максимальный балл, последний — минимальный; потом "
+"поправьте баллы. Подписи копируются из вариантов на всех языках."
+
+#: js/help.js:79
+msgid ""
+"The formula a group uses to turn its children’s scores into its own score. "
+"The weighted average is the usual choice: multiply each child score by its "
+"weight and add them up. “Minimum” makes the group as good as its weakest "
+"child."
+msgstr ""
+"Формула, по которой группа превращает баллы дочерних узлов в свой балл. "
+"Обычно это взвешенное среднее: каждый балл умножается на вес, и всё "
+"складывается. «Минимум» делает группу такой же, как её самый слабый узел."
+
+#: js/views/help.js:39
+msgid "The grade on the certificate"
+msgstr "Оценка в аттестате"
+
+#: js/scoring.js:42
+msgid "The group is as good as its best child. Weights are ignored."
+msgstr ""
+"Группа так же хороша, как её лучший дочерний узел. Веса не учитываются."
+
+#: js/scoring.js:41
+msgid "The group is as good as its weakest child. Weights are ignored."
+msgstr ""
+"Группа так же хороша, как её самый слабый дочерний узел. Веса не "
+"учитываются."
+
+#: js/views/help.js:33
+msgid "The idea in one minute"
+msgstr "Суть за одну минуту"
+
+#: js/views/admin-methodologies.js:392
+msgid "The ideal value: the highest score."
+msgstr "Идеальное значение: максимальный балл."
+
+#: js/views/account.js:100
+msgid "The interface switches to this language whenever you sign in."
+msgstr "При каждом входе интерфейс переключается на этот язык."
+
+#: js/help.js:128
+msgid ""
+"The kind of answer: number, single choice, multiple choice, yes/no, scale "
+"level or text."
+msgstr ""
+"Тип ответа: число, один вариант, несколько вариантов, да/нет, уровень шкалы "
+"или текст."
+
+#: js/views/admin-methodologies.js:309
+msgid ""
+"The library question this node asks. Changing it deletes the node’s score "
+"criteria, because they belong to the old question."
+msgstr ""
+"Вопрос из библиотеки, который задаёт этот узел. При его замене критерии узла"
+" удаляются, так как относятся к старому вопросу."
+
+#: js/views/admin-catalogs.js:155
+msgid ""
+"The lowest and highest scores are used by linear scoring rules: the worst "
+"answer gets the lowest score, the best answer the highest."
+msgstr ""
+"Минимальный и максимальный баллы используются линейными правилами: худший "
+"ответ получает минимальный балл, лучший — максимальный."
+
+#: js/help.js:101
+msgid "The measuring stick for scores, e.g. 1–5 with named levels."
+msgstr "Мерило для баллов, например 1–5 с названными уровнями."
+
+#: js/help.js:113
+msgid ""
+"The mechanics of getting an answer. On each question node you attach one or "
+"more methods with step-by-step instructions and the evidence to collect, so "
+"different respondents assess the same way."
+msgstr ""
+"Механика получения ответа. К каждому узлу-вопросу добавляется один или "
+"несколько методов с пошаговыми инструкциями и списком подтверждений, чтобы "
+"разные респонденты оценивали одинаково."
+
+#: js/scoring.js:136
+msgid "The number entered is used as the score as it is."
+msgstr "Введённое число используется как балл без изменений."
+
+#: js/views/admin-catalogs.js:134
+msgid ""
+"The number this level stands for. Scores are shown with the nearest level."
+msgstr ""
+"Число, которому соответствует уровень. Баллы показываются с ближайшим "
+"уровнем."
+
+#: js/views/respondent.js:147
+msgid "The object is not in the list? Register it"
+msgstr "Объекта нет в списке? Зарегистрируйте его"
+
+#: js/views/account.js:56 js/views/account.js:118
+msgid "The passwords don’t match."
+msgstr "Пароли не совпадают."
+
+#: js/views/help.js:35
+msgid "The question library"
+msgstr "Библиотека вопросов"
+
+#: js/views/dashboard.js:29
+msgid ""
+"The question library: what is asked and which kind of answer is valid. No "
+"scores yet."
+msgstr ""
+"Библиотека вопросов: что спрашивается и какой ответ допустим. Баллов здесь "
+"ещё нет."
+
+#: js/views/admin-methodologies.js:482
+msgid "The range includes this value."
+msgstr "Диапазон включает это значение."
+
+#: js/views/admin-methodologies.js:483
+msgid ""
+"The range stops just below this value, so the next range can start at it."
+msgstr ""
+"Диапазон заканчивается перед этим значением, чтобы следующий мог начаться с "
+"него."
+
+#: js/scoring.js:31
+msgid ""
+"The raw number is the score. Only for answers already on the score scale."
+msgstr ""
+"Исходное число и есть балл. Только для ответов, уже выраженных по шкале "
+"баллов."
+
+#: js/views/admin-catalogs.js:247
+msgid ""
+"The reference is your own identifier, such as a cadastral number. Attributes"
+" are free notes like the year built. Object names are not translated."
+msgstr ""
+"Идентификатор — ваш собственный номер, например кадастровый. Атрибуты — "
+"свободные заметки, например год постройки. Названия объектов не переводятся."
+
+#: js/views/admin-questions.js:170
+msgid "The respondent picks one of this scale’s levels."
+msgstr "Респондент выбирает один из уровней этой шкалы."
+
+#: js/views/admin-methodologies.js:282
+msgid "The root group"
+msgstr "Корневая группа"
+
+#: js/views/admin-methodologies.js:283
+msgid ""
+"The root sits at the top of the tree and combines the main groups into the "
+"final score. Add groups to it with “+ group” in the tree, e.g. “Structural "
+"condition”, “Fire safety”, “Energy efficiency”."
+msgstr ""
+"Корень находится наверху дерева и объединяет основные группы в итоговый "
+"балл. Добавляйте в него группы кнопкой «+ группа» в дереве, например "
+"«Состояние конструкций», «Пожарная безопасность», «Энергоэффективность»."
+
+#: js/help.js:45
+msgid ""
+"The rule book for assessing one kind of object. It arranges questions from "
+"the library into a tree, gives each part a weight and says how every answer "
+"is turned into a score. Methodologies have versions."
+msgstr ""
+"Свод правил для оценки одного вида объектов. Методика расставляет вопросы из"
+" библиотеки в дерево, задаёт каждой части вес и описывает, как каждый ответ "
+"превращается в балл. У методик есть версии."
+
+#: js/views/admin-methodologies.js:188
+msgid ""
+"The scale of the final score. Changing it also changes linear rules that use"
+" the default scale."
+msgstr ""
+"Шкала итогового балла. Её изменение влияет и на линейные правила, которые "
+"используют шкалу по умолчанию."
+
+#: js/views/admin-methodologies.js:82
+msgid ""
+"The scale of the final score. Nodes use it too unless you give them their "
+"own."
+msgstr ""
+"Шкала итогового балла. Узлы тоже используют её, если не задать им свою."
+
+#: js/scoring.js:134
+msgid "The score is calculated as {formula}, kept within {lo}–{hi}."
+msgstr "Балл считается как {formula} в пределах {lo}–{hi}."
+
+#: js/api.js:25
+msgid ""
+"The server hit an error ({status}). Check the runserver console for details."
+msgstr ""
+"На сервере произошла ошибка ({status}). Подробности — в консоли runserver."
+
+#: js/help.js:61
+msgid ""
+"The structure of a methodology: groups that contain sub-groups and "
+"questions."
+msgstr "Структура методики: группы, содержащие подгруппы и вопросы."
+
+#: js/views/respondent.js:320
+msgid ""
+"The total is provisional: unanswered questions are left out and the "
+"remaining weights rescaled until you complete the assessment."
+msgstr ""
+"Итог предварительный: вопросы без ответа не учитываются, а веса остальных "
+"пересчитываются, пока вы не завершите оценку."
+
+#: js/views/help.js:39
+msgid "The total score and its level, e.g. 3.9 “Good”"
+msgstr "Итоговый балл и его уровень, например 3,9 «Хорошо»"
+
+#: js/views/data.js:23
+msgid "The weighted property tree."
+msgstr "Взвешенное дерево свойств."
+
+#: js/scoring.js:16
+msgid ""
+"The worst value gets the lowest score, the best value the highest, "
+"proportional in between."
+msgstr ""
+"Худшее значение получает минимальный балл, лучшее — максимальный, между ними"
+" — пропорционально."
+
+#: js/views/admin-methodologies.js:124
+msgid ""
+"This checklist is re-checked by the server after every change. Click a code "
+"to open that node."
+msgstr ""
+"Сервер перепроверяет этот список после каждого изменения. Нажмите на код, "
+"чтобы открыть узел."
+
+#: js/views/admin-catalogs.js:84
+msgid ""
+"This is exactly what respondents see next to the input field, in every "
+"language."
+msgstr "Именно это респонденты видят рядом с полем ввода, на любом языке."
+
+#: js/views/respondent.js:306
+msgid ""
+"This is {name}’s assessment. You can read it, but only they can change the "
+"answers."
+msgstr ""
+"Это оценка пользователя {name}. Вы можете её читать, но менять ответы может "
+"только он."
+
+#: js/views/admin-methodologies.js:427
+msgid "This node has no scoring rule."
+msgstr "У этого узла нет правила оценки."
+
+#: js/main.js:182
+msgid "This page failed to render:"
+msgstr "Не удалось показать страницу:"
+
+#: js/views/help.js:24
+msgid "This setting is saved in this browser for your account."
+msgstr "Эта настройка сохраняется в этом браузере для вашей учётной записи."
+
+#: js/views/admin-methodologies.js:387
+msgid ""
+"This value, or anything better, gets the highest score. It may be lower than"
+" the worst value when less is better."
+msgstr ""
+"Это значение и всё, что лучше, получает максимальный балл. Оно может быть "
+"меньше худшего, если меньше — лучше."
+
+#: js/views/admin-methodologies.js:386
+msgid "This value, or anything worse, gets the lowest score of the scale."
+msgstr "Это значение и всё, что хуже, получает минимальный балл шкалы."
+
+#: js/scoring.js:49
+msgid "Tick all options that apply. The lowest of their scores counts."
+msgstr ""
+"Отметьте все подходящие варианты. Учитывается наименьший из их баллов."
+
+#: js/views/respondent.js:310
+msgid ""
+"Tick “Not applicable” when a question doesn’t apply to this object: it is "
+"left out and the other weights are rescaled."
+msgstr ""
+"Отметьте «Неприменимо», если вопрос не относится к объекту: он не "
+"учитывается, а веса остальных пересчитываются."
+
+#: js/help.js:11
+msgid "Tip"
+msgstr "Подсказка"
+
+#: js/views/admin-methodologies.js:47
+msgid ""
+"To change a published methodology, open it and click “Create new version”. "
+"You get an editable copy, e.g. v1.1, and the old version keeps working until"
+" you archive it."
+msgstr ""
+"Чтобы изменить опубликованную методику, откройте её и нажмите «Создать новую"
+" версию». Вы получите редактируемую копию, например v1.1, а старая версия "
+"продолжит работать, пока вы не перенесёте её в архив."
+
+#: js/views/admin-methodologies.js:279
+msgid "To fix on this node:"
+msgstr "Исправить в этом узле:"
+
+#: js/views/admin-methodologies.js:177
+msgid "To make changes, click “Create new version”."
+msgstr "Чтобы внести изменения, нажмите «Создать новую версию»."
+
+#: js/views/respondent.js:86 js/views/respondent.js:90
+#: js/views/respondent.js:223
+msgid "Total"
+msgstr "Итог"
+
+#: js/views/help.js:74
+msgid "Total = 0.5 × 3.4 + 0.3 × 5 + 0.2 × 3.5 = 3.9, “Good”."
+msgstr "Итог = 0,5 × 3,4 + 0,3 × 5 + 0,2 × 3,5 = 3,9, «Хорошо»."
+
+#: js/views/respondent.js:314
+msgid "Total score"
+msgstr "Итоговый балл"
+
+#: js/views/data.js:57
+msgid ""
+"Translated texts have one column per language, e.g. name_en, name_ru, "
+"name_ky. The column without a suffix shows the current language."
+msgstr ""
+"У переводимых текстов по столбцу на язык, например name_en, name_ru, "
+"name_ky. Столбец без суффикса показывает текущий язык."
+
+#: js/help.js:138
+msgid "Translations"
+msgstr "Переводы"
+
+#: js/views/dashboard.js:59
+msgid "Tree nodes"
+msgstr "Узлы дерева"
+
+#: js/views/admin-methodologies.js:297
+msgid "Try the rule"
+msgstr "Проверить правило"
+
+#: js/views/help.js:22
+msgid "Turn helpers off"
+msgstr "Выключить подсказки"
+
+#: js/views/help.js:22
+msgid "Turn helpers on"
+msgstr "Включить подсказки"
+
+#: js/views/admin-catalogs.js:94
+msgid "Two outcomes only, such as Pass / Fail."
+msgstr "Только два исхода, например Зачёт / Незачёт."
+
+#: js/views/admin-catalogs.js:162 js/views/admin-catalogs.js:253
+#: js/views/respondent.js:113 js/views/respondent.js:168
+msgid "Type"
+msgstr "Тип"
+
+#: js/views/admin-methodologies.js:250
+msgid "Unique in this version. Shown in the checklist and results."
+msgstr "Уникален в этой версии. Показывается в списке проверки и результатах."
+
+#: js/views/admin-questions.js:234
+msgid "Unique within this question."
+msgstr "Уникален в пределах вопроса."
+
+#: js/views/admin-questions.js:169
+msgid "Unit"
+msgstr "Единица измерения"
+
+#: js/views/admin-questions.js:65
+msgid "Unit / scale"
+msgstr "Единица / шкала"
+
+#: js/views/admin-catalogs.js:12 js/views/dashboard.js:49
+msgid "Units"
+msgstr "Единицы"
+
+#: js/views/data.js:8
+msgid "Units for numeric answers."
+msgstr "Единицы для числовых ответов."
+
+#: js/views/dashboard.js:22
+msgid ""
+"Units of measure, rating scales with their levels, assessment methods and "
+"object types."
+msgstr "Единицы измерения, шкалы с уровнями, методы оценки и типы объектов."
+
+#: js/views/admin-catalogs.js:88
+msgid "Units used by a question can’t be deleted."
+msgstr "Единицы, которые используются в вопросах, удалить нельзя."
+
+#: js/views/help.js:44
+msgid ""
+"Units, rating scales with levels, assessment methods, object types and "
+"objects. Usually set up once."
+msgstr ""
+"Единицы, шкалы с уровнями, методы оценки, типы объектов и объекты. Обычно "
+"заполняются один раз."
+
+#: js/views/respondent.js:443
+msgid "Unsupported answer type."
+msgstr "Неподдерживаемый тип ответа."
+
+#: js/views/admin-questions.js:174
+msgid "Untick to retire a question without deleting it."
+msgstr "Снимите отметку, чтобы вывести вопрос из работы, не удаляя его."
+
+#: js/views/admin-methodologies.js:483
+msgid "Up to, not included"
+msgstr "До (не включая)"
+
+#: js/views/admin-methodologies.js:393
+msgid "Upper limit"
+msgstr "Верхняя граница"
+
+#: js/scoring.js:30
+msgid "Use the answer as the score"
+msgstr "Ответ и есть балл"
+
+#: js/views/account.js:16
+msgid "Use your account to open your assessments or the admin dashboard."
+msgstr "Войдите, чтобы открыть свои оценки или панель администратора."
+
+#: js/views/admin-methodologies.js:174
+msgid "Use “Try the rule” to check that answers get the scores you expect."
+msgstr ""
+"С помощью «Проверить правило» убедитесь, что ответы получают ожидаемые "
+"баллы."
+
+#: js/api.js:26
+msgid "Used by: {list}."
+msgstr "Используется: {list}."
+
+#: js/views/admin-questions.js:65 js/views/admin-questions.js:197
+msgid "Used in"
+msgstr "Где используется"
+
+#: js/views/account.js:20 js/views/account.js:47
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: js/main.js:102
+msgid "Users and roles"
+msgstr "Пользователи и роли"
+
+#: js/main.js:102
+msgid "Users and roles are managed in Django admin"
+msgstr "Пользователи и роли управляются в Django admin"
+
+#: js/views/admin-methodologies.js:249
+msgid "Usually a short version of the question."
+msgstr "Обычно короткая версия вопроса."
+
+#: js/views/admin-catalogs.js:122 js/views/admin-catalogs.js:134
+msgid "Value"
+msgstr "Значение"
+
+#: js/help.js:49 js/views/admin-methodologies.js:61
+#: js/views/admin-questions.js:198
+msgid "Version"
+msgstr "Версия"
+
+#: js/views/admin-methodologies.js:131
+msgid "Version not found."
+msgstr "Версия не найдена."
+
+#: js/views/dashboard.js:58
+msgid "Version notes"
+msgstr "Заметки к версиям"
+
+#: js/views/admin-methodologies.js:182
+msgid "Version settings"
+msgstr "Настройки версии"
+
+#: js/views/admin-methodologies.js:106
+msgid "Version status"
+msgstr "Статус версии"
+
+#: js/views/admin-questions.js:75
+msgid "Versions: {count}"
+msgstr "Версий: {count}"
+
+#: js/views/respondent.js:303
+msgid "View result"
+msgstr "Посмотреть результат"
+
+#: js/views/admin-methodologies.js:126
+msgid "Warnings"
+msgstr "Предупреждения"
+
+#: js/views/admin-methodologies.js:279
+msgid "Warnings:"
+msgstr "Предупреждения:"
+
+#: js/help.js:71 js/views/admin-methodologies.js:219
+#: js/views/admin-methodologies.js:252 js/views/respondent.js:338
+#: js/views/respondent.js:529
+msgid "Weight"
+msgstr "Вес"
+
+#: js/views/respondent.js:529
+msgid "Weighted"
+msgstr "Взвешенный"
+
+#: js/scoring.js:37
+msgid "Weighted average"
+msgstr "Взвешенное среднее"
+
+#: js/scoring.js:38
+msgid "Weighted geometric mean"
+msgstr "Взвешенное геометрическое среднее"
+
+#: js/scoring.js:39
+msgid "Weighted harmonic mean"
+msgstr "Взвешенное гармоническое среднее"
+
+#: js/scoring.js:40
+msgid "Weighted sum"
+msgstr "Взвешенная сумма"
+
+#: js/views/admin-methodologies.js:182
+msgid "Weights"
+msgstr "Веса"
+
+#: js/help.js:73
+msgid ""
+"Weights are shares. Nodes directly under the same group must add up to 1 "
+"(100 %). A weight of 0.5 means the node makes up half of its group’s score."
+msgstr ""
+"Веса — это доли. Сумма весов узлов одной группы должна быть 1 (100 %). Вес "
+"0,5 означает, что узел составляет половину балла группы."
+
+#: js/views/admin-methodologies.js:20
+msgid "Weights come from pairwise comparisons (Analytic Hierarchy Process)."
+msgstr "Веса получены попарным сравнением (метод анализа иерархий)."
+
+#: js/views/admin-methodologies.js:19
+msgid "Weights were derived from a ranking of importance."
+msgstr "Веса получены из ранжирования по важности."
+
+#: js/views/admin-catalogs.js:75
+msgid "What are units for?"
+msgstr "Зачем нужны единицы измерения?"
+
+#: js/help.js:123
+msgid "What is asked and what kind of answer is valid. No weights or scores."
+msgstr "Что спрашивается и какой ответ допустим. Без весов и баллов."
+
+#: js/views/data.js:17
+msgid "What is asked and which answer is valid."
+msgstr "Что спрашивается и какой ответ допустим."
+
+#: js/views/data.js:56
+msgid "What is this page?"
+msgstr "Что это за страница?"
+
+#: js/views/admin-methodologies.js:83
+msgid "What the methodology assesses and when to use it."
+msgstr "Что оценивает методика и когда её применять."
+
+#: js/views/admin-questions.js:233
+msgid "What the respondent reads"
+msgstr "Что читает респондент"
+
+#: js/views/admin-questions.js:261
+msgid ""
+"What the respondent will see in the current language (the inputs are "
+"disabled here)."
+msgstr "Что увидит респондент на текущем языке (поля здесь отключены)."
+
+#: js/views/admin-methodologies.js:249
+msgid "What this group measures, e.g. “Structural condition”."
+msgstr "Что измеряет группа, например «Состояние конструкций»."
+
+#: js/views/admin-catalogs.js:136
+msgid ""
+"What this level means in practice, e.g. “Minor defects; no repair needed "
+"now”."
+msgstr ""
+"Что уровень означает на практике, например «Небольшие дефекты; ремонт пока "
+"не нужен»."
+
+#: js/views/admin-methodologies.js:61
+msgid "What this means"
+msgstr "Что это значит"
+
+#: js/views/help.js:30
+msgid "When a translation is missing, the English text is shown."
+msgstr "Если перевода нет, показывается английский текст."
+
+#: js/views/admin-methodologies.js:492
+msgid "When several options are ticked, the lowest of their scores applies."
+msgstr ""
+"Если отмечено несколько вариантов, применяется наименьший из их баллов."
+
+#: js/views/admin-methodologies.js:176
+msgid "When the checklist below is green, click Publish."
+msgstr "Когда список проверки ниже станет зелёным, нажмите «Опубликовать»."
+
+#: js/views/dashboard.js:123
+msgid ""
+"When you know your way around, turn the explanations off with the Helpers "
+"switch at the top right. You can turn them on again at any time."
+msgstr ""
+"Когда освоитесь, выключите пояснения переключателем «Подсказки» в правом "
+"верхнем углу. Включить их снова можно в любой момент."
+
+#: js/views/respondent.js:135
+msgid "Which object are you assessing?"
+msgstr "Какой объект вы оцениваете?"
+
+#: js/views/help.js:67
+msgid "Why"
+msgstr "Почему"
+
+#: js/views/account.js:43
+msgid ""
+"With an account you can fill in assessments and keep the history of your "
+"answers."
+msgstr ""
+"С учётной записью вы можете заполнять оценки и хранить историю своих "
+"ответов."
+
+#: js/scoring.js:118
+msgid "With several options ticked, the lowest of their scores counts."
+msgstr ""
+"Если отмечено несколько вариантов, учитывается наименьший из их баллов."
+
+#: js/views/admin-catalogs.js:276
+msgid ""
+"Work through the tabs from left to right. Records that are in use can’t be "
+"deleted; you will see what uses them instead."
+msgstr ""
+"Проходите вкладки слева направо. Используемые записи удалить нельзя — вместо"
+" этого вы увидите, где они используются."
+
+#: js/views/help.js:66
+msgid "Worked example"
+msgstr "Разобранный пример"
+
+#: js/views/admin-methodologies.js:386
+msgid "Worst value"
+msgstr "Худшее значение"
+
+#: js/views/admin-questions.js:162
+msgid "Write it exactly as the respondent should read it."
+msgstr "Пишите ровно так, как это должен прочитать респондент."
+
+#: js/scoring.js:134
+msgid "Write the formula."
+msgstr "Напишите формулу."
+
+#: js/views/admin-questions.js:156
+msgid ""
+"Write the question in every language. Keep the meaning identical, so answers"
+" can be compared."
+msgstr ""
+"Напишите вопрос на всех языках. Смысл должен быть одинаковым, чтобы ответы "
+"можно было сравнивать."
+
+#: js/views/help.js:45
+msgid ""
+"Write the question, choose the answer type, add options for choice "
+"questions. Questions carry no weights or scores."
+msgstr ""
+"Напишите вопрос, выберите тип ответа, добавьте варианты для вопросов с "
+"выбором. У вопросов нет весов и баллов."
+
+#: js/views/dashboard.js:28
+msgid "Write the questions"
+msgstr "Напишите вопросы"
+
+#: js/scoring.js:99 js/views/admin-methodologies.js:486
+#: js/views/admin-methodologies.js:564 js/views/admin-questions.js:255
+#: js/views/help.js:70 js/views/respondent.js:426 js/views/respondent.js:455
+msgid "Yes"
+msgstr "Да"
+
+#: js/scoring.js:50
+msgid "Yes / no"
+msgstr "Да / нет"
+
+#: js/views/admin-methodologies.js:507
+msgid "Yes gets the highest score and No the lowest; change them if needed."
+msgstr ""
+"«Да» получает максимальный балл, «Нет» — минимальный; при необходимости "
+"измените."
+
+#: js/views/account.js:88
+msgid ""
+"You are a standard user: you can fill in assessments and see your own "
+"history. Ask an administrator if you need access to the admin dashboard."
+msgstr ""
+"Вы обычный пользователь: можете заполнять оценки и видеть свою историю. Если"
+" нужен доступ к панели администратора, обратитесь к администратору."
+
+#: js/api.js:23
+msgid "You are signed out. Sign in again."
+msgstr "Вы вышли из системы. Войдите снова."
+
+#: js/views/admin-methodologies.js:29
+msgid "You can change everything. Respondents can’t use it yet."
+msgstr "Можно менять всё. Респонденты пока не могут её использовать."
+
+#: js/views/respondent.js:77
+msgid ""
+"You can stop at any time: answers are saved as soon as you enter them. "
+"Everything you have filled in stays in your history."
+msgstr ""
+"Можно прерваться в любой момент: ответы сохраняются сразу. Всё заполненное "
+"остаётся в вашей истории."
+
+#: js/api.js:24
+msgid ""
+"You don’t have permission to do this. Only admins can change this data."
+msgstr ""
+"У вас нет прав на это действие. Изменять эти данные могут только "
+"администраторы."
+
+#: js/views/respondent.js:168
+msgid "Your assessments"
+msgstr "Ваши оценки"
+
+#: js/views/respondent.js:72
+msgid ""
+"Your assessments in one place: continue where you left off, start a new one "
+"or look back at earlier results."
+msgstr ""
+"Все ваши оценки в одном месте: продолжите начатое, начните новую или "
+"посмотрите прошлые результаты."
+
+#: js/views/account.js:71
+msgid "Your details, language and password."
+msgstr "Ваши данные, язык и пароль."
+
+#: js/main.js:19
+msgid ""
+"Your role doesn’t give access to this page. Ask a superuser if you need it."
+msgstr ""
+"Ваша роль не даёт доступа к этой странице. Если он нужен, обратитесь к "
+"суперпользователю."
+
+#: js/views/account.js:87
+msgid ""
+"Your roles decide which parts of the admin dashboard you can use. A "
+"superuser changes roles in Django admin."
+msgstr ""
+"Ваши роли определяют, какие разделы панели администратора вам доступны. Роли"
+" меняет суперпользователь в Django admin."
+
+#: js/views/respondent.js:317
+msgid "a critical question is below its threshold."
+msgstr "критический вопрос ниже порога."
+
+#: js/views/help.js:63
+msgid ""
+"a staff role with full access to catalogs, questions, methodologies and all "
+"assessments, but not to users."
+msgstr ""
+"роль персонала с полным доступом к справочникам, вопросам, методикам и всем "
+"оценкам, но не к пользователям."
+
+#: js/views/admin-methodologies.js:56 js/views/respondent.js:132
+msgid "any object type"
+msgstr "любой тип объектов"
+
+#: js/dom.js:47
+msgid "archived"
+msgstr "в архиве"
+
+#: js/views/respondent.js:492
+msgid "below {threshold}"
+msgstr "ниже {threshold}"
+
+#: js/views/admin-catalogs.js:110 js/views/admin-catalogs.js:110
+msgid "better"
+msgstr "лучше"
+
+#: js/views/admin-catalogs.js:100
+msgid "binary"
+msgstr "бинарная"
+
+#: js/dom.js:47
+msgid "cancelled"
+msgstr "отменена"
+
+#: js/dom.js:47 js/views/respondent.js:511
+msgid "completed"
+msgstr "завершена"
+
+#: js/views/respondent.js:12
+msgid "document"
+msgstr "документ"
+
+#: js/views/dashboard.js:131
+msgid "done"
+msgstr "готово"
+
+#: js/dom.js:46
+msgid "draft"
+msgstr "черновик"
+
+#: js/views/admin-catalogs.js:170
+msgid "e.g. 1"
+msgstr "например, 1"
+
+#: js/views/admin-catalogs.js:171
+msgid "e.g. 5"
+msgstr "например, 5"
+
+#: js/views/admin-catalogs.js:168
+msgid "e.g. 5-point quality"
+msgstr "например, 5-балльное качество"
+
+#: js/views/admin-catalogs.js:260 js/views/respondent.js:114
+msgid "e.g. Block A, Riverside residential complex"
+msgstr "например, Корпус А, ЖК «Riverside»"
+
+#: js/views/admin-catalogs.js:135
+msgid "e.g. Good"
+msgstr "например, Хорошо"
+
+#: js/views/admin-methodologies.js:515
+msgid "e.g. Local cracks"
+msgstr "например, Местные трещины"
+
+#: js/views/admin-catalogs.js:85
+msgid "e.g. Millimetre"
+msgstr "например, Миллиметр"
+
+#: js/views/admin-methodologies.js:366
+msgid "e.g. Photo of the gauge against the widest crack"
+msgstr "например, Фото щупа у самой широкой трещины"
+
+#: js/views/admin-questions.js:100
+msgid "e.g. Structure"
+msgstr "например, Конструкции"
+
+#: js/views/admin-methodologies.js:80
+msgid "e.g. TECH_RES"
+msgstr "например, TECH_RES"
+
+#: js/views/admin-catalogs.js:200
+msgid "e.g. Visual inspection"
+msgstr "например, Визуальный осмотр"
+
+#: js/views/admin-catalogs.js:84
+msgid "e.g. mm, m², %"
+msgstr "например, mm, m², %"
+
+#: js/views/respondent.js:498
+msgid "evidence: {count}"
+msgstr "подтверждений: {count}"
+
+#: js/views/admin-methodologies.js:199
+msgid "group"
+msgstr "группа"
+
+#: js/views/admin-methodologies.js:199
+msgid "has problems"
+msgstr "есть проблемы"
+
+#: js/views/admin-catalogs.js:120
+msgid "higher is better"
+msgstr "больше — лучше"
+
+#: js/dom.js:46
+msgid "in progress"
+msgstr "в работе"
+
+#: js/views/admin-questions.js:76
+msgid "inactive"
+msgstr "неактивен"
+
+#: js/views/admin-catalogs.js:100
+msgid "interval"
+msgstr "интервальная"
+
+#: js/views/respondent.js:341 js/views/respondent.js:492
+msgid "knock-out"
+msgstr "критический провал"
+
+#: js/views/respondent.js:12
+msgid "link"
+msgstr "ссылка"
+
+#: js/views/admin-catalogs.js:120
+msgid "lower is better"
+msgstr "меньше — лучше"
+
+#: js/views/help.js:64
+msgid ""
+"manages users and roles in Django admin. New roles with narrower permissions"
+" can be added there at any time."
+msgstr ""
+"управляет пользователями и ролями в Django admin. Там же в любой момент "
+"можно добавить новые роли с более узкими правами."
+
+#: js/views/respondent.js:12
+msgid "measurement protocol"
+msgstr "протокол измерений"
+
+#: js/views/admin-questions.js:76
+msgid "needs options"
+msgstr "нужны варианты"
+
+#: js/views/dashboard.js:131
+msgid "next"
+msgstr "следующий"
+
+#: js/views/admin-methodologies.js:433
+msgid "no scale"
+msgstr "без шкалы"
+
+#: js/views/admin-catalogs.js:100
+msgid "nominal"
+msgstr "номинальная"
+
+#: js/views/admin-questions.js:75
+msgid "not used"
+msgstr "не используется"
+
+#: js/main.js:69
+msgid "off"
+msgstr "выкл."
+
+#: js/main.js:69
+msgid "on"
+msgstr "вкл."
+
+#: js/views/admin-catalogs.js:196 js/views/respondent.js:362
+msgid "optional"
+msgstr "необязательно"
+
+#: js/views/admin-catalogs.js:100
+msgid "ordinal"
+msgstr "порядковая"
+
+#: js/views/respondent.js:12
+msgid "photo"
+msgstr "фото"
+
+#: js/views/admin-methodologies.js:353 js/views/respondent.js:373
+msgid "primary"
+msgstr "основной"
+
+#: js/dom.js:46
+msgid "published"
+msgstr "опубликована"
+
+#: js/views/admin-methodologies.js:199
+msgid "question"
+msgstr "вопрос"
+
+#: js/views/admin-catalogs.js:100
+msgid "ratio"
+msgstr "отношений"
+
+#: js/views/admin-catalogs.js:196 js/views/respondent.js:362
+msgid "required"
+msgstr "обязательно"
+
+#: js/views/admin-methodologies.js:330
+msgid "scale"
+msgstr "шкала"
+
+#: js/views/help.js:62
+msgid "sign up themselves, fill in assessments and see their own history."
+msgstr "регистрируются сами, заполняют оценки и видят свою историю."
+
+#: js/main.js:100 js/views/account.js:80
+msgid "standard user"
+msgstr "обычный пользователь"
+
+#: js/views/account.js:32
+msgid "standard user: fills in assessments"
+msgstr "обычный пользователь: заполняет оценки"
+
+#: js/views/admin-catalogs.js:120
+msgid "step"
+msgstr "шаг"
+
+#: js/main.js:100 js/views/account.js:79
+msgid "superuser"
+msgstr "суперпользователь"
+
+#: js/views/account.js:34
+msgid "superuser: also manages users and roles in Django admin"
+msgstr ""
+"суперпользователь: также управляет пользователями и ролями в Django admin"
+
+#: js/views/dashboard.js:153
+msgid "total"
+msgstr "итог"
+
+#: js/views/admin-methodologies.js:329
+msgid "unit"
+msgstr "единица"
+
+#: js/views/admin-methodologies.js:220
+msgid "veto"
+msgstr "порог"
+
+#: js/views/respondent.js:362
+msgid "weight"
+msgstr "вес"
+
+#: js/views/admin-methodologies.js:225
+msgid "weights add up to {sum}"
+msgstr "сумма весов {sum}"
+
+#: js/views/admin-catalogs.js:110 js/views/admin-catalogs.js:110
+msgid "worse"
+msgstr "хуже"
+
+#: js/views/dashboard.js:23
+msgid ""
+"{units} units · {scales} scales · {methods} methods · {types} object types"
+msgstr ""
+"единиц: {units} · шкал: {scales} · методов: {methods} · типов объектов: "
+"{types}"
+
+#: js/scoring.js:124
+msgid ""
+"{worst} or worse scores {lo}; {best} or better scores {hi}. In between the "
+"score grows in proportion: {mid} scores {midScore}."
+msgstr ""
+"{worst} и хуже — {lo} балл; {best} и лучше — {hi}. Между ними балл растёт "
+"пропорционально: {mid} даёт {midScore}."
+
+#: js/views/admin-questions.js:173
+msgid "— none —"
+msgstr "— нет —"
+
+#: js/views/admin-questions.js:101
+msgid "— top level —"
+msgstr "— верхний уровень —"
+
+#: js/views/admin-catalogs.js:156
+msgid ""
+"“5-point quality” runs from 1 to 5 with levels 1 Unacceptable, 2 Poor, 3 "
+"Satisfactory, 4 Good, 5 Excellent."
+msgstr ""
+"«5-балльное качество» — от 1 до 5 с уровнями 1 Недопустимо, 2 Плохо, 3 "
+"Удовлетворительно, 4 Хорошо, 5 Отлично."
+
+#: js/views/admin-methodologies.js:521
+msgid "“From” must be lower than “Up to”."
+msgstr "«От» должно быть меньше «До»."
+
+#: js/views/help.js:38
+msgid "“Not admitted” for a critical failure"
+msgstr "«Не допущен» за критическую ошибку"
+
+#: js/views/admin-catalogs.js:189
+msgid ""
+"“Requires evidence” reminds respondents to attach photos or documents when "
+"they use this method."
+msgstr ""
+"«Нужны подтверждения» напоминает респондентам прикладывать фото или "
+"документы при использовании этого метода."
+
+#: js/help.js:46
+msgid ""
+"“Technical condition of residential buildings” (TECH_RES) checks structure, "
+"fire safety and energy efficiency."
+msgstr ""
+"«Техническое состояние жилых зданий» (TECH_RES) проверяет конструкции, "
+"пожарную безопасность и энергоэффективность."

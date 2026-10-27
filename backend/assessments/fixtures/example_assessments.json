@@ -1,0 +1,469 @@
+[
+{
+  "model": "assessments.assessment",
+  "pk": 1,
+  "fields": {
+    "object": 1,
+    "methodology_version": 1,
+    "status": "completed",
+    "title": "Block A – October 2026 inspection",
+    "assessed_at": "2026-10-15",
+    "total_score": "3.9000",
+    "total_scale_level": 4,
+    "notes": "Worked example: 1.2 mm crack, roof minor wear, working fire alarm, 150 kWh/m²·yr.",
+    "created_at": "2026-10-15T10:00:00Z",
+    "completed_at": "2026-10-15T16:30:00Z"
+  }
+},
+{
+  "model": "assessments.assessment",
+  "pk": 2,
+  "fields": {
+    "object": 2,
+    "methodology_version": 1,
+    "status": "completed",
+    "title": "House 7 – knock-out example",
+    "assessed_at": "2026-10-15",
+    "total_score": "2.7000",
+    "total_scale_level": 3,
+    "notes": "Same answers as Block A except the fire alarm is missing, which fails the building.",
+    "created_at": "2026-10-15T10:00:00Z",
+    "completed_at": "2026-10-15T16:30:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 1,
+  "fields": {
+    "assessment": 1,
+    "node": 5,
+    "assessment_method": 1,
+    "numeric_value": "1.2000",
+    "boolean_value": null,
+    "option": null,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": 3,
+    "score": "3.0000",
+    "comment": "Widest crack on the 3rd floor, east wall.",
+    "created_at": "2026-10-15T10:00:00Z",
+    "updated_at": "2026-10-15T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 2,
+  "fields": {
+    "assessment": 1,
+    "node": 6,
+    "assessment_method": 2,
+    "numeric_value": null,
+    "boolean_value": null,
+    "option": 2,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": 7,
+    "score": "4.0000",
+    "comment": null,
+    "created_at": "2026-10-15T10:00:00Z",
+    "updated_at": "2026-10-15T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 3,
+  "fields": {
+    "assessment": 1,
+    "node": 7,
+    "assessment_method": 3,
+    "numeric_value": null,
+    "boolean_value": true,
+    "option": null,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": 10,
+    "score": "5.0000",
+    "comment": null,
+    "created_at": "2026-10-15T10:00:00Z",
+    "updated_at": "2026-10-15T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 4,
+  "fields": {
+    "assessment": 1,
+    "node": 8,
+    "assessment_method": 3,
+    "numeric_value": "150.0000",
+    "boolean_value": null,
+    "option": null,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": null,
+    "score": "3.5000",
+    "comment": null,
+    "created_at": "2026-10-15T10:00:00Z",
+    "updated_at": "2026-10-15T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 5,
+  "fields": {
+    "assessment": 2,
+    "node": 5,
+    "assessment_method": 1,
+    "numeric_value": "1.2000",
+    "boolean_value": null,
+    "option": null,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": 3,
+    "score": "3.0000",
+    "comment": "Widest crack on the 3rd floor, east wall.",
+    "created_at": "2026-10-15T10:00:00Z",
+    "updated_at": "2026-10-15T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 6,
+  "fields": {
+    "assessment": 2,
+    "node": 6,
+    "assessment_method": 2,
+    "numeric_value": null,
+    "boolean_value": null,
+    "option": 2,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": 7,
+    "score": "4.0000",
+    "comment": null,
+    "created_at": "2026-10-15T10:00:00Z",
+    "updated_at": "2026-10-15T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 7,
+  "fields": {
+    "assessment": 2,
+    "node": 7,
+    "assessment_method": 3,
+    "numeric_value": null,
+    "boolean_value": false,
+    "option": null,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": 11,
+    "score": "1.0000",
+    "comment": null,
+    "created_at": "2026-10-15T10:00:00Z",
+    "updated_at": "2026-10-15T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 8,
+  "fields": {
+    "assessment": 2,
+    "node": 8,
+    "assessment_method": 3,
+    "numeric_value": "150.0000",
+    "boolean_value": null,
+    "option": null,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": null,
+    "score": "3.5000",
+    "comment": null,
+    "created_at": "2026-10-15T10:00:00Z",
+    "updated_at": "2026-10-15T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.responseevidence",
+  "pk": 1,
+  "fields": {
+    "response": 1,
+    "kind": "photo",
+    "uri": "https://example.com/evidence/crack-gauge.jpg",
+    "description": "Gauge against the widest crack",
+    "created_at": "2026-10-15T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.responseevidence",
+  "pk": 2,
+  "fields": {
+    "response": 2,
+    "kind": "photo",
+    "uri": "https://example.com/evidence/roof-1.jpg",
+    "description": null,
+    "created_at": "2026-10-15T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.responseevidence",
+  "pk": 3,
+  "fields": {
+    "response": 3,
+    "kind": "document",
+    "uri": "https://example.com/evidence/fire-alarm-log.pdf",
+    "description": "Fire alarm service log",
+    "created_at": "2026-10-15T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.responseevidence",
+  "pk": 4,
+  "fields": {
+    "response": 5,
+    "kind": "photo",
+    "uri": "https://example.com/evidence/crack-gauge.jpg",
+    "description": "Gauge against the widest crack",
+    "created_at": "2026-10-15T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.responseevidence",
+  "pk": 5,
+  "fields": {
+    "response": 6,
+    "kind": "photo",
+    "uri": "https://example.com/evidence/roof-1.jpg",
+    "description": null,
+    "created_at": "2026-10-15T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.responseevidence",
+  "pk": 6,
+  "fields": {
+    "response": 7,
+    "kind": "document",
+    "uri": "https://example.com/evidence/fire-alarm-log.pdf",
+    "description": "Fire alarm service log",
+    "created_at": "2026-10-15T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 1,
+  "fields": {
+    "assessment": 1,
+    "node": 5,
+    "score": "3.0000",
+    "weighted_score": "1.8000",
+    "scale_level": 3,
+    "is_vetoed": false,
+    "computed_at": "2026-10-15T16:30:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 2,
+  "fields": {
+    "assessment": 1,
+    "node": 6,
+    "score": "4.0000",
+    "weighted_score": "1.6000",
+    "scale_level": 4,
+    "is_vetoed": false,
+    "computed_at": "2026-10-15T16:30:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 3,
+  "fields": {
+    "assessment": 1,
+    "node": 2,
+    "score": "3.4000",
+    "weighted_score": "1.7000",
+    "scale_level": 3,
+    "is_vetoed": false,
+    "computed_at": "2026-10-15T16:30:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 4,
+  "fields": {
+    "assessment": 1,
+    "node": 7,
+    "score": "5.0000",
+    "weighted_score": "5.0000",
+    "scale_level": 5,
+    "is_vetoed": false,
+    "computed_at": "2026-10-15T16:30:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 5,
+  "fields": {
+    "assessment": 1,
+    "node": 3,
+    "score": "5.0000",
+    "weighted_score": "1.5000",
+    "scale_level": 5,
+    "is_vetoed": false,
+    "computed_at": "2026-10-15T16:30:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 6,
+  "fields": {
+    "assessment": 1,
+    "node": 8,
+    "score": "3.5000",
+    "weighted_score": "3.5000",
+    "scale_level": 3,
+    "is_vetoed": false,
+    "computed_at": "2026-10-15T16:30:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 7,
+  "fields": {
+    "assessment": 1,
+    "node": 4,
+    "score": "3.5000",
+    "weighted_score": "0.7000",
+    "scale_level": 3,
+    "is_vetoed": false,
+    "computed_at": "2026-10-15T16:30:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 8,
+  "fields": {
+    "assessment": 1,
+    "node": 1,
+    "score": "3.9000",
+    "weighted_score": "3.9000",
+    "scale_level": 4,
+    "is_vetoed": false,
+    "computed_at": "2026-10-15T16:30:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 9,
+  "fields": {
+    "assessment": 2,
+    "node": 5,
+    "score": "3.0000",
+    "weighted_score": "1.8000",
+    "scale_level": 3,
+    "is_vetoed": false,
+    "computed_at": "2026-10-15T16:30:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 10,
+  "fields": {
+    "assessment": 2,
+    "node": 6,
+    "score": "4.0000",
+    "weighted_score": "1.6000",
+    "scale_level": 4,
+    "is_vetoed": false,
+    "computed_at": "2026-10-15T16:30:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 11,
+  "fields": {
+    "assessment": 2,
+    "node": 2,
+    "score": "3.4000",
+    "weighted_score": "1.7000",
+    "scale_level": 3,
+    "is_vetoed": false,
+    "computed_at": "2026-10-15T16:30:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 12,
+  "fields": {
+    "assessment": 2,
+    "node": 7,
+    "score": "1.0000",
+    "weighted_score": "1.0000",
+    "scale_level": 1,
+    "is_vetoed": false,
+    "computed_at": "2026-10-15T16:30:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 13,
+  "fields": {
+    "assessment": 2,
+    "node": 3,
+    "score": "1.0000",
+    "weighted_score": "0.3000",
+    "scale_level": 1,
+    "is_vetoed": true,
+    "computed_at": "2026-10-15T16:30:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 14,
+  "fields": {
+    "assessment": 2,
+    "node": 8,
+    "score": "3.5000",
+    "weighted_score": "3.5000",
+    "scale_level": 3,
+    "is_vetoed": false,
+    "computed_at": "2026-10-15T16:30:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 15,
+  "fields": {
+    "assessment": 2,
+    "node": 4,
+    "score": "3.5000",
+    "weighted_score": "0.7000",
+    "scale_level": 3,
+    "is_vetoed": false,
+    "computed_at": "2026-10-15T16:30:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 16,
+  "fields": {
+    "assessment": 2,
+    "node": 1,
+    "score": "2.7000",
+    "weighted_score": "2.7000",
+    "scale_level": 3,
+    "is_vetoed": true,
+    "computed_at": "2026-10-15T16:30:00Z"
+  }
+}
+]
+

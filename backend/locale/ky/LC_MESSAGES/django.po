@@ -1,0 +1,1464 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-27 04:21+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ky\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: accounts/admin.py:20
+msgid "Personal info"
+msgstr "Жеке маалымат"
+
+#: accounts/admin.py:22
+msgid "Roles and access"
+msgstr "Ролдор жана жеткиликтүүлүк"
+
+#: accounts/admin.py:24
+msgid ""
+"Roles decide what a user can do. Staff status is set automatically: "
+"superusers and members of a staff role are staff. Users without a role are "
+"respondents."
+msgstr ""
+"Ролдор колдонуучу эмне кыла аларын аныктайт. Кызматкер статусу автоматтык "
+"түрдө коюлат: суперколдонуучулар жана кызматкер ролдорунун мүчөлөрү — "
+"кызматкерлер. Ролу жок колдонуучулар — респонденттер."
+
+#: accounts/admin.py:27
+msgid "Important dates"
+msgstr "Маанилүү даталар"
+
+#: accounts/admin.py:30
+msgid "roles"
+msgstr "ролдор"
+
+#: accounts/admin.py:38 accounts/models.py:46 accounts/models.py:47
+msgid "role settings"
+msgstr "ролдун жөндөөлөрү"
+
+#: accounts/admin.py:51 accounts/models.py:40
+msgid "staff role"
+msgstr "кызматкер ролу"
+
+#: accounts/admin.py:55
+#| msgid "number"
+msgid "members"
+msgstr "мүчөлөр"
+
+#: accounts/admin.py:59
+#| msgid "Version"
+msgid "permissions"
+msgstr "укуктар"
+
+#: accounts/apps.py:8
+msgid "Users and roles"
+msgstr "Колдонуучулар жана ролдор"
+
+#: accounts/models.py:17
+#| msgid "Validation"
+msgid "organization"
+msgstr "уюм"
+
+#: accounts/models.py:18
+#| msgid "option"
+msgid "position"
+msgstr "кызматы"
+
+#: accounts/models.py:19
+msgid "phone"
+msgstr "телефон"
+
+#: accounts/models.py:21
+#| msgid "Required in %(language)s."
+msgid "preferred language"
+msgstr "тандалган тил"
+
+#: accounts/models.py:22
+msgid "The interface switches to this language when the user signs in."
+msgstr "Колдонуучу киргенде интерфейс ушул тилге которулат."
+
+#: accounts/models.py:26
+msgid "user"
+msgstr "колдонуучу"
+
+#: accounts/models.py:27
+msgid "users"
+msgstr "колдонуучулар"
+
+#: accounts/models.py:37
+msgid "role"
+msgstr "рол"
+
+#: accounts/models.py:38 assessments/models.py:122 catalogs/models.py:19
+#: catalogs/models.py:34 catalogs/models.py:76 catalogs/models.py:92
+#: catalogs/models.py:113 library/models.py:26 methodologies/models.py:50
+#: methodologies/models.py:117 methodologies/models.py:196
+#: methodologies/models.py:227
+msgid "description"
+msgstr "сүрөттөмө"
+
+#: accounts/models.py:41
+msgid ""
+"Members can sign in to the admin dashboard and Django admin. Their "
+"permissions decide what they can do there."
+msgstr ""
+"Мүчөлөр администратордун панелине жана Django admin ге кире алышат. Алар ал "
+"жерде эмне кыла аларын укуктары аныктайт."
+
+#: assessments/admin.py:41
+msgid "Re-score answers and complete"
+msgstr "Жоопторду кайра эсептеп, аяктоо"
+
+#: assessments/admin.py:51
+#, python-format
+msgid "%(assessment)s: total %(total)s (%(level)s)."
+msgstr "%(assessment)s: жыйынтык %(total)s (%(level)s)."
+
+#: assessments/admin.py:55
+msgid "Reopen (delete computed results)"
+msgstr "Кайра ачуу (эсептелген жыйынтыктарды өчүрүү)"
+
+#: assessments/admin.py:59
+#, python-format
+msgid "Assessments reopened: %(count)s."
+msgstr "Кайра ачылган баалоолор: %(count)s."
+
+#: assessments/api.py:29
+msgid "The assessment is completed. Reopen it to change answers."
+msgstr "Баалоо аяктады. Жоопторду өзгөртүү үчүн аны кайра ачыңыз."
+
+#: assessments/api.py:60
+msgid "Object not found."
+msgstr "Объект табылган жок."
+
+#: assessments/api.py:166
+msgid "You can only add evidence to your own assessments."
+msgstr "Далилдерди өз баалоолоруңузга гана кошо аласыз."
+
+#: assessments/models.py:13 methodologies/models.py:37
+msgid "Draft"
+msgstr "Долбоор"
+
+#: assessments/models.py:14
+msgid "In progress"
+msgstr "Аткарылууда"
+
+#: assessments/models.py:15
+msgid "Completed"
+msgstr "Аяктаганы"
+
+#: assessments/models.py:16
+msgid "Cancelled"
+msgstr "Жокко чыгарылды"
+
+#: assessments/models.py:22
+#| msgid "response"
+msgid "respondent"
+msgstr "респондент"
+
+#: assessments/models.py:22
+#| msgid "Not a question of this assessment."
+msgid "the user who fills in the assessment"
+msgstr "баалоону толтурган колдонуучу"
+
+#: assessments/models.py:24
+msgid "object"
+msgstr "объект"
+
+#: assessments/models.py:26 methodologies/models.py:85
+msgid "methodology version"
+msgstr "методиканын версиясы"
+
+#: assessments/models.py:27 methodologies/models.py:72
+msgid "status"
+msgstr "абалы"
+
+#: assessments/models.py:28
+msgid "title"
+msgstr "аталышы"
+
+#: assessments/models.py:29
+msgid "assessed on"
+msgstr "бааланган күнү"
+
+#: assessments/models.py:31
+msgid "total score"
+msgstr "жыйынтык балл"
+
+#: assessments/models.py:32
+msgid "denormalized root node result"
+msgstr "тамыр түйүндүн жыйынтыгынын көчүрмөсү"
+
+#: assessments/models.py:34
+msgid "total level"
+msgstr "жыйынтык деңгээл"
+
+#: assessments/models.py:35 methodologies/models.py:78
+msgid "notes"
+msgstr "эскертүүлөр"
+
+#: assessments/models.py:36 assessments/models.py:78 assessments/models.py:123
+#: catalogs/models.py:56 library/models.py:54 methodologies/models.py:54
+#: methodologies/models.py:80
+msgid "created at"
+msgstr "түзүлгөн"
+
+#: assessments/models.py:37
+msgid "completed at"
+msgstr "аяктаган"
+
+#: assessments/models.py:42 assessments/models.py:56 assessments/models.py:139
+msgid "assessment"
+msgstr "баалоо"
+
+#: assessments/models.py:43
+msgid "assessments"
+msgstr "баалоолор"
+
+#: assessments/models.py:45
+msgid "Can see every user’s assessments"
+msgstr "Бардык колдонуучулардын баалоолорун көрө алат"
+
+#: assessments/models.py:49
+#, python-format
+msgid "Assessment #%(id)s"
+msgstr "Баалоо №%(id)s"
+
+#: assessments/models.py:58 assessments/models.py:140
+#: methodologies/models.py:159 methodologies/models.py:185
+msgid "node"
+msgstr "түйүн"
+
+#: assessments/models.py:58
+msgid "question node"
+msgstr "суроо түйүнү"
+
+#: assessments/models.py:61 catalogs/models.py:119 methodologies/models.py:161
+msgid "assessment method"
+msgstr "баалоо ыкмасы"
+
+#: assessments/models.py:61
+msgid "mechanics actually used"
+msgstr "иш жүзүндө колдонулган ыкма"
+
+#: assessments/models.py:62
+msgid "number"
+msgstr "сан"
+
+#: assessments/models.py:63
+msgid "yes / no"
+msgstr "ооба / жок"
+
+#: assessments/models.py:65 assessments/models.py:104
+#: methodologies/models.py:218
+msgid "option"
+msgstr "вариант"
+
+#: assessments/models.py:66
+msgid "single_choice"
+msgstr "бир вариант"
+
+#: assessments/models.py:68 assessments/models.py:147
+#: methodologies/models.py:222
+msgid "level"
+msgstr "деңгээл"
+
+#: assessments/models.py:69
+msgid "scale_level answers"
+msgstr "шкала деңгээли менен жооптор"
+
+#: assessments/models.py:70
+msgid "text"
+msgstr "текст"
+
+#: assessments/models.py:71
+msgid "not applicable"
+msgstr "тиешеси жок"
+
+#: assessments/models.py:74
+msgid "matched criterion"
+msgstr "туура келген критерий"
+
+#: assessments/models.py:74
+msgid "criterion that produced the score"
+msgstr "балл алынган критерий"
+
+#: assessments/models.py:76 assessments/models.py:142
+#: methodologies/models.py:224
+msgid "score"
+msgstr "балл"
+
+#: assessments/models.py:76
+msgid "normalized score of this question"
+msgstr "суроонун нормаланган баллы"
+
+#: assessments/models.py:77
+msgid "comment"
+msgstr "комментарий"
+
+#: assessments/models.py:79
+msgid "updated at"
+msgstr "өзгөртүлгөн"
+
+#: assessments/models.py:84 assessments/models.py:103
+#: assessments/models.py:119
+msgid "response"
+msgstr "жооп"
+
+#: assessments/models.py:85
+msgid "responses"
+msgstr "жооптор"
+
+#: assessments/models.py:108
+msgid "selected option"
+msgstr "тандалган вариант"
+
+#: assessments/models.py:109
+msgid "selected options"
+msgstr "тандалган варианттар"
+
+#: assessments/models.py:120
+msgid "kind"
+msgstr "түрү"
+
+#: assessments/models.py:120
+msgid "photo, document, measurement_protocol, link"
+msgstr "сүрөт, документ, өлчөө протоколу, шилтеме"
+
+#: assessments/models.py:121
+msgid "file or link"
+msgstr "файл же шилтеме"
+
+#: assessments/models.py:128 assessments/models.py:129
+msgid "evidence"
+msgstr "далилдер"
+
+#: assessments/models.py:142
+msgid "aggregated score of the node"
+msgstr "түйүндүн жалпы баллы"
+
+#: assessments/models.py:144
+msgid "weighted score"
+msgstr "салмактуу балл"
+
+#: assessments/models.py:145
+msgid "score * weight, contribution to parent"
+msgstr "балл × салмак, ата түйүнгө кошкон салымы"
+
+#: assessments/models.py:148
+msgid "knocked out"
+msgstr "критикалык босогодон өтпөдү"
+
+#: assessments/models.py:148
+msgid "failed a knock-out threshold"
+msgstr "критикалык босогодон өтпөй калды"
+
+#: assessments/models.py:149
+msgid "computed at"
+msgstr "эсептелген"
+
+#: assessments/models.py:154
+msgid "node result"
+msgstr "түйүндүн жыйынтыгы"
+
+#: assessments/models.py:155
+msgid "node results"
+msgstr "түйүндөрдүн жыйынтыктары"
+
+#: assessments/serializers.py:31
+msgid "Cannot be changed after the assessment is started."
+msgstr "Баалоо башталгандан кийин өзгөртүүгө болбойт."
+
+#: assessments/serializers.py:41
+#, python-format
+#| msgid ""
+#| "The question is used by a published version; its answer type is locked."
+msgid ""
+"This questionnaire has no published version for objects of type “%(type)s”."
+msgstr ""
+"Бул анкетанын «%(type)s» түрүндөгү объекттер үчүн жарыяланган версиясы жок."
+
+#: assessments/serializers.py:45
+#, python-format
+msgid ""
+"There is no published questionnaire for objects of type “%(type)s” yet."
+msgstr "«%(type)s» түрүндөгү объекттер үчүн азырынча жарыяланган анкета жок."
+
+#: assessments/serializers.py:48
+msgid "Choose which questionnaire to fill in."
+msgstr "Кайсы анкетаны толтурууну тандаңыз."
+
+#: assessments/serializers.py:120
+msgid "Not a question of this assessment."
+msgstr "Бул баалоонун суроосу эмес."
+
+#: assessments/serializers.py:125
+msgid "This question has no options."
+msgstr "Бул суроонун варианттары жок."
+
+#: assessments/serializers.py:127
+msgid "The option belongs to another question."
+msgstr "Вариант башка суроого тиешелүү."
+
+#: assessments/serializers.py:131
+msgid "The level is not on this question’s scale."
+msgstr "Бул деңгээл суроонун шкаласында жок."
+
+#: assessments/serializers.py:135
+msgid "This method is not described for the question."
+msgstr "Бул ыкма суроо үчүн сүрөттөлгөн эмес."
+
+#: assessments/services.py:104
+msgid "mandatory question is not answered."
+msgstr "милдеттүү суроого жооп берилген жок."
+
+#: assessments/services.py:106
+#, python-format
+msgid "answered but could not be scored (%(reason)s)"
+msgstr "жооп бар, бирок балл эсептелген жок (%(reason)s)"
+
+#: catalogs/models.py:9
+msgid "Binary"
+msgstr "Бинардык"
+
+#: catalogs/models.py:10
+msgid "Nominal"
+msgstr "Номиналдык"
+
+#: catalogs/models.py:11
+msgid "Ordinal"
+msgstr "Тартиптик"
+
+#: catalogs/models.py:12
+msgid "Interval"
+msgstr "Интервалдык"
+
+#: catalogs/models.py:13
+msgid "Ratio"
+msgstr "Катыштар шкаласы"
+
+#: catalogs/models.py:17 catalogs/models.py:32 catalogs/models.py:69
+#: catalogs/models.py:111 library/models.py:44 library/models.py:70
+#: methodologies/models.py:48 methodologies/models.py:115
+msgid "code"
+msgstr "код"
+
+#: catalogs/models.py:17
+msgid "mm, m2, %, pcs, kWh/m2"
+msgstr "мм, м², %, даана, кВт·с/м²"
+
+#: catalogs/models.py:18 catalogs/models.py:33 catalogs/models.py:49
+#: catalogs/models.py:70 catalogs/models.py:112 library/models.py:25
+#: methodologies/models.py:49 methodologies/models.py:116
+msgid "name"
+msgstr "аталышы"
+
+#: catalogs/models.py:24 library/models.py:49
+msgid "unit"
+msgstr "өлчөө бирдиги"
+
+#: catalogs/models.py:25
+msgid "units"
+msgstr "өлчөө бирдиктери"
+
+#: catalogs/models.py:32
+msgid "building, apartment, product..."
+msgstr "имарат, батир, буюм…"
+
+#: catalogs/models.py:39 catalogs/models.py:48 methodologies/models.py:53
+msgid "object type"
+msgstr "объекттин түрү"
+
+#: catalogs/models.py:40
+msgid "object types"
+msgstr "объекттердин түрлөрү"
+
+#: catalogs/models.py:51
+msgid "external reference"
+msgstr "тышкы идентификатор"
+
+#: catalogs/models.py:51
+msgid "cadastral number, SKU, etc."
+msgstr "кадастрдык номер, артикул ж. б."
+
+#: catalogs/models.py:52
+msgid "attributes"
+msgstr "атрибуттар"
+
+#: catalogs/models.py:52
+msgid "free-form descriptive attributes"
+msgstr "эркин сүрөттөөчү атрибуттар"
+
+#: catalogs/models.py:55
+#| msgid "created at"
+msgid "created by"
+msgstr "ким түзгөн"
+
+#: catalogs/models.py:61
+msgid "assessment object"
+msgstr "баалоо объекти"
+
+#: catalogs/models.py:62
+msgid "assessment objects"
+msgstr "баалоо объекттери"
+
+#: catalogs/models.py:71
+msgid "scale type"
+msgstr "шкаланын түрү"
+
+#: catalogs/models.py:72
+msgid "lowest score"
+msgstr "эң төмөнкү балл"
+
+#: catalogs/models.py:73
+msgid "highest score"
+msgstr "эң жогорку балл"
+
+#: catalogs/models.py:74
+msgid "step"
+msgstr "кадам"
+
+#: catalogs/models.py:75 methodologies/models.py:194
+msgid "higher is better"
+msgstr "көбүрөөк — жакшыраак"
+
+#: catalogs/models.py:81
+msgid "rating scale"
+msgstr "баалоо шкаласы"
+
+#: catalogs/models.py:82
+msgid "rating scales"
+msgstr "баалоо шкалалары"
+
+#: catalogs/models.py:89 library/models.py:51
+msgid "scale"
+msgstr "шкала"
+
+#: catalogs/models.py:90
+msgid "value"
+msgstr "мааниси"
+
+#: catalogs/models.py:91 library/models.py:71 methodologies/models.py:225
+msgid "label"
+msgstr "аталышы"
+
+#: catalogs/models.py:91
+msgid "Poor, Fair, Good, Excellent"
+msgstr "Начар, Канааттандырарлык, Жакшы, Эң жакшы"
+
+#: catalogs/models.py:92
+msgid "what this level means"
+msgstr "бул деңгээл эмнени билдирет"
+
+#: catalogs/models.py:93 library/models.py:72 methodologies/models.py:135
+#: methodologies/models.py:228
+msgid "sort order"
+msgstr "тартиби"
+
+#: catalogs/models.py:98
+msgid "scale level"
+msgstr "шкаланын деңгээли"
+
+#: catalogs/models.py:99
+msgid "scale levels"
+msgstr "шкаланын деңгээлдери"
+
+#: catalogs/models.py:114
+msgid "requires evidence"
+msgstr "далил талап кылынат"
+
+#: catalogs/models.py:120
+msgid "assessment methods"
+msgstr "баалоо ыкмалары"
+
+#: catalogs/serializers.py:64
+msgid "Must be greater than the lowest score."
+msgstr "Эң төмөнкү баллдан чоң болушу керек."
+
+#: catalogs/serializers.py:69
+msgid "Level values must be unique within a scale."
+msgstr "Шкаладагы деңгээлдердин маанилери кайталанбашы керек."
+
+#: catalogs/serializers.py:73
+msgid "Unknown level id for this scale."
+msgstr "Бул шкала үчүн белгисиз деңгээл."
+
+#: config/api.py:69
+msgid "This record is still in use and cannot be deleted."
+msgstr "Жазуу колдонулууда, аны өчүрүүгө болбойт."
+
+#: config/i18n.py:72
+#, python-format
+msgid "Required in %(language)s."
+msgstr "Бул тилде толтуруу милдеттүү: %(language)s."
+
+#: config/session_api.py:33
+msgid "An account with this email already exists."
+msgstr "Бул email менен каттоо эсеби мурунтан бар."
+
+#: config/session_api.py:62
+msgid "The current password is wrong."
+msgstr "Учурдагы сырсөз туура эмес."
+
+#: config/session_api.py:165
+msgid "Wrong username or password."
+msgstr "Колдонуучунун аты же сырсөз туура эмес."
+
+#: config/session_api.py:195
+msgid "Demo reset is turned off on this server."
+msgstr "Бул серверде демо-маалыматтарды баштапкы абалга келтирүү өчүрүлгөн."
+
+#: library/models.py:10
+msgid "Number"
+msgstr "Сан"
+
+#: library/models.py:11
+msgid "Single choice"
+msgstr "Бир вариант"
+
+#: library/models.py:12
+msgid "Multiple choice"
+msgstr "Бир нече вариант"
+
+#: library/models.py:13
+msgid "Yes / no"
+msgstr "Ооба / жок"
+
+#: library/models.py:14
+msgid "Rating on a scale"
+msgstr "Шкала боюнча баа"
+
+#: library/models.py:15
+msgid "Free text"
+msgstr "Эркин текст"
+
+#: library/models.py:24 methodologies/models.py:113
+msgid "parent"
+msgstr "ата түйүн"
+
+#: library/models.py:25
+msgid "Structure, Energy efficiency, Comfort..."
+msgstr "Конструкциялар, Энергия үнөмдүүлүгү, Ыңгайлуулук…"
+
+#: library/models.py:31
+msgid "question category"
+msgstr "суроолордун категориясы"
+
+#: library/models.py:32
+msgid "question categories"
+msgstr "суроолордун категориялары"
+
+#: library/models.py:43
+msgid "category"
+msgstr "категория"
+
+#: library/models.py:45 library/models.py:59 library/models.py:69
+#: methodologies/models.py:119
+msgid "question"
+msgstr "суроо"
+
+#: library/models.py:45
+msgid "the question / indicator wording"
+msgstr "суроонун / көрсөткүчтүн тексти"
+
+#: library/models.py:46
+msgid "guidance"
+msgstr "түшүндүрмө"
+
+#: library/models.py:46
+msgid "guidance and context"
+msgstr "түшүндүрмөлөр жана контекст"
+
+#: library/models.py:47
+msgid "answer type"
+msgstr "жооптун түрү"
+
+#: library/models.py:49
+msgid "for numeric answers"
+msgstr "сандык жооптор үчүн"
+
+#: library/models.py:52
+msgid "for scale_level answers"
+msgstr "шкала деңгээли менен жооптор үчүн"
+
+#: library/models.py:53
+msgid "active"
+msgstr "активдүү"
+
+#: library/models.py:60
+msgid "questions"
+msgstr "суроолор"
+
+#: library/models.py:77
+msgid "question option"
+msgstr "жооп варианты"
+
+#: library/models.py:78
+msgid "question options"
+msgstr "жооп варианттары"
+
+#: library/serializers.py:22
+msgid "A category cannot be inside itself."
+msgstr "Категория өзүнүн ичинде боло албайт."
+
+#: library/serializers.py:34 library/serializers.py:80
+msgid "Only single choice and multiple choice questions have options."
+msgstr "Варианттар тандоо суроолорунда гана болот."
+
+#: library/serializers.py:71
+msgid "Only numeric questions have a unit."
+msgstr "Өлчөө бирдиги сандык суроолордо гана болот."
+
+#: library/serializers.py:73
+msgid "Scale-level questions need a scale."
+msgstr "Шкала боюнча баалоо үчүн шкала керек."
+
+#: library/serializers.py:75
+msgid "Only scale-level questions have a scale."
+msgstr "Шкала шкала боюнча баалоо суроолорунда гана болот."
+
+#: library/serializers.py:83
+msgid "Option codes must be unique within a question."
+msgstr "Суроодогу варианттардын коддору кайталанбашы керек."
+
+#: library/serializers.py:87
+msgid "Unknown option id for this question."
+msgstr "Бул суроо үчүн белгисиз вариант."
+
+#: library/serializers.py:92
+msgid ""
+"The question is used by a published version; its answer type is locked."
+msgstr ""
+"Суроо жарыяланган версияда колдонулат, жооптун түрүн өзгөртүүгө болбойт."
+
+#: methodologies/admin.py:73
+msgid "Draft version 1.0 with a root node was created."
+msgstr "Тамыр түйүнү бар 1.0 версиянын долбоору түзүлдү."
+
+#: methodologies/admin.py:105
+msgid "Validation"
+msgstr "Текшерүү"
+
+#: methodologies/admin.py:111
+msgid "Ready to publish."
+msgstr "Жарыялоого даяр."
+
+#: methodologies/admin.py:111
+msgid "Valid."
+msgstr "Ката жок."
+
+#: methodologies/admin.py:112
+msgid "Error"
+msgstr "Ката"
+
+#: methodologies/admin.py:112
+msgid "Warning"
+msgstr "Эскертүү"
+
+#: methodologies/admin.py:115
+msgid "Validate selected versions"
+msgstr "Тандалган версияларды текшерүү"
+
+#: methodologies/admin.py:120
+#, python-format
+msgid "%(version)s: problems to fix: %(errors)s"
+msgstr "%(version)s: оңдоо керек: %(errors)s"
+
+#: methodologies/admin.py:123
+#, python-format
+msgid "%(version)s: valid, warnings: %(count)s."
+msgstr "%(version)s: ката жок, эскертүүлөр: %(count)s."
+
+#: methodologies/admin.py:126
+msgid "Publish selected drafts"
+msgstr "Тандалган долбоорлорду жарыялоо"
+
+#: methodologies/admin.py:130
+#, python-format
+msgid "%(version)s: only drafts can be published."
+msgstr "%(version)s: долбоорду гана жарыялоого болот."
+
+#: methodologies/admin.py:135
+#, python-format
+msgid "%(version)s was not published: %(errors)s"
+msgstr "%(version)s жарыяланган жок: %(errors)s"
+
+#: methodologies/admin.py:138
+#, python-format
+msgid "%(version)s is published."
+msgstr "%(version)s жарыяланды."
+
+#: methodologies/admin.py:140
+msgid "Archive selected published versions"
+msgstr "Тандалган жарыяланган версияларды архивге жөнөтүү"
+
+#: methodologies/admin.py:144
+#, python-format
+msgid "%(version)s is archived."
+msgstr "%(version)s архивге жөнөтүлдү."
+
+#: methodologies/admin.py:146
+msgid "Create new version (draft copy)"
+msgstr "Жаңы версия түзүү (долбоор көчүрмө)"
+
+#: methodologies/admin.py:150
+#, python-format
+msgid "Created %(copy)s from %(version)s."
+msgstr "%(version)s негизинде %(copy)s түзүлдү."
+
+#: methodologies/admin.py:192 methodologies/admin.py:218
+msgid "Version"
+msgstr "Версия"
+
+#: methodologies/api.py:147
+msgid "Only published versions can be archived."
+msgstr "Жарыяланган версияны гана архивге жөнөтүүгө болот."
+
+#: methodologies/api.py:188
+msgid "The root node cannot be deleted."
+msgstr "Тамыр түйүндү өчүрүүгө болбойт."
+
+#: methodologies/api.py:197
+msgid "Only question nodes are scored."
+msgstr "Суроо түйүндөрү гана балл алат."
+
+#: methodologies/models.py:11
+msgid "Weighted average"
+msgstr "Салмактуу орточо"
+
+#: methodologies/models.py:12
+msgid "Weighted geometric mean"
+msgstr "Салмактуу геометриялык орточо"
+
+#: methodologies/models.py:13
+msgid "Weighted harmonic mean"
+msgstr "Салмактуу гармониялык орточо"
+
+#: methodologies/models.py:14
+msgid "Weighted sum"
+msgstr "Салмактуу сумма"
+
+#: methodologies/models.py:15
+msgid "Minimum"
+msgstr "Минимум"
+
+#: methodologies/models.py:16
+msgid "Maximum"
+msgstr "Максимум"
+
+#: methodologies/models.py:17
+msgid "Custom formula"
+msgstr "Өз формуласы"
+
+#: methodologies/models.py:21
+msgid "Equal"
+msgstr "Бирдей"
+
+#: methodologies/models.py:22
+msgid "Direct expert"
+msgstr "Түз эксперттик"
+
+#: methodologies/models.py:23
+msgid "Ranking"
+msgstr "Рейтинг боюнча"
+
+#: methodologies/models.py:24
+msgid "Pairwise comparison (AHP)"
+msgstr "Жуптап салыштыруу (AHP)"
+
+#: methodologies/models.py:25
+msgid "Custom"
+msgstr "Башка"
+
+#: methodologies/models.py:29
+msgid "Use the answer as the score"
+msgstr "Жооп — бул балл"
+
+#: methodologies/models.py:30
+msgid "Linear between worst and best"
+msgstr "Начардан жакшыга чейин сызыктуу"
+
+#: methodologies/models.py:31
+msgid "Linear towards a target"
+msgstr "Максаттуу мааниге карай сызыктуу"
+
+#: methodologies/models.py:32
+msgid "Criteria lookup"
+msgstr "Критерийлер таблицасы боюнча"
+
+#: methodologies/models.py:33
+msgid "Formula"
+msgstr "Формула"
+
+#: methodologies/models.py:38
+msgid "Published"
+msgstr "Жарыяланган"
+
+#: methodologies/models.py:39
+msgid "Archived"
+msgstr "Архивде"
+
+#: methodologies/models.py:43
+msgid "Group"
+msgstr "Топ"
+
+#: methodologies/models.py:44
+msgid "Question"
+msgstr "Суроо"
+
+#: methodologies/models.py:53
+msgid "what kind of objects it assesses"
+msgstr "кандай объекттерди баалайт"
+
+#: methodologies/models.py:59 methodologies/models.py:70
+msgid "methodology"
+msgstr "методика"
+
+#: methodologies/models.py:60
+msgid "methodologies"
+msgstr "методикалар"
+
+#: methodologies/models.py:71 methodologies/models.py:111
+msgid "version"
+msgstr "версия"
+
+#: methodologies/models.py:74
+msgid "weighting method"
+msgstr "салмактарды аныктоо ыкмасы"
+
+#: methodologies/models.py:77
+msgid "result scale"
+msgstr "жыйынтык шкаласы"
+
+#: methodologies/models.py:77
+msgid "scale of the final integral score"
+msgstr "акыркы интегралдык баллдын шкаласы"
+
+#: methodologies/models.py:79
+msgid "published at"
+msgstr "жарыяланган"
+
+#: methodologies/models.py:86
+msgid "methodology versions"
+msgstr "методикалардын версиялары"
+
+#: methodologies/models.py:88
+#| msgid "methodology versions"
+msgid "Can publish methodology versions"
+msgstr "Методикалардын версияларын жарыялай алат"
+
+#: methodologies/models.py:89
+#| msgid "methodology versions"
+msgid "Can archive methodology versions"
+msgstr "Методикалардын версияларын архивге жөнөтө алат"
+
+#: methodologies/models.py:114
+msgid "node type"
+msgstr "түйүндүн түрү"
+
+#: methodologies/models.py:120
+msgid "set only for node_type = question"
+msgstr "суроо түйүндөрү үчүн гана"
+
+#: methodologies/models.py:122
+msgid "weight"
+msgstr "салмак"
+
+#: methodologies/models.py:122
+msgid "relative weight among siblings"
+msgstr "коңшу түйүндөрдүн арасындагы салыштырма салмак"
+
+#: methodologies/models.py:124
+msgid "aggregation"
+msgstr "бириктирүү"
+
+#: methodologies/models.py:125
+msgid "how children are combined (groups only)"
+msgstr "балдар түйүндөр кантип бириктирилет (топтор үчүн гана)"
+
+#: methodologies/models.py:127
+msgid "aggregation formula"
+msgstr "бириктирүү формуласы"
+
+#: methodologies/models.py:127
+msgid "used when aggregation_type = custom_formula"
+msgstr "өз формуласы тандалганда колдонулат"
+
+#: methodologies/models.py:129
+msgid "score scale"
+msgstr "балл шкаласы"
+
+#: methodologies/models.py:130
+msgid ""
+"scale this node score is expressed in; defaults to the version result scale"
+msgstr "түйүн баллынын шкаласы; демейки боюнча версиянын жыйынтык шкаласы"
+
+#: methodologies/models.py:131
+msgid "mandatory"
+msgstr "милдеттүү"
+
+#: methodologies/models.py:133
+msgid "knock-out threshold"
+msgstr "критикалык босого"
+
+#: methodologies/models.py:134
+msgid "if score below this, parent/root is failed (knock-out criterion)"
+msgstr ""
+"балл мындан төмөн болсо, ата түйүн жана бүт объект өтпөйт (критикалык "
+"көрсөткүч)"
+
+#: methodologies/models.py:140
+msgid "methodology node"
+msgstr "методиканын түйүнү"
+
+#: methodologies/models.py:141
+msgid "methodology nodes"
+msgstr "методиканын түйүндөрү"
+
+#: methodologies/models.py:162
+msgid "primary"
+msgstr "негизги"
+
+#: methodologies/models.py:164
+msgid "instructions"
+msgstr "нускама"
+
+#: methodologies/models.py:164
+msgid "step-by-step procedure, tools, sampling"
+msgstr "кадам-кадамы менен тартип, шаймандар, тандоо"
+
+#: methodologies/models.py:166
+msgid "required evidence"
+msgstr "керектүү далилдер"
+
+#: methodologies/models.py:166
+msgid "photos, protocols, documents to attach"
+msgstr "тиркелүүчү сүрөттөр, протоколдор, документтер"
+
+#: methodologies/models.py:171
+msgid "node assessment method"
+msgstr "түйүндү баалоо ыкмасы"
+
+#: methodologies/models.py:172
+msgid "node assessment methods"
+msgstr "түйүндөрдү баалоо ыкмалары"
+
+#: methodologies/models.py:186
+msgid "scoring method"
+msgstr "баллды эсептөө ыкмасы"
+
+#: methodologies/models.py:188
+msgid "worst value"
+msgstr "эң начар мааниси"
+
+#: methodologies/models.py:188
+msgid "worst acceptable raw value"
+msgstr "эң начар жол берилген мааниси"
+
+#: methodologies/models.py:190
+msgid "best value"
+msgstr "эң жакшы мааниси"
+
+#: methodologies/models.py:190
+msgid "best raw value"
+msgstr "эң жакшы мааниси"
+
+#: methodologies/models.py:192
+msgid "target value"
+msgstr "максаттуу мааниси"
+
+#: methodologies/models.py:193
+msgid "ideal value for linear_target"
+msgstr "сызыктуу максат үчүн идеалдуу мааниси"
+
+#: methodologies/models.py:195
+msgid "formula"
+msgstr "формула"
+
+#: methodologies/models.py:195
+msgid "expression for normalization_type = formula"
+msgstr "«Формула» ыкмасы үчүн туюнтма"
+
+#: methodologies/models.py:201 methodologies/models.py:212
+msgid "scoring rule"
+msgstr "баалоо эрежеси"
+
+#: methodologies/models.py:202
+msgid "scoring rules"
+msgstr "баалоо эрежелери"
+
+#: methodologies/models.py:214
+msgid "from"
+msgstr "баштап"
+
+#: methodologies/models.py:214
+msgid "numeric lower bound (inclusive)"
+msgstr "төмөнкү чек (кошо алганда)"
+
+#: methodologies/models.py:216
+msgid "up to"
+msgstr "чейин"
+
+#: methodologies/models.py:216
+msgid "numeric upper bound (exclusive)"
+msgstr "жогорку чек (кошпогондо)"
+
+#: methodologies/models.py:219
+msgid "match for choice answers"
+msgstr "тандоо жооптору үчүн шарт"
+
+#: methodologies/models.py:220
+msgid "yes / no answer"
+msgstr "ооба / жок жообу"
+
+#: methodologies/models.py:220
+msgid "match for boolean answers"
+msgstr "ооба/жок жооптору үчүн шарт"
+
+#: methodologies/models.py:223
+msgid "resulting level on the node scale"
+msgstr "түйүн шкаласындагы жыйынтык деңгээл"
+
+#: methodologies/models.py:224
+msgid "resulting score"
+msgstr "жыйынтык балл"
+
+#: methodologies/models.py:227
+msgid "human-readable criterion, e.g. \"cracks wider than 2 mm\""
+msgstr "түшүнүктүү сүрөттөмө, мисалы «2 мм ден кенен жаракалар»"
+
+#: methodologies/models.py:233
+msgid "score criterion"
+msgstr "баалоо критерийи"
+
+#: methodologies/models.py:234
+msgid "score criteria"
+msgstr "баалоо критерийлери"
+
+#: methodologies/scoring.py:120
+msgid "Yes"
+msgstr "Ооба"
+
+#: methodologies/scoring.py:120
+msgid "No"
+msgstr "Жок"
+
+#: methodologies/scoring.py:132
+msgid "No question linked to this node."
+msgstr "Түйүнгө суроо байланган эмес."
+
+#: methodologies/scoring.py:134
+msgid "Not applicable: left out of the calculation."
+msgstr "Тиешеси жок: эсепке кирбейт."
+
+#: methodologies/scoring.py:136
+msgid "Text answers are stored but not scored."
+msgstr "Тексттик жооптор сакталат, бирок бааланбайт."
+
+#: methodologies/scoring.py:138
+msgid "Not answered yet."
+msgstr "Азырынча жооп жок."
+
+#: methodologies/scoring.py:140
+msgid "No scoring rule is defined for this node."
+msgstr "Түйүн үчүн баалоо эрежеси коюлган эмес."
+
+#: methodologies/scoring.py:157
+msgid "No criterion matches the selected options."
+msgstr "Тандалган варианттарга бир дагы критерий туура келбейт."
+
+#: methodologies/scoring.py:159
+#, python-format
+msgid "The lowest score of the %(count)s selected options applies."
+msgstr "Тандалган варианттардын (%(count)s) эң төмөнкү баллы колдонулду."
+
+#: methodologies/scoring.py:163
+msgid "No criterion matches this answer."
+msgstr "Бул жоопко бир дагы критерий туура келбейт."
+
+#: methodologies/scoring.py:168 methodologies/scoring.py:178
+msgid "Linear rules need a numeric answer."
+msgstr "Сызыктуу эреже үчүн сандык жооп керек."
+
+#: methodologies/scoring.py:170
+msgid "The rule needs different worst and best values."
+msgstr "Эң начар жана эң жакшы маанилер ар башка болушу керек."
+
+#: methodologies/scoring.py:173
+#, python-format
+msgid ""
+"%(percent)s %% of the way from the worst value (%(worst)s) to the best "
+"(%(best)s)."
+msgstr ""
+"Эң начар мааниден (%(worst)s) эң жакшыга (%(best)s) чейинки жолдун "
+"%(percent)s %%."
+
+#: methodologies/scoring.py:180
+msgid "The target must lie between the lower and the upper limit."
+msgstr ""
+"Максаттуу маани төмөнкү жана жогорку чектердин ортосунда болушу керек."
+
+#: methodologies/scoring.py:184
+#, python-format
+msgid ""
+"Distance to the target %(target)s: %(percent)s %% of the tolerance used."
+msgstr ""
+"Максаттан (%(target)s) четтөө: жол берилген чектин %(percent)s %% "
+"колдонулду."
+
+#: methodologies/scoring.py:189
+msgid "The formula is empty."
+msgstr "Формула бош."
+
+#: methodologies/scoring.py:193
+#, python-format
+msgid "Formula error: %(error)s"
+msgstr "Формулада ката: %(error)s"
+
+#: methodologies/scoring.py:194
+#, python-format
+msgid "Formula %(formula)s with x = %(x)s."
+msgstr "x = %(x)s болгондо %(formula)s формуласы."
+
+#: methodologies/scoring.py:198
+msgid "This rule needs a numeric answer."
+msgstr "Бул эреже үчүн сандык жооп керек."
+
+#: methodologies/scoring.py:199
+msgid "The answer is used as the score."
+msgstr "Жооп балл катары колдонулат."
+
+#: methodologies/scoring.py:201
+#, python-format
+msgid "Unknown scoring method %(type)s."
+msgstr "Белгисиз эсептөө ыкмасы %(type)s."
+
+#: methodologies/serializers.py:22
+msgid "New group"
+msgstr "Жаңы топ"
+
+#: methodologies/serializers.py:22
+msgid "New question"
+msgstr "Жаңы суроо"
+
+#: methodologies/serializers.py:83
+msgid "A node cannot move to another version."
+msgstr "Түйүндү башка версияга көчүрүүгө болбойт."
+
+#: methodologies/serializers.py:85
+msgid "Delete the node and add a new one to change its type."
+msgstr "Түрүн өзгөртүү үчүн түйүндү өчүрүп, жаңысын кошуңуз."
+
+#: methodologies/serializers.py:92
+msgid "The version already has a root node; choose a parent group."
+msgstr "Версияда тамыр түйүн бар — ата топту тандаңыз."
+
+#: methodologies/serializers.py:95
+msgid "The parent must belong to the same version."
+msgstr "Ата түйүн ошол эле версиядан болушу керек."
+
+#: methodologies/serializers.py:97
+msgid "Only group nodes can have children."
+msgstr "Балдар түйүндөр топтордо гана болот."
+
+#: methodologies/serializers.py:101
+msgid "A node cannot be moved inside itself."
+msgstr "Түйүндү өзүнүн ичине жылдырууга болбойт."
+
+#: methodologies/serializers.py:110
+#, python-format
+msgid "Code %(code)s is already used in this version."
+msgstr "%(code)s коду бул версияда колдонулуп жатат."
+
+#: methodologies/serializers.py:114
+msgid "Group nodes do not link a question."
+msgstr "Топко суроо байланбайт."
+
+#: methodologies/serializers.py:122
+msgid "Only group nodes aggregate children."
+msgstr "Балдар түйүндөрдү топтор гана бириктирет."
+
+#: methodologies/serializers.py:125
+msgid "Weight cannot be negative."
+msgstr "Салмак терс боло албайт."
+
+#: methodologies/serializers.py:146 methodologies/serializers.py:219
+msgid "Cannot move to another node."
+msgstr "Башка түйүнгө көчүрүүгө болбойт."
+
+#: methodologies/serializers.py:148
+msgid "Assessment methods describe question nodes."
+msgstr "Баалоо ыкмалары суроо түйүндөрү үчүн коюлат."
+
+#: methodologies/serializers.py:154
+msgid "This method is already attached to the node."
+msgstr "Бул ыкма түйүнгө кошулган."
+
+#: methodologies/serializers.py:174
+msgid "Cannot move to another rule."
+msgstr "Башка эрежеге көчүрүүгө болбойт."
+
+#: methodologies/serializers.py:183
+msgid ""
+"Use one kind of condition: a numeric range, an option or a yes/no value."
+msgstr "Бир шартты колдонуңуз: сандык аралык, вариант же ооба/жок."
+
+#: methodologies/serializers.py:186
+msgid "Options apply to choice questions only."
+msgstr "Варианттар тандоо суроолору үчүн гана."
+
+#: methodologies/serializers.py:188
+#, python-format
+msgid "The option does not belong to question %(code)s."
+msgstr "Вариант %(code)s суроосуна тиешелүү эмес."
+
+#: methodologies/serializers.py:190
+msgid "Yes/no conditions apply to yes/no questions only."
+msgstr "Ооба/жок шарттары ооба/жок суроолору үчүн гана."
+
+#: methodologies/serializers.py:192
+msgid "Ranges apply to numeric and scale-level questions only."
+msgstr "Аралыктар сандык суроолор жана шкала боюнча баалоо үчүн гана."
+
+#: methodologies/serializers.py:194
+msgid ""
+"Must be greater than “from”: a range includes “from” and stops just below "
+"“up to”."
+msgstr ""
+"«Баштап» мааниден чоң болушу керек: аралык «баштап» маанини камтыйт жана "
+"«чейин» мааниге жетпей бүтөт."
+
+#: methodologies/serializers.py:199
+#, python-format
+msgid "The level must belong to the node scale %(scale)s."
+msgstr "Деңгээл түйүндүн %(scale)s шкаласынан болушу керек."
+
+#: methodologies/serializers.py:221
+msgid "Only question nodes have scoring rules."
+msgstr "Баалоо эрежелери суроо түйүндөрүндө гана болот."
+
+#: methodologies/services.py:34
+#, python-format
+msgid "%(version)s can no longer be changed. Create a new version to edit it."
+msgstr ""
+"%(version)s мындан ары өзгөртүлбөйт. Түзөтүү үчүн жаңы версия түзүңүз."
+
+#: methodologies/services.py:102
+#, python-format
+msgid "The tree must have exactly one root node (found %(count)s)."
+msgstr "Даракта бир гана тамыр түйүн болушу керек (табылды: %(count)s)."
+
+#: methodologies/services.py:104
+msgid "Choose a result scale for the version."
+msgstr "Версиянын жыйынтык шкаласын тандаңыз."
+
+#: methodologies/services.py:108
+msgid "weight must be greater than 0."
+msgstr "салмак 0дөн чоң болушу керек."
+
+#: methodologies/services.py:113
+msgid "group has no children."
+msgstr "топто балдар түйүндөр жок."
+
+#: methodologies/services.py:115
+msgid "choose how the group combines its children."
+msgstr "топ балдар түйүндөрдү кантип бириктирерин тандаңыз."
+
+#: methodologies/services.py:118
+msgid "custom formula is empty."
+msgstr "өз формуласы бош."
+
+#: methodologies/services.py:123
+#, python-format
+msgid "custom formula: %(error)s."
+msgstr "өз формуласы: %(error)s."
+
+#: methodologies/services.py:127
+#, python-format
+msgid "child weights add up to %(total)s, expected 1."
+msgstr ""
+"балдар түйүндөрдүн салмактарынын суммасы %(total)s, ал эми 1 болушу керек."
+
+#: methodologies/services.py:132
+msgid "no question linked."
+msgstr "суроо байланган эмес."
+
+#: methodologies/services.py:135
+msgid "text question, stored but not scored."
+msgstr "тексттик суроо: сакталат, бирок бааланбайт."
+
+#: methodologies/services.py:138
+msgid "no assessment method describes how to obtain the value."
+msgstr "маанини кантип алууну сүрөттөгөн баалоо ыкмасы жок."
+
+#: methodologies/services.py:142
+msgid "no scoring rule."
+msgstr "баалоо эрежеси жок."
+
+#: methodologies/services.py:158
+msgid "the criteria lookup has no criteria."
+msgstr "критерийлер таблицасында бир да критерий жок."
+
+#: methodologies/services.py:163
+#, python-format
+msgid "option “%(option)s” has no criterion."
+msgstr "«%(option)s» варианты үчүн критерий жок."
+
+#: methodologies/services.py:167
+msgid "no criterion for “Yes”."
+msgstr "«Ооба» жообу үчүн критерий жок."
+
+#: methodologies/services.py:169
+msgid "no criterion for “No”."
+msgstr "«Жок» жообу үчүн критерий жок."
+
+#: methodologies/services.py:172 methodologies/services.py:179
+msgid "a linear rule needs a numeric or scale answer."
+msgstr "сызыктуу эреже үчүн сандык жооп же шкала боюнча баа керек."
+
+#: methodologies/services.py:174
+msgid "set the worst and the best value."
+msgstr "эң начар жана эң жакшы маанилерди көрсөтүңүз."
+
+#: methodologies/services.py:176
+msgid "the worst and the best value must differ."
+msgstr "эң начар жана эң жакшы маанилер ар башка болушу керек."
+
+#: methodologies/services.py:181
+msgid "set the lower limit, the target and the upper limit."
+msgstr "төмөнкү чекти, максатты жана жогорку чекти көрсөтүңүз."
+
+#: methodologies/services.py:183
+msgid "the target must lie between the lower and the upper limit."
+msgstr "максат төмөнкү жана жогорку чектердин ортосунда болушу керек."
+
+#: methodologies/services.py:186
+msgid "the formula is empty."
+msgstr "формула бош."
+
+#: methodologies/services.py:191
+#, python-format
+msgid "formula: %(error)s."
+msgstr "формула: %(error)s."
+
+#: methodologies/services.py:206
+#, python-format
+msgid "ranges “%(a)s” and “%(b)s” overlap."
+msgstr "«%(a)s» жана «%(b)s» аралыктары кесилишет."
+
+#: methodologies/services.py:208
+#, python-format
+msgid "gap between %(a)s and %(b)s: answers there get no score."
+msgstr "%(a)s менен %(b)s ортосунда боштук: мындай жооптор балл албайт."

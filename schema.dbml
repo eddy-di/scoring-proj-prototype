@@ -1,0 +1,379 @@
+Project qualimetry_scoring {
+  database_type: 'PostgreSQL'
+  Note: '''
+  Qualimetric assessment engine.
+
+  Core idea:
+  - A reusable library of QUESTIONS (what is measured) and RATING SCALES.
+  - A METHODOLOGY (versioned) arranges questions into a hierarchical
+    property tree (qualimetry "tree of properties") with weights and
+    aggregation rules per node.
+  - Each leaf (question) has SCORING RULES + SCORE CRITERIA that convert a raw
+    answer into a normalized score, and ASSESSMENT METHODS (mechanics) that
+    describe how the value is obtained (measurement, inspection, documents...).
+  - An ASSESSMENT applies a methodology version to a concrete object and
+    stores raw answers, normalized scores and aggregated node results.
+  - USERS fill in assessments (respondents). ROLES (Django groups with
+    permissions, see role_profiles) give staff access to the admin part.
+  '''
+}
+
+// ─────────────────────────────── Enums ───────────────────────────────
+
+Enum scale_type {
+  binary
+  nominal
+  ordinal
+  interval
+  ratio
+}
+
+Enum answer_type {
+  numeric       [note: 'measured / counted value']
+  single_choice
+  multi_choice
+  boolean
+  scale_level   [note: 'answer is directly a level of a rating scale']
+  text          [note: 'free text, not scored automatically']
+}
+
+Enum node_type {
+  group     [note: 'complex property / criterion group, aggregates children']
+  question  [note: 'leaf, scored from an answer']
+}
+
+Enum aggregation_type {
+  weighted_arithmetic_mean
+  weighted_geometric_mean
+  weighted_harmonic_mean
+  weighted_sum
+  min
+  max
+  custom_formula
+}
+
+Enum weighting_method {
+  equal
+  direct_expert      [note: 'weights assigned directly']
+  ranking            [note: 'derived from rank order']
+  pairwise_ahp       [note: 'Analytic Hierarchy Process']
+  custom
+}
+
+Enum normalization_type {
+  none            [note: 'raw value used as score']
+  linear_min_max  [note: '(x - min) / (max - min)']
+  linear_target   [note: 'distance to target/ideal value']
+  criteria_lookup [note: 'score taken from matching score_criteria row']
+  formula         [note: 'custom expression in scoring_rules.formula']
+}
+
+Enum version_status {
+  draft
+  published
+  archived
+}
+
+Enum assessment_status {
+  draft
+  in_progress
+  completed
+  cancelled
+}
+
+// ─────────────────────────── Users and roles ────────────────────────────
+// Roles are Django groups (auth_group, auth_group_permissions, auth_user_groups,
+// auth_permission). Those built-in tables are not repeated here.
+
+Table users {
+  id                 bigserial [pk]
+  username           varchar(150) [unique, not null]
+  password           varchar(128) [not null, note: 'hash']
+  email              varchar(254)
+  first_name         varchar(150)
+  last_name          varchar(150)
+  organization       varchar(255)
+  position           varchar(255)
+  phone              varchar(64)
+  preferred_language varchar(8) [not null, default: 'en', note: 'en, ru, ky']
+  is_active          boolean [not null, default: true]
+  is_staff           boolean [not null, default: false, note: 'set automatically: superuser or member of a staff role']
+  is_superuser       boolean [not null, default: false, note: 'manages users and roles']
+  last_login         timestamptz
+  date_joined        timestamptz [not null, default: `now()`]
+  Note: 'Users without a role are respondents. Self-registration creates such users.'
+}
+
+Table role_profiles {
+  id            bigserial [pk]
+  group_id      int [unique, not null, note: 'auth_group.id: the role']
+  description   text
+  is_staff_role boolean [not null, default: true, note: 'members get is_staff']
+  Note: 'Extra settings of a role. Built-in role: Admin (all qualimetry permissions, no user management).'
+}
+
+// ─────────────────────── Reference / catalog data ───────────────────────
+
+Table units {
+  id          bigserial [pk]
+  code        varchar(32) [unique, not null, note: 'mm, m2, %, pcs, kWh/m2']
+  name        varchar(128) [not null]
+  description text
+}
+
+Table object_types {
+  id          bigserial [pk]
+  code        varchar(64) [unique, not null, note: 'building, apartment, product...']
+  name        varchar(255) [not null]
+  description text
+}
+
+Table assessment_objects {
+  id             bigserial [pk]
+  object_type_id bigint [not null, ref: > object_types.id]
+  name           varchar(255) [not null]
+  external_ref   varchar(255) [note: 'cadastral number, SKU, etc.']
+  attributes     jsonb [note: 'free-form descriptive attributes']
+  created_by_id  bigint [ref: > users.id, note: 'who registered the object']
+  created_at     timestamptz [not null, default: `now()`]
+}
+
+Table rating_scales {
+  id               bigserial [pk]
+  code             varchar(64) [unique, not null]
+  name             varchar(255) [not null]
+  scale_type       scale_type [not null]
+  min_value        numeric(12,4)
+  max_value        numeric(12,4)
+  step             numeric(12,4)
+  higher_is_better boolean [not null, default: true]
+  description      text
+  Note: 'e.g. "0-1 normalized", "1-5 points", "0-100 %", "pass/fail"'
+}
+
+Table scale_levels {
+  id          bigserial [pk]
+  scale_id    bigint [not null, ref: > rating_scales.id]
+  value       numeric(12,4) [not null]
+  label       varchar(128) [not null, note: 'Poor, Fair, Good, Excellent']
+  description text [note: 'what this level means']
+  sort_order  int [not null, default: 0]
+
+  indexes {
+    (scale_id, value) [unique]
+  }
+}
+
+Table assessment_methods {
+  id                bigserial [pk]
+  code              varchar(64) [unique, not null]
+  name              varchar(255) [not null, note: 'instrumental measurement, visual inspection, document review, survey, calculation, expert judgement']
+  description       text
+  requires_evidence boolean [not null, default: false]
+  Note: 'Catalog of assessment mechanics: HOW a value is obtained'
+}
+
+// ─────────────────────────── Question library ───────────────────────────
+
+Table question_categories {
+  id          bigserial [pk]
+  parent_id   bigint [ref: > question_categories.id]
+  name        varchar(255) [not null, note: 'Structure, Energy efficiency, Comfort...']
+  description text
+}
+
+Table questions {
+  id               bigserial [pk]
+  category_id      bigint [ref: > question_categories.id]
+  code             varchar(64) [unique, not null]
+  text             text [not null, note: 'the question / indicator wording']
+  description      text [note: 'guidance and context']
+  answer_type      answer_type [not null]
+  unit_id          bigint [ref: > units.id, note: 'for numeric answers']
+  default_scale_id bigint [ref: > rating_scales.id, note: 'for scale_level answers']
+  is_active        boolean [not null, default: true]
+  created_at       timestamptz [not null, default: `now()`]
+  Note: 'Reusable across methodologies'
+}
+
+Table question_options {
+  id          bigserial [pk]
+  question_id bigint [not null, ref: > questions.id]
+  code        varchar(64) [not null]
+  label       varchar(255) [not null]
+  sort_order  int [not null, default: 0]
+  Note: 'Choices for single_choice / multi_choice questions'
+
+  indexes {
+    (question_id, code) [unique]
+  }
+}
+
+// ───────────────────────────── Methodologies ─────────────────────────────
+
+Table methodologies {
+  id             bigserial [pk]
+  code           varchar(64) [unique, not null]
+  name           varchar(255) [not null]
+  description    text
+  object_type_id bigint [ref: > object_types.id, note: 'what kind of objects it assesses']
+  created_at     timestamptz [not null, default: `now()`]
+}
+
+Table methodology_versions {
+  id               bigserial [pk]
+  methodology_id   bigint [not null, ref: > methodologies.id]
+  version          varchar(32) [not null]
+  status           version_status [not null, default: 'draft']
+  weighting_method weighting_method [not null, default: 'direct_expert']
+  result_scale_id  bigint [ref: > rating_scales.id, note: 'scale of the final integral score']
+  notes            text
+  published_at     timestamptz
+  created_at       timestamptz [not null, default: `now()`]
+  Note: 'Published versions are immutable so past scores stay reproducible'
+
+  indexes {
+    (methodology_id, version) [unique]
+  }
+}
+
+Table methodology_nodes {
+  id                     bigserial [pk]
+  version_id             bigint [not null, ref: > methodology_versions.id]
+  parent_id              bigint [ref: > methodology_nodes.id, note: 'NULL = root (integral quality)']
+  node_type              node_type [not null]
+  code                   varchar(64) [not null]
+  name                   varchar(255) [not null]
+  description            text
+  question_id            bigint [ref: > questions.id, note: 'set only for node_type = question']
+  weight                 numeric(8,6) [not null, default: 1, note: 'relative weight among siblings']
+  aggregation_type       aggregation_type [note: 'how children are combined (groups only)']
+  aggregation_formula    text [note: 'used when aggregation_type = custom_formula']
+  score_scale_id         bigint [ref: > rating_scales.id, note: 'scale this node score is expressed in']
+  is_mandatory           boolean [not null, default: true]
+  veto_threshold         numeric(12,4) [note: 'if score below this, parent/root is failed (knock-out criterion)']
+  sort_order             int [not null, default: 0]
+  Note: 'Hierarchical property tree of a methodology version'
+
+  indexes {
+    (version_id, code) [unique]
+    (version_id, parent_id)
+  }
+}
+
+Table node_assessment_methods {
+  id                   bigserial [pk]
+  node_id              bigint [not null, ref: > methodology_nodes.id]
+  assessment_method_id bigint [not null, ref: > assessment_methods.id]
+  is_primary           boolean [not null, default: true]
+  instructions         text [note: 'step-by-step procedure, tools, sampling']
+  required_evidence    text [note: 'photos, protocols, documents to attach']
+  Note: 'Assessment mechanics for a specific node'
+
+  indexes {
+    (node_id, assessment_method_id) [unique]
+  }
+}
+
+Table scoring_rules {
+  id                 bigserial [pk]
+  node_id            bigint [not null, unique, ref: - methodology_nodes.id]
+  normalization_type normalization_type [not null]
+  raw_min            numeric(14,4) [note: 'worst acceptable raw value']
+  raw_max            numeric(14,4) [note: 'best raw value']
+  target_value       numeric(14,4) [note: 'ideal value for linear_target']
+  higher_is_better   boolean [not null, default: true]
+  formula            text [note: 'expression for normalization_type = formula']
+  description        text
+  Note: 'How a raw answer is converted to a score for a question node'
+}
+
+Table score_criteria {
+  id              bigserial [pk]
+  scoring_rule_id bigint [not null, ref: > scoring_rules.id]
+  range_from      numeric(14,4) [note: 'numeric lower bound (inclusive)']
+  range_to        numeric(14,4) [note: 'numeric upper bound (exclusive)']
+  option_id       bigint [ref: > question_options.id, note: 'match for choice answers']
+  boolean_value   boolean [note: 'match for boolean answers']
+  scale_level_id  bigint [ref: > scale_levels.id, note: 'resulting level on the node scale']
+  score           numeric(12,4) [not null, note: 'resulting score']
+  label           varchar(255)
+  description     text [note: 'human-readable criterion, e.g. "cracks wider than 2 mm"']
+  sort_order      int [not null, default: 0]
+  Note: 'Score criteria: condition on the raw answer -> score'
+}
+
+// ────────────────────────────── Assessments ──────────────────────────────
+
+Table assessments {
+  id                     bigserial [pk]
+  respondent_id          bigint [ref: > users.id, note: 'who fills it in; respondents see only their own']
+  object_id              bigint [not null, ref: > assessment_objects.id]
+  methodology_version_id bigint [not null, ref: > methodology_versions.id]
+  status                 assessment_status [not null, default: 'draft']
+  title                  varchar(255)
+  assessed_at            date
+  total_score            numeric(12,4) [note: 'denormalized root node result']
+  total_scale_level_id   bigint [ref: > scale_levels.id]
+  notes                  text
+  created_at             timestamptz [not null, default: `now()`]
+  completed_at           timestamptz
+}
+
+Table responses {
+  id                   bigserial [pk]
+  assessment_id        bigint [not null, ref: > assessments.id]
+  node_id              bigint [not null, ref: > methodology_nodes.id, note: 'question node']
+  assessment_method_id bigint [ref: > assessment_methods.id, note: 'mechanics actually used']
+  numeric_value        numeric(14,4)
+  boolean_value        boolean
+  option_id            bigint [ref: > question_options.id, note: 'single_choice']
+  scale_level_id       bigint [ref: > scale_levels.id, note: 'scale_level answers']
+  text_value           text
+  is_not_applicable    boolean [not null, default: false]
+  matched_criterion_id bigint [ref: > score_criteria.id, note: 'criterion that produced the score']
+  score                numeric(12,4) [note: 'normalized score of this question']
+  comment              text
+  created_at           timestamptz [not null, default: `now()`]
+  updated_at           timestamptz
+  Note: 'Raw answer + resulting score per question in an assessment'
+
+  indexes {
+    (assessment_id, node_id) [unique]
+  }
+}
+
+Table response_options {
+  response_id bigint [ref: > responses.id]
+  option_id   bigint [ref: > question_options.id]
+
+  indexes {
+    (response_id, option_id) [pk]
+  }
+  Note: 'Selected options for multi_choice answers'
+}
+
+Table response_evidence {
+  id          bigserial [pk]
+  response_id bigint [not null, ref: > responses.id]
+  kind        varchar(32) [not null, note: 'photo, document, measurement_protocol, link']
+  uri         text [not null]
+  description text
+  created_at  timestamptz [not null, default: `now()`]
+}
+
+Table node_results {
+  id             bigserial [pk]
+  assessment_id  bigint [not null, ref: > assessments.id]
+  node_id        bigint [not null, ref: > methodology_nodes.id]
+  score          numeric(12,4) [note: 'aggregated score of the node']
+  weighted_score numeric(12,4) [note: 'score * weight, contribution to parent']
+  scale_level_id bigint [ref: > scale_levels.id]
+  is_vetoed      boolean [not null, default: false, note: 'failed a knock-out threshold']
+  computed_at    timestamptz [not null, default: `now()`]
+  Note: 'Computed results for every node (groups and root) of an assessment'
+
+  indexes {
+    (assessment_id, node_id) [unique]
+  }
+}

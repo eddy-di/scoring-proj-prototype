@@ -1,0 +1,335 @@
+[
+{
+  "model": "library.questioncategory",
+  "pk": 1,
+  "fields": {
+    "parent": null,
+    "name": "Structure",
+    "name_en": "Structure",
+    "name_ru": "Конструкции",
+    "name_ky": "Конструкциялар",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "library.questioncategory",
+  "pk": 2,
+  "fields": {
+    "parent": null,
+    "name": "Fire safety",
+    "name_en": "Fire safety",
+    "name_ru": "Пожарная безопасность",
+    "name_ky": "Өрт коопсуздугу",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "library.questioncategory",
+  "pk": 3,
+  "fields": {
+    "parent": null,
+    "name": "Energy",
+    "name_en": "Energy",
+    "name_ru": "Энергия",
+    "name_ky": "Энергия",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "library.questioncategory",
+  "pk": 4,
+  "fields": {
+    "parent": null,
+    "name": "Comfort & appearance",
+    "name_en": "Comfort & appearance",
+    "name_ru": "Комфорт и внешний вид",
+    "name_ky": "Ыңгайлуулук жана сырткы көрүнүш",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "library.question",
+  "pk": 1,
+  "fields": {
+    "category": 1,
+    "code": "STR_CRACK_WIDTH",
+    "text": "What is the width of the widest crack in the load-bearing walls?",
+    "text_en": "What is the width of the widest crack in the load-bearing walls?",
+    "text_ru": "Какова ширина самой широкой трещины в несущих стенах?",
+    "text_ky": "Көтөрүүчү дубалдардагы эң кенен жараканын туурасы канча?",
+    "description": "Measure at the widest point. Ignore hairline cracks in plaster only.",
+    "description_en": "Measure at the widest point. Ignore hairline cracks in plaster only.",
+    "description_ru": "Измеряйте в самом широком месте. Волосяные трещины только в штукатурке не учитывайте.",
+    "description_ky": "Эң кенен жеринен өлчөңүз. Шыбактагы гана кылдай жаракаларды эсепке албаңыз.",
+    "answer_type": "numeric",
+    "unit": 1,
+    "default_scale": null,
+    "is_active": true,
+    "created_at": "2026-10-01T09:00:00Z"
+  }
+},
+{
+  "model": "library.question",
+  "pk": 2,
+  "fields": {
+    "category": 1,
+    "code": "STR_ROOF_STATE",
+    "text": "What is the condition of the roof covering?",
+    "text_en": "What is the condition of the roof covering?",
+    "text_ru": "В каком состоянии кровельное покрытие?",
+    "text_ky": "Чатырдын жабуусу кандай абалда?",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "answer_type": "single_choice",
+    "unit": null,
+    "default_scale": null,
+    "is_active": true,
+    "created_at": "2026-10-01T09:00:00Z"
+  }
+},
+{
+  "model": "library.question",
+  "pk": 3,
+  "fields": {
+    "category": 2,
+    "code": "SAF_FIRE_ALARM",
+    "text": "Is an automatic fire alarm installed and working?",
+    "text_en": "Is an automatic fire alarm installed and working?",
+    "text_ru": "Установлена ли автоматическая пожарная сигнализация и работает ли она?",
+    "text_ky": "Автоматтык өрт сигнализациясы орнотулганбы жана иштейби?",
+    "description": "Working means it passed its last scheduled test.",
+    "description_en": "Working means it passed its last scheduled test.",
+    "description_ru": "«Работает» означает, что она прошла последнюю плановую проверку.",
+    "description_ky": "«Иштейт» — акыркы пландуу текшерүүдөн өткөн дегенди билдирет.",
+    "answer_type": "boolean",
+    "unit": null,
+    "default_scale": null,
+    "is_active": true,
+    "created_at": "2026-10-01T09:00:00Z"
+  }
+},
+{
+  "model": "library.question",
+  "pk": 4,
+  "fields": {
+    "category": 3,
+    "code": "EN_HEAT_USE",
+    "text": "What is the specific annual heat consumption of the building?",
+    "text_en": "What is the specific annual heat consumption of the building?",
+    "text_ru": "Каково удельное годовое потребление тепла зданием?",
+    "text_ky": "Имараттын жылдык салыштырма жылуулук керектөөсү канча?",
+    "description": "Use the last full heating season from meter readings.",
+    "description_en": "Use the last full heating season from meter readings.",
+    "description_ru": "Возьмите последний полный отопительный сезон по показаниям счётчика.",
+    "description_ky": "Эсептегичтин көрсөткүчтөрү боюнча акыркы толук жылытуу мезгилин алыңыз.",
+    "answer_type": "numeric",
+    "unit": 2,
+    "default_scale": null,
+    "is_active": true,
+    "created_at": "2026-10-01T09:00:00Z"
+  }
+},
+{
+  "model": "library.question",
+  "pk": 5,
+  "fields": {
+    "category": 4,
+    "code": "COM_INDOOR_HUMIDITY",
+    "text": "What is the average relative indoor humidity in winter?",
+    "text_en": "What is the average relative indoor humidity in winter?",
+    "text_ru": "Какова средняя относительная влажность в помещениях зимой?",
+    "text_ky": "Кышында бөлмөлөрдөгү орточо салыштырма нымдуулук канча?",
+    "description": "Ideal is around 45 %. Good candidate for a linear_target rule.",
+    "description_en": "Ideal is around 45 %. Good candidate for a linear_target rule.",
+    "description_ru": "Идеал — около 45 %. Подходит для правила «линейно к целевому значению».",
+    "description_ky": "Идеалдуусу — болжол менен 45 %. «Максаттуу мааниге карай сызыктуу» эрежеси үчүн ылайыктуу.",
+    "answer_type": "numeric",
+    "unit": 3,
+    "default_scale": null,
+    "is_active": true,
+    "created_at": "2026-10-01T09:00:00Z"
+  }
+},
+{
+  "model": "library.question",
+  "pk": 6,
+  "fields": {
+    "category": 4,
+    "code": "COM_FACADE_RATING",
+    "text": "How would you rate the overall appearance of the facade?",
+    "text_en": "How would you rate the overall appearance of the facade?",
+    "text_ru": "Как вы оцениваете общий внешний вид фасада?",
+    "text_ky": "Фасаддын жалпы сырткы көрүнүшүн кандай баалайсыз?",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "answer_type": "scale_level",
+    "unit": null,
+    "default_scale": 1,
+    "is_active": true,
+    "created_at": "2026-10-01T09:00:00Z"
+  }
+},
+{
+  "model": "library.question",
+  "pk": 7,
+  "fields": {
+    "category": 4,
+    "code": "COM_FACADE_DEFECTS",
+    "text": "Which facade defects are present?",
+    "text_en": "Which facade defects are present?",
+    "text_ru": "Какие дефекты фасада есть?",
+    "text_ky": "Фасадда кандай кемчиликтер бар?",
+    "description": "Select every defect you can see.",
+    "description_en": "Select every defect you can see.",
+    "description_ru": "Отметьте все дефекты, которые видите.",
+    "description_ky": "Көргөн бардык кемчиликтерди белгилеңиз.",
+    "answer_type": "multi_choice",
+    "unit": null,
+    "default_scale": null,
+    "is_active": true,
+    "created_at": "2026-10-01T09:00:00Z"
+  }
+},
+{
+  "model": "library.question",
+  "pk": 8,
+  "fields": {
+    "category": 4,
+    "code": "GEN_REMARKS",
+    "text": "Any other remarks about the building?",
+    "text_en": "Any other remarks about the building?",
+    "text_ru": "Другие замечания по зданию?",
+    "text_ky": "Имарат боюнча башка эскертүүлөр барбы?",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "answer_type": "text",
+    "unit": null,
+    "default_scale": null,
+    "is_active": true,
+    "created_at": "2026-10-01T09:00:00Z"
+  }
+},
+{
+  "model": "library.questionoption",
+  "pk": 1,
+  "fields": {
+    "question": 2,
+    "code": "good",
+    "label": "Good, no visible defects",
+    "label_en": "Good, no visible defects",
+    "label_ru": "Хорошее, видимых дефектов нет",
+    "label_ky": "Жакшы, көрүнгөн кемчиликтер жок",
+    "sort_order": 0
+  }
+},
+{
+  "model": "library.questionoption",
+  "pk": 2,
+  "fields": {
+    "question": 2,
+    "code": "minor_wear",
+    "label": "Minor wear",
+    "label_en": "Minor wear",
+    "label_ru": "Небольшой износ",
+    "label_ky": "Бир аз эскирген",
+    "sort_order": 1
+  }
+},
+{
+  "model": "library.questionoption",
+  "pk": 3,
+  "fields": {
+    "question": 2,
+    "code": "local_damage",
+    "label": "Local damage",
+    "label_en": "Local damage",
+    "label_ru": "Местные повреждения",
+    "label_ky": "Жергиликтүү бузулуулар",
+    "sort_order": 2
+  }
+},
+{
+  "model": "library.questionoption",
+  "pk": 4,
+  "fields": {
+    "question": 2,
+    "code": "leaking",
+    "label": "Leaking",
+    "label_en": "Leaking",
+    "label_ru": "Протекает",
+    "label_ky": "Суу өтөт",
+    "sort_order": 3
+  }
+},
+{
+  "model": "library.questionoption",
+  "pk": 5,
+  "fields": {
+    "question": 7,
+    "code": "none",
+    "label": "No defects",
+    "label_en": "No defects",
+    "label_ru": "Без дефектов",
+    "label_ky": "Кемчиликсиз",
+    "sort_order": 0
+  }
+},
+{
+  "model": "library.questionoption",
+  "pk": 6,
+  "fields": {
+    "question": 7,
+    "code": "stains",
+    "label": "Stains or efflorescence",
+    "label_en": "Stains or efflorescence",
+    "label_ru": "Пятна или высолы",
+    "label_ky": "Тактар же туз чыгуу",
+    "sort_order": 1
+  }
+},
+{
+  "model": "library.questionoption",
+  "pk": 7,
+  "fields": {
+    "question": 7,
+    "code": "peeling",
+    "label": "Peeling paint or plaster",
+    "label_en": "Peeling paint or plaster",
+    "label_ru": "Отслоение краски или штукатурки",
+    "label_ky": "Боёктун же шыбактын кабыршактанышы",
+    "sort_order": 2
+  }
+},
+{
+  "model": "library.questionoption",
+  "pk": 8,
+  "fields": {
+    "question": 7,
+    "code": "missing",
+    "label": "Missing cladding elements",
+    "label_en": "Missing cladding elements",
+    "label_ru": "Отсутствуют элементы облицовки",
+    "label_ky": "Каптоо элементтери жок",
+    "sort_order": 3
+  }
+}
+]
+

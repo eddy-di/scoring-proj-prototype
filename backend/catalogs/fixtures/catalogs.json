@@ -1,0 +1,362 @@
+[
+{
+  "model": "catalogs.unit",
+  "pk": 1,
+  "fields": {
+    "code": "mm",
+    "name": "Millimetre",
+    "name_en": "Millimetre",
+    "name_ru": "Миллиметр",
+    "name_ky": "Миллиметр",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 2,
+  "fields": {
+    "code": "kWh/m²·yr",
+    "name": "Kilowatt-hours per m² per year",
+    "name_en": "Kilowatt-hours per m² per year",
+    "name_ru": "Киловатт-часов на м² в год",
+    "name_ky": "Жылына м² үчүн киловатт-саат",
+    "description": "Specific annual heat consumption",
+    "description_en": "Specific annual heat consumption",
+    "description_ru": "Удельное годовое потребление тепла",
+    "description_ky": "Жылдык салыштырма жылуулук керектөө"
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 3,
+  "fields": {
+    "code": "%",
+    "name": "Percent",
+    "name_en": "Percent",
+    "name_ru": "Процент",
+    "name_ky": "Пайыз",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 4,
+  "fields": {
+    "code": "pcs",
+    "name": "Pieces",
+    "name_en": "Pieces",
+    "name_ru": "Штуки",
+    "name_ky": "Даана",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.objecttype",
+  "pk": 1,
+  "fields": {
+    "code": "residential_building",
+    "name": "Residential building",
+    "name_en": "Residential building",
+    "name_ru": "Жилое здание",
+    "name_ky": "Турак жай имараты",
+    "description": "Multi-apartment or single-family housing",
+    "description_en": "Multi-apartment or single-family housing",
+    "description_ru": "Многоквартирный или индивидуальный жилой дом",
+    "description_ky": "Көп батирлүү же жеке турак үй"
+  }
+},
+{
+  "model": "catalogs.objecttype",
+  "pk": 2,
+  "fields": {
+    "code": "office_building",
+    "name": "Office building",
+    "name_en": "Office building",
+    "name_ru": "Офисное здание",
+    "name_ky": "Кеңсе имараты",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.ratingscale",
+  "pk": 1,
+  "fields": {
+    "code": "quality_5",
+    "name": "5-point quality",
+    "name_en": "5-point quality",
+    "name_ru": "5-балльное качество",
+    "name_ky": "5 баллдык сапат",
+    "scale_type": "ordinal",
+    "min_value": "1.0000",
+    "max_value": "5.0000",
+    "step": "1.0000",
+    "higher_is_better": true,
+    "description": "General quality scale used for node scores and the final result",
+    "description_en": "General quality scale used for node scores and the final result",
+    "description_ru": "Общая шкала качества для баллов узлов и итогового результата",
+    "description_ky": "Түйүндөрдүн баллдары жана акыркы жыйынтык үчүн жалпы сапат шкаласы"
+  }
+},
+{
+  "model": "catalogs.ratingscale",
+  "pk": 2,
+  "fields": {
+    "code": "pass_fail",
+    "name": "Pass / fail",
+    "name_en": "Pass / fail",
+    "name_ru": "Зачёт / незачёт",
+    "name_ky": "Өттү / өтпөдү",
+    "scale_type": "binary",
+    "min_value": "0.0000",
+    "max_value": "1.0000",
+    "step": "1.0000",
+    "higher_is_better": true,
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 1,
+  "fields": {
+    "scale": 1,
+    "value": "1.0000",
+    "label": "Unacceptable",
+    "label_en": "Unacceptable",
+    "label_ru": "Недопустимо",
+    "label_ky": "Жол берилгис",
+    "description": "Dangerous or unusable; immediate action required",
+    "description_en": "Dangerous or unusable; immediate action required",
+    "description_ru": "Опасно или непригодно; нужны срочные меры",
+    "description_ky": "Коркунучтуу же жараксыз; шашылыш чара керек",
+    "sort_order": 0
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 2,
+  "fields": {
+    "scale": 1,
+    "value": "2.0000",
+    "label": "Poor",
+    "label_en": "Poor",
+    "label_ru": "Плохо",
+    "label_ky": "Начар",
+    "description": "Significant defects; major repair required",
+    "description_en": "Significant defects; major repair required",
+    "description_ru": "Значительные дефекты; нужен капитальный ремонт",
+    "description_ky": "Олуттуу кемчиликтер; капиталдык оңдоо керек",
+    "sort_order": 1
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 3,
+  "fields": {
+    "scale": 1,
+    "value": "3.0000",
+    "label": "Satisfactory",
+    "label_en": "Satisfactory",
+    "label_ru": "Удовлетворительно",
+    "label_ky": "Канааттандырарлык",
+    "description": "Noticeable defects; local repair required",
+    "description_en": "Noticeable defects; local repair required",
+    "description_ru": "Заметные дефекты; нужен местный ремонт",
+    "description_ky": "Байкалган кемчиликтер; жергиликтүү оңдоо керек",
+    "sort_order": 2
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 4,
+  "fields": {
+    "scale": 1,
+    "value": "4.0000",
+    "label": "Good",
+    "label_en": "Good",
+    "label_ru": "Хорошо",
+    "label_ky": "Жакшы",
+    "description": "Minor defects; no repair needed now",
+    "description_en": "Minor defects; no repair needed now",
+    "description_ru": "Небольшие дефекты; ремонт пока не нужен",
+    "description_ky": "Майда кемчиликтер; азырынча оңдоо керек эмес",
+    "sort_order": 3
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 5,
+  "fields": {
+    "scale": 1,
+    "value": "5.0000",
+    "label": "Excellent",
+    "label_en": "Excellent",
+    "label_ru": "Отлично",
+    "label_ky": "Эң жакшы",
+    "description": "No defects",
+    "description_en": "No defects",
+    "description_ru": "Без дефектов",
+    "description_ky": "Кемчиликсиз",
+    "sort_order": 4
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 6,
+  "fields": {
+    "scale": 2,
+    "value": "0.0000",
+    "label": "Fail",
+    "label_en": "Fail",
+    "label_ru": "Незачёт",
+    "label_ky": "Өтпөдү",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "sort_order": 0
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 7,
+  "fields": {
+    "scale": 2,
+    "value": "1.0000",
+    "label": "Pass",
+    "label_en": "Pass",
+    "label_ru": "Зачёт",
+    "label_ky": "Өттү",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "sort_order": 1
+  }
+},
+{
+  "model": "catalogs.assessmentmethod",
+  "pk": 1,
+  "fields": {
+    "code": "measurement",
+    "name": "Instrumental measurement",
+    "name_en": "Instrumental measurement",
+    "name_ru": "Инструментальное измерение",
+    "name_ky": "Аспаптык өлчөө",
+    "description": "Value read from a measuring instrument",
+    "description_en": "Value read from a measuring instrument",
+    "description_ru": "Значение снимается с измерительного прибора",
+    "description_ky": "Маани өлчөөчү аспаптан алынат",
+    "requires_evidence": true
+  }
+},
+{
+  "model": "catalogs.assessmentmethod",
+  "pk": 2,
+  "fields": {
+    "code": "visual",
+    "name": "Visual inspection",
+    "name_en": "Visual inspection",
+    "name_ru": "Визуальный осмотр",
+    "name_ky": "Визуалдык текшерүү",
+    "description": "On-site inspection without instruments",
+    "description_en": "On-site inspection without instruments",
+    "description_ru": "Осмотр на месте без приборов",
+    "description_ky": "Аспапсыз жеринде текшерүү",
+    "requires_evidence": true
+  }
+},
+{
+  "model": "catalogs.assessmentmethod",
+  "pk": 3,
+  "fields": {
+    "code": "documents",
+    "name": "Document review",
+    "name_en": "Document review",
+    "name_ru": "Анализ документов",
+    "name_ky": "Документтерди карап чыгуу",
+    "description": "Value taken from certificates, reports or passports",
+    "description_en": "Value taken from certificates, reports or passports",
+    "description_ru": "Значение берётся из сертификатов, отчётов или паспортов",
+    "description_ky": "Маани сертификаттардан, отчеттордон же паспорттордон алынат",
+    "requires_evidence": false
+  }
+},
+{
+  "model": "catalogs.assessmentmethod",
+  "pk": 4,
+  "fields": {
+    "code": "calculation",
+    "name": "Calculation",
+    "name_en": "Calculation",
+    "name_ru": "Расчёт",
+    "name_ky": "Эсептөө",
+    "description": "Derived from other measured values",
+    "description_en": "Derived from other measured values",
+    "description_ru": "Вычисляется из других измеренных значений",
+    "description_ky": "Башка өлчөнгөн маанилерден эсептелет",
+    "requires_evidence": false
+  }
+},
+{
+  "model": "catalogs.assessmentmethod",
+  "pk": 5,
+  "fields": {
+    "code": "expert",
+    "name": "Expert judgement",
+    "name_en": "Expert judgement",
+    "name_ru": "Экспертная оценка",
+    "name_ky": "Эксперттик баа",
+    "description": "Rated directly by a qualified expert",
+    "description_en": "Rated directly by a qualified expert",
+    "description_ru": "Оценивается напрямую квалифицированным экспертом",
+    "description_ky": "Квалификациялуу эксперт түздөн-түз баалайт",
+    "requires_evidence": false
+  }
+},
+{
+  "model": "catalogs.assessmentobject",
+  "pk": 1,
+  "fields": {
+    "object_type": 1,
+    "name": "Block A, Riverside residential complex",
+    "external_ref": "RC-0042",
+    "attributes": {
+      "year_built": 1987,
+      "floors": 9,
+      "wall_material": "brick"
+    },
+    "created_at": "2026-10-01T09:00:00Z"
+  }
+},
+{
+  "model": "catalogs.assessmentobject",
+  "pk": 2,
+  "fields": {
+    "object_type": 1,
+    "name": "House 7, Green Lane",
+    "external_ref": "GL-0007",
+    "attributes": {
+      "year_built": 2015,
+      "floors": 3,
+      "wall_material": "aerated concrete"
+    },
+    "created_at": "2026-10-01T09:00:00Z"
+  }
+}
+]
+
