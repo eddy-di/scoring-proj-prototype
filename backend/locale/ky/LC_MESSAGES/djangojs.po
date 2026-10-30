@@ -24,7 +24,7 @@ msgstr "+ топ"
 msgid "+ question"
 msgstr "+ суроо"
 
-#: js/views/respondent.js:76
+#: js/views/respondent.js:67
 msgid ""
 "1. Click “New assessment” and choose a questionnaire or the object you are "
 "assessing. The newest version of the questionnaire is used automatically. 2."
@@ -108,13 +108,14 @@ msgstr ""
 
 #: js/help.js:119
 msgid ""
-"A methodology is written for one object type, e.g. residential buildings. "
-"Objects are the actual things respondents assess, e.g. “Block A, Riverside "
-"residential complex”."
+"A methodology is written for one object type, e.g. residential buildings or "
+"suppliers. Objects are the actual things respondents assess, e.g. “Block A, "
+"Riverside residential complex” or “Ala-Too Packaging LLC”."
 msgstr ""
-"Методика объекттин бир түрү үчүн жазылат, мисалы турак жай имараттары үчүн. "
-"Объекттер — респонденттер баалаган конкреттүү нерселер, мисалы «А корпусу, "
-"Riverside турак жай комплекси»."
+"Методика объекттин бир түрү үчүн жазылат, мисалы турак жай имараттары же "
+"жабдуучулар үчүн. Объекттер — респонденттер баалаган конкреттүү нерселер, "
+"мисалы «А корпусу, Riverside турак жай комплекси» же «Ala-Too Packaging "
+"LLC»."
 
 #: js/views/help.js:33
 msgid "A methodology works like an exam."
@@ -147,7 +148,7 @@ msgstr ""
 " балл берери ар бир методиканын ичинде чечилет. Ошентип бир суроону көп "
 "методикаларда колдонсо болот, ар бири аны өзүнчө баалайт."
 
-#: js/views/data.js:57
+#: js/views/data.js:76
 msgid ""
 "A read-only look at the raw database rows behind the screens, with the same "
 "table and column names as schema.dbml. Useful to understand where each piece"
@@ -337,7 +338,7 @@ msgstr "Кошулду: {name}."
 msgid "Admin"
 msgstr "Администрация"
 
-#: js/views/dashboard.js:117
+#: js/views/dashboard.js:119
 msgid "Admin dashboard"
 msgstr "Администратордун панели"
 
@@ -353,13 +354,12 @@ msgstr "Администратор: иштин адаттагы тартиби"
 msgid "Aggregation"
 msgstr "Бириктирүү"
 
-#: js/views/respondent.js:218 js/views/respondent.js:220
-#: js/views/respondent.js:222
+#: js/views/respondent.js:235 js/views/respondent.js:237
 msgid "All"
 msgstr "Баары"
 
-#: js/main.js:47 js/views/respondent.js:212 js/views/respondent.js:280
-#: js/views/respondent.js:510
+#: js/main.js:47 js/views/respondent.js:229 js/views/respondent.js:301
+#: js/views/respondent.js:532
 msgid "All assessments"
 msgstr "Бардык баалоолор"
 
@@ -375,7 +375,7 @@ msgstr "Бардык суроолор"
 msgid "All siblings weigh the same."
 msgstr "Бардык коңшу түйүндөрдүн салмагы бирдей."
 
-#: js/views/dashboard.js:127
+#: js/views/dashboard.js:129
 msgid ""
 "All steps are done. You can still go back and change anything; published "
 "versions need a new version first."
@@ -425,12 +425,13 @@ msgstr "1ден 5ке чейин эксперттик баа."
 
 #: js/views/admin-catalogs.js:247
 msgid ""
-"An object is one real building, apartment or product. Respondents pick an "
-"object when they start an assessment, and they can also register new objects"
-" themselves."
+"An object is one real thing being assessed: a building, a supplier, a "
+"product. Respondents pick an object when they start an assessment, and they "
+"can also register new objects themselves."
 msgstr ""
-"Объект — бир чыныгы имарат, батир же буюм. Респонденттер баалоону баштаганда"
-" объектти тандашат жана жаңы объекттерди өздөрү каттай алышат."
+"Объект — бааланып жаткан бир чыныгы нерсе: имарат, жабдуучу, буюм. "
+"Респонденттер баалоону баштаганда объектти тандашат жана жаңы объекттерди "
+"өздөрү каттай алышат."
 
 #: js/views/admin-methodologies.js:21
 msgid "Another method; describe it in the notes."
@@ -440,7 +441,7 @@ msgstr "Башка ыкма; аны эскертүүлөрдө сүрөттөң�
 msgid "Answer"
 msgstr "Жооп"
 
-#: js/views/respondent.js:529
+#: js/views/respondent.js:551
 msgid "Answer and reason"
 msgstr "Жооп жана негиздеме"
 
@@ -453,12 +454,12 @@ msgstr "Жооп варианттары"
 msgid "Answer type"
 msgstr "Жооптун түрү"
 
-#: js/views/respondent.js:86 js/views/respondent.js:90
-#: js/views/respondent.js:223 js/views/respondent.js:313
+#: js/views/respondent.js:77 js/views/respondent.js:81
+#: js/views/respondent.js:242 js/views/respondent.js:334
 msgid "Answered"
 msgstr "Жооп берилди"
 
-#: js/views/respondent.js:308
+#: js/views/respondent.js:329
 msgid "Answering"
 msgstr "Жооп берүү"
 
@@ -498,17 +499,17 @@ msgstr ""
 "Бир эле нерсе жөнүндө сураңыз. «Эң кенен жараканын туурасы» «Жаракалар жана "
 "алардын өлчөмү» дегенден жакшыраак."
 
-#: js/help.js:132 js/views/data.js:28 js/views/respondent.js:86
-#: js/views/respondent.js:90 js/views/respondent.js:223
+#: js/help.js:132 js/views/data.js:28 js/views/respondent.js:77
+#: js/views/respondent.js:81 js/views/respondent.js:242
 msgid "Assessment"
 msgstr "Баалоо"
 
-#: js/views/dashboard.js:150 js/views/respondent.js:53
-#: js/views/respondent.js:301
+#: js/views/dashboard.js:152 js/views/respondent.js:44
+#: js/views/respondent.js:322
 msgid "Assessment #{id}"
 msgstr "Баалоо №{id}"
 
-#: js/views/respondent.js:290
+#: js/views/respondent.js:311
 msgid "Assessment completed."
 msgstr "Баалоо аяктады."
 
@@ -532,16 +533,16 @@ msgstr "Баалоо ыкмалары"
 msgid "Assessment methods: how a value is obtained"
 msgstr "Баалоо ыкмалары: маани кантип алынат"
 
-#: js/views/respondent.js:272 js/views/respondent.js:465
+#: js/views/respondent.js:293 js/views/respondent.js:487
 msgid "Assessment not found."
 msgstr "Баалоо табылган жок."
 
-#: js/views/respondent.js:105
+#: js/views/respondent.js:96
 msgid "Assessment started."
 msgstr "Баалоо башталды."
 
 #: js/views/account.js:83 js/views/admin-catalogs.js:257
-#: js/views/dashboard.js:145
+#: js/views/dashboard.js:147
 msgid "Assessments"
 msgstr "Баалоолор"
 
@@ -549,7 +550,7 @@ msgstr "Баалоолор"
 msgid "At least 8 characters; not only digits and not a common password."
 msgstr "Кеминде 8 белги; сандар гана эмес жана жалпы белгилүү сырсөз эмес."
 
-#: js/views/respondent.js:523
+#: js/views/respondent.js:545
 msgid ""
 "At least one critical question scored below its threshold, so the object "
 "fails regardless of the total."
@@ -565,20 +566,20 @@ msgstr "Бул мааниде жана андан жогору — эң төмө
 msgid "At or below this value, the lowest score."
 msgstr "Бул мааниде жана андан төмөн — эң төмөнкү балл."
 
-#: js/views/respondent.js:397
+#: js/views/respondent.js:418
 msgid "Attach"
 msgstr "Тиркөө"
 
-#: js/views/respondent.js:395
+#: js/views/respondent.js:416
 msgid "Attach evidence ({count})"
 msgstr "Далил тиркөө ({count})"
 
 #: js/views/admin-catalogs.js:256 js/views/admin-catalogs.js:263
-#: js/views/respondent.js:116
+#: js/views/respondent.js:107
 msgid "Attributes"
 msgstr "Атрибуттар"
 
-#: js/views/respondent.js:272 js/views/respondent.js:465
+#: js/views/respondent.js:293 js/views/respondent.js:487
 msgid "Back to assessments"
 msgstr "Баалоолорго кайтуу"
 
@@ -590,7 +591,7 @@ msgstr "Методикаларга кайтуу"
 msgid "Back to the library"
 msgstr "Китепканага кайтуу"
 
-#: js/views/respondent.js:473
+#: js/views/respondent.js:495
 msgid "Back to the questionnaire"
 msgstr "Анкетага кайтуу"
 
@@ -618,7 +619,7 @@ msgstr "{lo} менен {hi} ортосунда"
 msgid "Block A, October 2026 inspection: total 3.9, “Good”."
 msgstr "А корпусу, 2026-жылдын октябрындагы текшерүү: жыйынтык 3,9, «Жакшы»."
 
-#: js/views/respondent.js:528
+#: js/views/respondent.js:550
 msgid "Breakdown"
 msgstr "Майда-барат"
 
@@ -640,23 +641,23 @@ msgstr ""
 msgid "Building quality → Structural condition → Crack width."
 msgstr "Имараттын сапаты → Конструкциялардын абалы → Жаракалардын туурасы."
 
-#: js/views/respondent.js:190
+#: js/views/respondent.js:181
 msgid "By object"
 msgstr "Объект боюнча"
 
-#: js/views/respondent.js:190
+#: js/views/respondent.js:181
 msgid "By questionnaire"
 msgstr "Анкета боюнча"
 
-#: js/views/admin-catalogs.js:262 js/views/respondent.js:115
-msgid "Cadastral number, inventory code…"
-msgstr "Кадастрдык номер, инвентардык код…"
+#: js/views/admin-catalogs.js:262 js/views/respondent.js:106
+msgid "Cadastral number, supplier code, SKU…"
+msgstr "Кадастрдык номер, жабдуучунун коду, артикул…"
 
 #: js/views/data.js:33
 msgid "Calculated score of every node on completion."
 msgstr "Аяктаганда эсептелген ар бир түйүндүн баллы."
 
-#: js/dom.js:368 js/views/respondent.js:146
+#: js/dom.js:368 js/views/respondent.js:137
 msgid "Cancel"
 msgstr "Жокко чыгаруу"
 
@@ -715,7 +716,7 @@ msgstr "Тандоо суроосу, варианттар: {count}; кеминд
 msgid "Choices for choice questions."
 msgstr "Тандоо суроолору үчүн варианттар."
 
-#: js/views/respondent.js:149
+#: js/views/respondent.js:140
 msgid "Choose"
 msgstr "Тандоо"
 
@@ -735,18 +736,18 @@ msgstr ""
 msgid "Choose the kind of answer."
 msgstr "Жооптун түрүн тандаңыз."
 
-#: js/views/respondent.js:143
+#: js/views/respondent.js:134
 msgid "Choose the object first."
 msgstr "Адегенде объектти тандаңыз."
 
-#: js/views/respondent.js:189
+#: js/views/respondent.js:180
 msgid ""
 "Choose what to assess. Start from a questionnaire or from the object itself."
 msgstr "Эмнени баалоону тандаңыз. Анкетадан же объекттин өзүнөн баштаңыз."
 
 #: js/dom.js:218 js/views/admin-methodologies.js:565
 #: js/views/admin-methodologies.js:569 js/views/admin-methodologies.js:580
-#: js/views/respondent.js:137
+#: js/views/respondent.js:128
 msgid "Choose…"
 msgstr "Тандаңыз…"
 
@@ -760,7 +761,7 @@ msgstr ""
 
 #: js/views/admin-catalogs.js:127 js/views/admin-methodologies.js:358
 #: js/views/admin-methodologies.js:502 js/views/admin-questions.js:94
-#: js/views/admin-questions.js:226 js/views/respondent.js:393
+#: js/views/admin-questions.js:226 js/views/respondent.js:414
 msgid "Click again"
 msgstr "Дагы бир жолу басыңыз"
 
@@ -824,7 +825,7 @@ msgstr "Түс темасы"
 msgid "Combine children with"
 msgstr "Балдар түйүндөрдү кантип бириктирүү"
 
-#: js/views/respondent.js:387
+#: js/views/respondent.js:408
 msgid "Comment"
 msgstr "Комментарий"
 
@@ -832,20 +833,20 @@ msgstr "Комментарий"
 msgid "Complete"
 msgstr "Аяктаңыз"
 
-#: js/views/respondent.js:328
+#: js/views/respondent.js:349
 msgid "Complete assessment"
 msgstr "Баалоону аяктоо"
 
-#: js/views/account.js:84 js/views/respondent.js:81
+#: js/views/account.js:84 js/views/respondent.js:72
 msgid "Completed"
 msgstr "Аяктаганы"
 
-#: js/views/respondent.js:319
+#: js/views/respondent.js:340
 msgid "Completed. Answers are locked; reopen the assessment to change them."
 msgstr ""
 "Аяктады. Жооптор бекитилди; аларды өзгөртүү үчүн баалоону кайра ачыңыз."
 
-#: js/views/dashboard.js:145
+#: js/views/dashboard.js:147
 msgid "Completed: {count}"
 msgstr "Аяктаганы: {count}"
 
@@ -857,7 +858,7 @@ msgstr ""
 "Аяктаганда милдеттүү суроолорго жооп берилгени текшерилет, андан кийин "
 "бардык топтор жана жыйынтык эсептелет."
 
-#: js/views/respondent.js:327
+#: js/views/respondent.js:348
 msgid ""
 "Completing checks the mandatory questions, then calculates every group and "
 "saves the total."
@@ -886,7 +887,7 @@ msgstr ""
 "Суроолор, варианттар, критерийлер сыяктуу мазмунду бул тилдерде киргизүү "
 "керек: {list}."
 
-#: js/views/respondent.js:61 js/views/respondent.js:84
+#: js/views/respondent.js:52 js/views/respondent.js:75
 msgid "Continue"
 msgstr "Улантуу"
 
@@ -1025,7 +1026,7 @@ msgstr "Өз формуласы"
 msgid "Dashboard"
 msgstr "Панель"
 
-#: js/main.js:53 js/views/data.js:55
+#: js/main.js:53 js/views/data.js:74
 msgid "Data tables"
 msgstr "Маалымат таблицалары"
 
@@ -1082,7 +1083,7 @@ msgstr "Демо каттоо эсептери"
 #: js/views/admin-catalogs.js:202 js/views/admin-catalogs.js:219
 #: js/views/admin-catalogs.js:223 js/views/admin-methodologies.js:83
 #: js/views/admin-methodologies.js:262 js/views/admin-methodologies.js:494
-#: js/views/admin-methodologies.js:516 js/views/respondent.js:401
+#: js/views/admin-methodologies.js:516 js/views/respondent.js:422
 msgid "Description"
 msgstr "Сүрөттөмө"
 
@@ -1156,7 +1157,7 @@ msgstr ""
 "ошол түрдөгү объекттерге гана колдоно алышат, ошондуктан имараттар үчүн "
 "методиканы буюмга жаңылыштык менен колдонууга болбойт."
 
-#: js/views/respondent.js:154
+#: js/views/respondent.js:145
 msgid ""
 "Each questionnaire is the newest published version of a methodology. Choose "
 "one, then the object you are assessing."
@@ -1164,7 +1165,7 @@ msgstr ""
 "Ар бир анкета — методиканын эң жаңы жарыяланган версиясы. Анкетаны, андан "
 "кийин бааланган объектти тандаңыз."
 
-#: js/views/respondent.js:526
+#: js/views/respondent.js:548
 msgid ""
 "Each row is a node of the tree. “Weighted” is the node’s contribution to its"
 " parent (score × weight). The last column shows the answer and the criterion"
@@ -1256,7 +1257,7 @@ msgstr ""
 "Сиз баштаган ар бир баалоо жооптору жана жыйынтыктары менен тарыхыңызда "
 "калат."
 
-#: js/views/respondent.js:213
+#: js/views/respondent.js:230
 msgid ""
 "Every assessment you have started, newest first. Open one to see your "
 "answers and the result."
@@ -1294,7 +1295,7 @@ msgstr ""
 "жыйынтык шкаласы бар; анын түйүндөрү, өздөрүнө башкасы берилбесе, ошол эле "
 "шкаланы колдонот."
 
-#: js/views/data.js:55
+#: js/views/data.js:74
 msgid ""
 "Every table from schema.dbml, as stored in the database. Watch the rows "
 "change while you work through the admin and respondent screens."
@@ -1303,7 +1304,7 @@ msgstr ""
 "Администратор жана респондент экрандарында иштеп жатканда саптар кантип "
 "өзгөрөрүн караңыз."
 
-#: js/views/respondent.js:213
+#: js/views/respondent.js:230
 msgid ""
 "Every user’s assessments. You can open them read-only; only their respondent"
 " can change answers."
@@ -1319,7 +1320,7 @@ msgstr "Далилдер"
 msgid "Evidence to collect"
 msgstr "Чогултуу керек болгон далилдер"
 
-#: js/views/respondent.js:375
+#: js/views/respondent.js:396
 msgid "Evidence:"
 msgstr "Далилдер:"
 
@@ -1336,7 +1337,7 @@ msgid "Example data restored."
 msgstr "Мисал маалыматтары калыбына келтирилди."
 
 #: js/dom.js:228 js/help.js:23 js/views/admin-methodologies.js:420
-#: js/views/help.js:81
+#: js/views/help.js:82
 msgid "Example:"
 msgstr "Мисал:"
 
@@ -1360,11 +1361,11 @@ msgstr "Фасаддын көрүнүшү 1 «Жол берилгис» дан 5
 msgid "Facade defects: stains, peeling, missing elements."
 msgstr "Фасаддын кемчиликтери: тактар, кабыршактануу, жок элементтер."
 
-#: js/views/respondent.js:523
+#: js/views/respondent.js:545
 msgid "Failed on a knock-out criterion."
 msgstr "Критикалык көрсөткүч боюнча өтпөдү."
 
-#: js/views/respondent.js:400
+#: js/views/respondent.js:421
 msgid "File name or link"
 msgstr "Файлдын аты же шилтеме"
 
@@ -1387,7 +1388,7 @@ msgstr "Бош калтырылса, балл боюнча автоматтык 
 msgid "Filter questions…"
 msgstr "Суроолорду чыпкалоо…"
 
-#: js/views/respondent.js:165
+#: js/views/respondent.js:156
 msgid ""
 "Find the object you are assessing. The questionnaires that apply to its type"
 " are shown next to it, always in their newest version."
@@ -1457,7 +1458,7 @@ msgstr ""
 "Ар бир суроо түйүнү үчүн: китепканадан суроо байлаңыз, баалоо ыкмасын "
 "кошуңуз жана баалоо эрежесин аныктаңыз."
 
-#: js/views/admin-methodologies.js:56 js/views/respondent.js:132
+#: js/views/admin-methodologies.js:56 js/views/respondent.js:123
 msgid "For: {type}"
 msgstr "Кимге: {type}"
 
@@ -1493,7 +1494,7 @@ msgstr ""
 msgid "Give every child the same weight"
 msgstr "Бардык балдар түйүндөргө бирдей салмак берүү"
 
-#: js/views/help.js:78
+#: js/views/help.js:79
 msgid "Glossary"
 msgstr "Глоссарий"
 
@@ -1526,7 +1527,7 @@ msgid "Heat use: 250 or more → 1, 90 or less → 5, 170 → 3."
 msgstr ""
 "Жылуулук керектөө: 250 жана андан көп → 1, 90 жана андан аз → 5, 170 → 3."
 
-#: js/views/respondent.js:72
+#: js/views/respondent.js:63
 msgid "Hello, {name}"
 msgstr "Саламатсызбы, {name}"
 
@@ -1570,8 +1571,8 @@ msgstr "Маани канчалык чоң болсо, ошончолук жак
 msgid "Highest score"
 msgstr "Эң жогорку балл"
 
-#: js/main.js:52 js/views/help.js:58 js/views/respondent.js:212
-#: js/views/respondent.js:280 js/views/respondent.js:510
+#: js/main.js:52 js/views/help.js:58 js/views/respondent.js:229
+#: js/views/respondent.js:301 js/views/respondent.js:532
 msgid "History"
 msgstr "Тарых"
 
@@ -1600,7 +1601,7 @@ msgstr "Баштапкы жооп баллга кантип которулат."
 msgid "How a value is obtained: measuring, inspecting, reading documents…"
 msgstr "Маани кантип алынат: өлчөө, текшерүү, документтерди окуу…"
 
-#: js/views/respondent.js:75
+#: js/views/respondent.js:66
 msgid "How an assessment works"
 msgstr "Баалоо кантип өтөт"
 
@@ -1639,7 +1640,7 @@ msgstr "Салмактар кантип коюлган"
 msgid "How to assess"
 msgstr "Кантип баалоо керек"
 
-#: js/views/respondent.js:371
+#: js/views/respondent.js:392
 msgid "How to assess:"
 msgstr "Кантип баалоо керек:"
 
@@ -1691,7 +1692,7 @@ msgstr "Экзаменде"
 msgid "In plain words"
 msgstr "Жөнөкөй сөз менен"
 
-#: js/views/respondent.js:80
+#: js/views/respondent.js:71
 msgid "In progress"
 msgstr "Аткарылууда"
 
@@ -1715,7 +1716,7 @@ msgstr "Орнотулган жана иштейт"
 msgid "Instructions"
 msgstr "Нускама"
 
-#: js/views/respondent.js:516
+#: js/views/respondent.js:538
 msgid "Integral quality"
 msgstr "Интегралдык сапат"
 
@@ -1739,7 +1740,7 @@ msgstr "Иштеген өрт сигнализациясы орнотулган�
 msgid "Keep the proportions, make the sum 1"
 msgstr "Пропорцияларды сактап, сумманы 1 кылуу"
 
-#: js/views/respondent.js:399
+#: js/views/respondent.js:420
 msgid "Kind"
 msgstr "Түрү"
 
@@ -1755,7 +1756,7 @@ msgstr "Бааланган объекттердин түрлөрү."
 msgid "Knock-out threshold"
 msgstr "Критикалык босого"
 
-#: js/views/respondent.js:317
+#: js/views/respondent.js:338
 msgid "Knock-out:"
 msgstr "Критикалык көрсөткүч:"
 
@@ -1777,11 +1778,11 @@ msgstr "Тилдер"
 msgid "Last name"
 msgstr "Фамилиясы"
 
-#: js/views/dashboard.js:148
+#: js/views/dashboard.js:150
 msgid "Latest assessments"
 msgstr "Акыркы баалоолор"
 
-#: js/views/respondent.js:89
+#: js/views/respondent.js:80
 msgid "Latest results"
 msgstr "Акыркы жыйынтыктар"
 
@@ -1806,7 +1807,7 @@ msgid "Letters, digits and @ . + - _ only."
 msgstr "Тамгалар, сандар жана @ . + - _ гана."
 
 #: js/views/admin-methodologies.js:494 js/views/admin-methodologies.js:514
-#: js/views/respondent.js:520 js/views/respondent.js:529
+#: js/views/respondent.js:542 js/views/respondent.js:551
 msgid "Level"
 msgstr "Деңгээл"
 
@@ -1865,7 +1866,8 @@ msgstr "Максаттуу мааниге карай сызыктуу"
 msgid "Linear: 250 → 1, 90 → 5"
 msgstr "Сызыктуу: 250 → 1, 90 → 5"
 
-#: js/views/respondent.js:192
+#: js/views/data.js:87 js/views/respondent.js:183 js/views/respondent.js:241
+#: js/views/respondent.js:291 js/views/respondent.js:485
 msgid "Loading…"
 msgstr "Жүктөлүүдө…"
 
@@ -1950,7 +1952,7 @@ msgstr "Ыкма өчүрүлдү."
 msgid "Method saved."
 msgstr "Ыкма сакталды."
 
-#: js/views/respondent.js:383
+#: js/views/respondent.js:404
 msgid "Method used"
 msgstr "Колдонулган ыкма"
 
@@ -1972,7 +1974,7 @@ msgstr "Методикалар: {count}"
 msgid "Methodology"
 msgstr "Методика"
 
-#: js/views/dashboard.js:143
+#: js/views/dashboard.js:145
 msgid "Methodology versions"
 msgstr "Методикалардын версиялары"
 
@@ -2004,7 +2006,7 @@ msgstr "Жогору"
 msgid "Multiple choice"
 msgstr "Бир нече вариант"
 
-#: js/main.js:52 js/views/respondent.js:188
+#: js/main.js:52 js/views/respondent.js:179
 msgid "My assessments"
 msgstr "Менин баалоолорум"
 
@@ -2018,11 +2020,11 @@ msgstr "Менин ишим"
 #: js/views/admin-catalogs.js:219 js/views/admin-catalogs.js:222
 #: js/views/admin-catalogs.js:254 js/views/admin-catalogs.js:261
 #: js/views/admin-methodologies.js:79 js/views/admin-methodologies.js:249
-#: js/views/admin-questions.js:100 js/views/respondent.js:114
+#: js/views/admin-questions.js:100 js/views/respondent.js:105
 msgid "Name"
 msgstr "Аталышы"
 
-#: js/views/respondent.js:167
+#: js/views/respondent.js:158
 msgid "Name or reference"
 msgstr "Аталышы же идентификатору"
 
@@ -2064,12 +2066,12 @@ msgstr ""
 msgid "Nearest to the score"
 msgstr "Баллга эң жакын"
 
-#: js/views/dashboard.js:136
+#: js/views/dashboard.js:138
 msgid "Needs attention"
 msgstr "Көңүл буруу керек"
 
-#: js/main.js:52 js/views/respondent.js:73 js/views/respondent.js:188
-#: js/views/respondent.js:189 js/views/respondent.js:214
+#: js/main.js:52 js/views/respondent.js:64 js/views/respondent.js:179
+#: js/views/respondent.js:180 js/views/respondent.js:231
 msgid "New assessment"
 msgstr "Жаңы баалоо"
 
@@ -2077,7 +2079,7 @@ msgstr "Жаңы баалоо"
 msgid "New here?"
 msgstr "Бул жерде биринчи жолусузбу?"
 
-#: js/views/dashboard.js:119
+#: js/views/dashboard.js:121
 msgid "New here? Start with this page"
 msgstr "Бул жерде биринчи жолусузбу? Ушул беттен баштаңыз"
 
@@ -2094,21 +2096,25 @@ msgstr "Жаңы сырсөз"
 msgid "New question"
 msgstr "Жаңы суроо"
 
-#: js/views/dashboard.js:127
+#: js/views/data.js:69 js/views/respondent.js:218
+msgid "Next"
+msgstr "Кийинки"
+
+#: js/views/dashboard.js:129
 msgid "Next step:"
 msgstr "Кийинки кадам:"
 
 #: js/scoring.js:99 js/views/admin-methodologies.js:486
 #: js/views/admin-methodologies.js:564 js/views/admin-questions.js:255
-#: js/views/respondent.js:427 js/views/respondent.js:455
+#: js/views/respondent.js:448 js/views/respondent.js:476
 msgid "No"
 msgstr "Жок"
 
-#: js/views/respondent.js:225
-msgid "No assessments yet."
-msgstr "Азырынча баалоолор жок."
+#: js/views/respondent.js:244
+msgid "No assessments found."
+msgstr "Баалоолор табылган жок."
 
-#: js/views/respondent.js:225
+#: js/views/respondent.js:244
 msgid "No assessments yet. Start one with “New assessment”."
 msgstr ""
 "Азырынча баалоолор жок. Биринчисин «Жаңы баалоо» баскычы менен баштаңыз."
@@ -2148,11 +2154,11 @@ msgstr "Азырынча ыкмалар жок. Биринчисин төмөн�
 msgid "No object types yet. Add the first one below."
 msgstr "Азырынча объект түрлөрү жок. Биринчисин төмөндө кошуңуз."
 
-#: js/views/respondent.js:179
+#: js/views/respondent.js:170
 msgid "No objects found."
 msgstr "Объекттер табылган жок."
 
-#: js/views/respondent.js:137
+#: js/views/respondent.js:128
 msgid "No objects of this type yet"
 msgstr "Бул түрдөгү объекттер азырынча жок"
 
@@ -2168,11 +2174,11 @@ msgstr "Азырынча варианттар жок. Кеминде экөөн�
 msgid "No question matches"
 msgstr "Ылайыктуу суроо жок"
 
-#: js/views/respondent.js:176
+#: js/views/respondent.js:167
 msgid "No questionnaire for this type yet"
 msgstr "Бул түр үчүн азырынча анкета жок"
 
-#: js/views/respondent.js:155
+#: js/views/respondent.js:146
 msgid "No questionnaires are published yet. Ask an admin to publish one."
 msgstr ""
 "Азырынча жарыяланган анкеталар жок. Администратордон анкетаны жарыялоону "
@@ -2187,7 +2193,7 @@ msgid "No questions yet. Click “New question” to write the first one."
 msgstr ""
 "Азырынча суроолор жок. Биринчисин жазуу үчүн «Жаңы суроо» баскычын басыңыз."
 
-#: js/views/respondent.js:400
+#: js/views/respondent.js:421
 msgid "No real upload in this prototype"
 msgstr "Бул прототипте файлдар жүктөлбөйт"
 
@@ -2195,7 +2201,7 @@ msgstr "Бул прототипте файлдар жүктөлбөйт"
 msgid "No root node."
 msgstr "Тамыр түйүн жок."
 
-#: js/views/data.js:68
+#: js/views/data.js:89
 msgid "No rows yet."
 msgstr "Азырынча саптар жок."
 
@@ -2211,7 +2217,7 @@ msgstr "Азырынча баалоо эрежеси жок."
 msgid "No units yet. Add the first one below."
 msgstr "Азырынча өлчөө бирдиктери жок. Биринчисин төмөндө кошуңуз."
 
-#: js/help.js:66 js/views/respondent.js:529
+#: js/help.js:66 js/views/respondent.js:551
 msgid "Node"
 msgstr "Түйүн"
 
@@ -2227,19 +2233,19 @@ msgstr "Түйүндүн жөндөөлөрү"
 msgid "Nodes"
 msgstr "Түйүндөр"
 
-#: js/views/respondent.js:450
+#: js/views/respondent.js:471
 msgid "Not answered"
 msgstr "Жооп жок"
 
-#: js/views/respondent.js:353
+#: js/views/respondent.js:374
 msgid "Not answered yet."
 msgstr "Азырынча жооп жок."
 
-#: js/views/respondent.js:382 js/views/respondent.js:451
+#: js/views/respondent.js:403 js/views/respondent.js:472
 msgid "Not applicable"
 msgstr "Тиешеси жок"
 
-#: js/views/respondent.js:353
+#: js/views/respondent.js:374
 msgid "Not applicable: left out."
 msgstr "Тиешеси жок: эсепке алынбайт."
 
@@ -2255,7 +2261,7 @@ msgstr "Эч бир методикада колдонулбайт"
 msgid "Not used yet. Add it to a methodology from the methodology’s tree."
 msgstr "Азырынча колдонулбайт. Аны методиканын дарагы аркылуу кошуңуз."
 
-#: js/views/dashboard.js:142
+#: js/views/dashboard.js:144
 msgid "Not used yet: {count}"
 msgstr "Азырынча колдонулбагандар: {count}"
 
@@ -2267,11 +2273,11 @@ msgstr "Эскертүүлөр"
 msgid "Nothing here yet."
 msgstr "Бул жерде азырынча эч нерсе жок."
 
-#: js/views/respondent.js:87
+#: js/views/respondent.js:78
 msgid "Nothing in progress. Start a new assessment."
 msgstr "Аткарылып жаткан баалоо жок. Жаңысын баштаңыз."
 
-#: js/views/dashboard.js:139
+#: js/views/dashboard.js:141
 msgid "Nothing needs attention."
 msgstr "Баары жайында."
 
@@ -2285,8 +2291,8 @@ msgid ""
 msgstr ""
 "Кадамы бирдей, бирок чыныгы нөлү жок сандар, мисалы °C менен температура."
 
-#: js/views/respondent.js:86 js/views/respondent.js:90
-#: js/views/respondent.js:168 js/views/respondent.js:223
+#: js/views/respondent.js:77 js/views/respondent.js:81
+#: js/views/respondent.js:159 js/views/respondent.js:242
 msgid "Object"
 msgstr "Объект"
 
@@ -2314,11 +2320,11 @@ msgstr "Объекттер же методикалар колдонгон түр
 msgid "Object types: what kind of thing is assessed"
 msgstr "Объекттердин түрлөрү: эмне бааланат"
 
-#: js/views/dashboard.js:144
+#: js/views/dashboard.js:146
 msgid "Object types: {count}"
 msgstr "Объекттердин түрлөрү: {count}"
 
-#: js/views/admin-catalogs.js:17 js/views/dashboard.js:144
+#: js/views/admin-catalogs.js:17 js/views/dashboard.js:146
 msgid "Objects"
 msgstr "Объекттер"
 
@@ -2345,7 +2351,7 @@ msgstr ""
 msgid "One methodology version applied to one object."
 msgstr "Бир объектке колдонулган методиканын бир версиясы."
 
-#: js/views/admin-catalogs.js:263 js/views/respondent.js:116
+#: js/views/admin-catalogs.js:263 js/views/respondent.js:107
 msgid "One per line, e.g. year_built = 1987"
 msgstr "Ар бир сапка бирден, мисалы year_built = 1987"
 
@@ -2373,7 +2379,7 @@ msgstr ""
 "Тиркемени Django сервери аркылуу ачыңыз (python manage.py runserver, андан "
 "кийин http://localhost:8000), файлдан же башка веб-серверден эмес."
 
-#: js/views/respondent.js:309
+#: js/views/respondent.js:330
 msgid ""
 "Open “How to assess” on each question for the instructions. Each answer is "
 "saved and scored shortly after you enter it."
@@ -2508,7 +2514,7 @@ msgstr "Белгиленген талааларды оңдоңуз."
 msgid "Position"
 msgstr "Орду"
 
-#: js/views/dashboard.js:117
+#: js/views/dashboard.js:119
 msgid ""
 "Prepare everything respondents need to assess objects: reference lists, "
 "questions and published methodologies."
@@ -2519,6 +2525,10 @@ msgstr ""
 #: js/views/admin-questions.js:261
 msgid "Preview"
 msgstr "Алдын ала көрүү"
+
+#: js/views/data.js:67 js/views/respondent.js:216
+msgid "Previous"
+msgstr "Мурунку"
 
 #: js/views/admin-methodologies.js:123
 msgid "Problems to fix before publishing: {count}"
@@ -2540,7 +2550,7 @@ msgstr "Профиль сакталды."
 msgid "Property tree"
 msgstr "Касиеттер дарагы"
 
-#: js/views/respondent.js:314
+#: js/views/respondent.js:335
 msgid "Provisional total"
 msgstr "Алдын ала жыйынтык"
 
@@ -2556,7 +2566,7 @@ msgstr "Жарыяланган"
 msgid "Published v{version}. Respondents can now use it."
 msgstr "v{version} версиясы жарыяланды. Эми респонденттер аны колдоно алышат."
 
-#: js/views/respondent.js:132
+#: js/views/respondent.js:123
 msgid "Published {date}"
 msgstr "{date} жарыяланган"
 
@@ -2568,7 +2578,7 @@ msgstr ""
 "Жарыяланган: мурунку баллдарды кайра алууга болушу үчүн бекитилген. "
 "Респонденттер ал боюнча баалоо баштай алышат."
 
-#: js/views/dashboard.js:143
+#: js/views/dashboard.js:145
 msgid "Published: {count}"
 msgstr "Жарыяланганы: {count}"
 
@@ -2641,21 +2651,21 @@ msgstr ""
 "Суроонун тексти: EN «Is an automatic fire alarm installed?», RU жана KY — өз"
 " сөздөрү менен."
 
-#: js/views/respondent.js:86 js/views/respondent.js:90
-#: js/views/respondent.js:219 js/views/respondent.js:223
+#: js/views/respondent.js:77 js/views/respondent.js:81
+#: js/views/respondent.js:236 js/views/respondent.js:242
 msgid "Questionnaire"
 msgstr "Анкета"
 
-#: js/views/respondent.js:168
+#: js/views/respondent.js:159
 msgid "Questionnaires"
 msgstr "Анкеталар"
 
-#: js/views/respondent.js:82
+#: js/views/respondent.js:73
 msgid "Questionnaires available"
 msgstr "Жеткиликтүү анкеталар"
 
 #: js/main.js:45 js/views/admin-questions.js:55 js/views/admin-questions.js:89
-#: js/views/dashboard.js:55 js/views/dashboard.js:142 js/views/help.js:45
+#: js/views/dashboard.js:55 js/views/dashboard.js:144 js/views/help.js:45
 msgid "Questions"
 msgstr "Суроолор"
 
@@ -2674,7 +2684,7 @@ msgstr ""
 "текстти жана жооптун түрүн гана аныктайт (сан, тандоо, ооба/жок…). Анын "
 "маанилүүлүгү жана кантип бааланары ар бир методикада чечилет."
 
-#: js/views/respondent.js:132
+#: js/views/respondent.js:123
 msgid "Questions: {count}"
 msgstr "Суроолор: {count}"
 
@@ -2714,7 +2724,7 @@ msgstr "Баштапкы жооп, колдонулган ыкма, балл ж�
 msgid "Read the result"
 msgstr "Жыйынтыкты окуңуз"
 
-#: js/views/respondent.js:525
+#: js/views/respondent.js:547
 msgid "Reading the result"
 msgstr "Жыйынтыкты кантип окуу керек"
 
@@ -2723,24 +2733,24 @@ msgid "Ready to publish: no problems found."
 msgstr "Жарыялоого даяр: көйгөйлөр табылган жок."
 
 #: js/views/admin-catalogs.js:255 js/views/admin-catalogs.js:262
-#: js/views/respondent.js:115 js/views/respondent.js:168
+#: js/views/respondent.js:106 js/views/respondent.js:159
 msgid "Reference"
 msgstr "Идентификатор"
 
-#: js/views/respondent.js:180
+#: js/views/respondent.js:171
 msgid "Register an object"
 msgstr "Объектти каттоо"
 
-#: js/views/respondent.js:111
+#: js/views/respondent.js:102
 msgid "Register object"
 msgstr "Объектти каттоо"
 
-#: js/views/respondent.js:120
+#: js/views/respondent.js:111
 msgid "Registered {name}."
 msgstr "{name} катталды."
 
 #: js/views/admin-methodologies.js:358 js/views/admin-methodologies.js:502
-#: js/views/respondent.js:393
+#: js/views/respondent.js:414
 msgid "Remove"
 msgstr "Алып салуу"
 
@@ -2748,11 +2758,11 @@ msgstr "Алып салуу"
 msgid "Rename"
 msgstr "Атын өзгөртүү"
 
-#: js/views/respondent.js:304
+#: js/views/respondent.js:325
 msgid "Reopen"
 msgstr "Кайра ачуу"
 
-#: js/views/respondent.js:304
+#: js/views/respondent.js:325
 msgid "Reopened: you can change answers again."
 msgstr "Кайра ачылды: жоопторду кайра өзгөртсө болот."
 
@@ -2789,11 +2799,10 @@ msgid "Reset demo data"
 msgstr "Демо маалыматтарды калыбына келтирүү"
 
 #: js/views/admin-catalogs.js:214
-msgid "Residential building, Office building."
-msgstr "Турак жай имараты, Кеңсе имараты."
+msgid "Residential building, Office building, Supplier."
+msgstr "Турак жай имараты, Кеңсе имараты, Жабдуучу."
 
-#: js/views/respondent.js:221 js/views/respondent.js:223
-#: js/views/respondent.js:512
+#: js/views/respondent.js:242 js/views/respondent.js:534
 msgid "Respondent"
 msgstr "Респондент"
 
@@ -2813,12 +2822,12 @@ msgstr ""
 msgid "Respondents see this name when they start an assessment."
 msgstr "Респонденттер баалоону баштаганда бул аталышты көрүшөт."
 
-#: js/views/respondent.js:61 js/views/respondent.js:510
-#: js/views/respondent.js:511
+#: js/views/respondent.js:52 js/views/respondent.js:532
+#: js/views/respondent.js:533
 msgid "Result"
 msgstr "Жыйынтык"
 
-#: js/views/respondent.js:472
+#: js/views/respondent.js:494
 msgid "Result not ready"
 msgstr "Жыйынтык азырынча даяр эмес"
 
@@ -2827,7 +2836,7 @@ msgstr "Жыйынтык азырынча даяр эмес"
 msgid "Result scale"
 msgstr "Жыйынтык шкаласы"
 
-#: js/views/respondent.js:472
+#: js/views/respondent.js:494
 msgid "Results are calculated when the assessment is completed."
 msgstr "Жыйынтыктар баалоо аяктаганда эсептелет."
 
@@ -2961,7 +2970,7 @@ msgstr ""
 "болбойт."
 
 #: js/views/admin-methodologies.js:494 js/views/admin-methodologies.js:513
-#: js/views/help.js:67 js/views/respondent.js:529
+#: js/views/help.js:67 js/views/respondent.js:551
 msgid "Score"
 msgstr "Балл"
 
@@ -2994,7 +3003,8 @@ msgstr "Баалоо эрежеси"
 msgid "Scoring rules"
 msgstr "Баалоо эрежелери"
 
-#: js/views/admin-questions.js:57 js/views/respondent.js:166
+#: js/views/admin-questions.js:57 js/views/respondent.js:157
+#: js/views/respondent.js:238
 msgid "Search"
 msgstr "Издөө"
 
@@ -3002,7 +3012,7 @@ msgstr "Издөө"
 msgid "Sections"
 msgstr "Бөлүмдөр"
 
-#: js/views/respondent.js:91
+#: js/views/respondent.js:82
 msgid "See your full history"
 msgstr "Толук тарыхты көрүү"
 
@@ -3022,7 +3032,7 @@ msgstr "Эң начар жана эң жакшы маанилерди көрсө
 msgid "Set up the catalogs"
 msgstr "Маалымдамаларды толтуруңуз"
 
-#: js/views/dashboard.js:120
+#: js/views/dashboard.js:122
 msgid ""
 "Setting up an assessment goes in four steps, shown below in the usual order."
 " Each step opens a page that explains what to do. Words with a dotted "
@@ -3038,7 +3048,7 @@ msgstr ""
 msgid "Settings saved."
 msgstr "Жөндөөлөр сакталды."
 
-#: js/views/dashboard.js:126
+#: js/views/dashboard.js:128
 msgid "Setup steps"
 msgstr "Даярдоо кадамдары"
 
@@ -3110,22 +3120,22 @@ msgstr "Жөнөкөй колдонуучулар"
 msgid "Start"
 msgstr "Баштаңыз"
 
-#: js/views/respondent.js:141
+#: js/views/respondent.js:132
 msgid "Start assessment"
 msgstr "Баалоону баштоо"
 
-#: js/views/respondent.js:175
+#: js/views/respondent.js:166
 msgid "Start “{name}”"
 msgstr "«{name}» баштоо"
 
-#: js/views/respondent.js:86 js/views/respondent.js:90
-#: js/views/respondent.js:223
+#: js/views/respondent.js:77 js/views/respondent.js:81
+#: js/views/respondent.js:242
 msgid "Started"
 msgstr "Башталды"
 
 #: js/views/admin-methodologies.js:61 js/views/admin-questions.js:198
-#: js/views/respondent.js:86 js/views/respondent.js:90
-#: js/views/respondent.js:217 js/views/respondent.js:223
+#: js/views/respondent.js:77 js/views/respondent.js:81
+#: js/views/respondent.js:234 js/views/respondent.js:242
 msgid "Status"
 msgstr "Абалы"
 
@@ -3225,7 +3235,7 @@ msgstr "Тексттик жооптор бааланбайт."
 msgid "Text answers are stored but never scored."
 msgstr "Тексттик жооптор сакталат, бирок эч качан бааланбайт."
 
-#: js/views/dashboard.js:122
+#: js/views/dashboard.js:124
 msgid ""
 "Texts such as names and questions are entered in every language: English, "
 "Russian and Kyrgyz."
@@ -3275,7 +3285,7 @@ msgstr ""
 msgid "The app could not start."
 msgstr "Тиркеме иштеп баштаган жок."
 
-#: js/views/respondent.js:326
+#: js/views/respondent.js:347
 msgid "The assessment can’t be completed yet:"
 msgstr "Баалоону азырынча аяктоого болбойт:"
 
@@ -3317,7 +3327,7 @@ msgstr "Респондент тандай турган варианттар, у�
 msgid "The exam programme: which questions, how many points each"
 msgstr "Экзамендин программасы: кайсы суроолор жана ар бири үчүн канча балл"
 
-#: js/views/dashboard.js:121
+#: js/views/dashboard.js:123
 msgid ""
 "The example data already contains a complete, published methodology. Open it"
 " to see how a finished one looks before you build your own."
@@ -3420,7 +3430,7 @@ msgid ""
 msgstr ""
 "Бул деңгээл туура келген сан. Баллдар эң жакын деңгээл менен көрсөтүлөт."
 
-#: js/views/respondent.js:147
+#: js/views/respondent.js:138
 msgid "The object is not in the list? Register it"
 msgstr "Объект тизмеде жокпу? Аны каттаңыз"
 
@@ -3457,11 +3467,13 @@ msgstr "Баштапкы сан — бул балл. Балл шкаласынд
 
 #: js/views/admin-catalogs.js:248
 msgid ""
-"The reference is your own identifier, such as a cadastral number. Attributes"
-" are free notes like the year built. Object names are not translated."
+"The reference is your own identifier, such as a cadastral number or a "
+"supplier code. Attributes are free notes like the year built or the country."
+" Object names are not translated."
 msgstr ""
-"Идентификатор — өзүңүздүн номериңиз, мисалы кадастрдык. Атрибуттар — эркин "
-"эскертүүлөр, мисалы курулган жылы. Объекттердин аттары которулбайт."
+"Идентификатор — өзүңүздүн номериңиз, мисалы кадастрдык номер же жабдуучунун "
+"коду. Атрибуттар — эркин эскертүүлөр, мисалы курулган жылы же өлкө. "
+"Объекттердин аттары которулбайт."
 
 #: js/views/admin-questions.js:170
 msgid "The respondent picks one of this scale’s levels."
@@ -3490,6 +3502,18 @@ msgstr ""
 "Объекттин бир түрүн баалоо эрежелеринин жыйындысы. Методика китепканадагы "
 "суроолорду даракка жайгаштырып, ар бир бөлүгүнө салмак берет жана ар бир "
 "жооп баллга кантип айланарын сүрөттөйт. Методикалардын версиялары бар."
+
+#: js/views/help.js:76
+msgid ""
+"The same rules work for any kind of object. The example data also has "
+"supplier reviews (SUPPLIER_EVAL): Ala-Too Packaging scores 4.3, “Good”. Silk"
+" Road Ingredients fails: 9 % of its batches were rejected, which scores 1.4,"
+" below the knock-out threshold of 2."
+msgstr ""
+"Ошол эле эрежелер ар кандай объекттер үчүн иштейт. Мисалдарда жабдуучуларды "
+"баалоо да бар (SUPPLIER_EVAL): Ala-Too Packaging 4,3 алат — «Жакшы». Silk "
+"Road Ingredients өтпөйт: партиялардын 9 % жараксыз деп табылган, бул 1,4 "
+"балл — критикалык босого 2ден төмөн."
 
 #: js/views/admin-methodologies.js:188
 msgid ""
@@ -3524,7 +3548,7 @@ msgid ""
 msgstr ""
 "Методиканын түзүлүшү: кошумча топторду жана суроолорду камтыган топтор."
 
-#: js/views/respondent.js:320
+#: js/views/respondent.js:341
 msgid ""
 "The total is provisional: unanswered questions are left out and the "
 "remaining weights rescaled until you complete the assessment."
@@ -3580,7 +3604,7 @@ msgstr ""
 "Респонденттер киргизүү талаасынын жанында так ушуну көрүшөт, бардык "
 "тилдерде."
 
-#: js/views/respondent.js:306
+#: js/views/respondent.js:327
 msgid ""
 "This is {name}’s assessment. You can read it, but only they can change the "
 "answers."
@@ -3618,7 +3642,7 @@ msgstr ""
 "Туура келген бардык варианттарды белгилеңиз. Алардын эң төмөнкү баллы "
 "эсептелет."
 
-#: js/views/respondent.js:310
+#: js/views/respondent.js:331
 msgid ""
 "Tick “Not applicable” when a question doesn’t apply to this object: it is "
 "left out and the other weights are rescaled."
@@ -3629,6 +3653,10 @@ msgstr ""
 #: js/help.js:11
 msgid "Tip"
 msgstr "Кеңеш"
+
+#: js/views/respondent.js:239
+msgid "Title, object or respondent"
+msgstr "Аталышы, объект же респондент"
 
 #: js/views/admin-methodologies.js:47
 msgid ""
@@ -3648,8 +3676,8 @@ msgstr "Бул түйүндө оңдоо керек:"
 msgid "To make changes, click “Create new version”."
 msgstr "Өзгөртүү үчүн «Жаңы версия түзүү» баскычын басыңыз."
 
-#: js/views/respondent.js:86 js/views/respondent.js:90
-#: js/views/respondent.js:223
+#: js/views/respondent.js:77 js/views/respondent.js:81
+#: js/views/respondent.js:242
 msgid "Total"
 msgstr "Жыйынтык"
 
@@ -3657,11 +3685,11 @@ msgstr "Жыйынтык"
 msgid "Total = 0.5 × 3.4 + 0.3 × 5 + 0.2 × 3.5 = 3.9, “Good”."
 msgstr "Жыйынтык = 0,5 × 3,4 + 0,3 × 5 + 0,2 × 3,5 = 3,9, «Жакшы»."
 
-#: js/views/respondent.js:314
+#: js/views/respondent.js:335
 msgid "Total score"
 msgstr "Жыйынтык балл"
 
-#: js/views/data.js:57
+#: js/views/data.js:76
 msgid ""
 "Translated texts have one column per language, e.g. name_en, name_ru, "
 "name_ky. The column without a suffix shows the current language."
@@ -3694,7 +3722,7 @@ msgid "Two outcomes only, such as Pass / Fail."
 msgstr "Эки гана натыйжа, мисалы Өттү / Өтпөдү."
 
 #: js/views/admin-catalogs.js:163 js/views/admin-catalogs.js:254
-#: js/views/respondent.js:113 js/views/respondent.js:168
+#: js/views/respondent.js:104 js/views/respondent.js:159
 msgid "Type"
 msgstr "Түрү"
 
@@ -3743,7 +3771,7 @@ msgstr ""
 "Бирдиктер, деңгээлдери бар шкалалар, баалоо ыкмалары, объекттердин түрлөрү "
 "жана объекттер. Адатта бир жолу толтурулат."
 
-#: js/views/respondent.js:443
+#: js/views/respondent.js:464
 msgid "Unsupported answer type."
 msgstr "Колдоого алынбаган жооп түрү."
 
@@ -3825,7 +3853,7 @@ msgstr "Версиянын абалы"
 msgid "Versions: {count}"
 msgstr "Версиялар: {count}"
 
-#: js/views/respondent.js:303
+#: js/views/respondent.js:324
 msgid "View result"
 msgstr "Жыйынтыкты көрүү"
 
@@ -3838,12 +3866,12 @@ msgid "Warnings:"
 msgstr "Эскертүүлөр:"
 
 #: js/help.js:71 js/views/admin-methodologies.js:219
-#: js/views/admin-methodologies.js:252 js/views/respondent.js:338
-#: js/views/respondent.js:529
+#: js/views/admin-methodologies.js:252 js/views/respondent.js:359
+#: js/views/respondent.js:551
 msgid "Weight"
 msgstr "Салмак"
 
-#: js/views/respondent.js:529
+#: js/views/respondent.js:551
 msgid "Weighted"
 msgstr "Салмактуу"
 
@@ -3895,7 +3923,7 @@ msgstr "Эмне суралат жана кандай жооп жарактуу.
 msgid "What is asked and which answer is valid."
 msgstr "Эмне суралат жана кандай жооп жарактуу."
 
-#: js/views/data.js:56
+#: js/views/data.js:75
 msgid "What is this page?"
 msgstr "Бул кандай барак?"
 
@@ -3920,11 +3948,11 @@ msgstr "Бул топ эмнени өлчөйт, мисалы «Конструк
 
 #: js/views/admin-catalogs.js:137
 msgid ""
-"What this level means in practice, e.g. “Minor defects; no repair needed "
-"now”."
+"What this level means in practice, e.g. “Minor shortcomings; no action "
+"needed now”."
 msgstr ""
 "Бул деңгээл иш жүзүндө эмнени билдирет, мисалы «Майда кемчиликтер; азырынча "
-"оңдоо керек эмес»."
+"чара көрүү керек эмес»."
 
 #: js/views/admin-methodologies.js:61
 msgid "What this means"
@@ -3942,7 +3970,7 @@ msgstr "Бир нече вариант белгиленсе, алардын эң
 msgid "When the checklist below is green, click Publish."
 msgstr "Төмөнкү текшерүү тизмеси жашыл болгондо, «Жарыялоо» баскычын басыңыз."
 
-#: js/views/dashboard.js:123
+#: js/views/dashboard.js:125
 msgid ""
 "When you know your way around, turn the explanations off with the Helpers "
 "switch at the top right. You can turn them on again at any time."
@@ -3950,7 +3978,7 @@ msgstr ""
 "Көнүп калганда, түшүндүрмөлөрдү жогорку оң бурчтагы «Жардамчылар» которгучу "
 "менен өчүрүңүз. Аларды каалаган убакта кайра күйгүзсөңүз болот."
 
-#: js/views/respondent.js:135
+#: js/views/respondent.js:126
 msgid "Which object are you assessing?"
 msgstr "Кайсы объектти баалап жатасыз?"
 
@@ -4016,7 +4044,7 @@ msgstr "Суроолорду жазыңыз"
 
 #: js/scoring.js:99 js/views/admin-methodologies.js:486
 #: js/views/admin-methodologies.js:564 js/views/admin-questions.js:255
-#: js/views/help.js:70 js/views/respondent.js:426 js/views/respondent.js:455
+#: js/views/help.js:70 js/views/respondent.js:447 js/views/respondent.js:476
 msgid "Yes"
 msgstr "Ооба"
 
@@ -4045,7 +4073,7 @@ msgstr "Сиз системадан чыктыңыз. Кайра кириңиз.
 msgid "You can change everything. Respondents can’t use it yet."
 msgstr "Баарын өзгөртсө болот. Респонденттер аны азырынча колдоно алышпайт."
 
-#: js/views/respondent.js:77
+#: js/views/respondent.js:68
 msgid ""
 "You can stop at any time: answers are saved as soon as you enter them. "
 "Everything you have filled in stays in your history."
@@ -4060,11 +4088,11 @@ msgstr ""
 "Сизде бул аракетке укук жок. Бул маалыматтарды администраторлор гана өзгөртө"
 " алат."
 
-#: js/views/respondent.js:168
+#: js/views/respondent.js:159
 msgid "Your assessments"
 msgstr "Сиздин баалоолоруңуз"
 
-#: js/views/respondent.js:72
+#: js/views/respondent.js:63
 msgid ""
 "Your assessments in one place: continue where you left off, start a new one "
 "or look back at earlier results."
@@ -4091,7 +4119,7 @@ msgstr ""
 "Ролдоруңуз администратордун панелинин кайсы бөлүмдөрүн колдоно аларыңызды "
 "аныктайт. Ролдорду суперколдонуучу Django admin де өзгөртөт."
 
-#: js/views/respondent.js:317
+#: js/views/respondent.js:338
 msgid "a critical question is below its threshold."
 msgstr "критикалык суроо босогодон төмөн."
 
@@ -4103,7 +4131,7 @@ msgstr ""
 "маалымдамаларга, суроолорго, методикаларга жана бардык баалоолорго толук "
 "жеткиликтүү, бирок колдонуучуларга эмес кызматкер ролу."
 
-#: js/views/admin-methodologies.js:56 js/views/respondent.js:132
+#: js/views/admin-methodologies.js:56 js/views/respondent.js:123
 msgid "any object type"
 msgstr "объекттин каалаган түрү"
 
@@ -4111,7 +4139,7 @@ msgstr "объекттин каалаган түрү"
 msgid "archived"
 msgstr "архивде"
 
-#: js/views/respondent.js:492
+#: js/views/respondent.js:514
 msgid "below {threshold}"
 msgstr "{threshold} төмөн"
 
@@ -4127,15 +4155,15 @@ msgstr "бинардык"
 msgid "cancelled"
 msgstr "жокко чыгарылды"
 
-#: js/dom.js:64 js/views/respondent.js:511
+#: js/dom.js:64 js/views/respondent.js:533
 msgid "completed"
 msgstr "аяктады"
 
-#: js/views/respondent.js:12
+#: js/views/respondent.js:11
 msgid "document"
 msgstr "документ"
 
-#: js/views/dashboard.js:131
+#: js/views/dashboard.js:133
 msgid "done"
 msgstr "даяр"
 
@@ -4155,7 +4183,7 @@ msgstr "мисалы, 5"
 msgid "e.g. 5-point quality"
 msgstr "мисалы, 5 баллдык сапат"
 
-#: js/views/admin-catalogs.js:261 js/views/respondent.js:114
+#: js/views/admin-catalogs.js:261 js/views/respondent.js:105
 msgid "e.g. Block A, Riverside residential complex"
 msgstr "мисалы, А корпусу, Riverside турак жай комплекси"
 
@@ -4191,7 +4219,7 @@ msgstr "мисалы, Визуалдык текшерүү"
 msgid "e.g. mm, m², %"
 msgstr "мисалы, mm, m², %"
 
-#: js/views/respondent.js:498
+#: js/views/respondent.js:520
 msgid "evidence: {count}"
 msgstr "далилдер: {count}"
 
@@ -4219,11 +4247,11 @@ msgstr "активдүү эмес"
 msgid "interval"
 msgstr "интервалдык"
 
-#: js/views/respondent.js:341 js/views/respondent.js:492
+#: js/views/respondent.js:362 js/views/respondent.js:514
 msgid "knock-out"
 msgstr "критикалык өтпөө"
 
-#: js/views/respondent.js:12
+#: js/views/respondent.js:11
 msgid "link"
 msgstr "шилтеме"
 
@@ -4239,7 +4267,7 @@ msgstr ""
 "Django admin де колдонуучуларды жана ролдорду башкарат. Ал жерде каалаган "
 "убакта тарыраак укуктары бар жаңы ролдорду кошсо болот."
 
-#: js/views/respondent.js:12
+#: js/views/respondent.js:11
 msgid "measurement protocol"
 msgstr "өлчөө протоколу"
 
@@ -4247,7 +4275,7 @@ msgstr "өлчөө протоколу"
 msgid "needs options"
 msgstr "варианттар керек"
 
-#: js/views/dashboard.js:131
+#: js/views/dashboard.js:133
 msgid "next"
 msgstr "кийинки"
 
@@ -4271,7 +4299,7 @@ msgstr "өчүк"
 msgid "on"
 msgstr "күйүк"
 
-#: js/views/admin-catalogs.js:197 js/views/respondent.js:362
+#: js/views/admin-catalogs.js:197 js/views/respondent.js:383
 msgid "optional"
 msgstr "милдеттүү эмес"
 
@@ -4279,11 +4307,11 @@ msgstr "милдеттүү эмес"
 msgid "ordinal"
 msgstr "тартиптик"
 
-#: js/views/respondent.js:12
+#: js/views/respondent.js:11
 msgid "photo"
 msgstr "сүрөт"
 
-#: js/views/admin-methodologies.js:353 js/views/respondent.js:373
+#: js/views/admin-methodologies.js:353 js/views/respondent.js:394
 msgid "primary"
 msgstr "негизги"
 
@@ -4299,7 +4327,7 @@ msgstr "суроо"
 msgid "ratio"
 msgstr "катыштар"
 
-#: js/views/admin-catalogs.js:197 js/views/respondent.js:362
+#: js/views/admin-catalogs.js:197 js/views/respondent.js:383
 msgid "required"
 msgstr "милдеттүү"
 
@@ -4332,7 +4360,7 @@ msgid "superuser: also manages users and roles in Django admin"
 msgstr ""
 "суперколдонуучу: Django admin де колдонуучуларды жана ролдорду да башкарат"
 
-#: js/views/dashboard.js:153
+#: js/views/dashboard.js:155
 msgid "total"
 msgstr "жыйынтык"
 
@@ -4344,7 +4372,7 @@ msgstr "бирдик"
 msgid "veto"
 msgstr "босого"
 
-#: js/views/respondent.js:362
+#: js/views/respondent.js:383
 msgid "weight"
 msgstr "салмак"
 
@@ -4355,6 +4383,10 @@ msgstr "салмактардын суммасы {sum}"
 #: js/views/admin-catalogs.js:111 js/views/admin-catalogs.js:111
 msgid "worse"
 msgstr "начарыраак"
+
+#: js/views/data.js:68 js/views/respondent.js:217
+msgid "{from}–{to} of {count}"
+msgstr "{count} ичинен {from}–{to}"
 
 #: js/views/dashboard.js:23
 msgid ""

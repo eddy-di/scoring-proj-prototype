@@ -9,7 +9,14 @@ from catalogs.models import AssessmentMethod, AssessmentObject, ObjectType, Rati
 from library.models import Question, QuestionCategory
 from methodologies.models import Methodology
 
-FIXTURES = ['catalogs', 'question_library', 'tech_res_methodology', 'example_assessments']
+# Two example domains, to show that any kind of object can be assessed: residential buildings
+# (TECH_RES) and suppliers (SUPPLIER_EVAL). Each fixture refers to records in the ones before it.
+FIXTURES = [
+    'catalogs', 'supplier_catalogs',
+    'question_library', 'supplier_questions',
+    'tech_res_methodology', 'supplier_methodology',
+    'example_assessments', 'supplier_assessments',
+]
 
 # username, password, role, what they can do
 DEMO_USERS = [

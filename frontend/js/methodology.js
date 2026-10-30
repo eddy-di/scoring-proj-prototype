@@ -63,7 +63,7 @@ async function setWeights(children, weights) {
       await db.update('methodology_nodes', c.id, { weight: weights[i] }, ['methodology_nodes']);
     }
   }
-  await db.load();
+  await db.load(db.GROUPS.methodology);
 }
 
 const round6 = (x) => Math.round(x * 1e6) / 1e6;

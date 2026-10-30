@@ -72,7 +72,8 @@ export default function helpView(focus) {
       ]),
       h('p', {}, t('Structural condition = 0.6 × 3 + 0.4 × 4 = 3.4. Fire safety = 5. Energy efficiency = 3.5.')),
       h('p', {}, t('Total = 0.5 × 3.4 + 0.3 × 5 + 0.2 × 3.5 = 3.9, “Good”.')),
-      h('p', {}, t('House 7 has the same answers but no fire alarm. The alarm scores 1, below its knock-out threshold of 2, so the building fails even though its total is 2.7.'))),
+      h('p', {}, t('House 7 has the same answers but no fire alarm. The alarm scores 1, below its knock-out threshold of 2, so the building fails even though its total is 2.7.')),
+      h('p', {}, t('The same rules work for any kind of object. The example data also has supplier reviews (SUPPLIER_EVAL): Ala-Too Packaging scores 4.3, “Good”. Silk Road Ingredients fails: 9 % of its batches were rejected, which scores 1.4, below the knock-out threshold of 2.'))),
 
     h('section', { class: 'block', id: 'glossary' },
       h('h2', {}, t('Glossary')),

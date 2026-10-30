@@ -8,7 +8,6 @@ import { t, formatDate, formatDateTime } from '../i18n.js';
 import { childrenOf, rootOf } from '../methodology.js';
 import { scoreBadge } from './shared.js';
 
-const R = db.RESPONDENT_TABLES;
 const evidenceKinds = () => ({ photo: t('photo'), document: t('document'), measurement_protocol: t('measurement protocol'), link: t('link') });
 
 // UI-only state
@@ -16,18 +15,10 @@ const issuesByAssessment = new Map();
 const openHelp = new Set();
 
 const versionLabel = (v) => `${db.get('methodologies', v?.methodology_id)?.name ?? '?'} v${v?.version}`;
-const questionNodes = (versionId) => db.all('methodology_nodes', (n) => n.version_id === versionId && n.node_type === 'question');
 const responseOf = (a, node) => db.find('responses', (x) => x.assessment_id === a.id && x.node_id === node.id);
 
-function progress(a) {
-  const nodes = questionNodes(a.methodology_version_id);
-  const done = nodes.filter((n) => {
-    const r = responseOf(a, n);
-    const q = db.get('questions', n.question_id);
-    return r && (r.is_not_applicable || (q && hasAnswer(q, answerOf(r))));
-  }).length;
-  return { done, total: nodes.length };
-}
+// Counted by the server (assessments.answered_count / question_count), so lists don't need the answers.
+const progress = (a) => ({ done: a.answered_count ?? 0, total: a.question_count ?? 0 });
 
 function parseAttributes(text) {
   if (!text) return null;
@@ -101,7 +92,7 @@ async function start(objectId, methodologyId) {
     object_id: objectId, methodology: methodologyId,
     title: `${obj?.name ?? ''}, ${new Date().toISOString().slice(0, 10)}`,
     assessed_at: new Date().toISOString().slice(0, 10),
-  }, R);
+  }, ['assessments']);
   toast(t('Assessment started.'));
   navigate(`/respondent/assessments/${a.id}`);
 }
@@ -112,7 +103,7 @@ function registerObjectForm(id, objectTypeId, onCreated) {
     fields: [
       !objectTypeId && { name: 'object_type_id', label: t('Type'), type: 'select', numeric: true, required: true, options: db.all('object_types').map((x) => ({ value: x.id, label: x.name })) },
       { name: 'name', label: t('Name'), required: true, hint: t('e.g. Block A, Riverside residential complex') },
-      { name: 'external_ref', label: t('Reference'), hint: t('Cadastral number, inventory code…') },
+      { name: 'external_ref', label: t('Reference'), hint: t('Cadastral number, supplier code, SKU…') },
       { name: 'attributes', label: t('Attributes'), type: 'textarea', rows: 2, wide: true, hint: t('One per line, e.g. year_built = 1987') },
     ],
     onSubmit: async (v) => {
@@ -194,19 +185,45 @@ export function startView(tab = 'questionnaire') {
 
 // ── History ───────────────────────────────────────────────────
 
-const historyFilter = { status: '', methodology: '', respondent: '' };
+const historyFilter = { status: '', methodology: '', search: '', offset: 0 };
+const PAGE_SIZE = 50;
+let searchTimer = null;
 
-// scope: 'mine' (everyone's own history) or 'all' (roles that see every assessment).
+// scope: 'mine' (everyone's own history, kept in memory) or 'all' (roles that see every
+// assessment: read from the server a page at a time, filtered there).
 export function historyView(scope = 'mine') {
   const everyone = scope === 'all';
-  const rows = (everyone ? db.all('assessments') : ownAssessments()).filter((a) => {
-    const version = db.get('methodology_versions', a.methodology_version_id);
-    return (!historyFilter.status || a.status === historyFilter.status)
-      && (!historyFilter.methodology || version?.methodology_id === Number(historyFilter.methodology))
-      && (!everyone || !historyFilter.respondent || String(a.respondent_id) === historyFilter.respondent);
-  });
-  const setFilter = (key) => (e) => { historyFilter[key] = e.target.value; rerender(); };
-  const respondents = [...new Map(db.all('assessments').filter((a) => a.respondent_id).map((a) => [a.respondent_id, a.respondent_name])).entries()];
+  const setFilter = (key) => (e) => { historyFilter[key] = e.target.value; historyFilter.offset = 0; rerender(); };
+  const setSearch = (e) => {
+    clearTimeout(searchTimer);
+    const value = e.target.value;
+    searchTimer = setTimeout(() => { historyFilter.search = value.trim(); historyFilter.offset = 0; rerender(); }, 300);
+  };
+
+  let rows;
+  let pager = null;
+  if (everyone) {
+    const result = db.page('assessments', {
+      status: historyFilter.status, methodology: historyFilter.methodology, search: historyFilter.search,
+      limit: PAGE_SIZE, offset: historyFilter.offset,
+    });
+    rows = result?.results ?? null;
+    if (result && result.count > PAGE_SIZE) {
+      const from = historyFilter.offset + 1;
+      const to = Math.min(historyFilter.offset + PAGE_SIZE, result.count);
+      const go = (offset) => () => { historyFilter.offset = offset; rerender(); };
+      pager = h('div', { class: 'pager' },
+        button(t('Previous'), go(Math.max(0, historyFilter.offset - PAGE_SIZE)), { class: 'btn small', disabled: historyFilter.offset === 0 }),
+        h('span', { class: 'small muted' }, t('{from}–{to} of {count}', { from, to, count: result.count })),
+        button(t('Next'), go(historyFilter.offset + PAGE_SIZE), { class: 'btn small', disabled: to >= result.count }));
+    }
+  } else {
+    rows = ownAssessments().filter((a) => {
+      const version = db.get('methodology_versions', a.methodology_version_id);
+      return (!historyFilter.status || a.status === historyFilter.status)
+        && (!historyFilter.methodology || version?.methodology_id === Number(historyFilter.methodology));
+    });
+  }
 
   return h('div', { class: 'page wide' },
     pageHead(everyone ? t('All assessments') : t('History'),
@@ -218,11 +235,14 @@ export function historyView(scope = 'mine') {
           selectEl(['in_progress', 'completed', 'draft', 'cancelled'].map((x) => ({ value: x, label: statusLabel(x) })), historyFilter.status, { id: 'h-status', placeholder: t('All'), onchange: setFilter('status') })),
         h('label', { class: 'field' }, h('span', { class: 'field-label' }, t('Questionnaire')),
           selectEl(db.all('methodologies').map((m) => ({ value: m.id, label: m.name })), historyFilter.methodology, { id: 'h-meth', placeholder: t('All'), onchange: setFilter('methodology') })),
-        everyone && h('label', { class: 'field' }, h('span', { class: 'field-label' }, t('Respondent')),
-          selectEl(respondents.map(([id, name]) => ({ value: id, label: name })), historyFilter.respondent, { id: 'h-resp', placeholder: t('All'), onchange: setFilter('respondent') }))),
-      table([t('Assessment'), everyone && t('Respondent'), t('Object'), t('Questionnaire'), t('Started'), t('Status'), t('Answered'), t('Total'), ''].filter((x) => x !== false),
-        rows.map((a) => assessmentRow(a, { withRespondent: everyone })),
-        everyone ? t('No assessments yet.') : t('No assessments yet. Start one with “New assessment”.')),
+        everyone && h('label', { class: 'field grow' }, h('span', { class: 'field-label' }, t('Search')),
+          h('input', { type: 'search', id: 'h-search', value: historyFilter.search, placeholder: t('Title, object or respondent'), oninput: setSearch }))),
+      rows == null
+        ? h('p', { class: 'muted' }, t('Loading…'))
+        : table([t('Assessment'), everyone && t('Respondent'), t('Object'), t('Questionnaire'), t('Started'), t('Status'), t('Answered'), t('Total'), ''].filter((x) => x !== false),
+          rows.map((a) => assessmentRow(a, { withRespondent: everyone })),
+          everyone ? t('No assessments found.') : t('No assessments yet. Start one with “New assessment”.')),
+      pager,
       stored('assessments')));
 }
 
@@ -260,7 +280,7 @@ async function saveAnswer(a, node, patch = {}, optionIds) {
   const body = { node: node.id, ...db.toApi('responses', patch) };
   if (optionIds) body.options = optionIds;
   try {
-    return await db.action(answerUrl(a), body, R);
+    return await db.action(answerUrl(a), body, db.forAssessment(a.id));
   } catch (err) {
     toast(err.message, 'bad');
     return null;
@@ -268,6 +288,7 @@ async function saveAnswer(a, node, patch = {}, optionIds) {
 }
 
 export function fillView(id) {
+  if (!db.assessmentReady(id)) return h('div', { class: 'page' }, h('p', { class: 'loading' }, t('Loading…')));
   const a = db.get('assessments', id);
   if (!a) return h('div', { class: 'page' }, h('p', {}, t('Assessment not found.'), ' '), link('/respondent', t('Back to assessments')));
   const version = db.get('methodology_versions', a.methodology_version_id);
@@ -285,7 +306,7 @@ export function fillView(id) {
 
   const complete = async () => {
     try {
-      await db.action(`${url}complete/`, {}, R);
+      await db.action(`${url}complete/`, {}, db.forAssessment(a.id));
       issuesByAssessment.delete(a.id);
       toast(t('Assessment completed.'));
       navigate(`/respondent/assessments/${a.id}/result`);
@@ -301,7 +322,7 @@ export function fillView(id) {
     pageHead(a.title ?? t('Assessment #{id}', { id: a.id }), `${obj?.name} · ${versionLabel(version)}`,
       statusChip(a.status),
       done && button(t('View result'), () => navigate(`/respondent/assessments/${a.id}/result`), { class: 'btn primary' }),
-      done && own && asyncButton(t('Reopen'), async () => { issuesByAssessment.delete(a.id); await db.action(`${url}reopen/`, {}, R); toast(t('Reopened: you can change answers again.')); })),
+      done && own && asyncButton(t('Reopen'), async () => { issuesByAssessment.delete(a.id); await db.action(`${url}reopen/`, {}, db.forAssessment(a.id)); toast(t('Reopened: you can change answers again.')); })),
 
     !own && h('p', { class: 'banner' }, t('This is {name}’s assessment. You can read it, but only they can change the answers.', { name: a.respondent_name ?? '?' })),
 
@@ -390,7 +411,7 @@ function questionCard(a, node) {
     h('div', { class: 'evidence' },
       evidence.map((e) => h('div', { class: 'ev' },
         chip(evidenceKinds()[e.kind] ?? e.kind, 'muted'), ' ', h('span', { class: 'ev-uri' }, e.uri), e.description && h('span', { class: 'muted' }, ` · ${e.description}`),
-        confirmButton(t('Remove'), t('Click again'), () => db.remove('response_evidence', e.id, R), { class: 'btn small ghost' }))),
+        confirmButton(t('Remove'), t('Click again'), () => db.remove('response_evidence', e.id, db.forAssessment(a.id)), { class: 'btn small ghost' }))),
       h('details', { class: 'ev-add' },
         h('summary', {}, t('Attach evidence ({count})', { count: evidence.length })),
         form({
@@ -402,7 +423,7 @@ function questionCard(a, node) {
           ],
           onSubmit: async (v) => {
             const responseId = r?.id ?? (await saveAnswer(a, node))?.id;
-            if (responseId) await db.create('response_evidence', { ...v, response_id: responseId }, R);
+            if (responseId) await db.create('response_evidence', { ...v, response_id: responseId }, db.forAssessment(a.id));
           },
         }))));
 }
@@ -461,6 +482,7 @@ function answerText(q, r) {
 }
 
 export function resultView(id) {
+  if (!db.assessmentReady(id)) return h('div', { class: 'page' }, h('p', { class: 'loading' }, t('Loading…')));
   const a = db.get('assessments', id);
   if (!a) return h('div', { class: 'page' }, h('p', {}, t('Assessment not found.'), ' '), link('/respondent', t('Back to assessments')));
   const version = db.get('methodology_versions', a.methodology_version_id);

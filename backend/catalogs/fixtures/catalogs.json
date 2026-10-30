@@ -139,10 +139,10 @@
     "label_en": "Unacceptable",
     "label_ru": "Недопустимо",
     "label_ky": "Жол берилгис",
-    "description": "Dangerous or unusable; immediate action required",
-    "description_en": "Dangerous or unusable; immediate action required",
-    "description_ru": "Опасно или непригодно; нужны срочные меры",
-    "description_ky": "Коркунучтуу же жараксыз; шашылыш чара керек",
+    "description": "Does not meet the requirements; immediate action needed",
+    "description_en": "Does not meet the requirements; immediate action needed",
+    "description_ru": "Не соответствует требованиям; нужны срочные меры",
+    "description_ky": "Талаптарга жооп бербейт; шашылыш чара керек",
     "sort_order": 0
   }
 },
@@ -156,10 +156,10 @@
     "label_en": "Poor",
     "label_ru": "Плохо",
     "label_ky": "Начар",
-    "description": "Significant defects; major repair required",
-    "description_en": "Significant defects; major repair required",
-    "description_ru": "Значительные дефекты; нужен капитальный ремонт",
-    "description_ky": "Олуттуу кемчиликтер; капиталдык оңдоо керек",
+    "description": "Serious shortcomings; major improvement needed",
+    "description_en": "Serious shortcomings; major improvement needed",
+    "description_ru": "Серьёзные недостатки; нужны существенные улучшения",
+    "description_ky": "Олуттуу кемчиликтер; олуттуу жакшыртуу керек",
     "sort_order": 1
   }
 },
@@ -173,10 +173,10 @@
     "label_en": "Satisfactory",
     "label_ru": "Удовлетворительно",
     "label_ky": "Канааттандырарлык",
-    "description": "Noticeable defects; local repair required",
-    "description_en": "Noticeable defects; local repair required",
-    "description_ru": "Заметные дефекты; нужен местный ремонт",
-    "description_ky": "Байкалган кемчиликтер; жергиликтүү оңдоо керек",
+    "description": "Noticeable shortcomings; some improvement needed",
+    "description_en": "Noticeable shortcomings; some improvement needed",
+    "description_ru": "Заметные недостатки; нужны отдельные улучшения",
+    "description_ky": "Байкалган кемчиликтер; айрым жакшыртуулар керек",
     "sort_order": 2
   }
 },
@@ -190,10 +190,10 @@
     "label_en": "Good",
     "label_ru": "Хорошо",
     "label_ky": "Жакшы",
-    "description": "Minor defects; no repair needed now",
-    "description_en": "Minor defects; no repair needed now",
-    "description_ru": "Небольшие дефекты; ремонт пока не нужен",
-    "description_ky": "Майда кемчиликтер; азырынча оңдоо керек эмес",
+    "description": "Minor shortcomings; no action needed now",
+    "description_en": "Minor shortcomings; no action needed now",
+    "description_ru": "Небольшие недостатки; сейчас меры не нужны",
+    "description_ky": "Майда кемчиликтер; азырынча чара көрүү керек эмес",
     "sort_order": 3
   }
 },
@@ -207,10 +207,10 @@
     "label_en": "Excellent",
     "label_ru": "Отлично",
     "label_ky": "Эң жакшы",
-    "description": "No defects",
-    "description_en": "No defects",
-    "description_ru": "Без дефектов",
-    "description_ky": "Кемчиликсиз",
+    "description": "Fully meets the requirements",
+    "description_en": "Fully meets the requirements",
+    "description_ru": "Полностью соответствует требованиям",
+    "description_ky": "Талаптарга толук жооп берет",
     "sort_order": 4
   }
 },

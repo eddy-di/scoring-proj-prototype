@@ -91,10 +91,25 @@ the same language. English is the main language and the fallback.
 
 ## Where data lives
 
-`js/store.js` loads every table from the API into memory. It keeps the schema's table and column names, so
-`methodology_nodes.parent_id` works as before even though the API calls the field `parent`. Each change
-goes to the API, and then the tables are reloaded, so the screen always shows what the server stored.
-Answers typed into the questionnaire are saved shortly after you stop typing.
+`js/store.js` keeps the data the screens read in memory. It uses the schema's table and column names, so
+`methodology_nodes.parent_id` works even though the API calls the field `parent`. What it loads is chosen
+so that the amount doesn't grow with the number of assessments:
+
+| Data | Loaded |
+| --- | --- |
+| Catalogs, question library, methodologies | At sign-in. Admins write them and they stay small |
+| Assessments | Only the user's own, at sign-in, plus any opened by link |
+| Answers, evidence, node results | Per assessment, when it is opened (`db.assessmentReady(id)`) |
+| Everyone's assessments, dashboard counts | From the server, a page at a time (`db.page()`, `db.assessmentSummary()`) |
+| Data tables of assessments and answers | From the server, 100 rows at a time |
+
+Each change goes to the API and then reloads only what it can have changed: the written table's group
+(`GROUPS` in `store.js`), or for answers just that assessment (`db.forAssessment(id)`). Lists show their
+previous rows while they refresh. Every GET revalidates with the server's ETag, so an unchanged list costs
+an empty `304`. Answers typed into the questionnaire are saved shortly after you stop typing.
+
+When adding a screen: read reference data with `db.all()`/`db.get()`; read assessments of other people
+with `db.page()`; call `db.assessmentReady(id)` before reading one assessment's answers.
 
 ## Security
 

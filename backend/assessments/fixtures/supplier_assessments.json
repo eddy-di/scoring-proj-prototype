@@ -1,0 +1,894 @@
+[
+{
+  "model": "assessments.assessment",
+  "pk": 3,
+  "fields": {
+    "respondent": null,
+    "object": 3,
+    "methodology_version": 2,
+    "status": "completed",
+    "title": "Ala-Too Packaging – 2026 supplier review",
+    "assessed_at": "2026-10-20",
+    "total_score": "4.3431",
+    "total_scale_level": 4,
+    "notes": "Worked example: a reliable supplier with one paperwork problem.",
+    "created_at": "2026-10-20T10:00:00Z",
+    "completed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.assessment",
+  "pk": 4,
+  "fields": {
+    "respondent": null,
+    "object": 4,
+    "methodology_version": 2,
+    "status": "completed",
+    "title": "Silk Road Ingredients – knock-out example",
+    "assessed_at": "2026-10-20",
+    "total_score": "2.6931",
+    "total_scale_level": 3,
+    "notes": "Reasonable prices and documents, but 9 % of batches were rejected, which is below the knock-out threshold and fails the supplier.",
+    "created_at": "2026-10-20T10:00:00Z",
+    "completed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.assessment",
+  "pk": 5,
+  "fields": {
+    "respondent": null,
+    "object": 5,
+    "methodology_version": 2,
+    "status": "in_progress",
+    "title": "Tian Shan Print – review in progress",
+    "assessed_at": "2026-10-20",
+    "total_score": null,
+    "total_scale_level": null,
+    "notes": "Started: only some questions answered.",
+    "created_at": "2026-10-20T10:00:00Z",
+    "completed_at": null
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 9,
+  "fields": {
+    "assessment": 3,
+    "node": 14,
+    "assessment_method": 4,
+    "numeric_value": "96.0000",
+    "boolean_value": null,
+    "option": null,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": null,
+    "score": "4.2000",
+    "comment": null,
+    "created_at": "2026-10-20T10:00:00Z",
+    "updated_at": "2026-10-20T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 10,
+  "fields": {
+    "assessment": 3,
+    "node": 15,
+    "assessment_method": 3,
+    "numeric_value": "10.0000",
+    "boolean_value": null,
+    "option": null,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": 13,
+    "score": "4.0000",
+    "comment": null,
+    "created_at": "2026-10-20T10:00:00Z",
+    "updated_at": "2026-10-20T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 11,
+  "fields": {
+    "assessment": 3,
+    "node": 16,
+    "assessment_method": 3,
+    "numeric_value": "1.5000",
+    "boolean_value": null,
+    "option": null,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": null,
+    "score": "4.4000",
+    "comment": null,
+    "created_at": "2026-10-20T10:00:00Z",
+    "updated_at": "2026-10-20T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 12,
+  "fields": {
+    "assessment": 3,
+    "node": 17,
+    "assessment_method": 3,
+    "numeric_value": null,
+    "boolean_value": null,
+    "option": null,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": 18,
+    "score": "4.0000",
+    "comment": "Two invoices arrived a week after the goods in March.",
+    "created_at": "2026-10-20T10:00:00Z",
+    "updated_at": "2026-10-20T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 13,
+  "fields": {
+    "assessment": 3,
+    "node": 18,
+    "assessment_method": 3,
+    "numeric_value": null,
+    "boolean_value": true,
+    "option": null,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": 22,
+    "score": "5.0000",
+    "comment": null,
+    "created_at": "2026-10-20T10:00:00Z",
+    "updated_at": "2026-10-20T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 14,
+  "fields": {
+    "assessment": 3,
+    "node": 19,
+    "assessment_method": 4,
+    "numeric_value": "98.0000",
+    "boolean_value": null,
+    "option": null,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": null,
+    "score": "4.6571",
+    "comment": null,
+    "created_at": "2026-10-20T10:00:00Z",
+    "updated_at": "2026-10-20T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 15,
+  "fields": {
+    "assessment": 3,
+    "node": 20,
+    "assessment_method": 3,
+    "numeric_value": null,
+    "boolean_value": null,
+    "option": 11,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": 26,
+    "score": "4.0000",
+    "comment": null,
+    "created_at": "2026-10-20T10:00:00Z",
+    "updated_at": "2026-10-20T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 16,
+  "fields": {
+    "assessment": 3,
+    "node": 21,
+    "assessment_method": 6,
+    "numeric_value": null,
+    "boolean_value": null,
+    "option": null,
+    "scale_level": 4,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": null,
+    "score": "4.0000",
+    "comment": null,
+    "created_at": "2026-10-20T10:00:00Z",
+    "updated_at": "2026-10-20T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 17,
+  "fields": {
+    "assessment": 3,
+    "node": 22,
+    "assessment_method": 3,
+    "numeric_value": null,
+    "boolean_value": true,
+    "option": null,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": 28,
+    "score": "5.0000",
+    "comment": null,
+    "created_at": "2026-10-20T10:00:00Z",
+    "updated_at": "2026-10-20T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 18,
+  "fields": {
+    "assessment": 4,
+    "node": 14,
+    "assessment_method": 4,
+    "numeric_value": "88.0000",
+    "boolean_value": null,
+    "option": null,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": null,
+    "score": "2.6000",
+    "comment": null,
+    "created_at": "2026-10-20T10:00:00Z",
+    "updated_at": "2026-10-20T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 19,
+  "fields": {
+    "assessment": 4,
+    "node": 15,
+    "assessment_method": 3,
+    "numeric_value": "21.0000",
+    "boolean_value": null,
+    "option": null,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": 14,
+    "score": "3.0000",
+    "comment": null,
+    "created_at": "2026-10-20T10:00:00Z",
+    "updated_at": "2026-10-20T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 20,
+  "fields": {
+    "assessment": 4,
+    "node": 16,
+    "assessment_method": 3,
+    "numeric_value": "9.0000",
+    "boolean_value": null,
+    "option": null,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": null,
+    "score": "1.4000",
+    "comment": "4 of 44 batches rejected for moisture above the limit.",
+    "created_at": "2026-10-20T10:00:00Z",
+    "updated_at": "2026-10-20T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 21,
+  "fields": {
+    "assessment": 4,
+    "node": 17,
+    "assessment_method": 3,
+    "numeric_value": null,
+    "boolean_value": null,
+    "option": null,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": 20,
+    "score": "2.0000",
+    "comment": null,
+    "created_at": "2026-10-20T10:00:00Z",
+    "updated_at": "2026-10-20T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 22,
+  "fields": {
+    "assessment": 4,
+    "node": 18,
+    "assessment_method": 3,
+    "numeric_value": null,
+    "boolean_value": false,
+    "option": null,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": 23,
+    "score": "3.0000",
+    "comment": null,
+    "created_at": "2026-10-20T10:00:00Z",
+    "updated_at": "2026-10-20T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 23,
+  "fields": {
+    "assessment": 4,
+    "node": 19,
+    "assessment_method": 4,
+    "numeric_value": "82.0000",
+    "boolean_value": null,
+    "option": null,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": null,
+    "score": "2.9200",
+    "comment": null,
+    "created_at": "2026-10-20T10:00:00Z",
+    "updated_at": "2026-10-20T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 24,
+  "fields": {
+    "assessment": 4,
+    "node": 20,
+    "assessment_method": 3,
+    "numeric_value": null,
+    "boolean_value": null,
+    "option": 10,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": 25,
+    "score": "3.0000",
+    "comment": null,
+    "created_at": "2026-10-20T10:00:00Z",
+    "updated_at": "2026-10-20T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 25,
+  "fields": {
+    "assessment": 4,
+    "node": 21,
+    "assessment_method": 6,
+    "numeric_value": null,
+    "boolean_value": null,
+    "option": null,
+    "scale_level": 3,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": null,
+    "score": "3.0000",
+    "comment": null,
+    "created_at": "2026-10-20T10:00:00Z",
+    "updated_at": "2026-10-20T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 26,
+  "fields": {
+    "assessment": 4,
+    "node": 22,
+    "assessment_method": 3,
+    "numeric_value": null,
+    "boolean_value": true,
+    "option": null,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": 28,
+    "score": "5.0000",
+    "comment": null,
+    "created_at": "2026-10-20T10:00:00Z",
+    "updated_at": "2026-10-20T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 27,
+  "fields": {
+    "assessment": 5,
+    "node": 14,
+    "assessment_method": 4,
+    "numeric_value": "100.0000",
+    "boolean_value": null,
+    "option": null,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": null,
+    "score": "5.0000",
+    "comment": null,
+    "created_at": "2026-10-20T10:00:00Z",
+    "updated_at": "2026-10-20T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 28,
+  "fields": {
+    "assessment": 5,
+    "node": 15,
+    "assessment_method": 3,
+    "numeric_value": "5.0000",
+    "boolean_value": null,
+    "option": null,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": 12,
+    "score": "5.0000",
+    "comment": null,
+    "created_at": "2026-10-20T10:00:00Z",
+    "updated_at": "2026-10-20T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.response",
+  "pk": 29,
+  "fields": {
+    "assessment": 5,
+    "node": 22,
+    "assessment_method": 3,
+    "numeric_value": null,
+    "boolean_value": true,
+    "option": null,
+    "scale_level": null,
+    "text_value": null,
+    "is_not_applicable": false,
+    "matched_criterion": 28,
+    "score": "5.0000",
+    "comment": null,
+    "created_at": "2026-10-20T10:00:00Z",
+    "updated_at": "2026-10-20T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.responseoption",
+  "pk": 1,
+  "fields": {
+    "response": 12,
+    "option": 14
+  }
+},
+{
+  "model": "assessments.responseoption",
+  "pk": 2,
+  "fields": {
+    "response": 21,
+    "option": 15
+  }
+},
+{
+  "model": "assessments.responseoption",
+  "pk": 3,
+  "fields": {
+    "response": 21,
+    "option": 16
+  }
+},
+{
+  "model": "assessments.responseevidence",
+  "pk": 7,
+  "fields": {
+    "response": 9,
+    "kind": "document",
+    "uri": "https://example.com/evidence/ala-too-deliveries.xlsx",
+    "description": "Delivery log, Oct 2025 – Sep 2026",
+    "created_at": "2026-10-20T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.responseevidence",
+  "pk": 8,
+  "fields": {
+    "response": 13,
+    "kind": "document",
+    "uri": "https://example.com/evidence/ala-too-iso9001.pdf",
+    "description": "ISO 9001 certificate",
+    "created_at": "2026-10-20T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.responseevidence",
+  "pk": 9,
+  "fields": {
+    "response": 20,
+    "kind": "document",
+    "uri": "https://example.com/evidence/silk-road-inspection.pdf",
+    "description": "Incoming inspection report",
+    "created_at": "2026-10-20T10:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 17,
+  "fields": {
+    "assessment": 3,
+    "node": 14,
+    "score": "4.2000",
+    "weighted_score": "2.5200",
+    "scale_level": 4,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 18,
+  "fields": {
+    "assessment": 3,
+    "node": 15,
+    "score": "4.0000",
+    "weighted_score": "1.6000",
+    "scale_level": 4,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 19,
+  "fields": {
+    "assessment": 3,
+    "node": 10,
+    "score": "4.1200",
+    "weighted_score": "1.4420",
+    "scale_level": 4,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 20,
+  "fields": {
+    "assessment": 3,
+    "node": 16,
+    "score": "4.4000",
+    "weighted_score": "2.2000",
+    "scale_level": 4,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 21,
+  "fields": {
+    "assessment": 3,
+    "node": 17,
+    "score": "4.0000",
+    "weighted_score": "1.2000",
+    "scale_level": 4,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 22,
+  "fields": {
+    "assessment": 3,
+    "node": 18,
+    "score": "5.0000",
+    "weighted_score": "1.0000",
+    "scale_level": 5,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 23,
+  "fields": {
+    "assessment": 3,
+    "node": 11,
+    "score": "4.3867",
+    "weighted_score": "1.5353",
+    "scale_level": 4,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 24,
+  "fields": {
+    "assessment": 3,
+    "node": 19,
+    "score": "4.6571",
+    "weighted_score": "2.3285",
+    "scale_level": 5,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 25,
+  "fields": {
+    "assessment": 3,
+    "node": 20,
+    "score": "4.0000",
+    "weighted_score": "0.8000",
+    "scale_level": 4,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 26,
+  "fields": {
+    "assessment": 3,
+    "node": 21,
+    "score": "4.0000",
+    "weighted_score": "1.2000",
+    "scale_level": 4,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 27,
+  "fields": {
+    "assessment": 3,
+    "node": 12,
+    "score": "4.3285",
+    "weighted_score": "0.8657",
+    "scale_level": 4,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 28,
+  "fields": {
+    "assessment": 3,
+    "node": 22,
+    "score": "5.0000",
+    "weighted_score": "5.0000",
+    "scale_level": 5,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 29,
+  "fields": {
+    "assessment": 3,
+    "node": 13,
+    "score": "5.0000",
+    "weighted_score": "0.5000",
+    "scale_level": 5,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 30,
+  "fields": {
+    "assessment": 3,
+    "node": 9,
+    "score": "4.3431",
+    "weighted_score": "4.3431",
+    "scale_level": 4,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 31,
+  "fields": {
+    "assessment": 4,
+    "node": 14,
+    "score": "2.6000",
+    "weighted_score": "1.5600",
+    "scale_level": 3,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 32,
+  "fields": {
+    "assessment": 4,
+    "node": 15,
+    "score": "3.0000",
+    "weighted_score": "1.2000",
+    "scale_level": 3,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 33,
+  "fields": {
+    "assessment": 4,
+    "node": 10,
+    "score": "2.7600",
+    "weighted_score": "0.9660",
+    "scale_level": 3,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 34,
+  "fields": {
+    "assessment": 4,
+    "node": 16,
+    "score": "1.4000",
+    "weighted_score": "0.7000",
+    "scale_level": 1,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 35,
+  "fields": {
+    "assessment": 4,
+    "node": 17,
+    "score": "2.0000",
+    "weighted_score": "0.6000",
+    "scale_level": 2,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 36,
+  "fields": {
+    "assessment": 4,
+    "node": 18,
+    "score": "3.0000",
+    "weighted_score": "0.6000",
+    "scale_level": 3,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 37,
+  "fields": {
+    "assessment": 4,
+    "node": 11,
+    "score": "1.8147",
+    "weighted_score": "0.6351",
+    "scale_level": 2,
+    "is_vetoed": true,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 38,
+  "fields": {
+    "assessment": 4,
+    "node": 19,
+    "score": "2.9200",
+    "weighted_score": "1.4600",
+    "scale_level": 3,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 39,
+  "fields": {
+    "assessment": 4,
+    "node": 20,
+    "score": "3.0000",
+    "weighted_score": "0.6000",
+    "scale_level": 3,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 40,
+  "fields": {
+    "assessment": 4,
+    "node": 21,
+    "score": "3.0000",
+    "weighted_score": "0.9000",
+    "scale_level": 3,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 41,
+  "fields": {
+    "assessment": 4,
+    "node": 12,
+    "score": "2.9600",
+    "weighted_score": "0.5920",
+    "scale_level": 3,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 42,
+  "fields": {
+    "assessment": 4,
+    "node": 22,
+    "score": "5.0000",
+    "weighted_score": "5.0000",
+    "scale_level": 5,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 43,
+  "fields": {
+    "assessment": 4,
+    "node": 13,
+    "score": "5.0000",
+    "weighted_score": "0.5000",
+    "scale_level": 5,
+    "is_vetoed": false,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+},
+{
+  "model": "assessments.noderesult",
+  "pk": 44,
+  "fields": {
+    "assessment": 4,
+    "node": 9,
+    "score": "2.6931",
+    "weighted_score": "2.6931",
+    "scale_level": 3,
+    "is_vetoed": true,
+    "computed_at": "2026-10-20T15:00:00Z"
+  }
+}
+]

@@ -36,6 +36,9 @@ AUTH_USER_MODEL = 'accounts.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    # ETag on every response; an unchanged one is answered with 304 Not Modified (see config/middleware.py).
+    'django.middleware.http.ConditionalGetMiddleware',
+    'config.middleware.api_revalidate',
     'django.contrib.sessions.middleware.SessionMiddleware',
     # Picks the language from the django_language cookie, then the Accept-Language header.
     'django.middleware.locale.LocaleMiddleware',
@@ -174,6 +177,8 @@ REST_FRAMEWORK = {
     'EXCEPTION_HANDLER': 'config.api.exception_handler',
     # numeric(…) columns are returned as JSON numbers, not strings.
     'COERCE_DECIMAL_TO_STRING': False,
+    # ?limit=&offset= pages a list; without it the whole list is returned (config/api.py).
+    'DEFAULT_PAGINATION_CLASS': 'config.api.OptionalPagination',
 }
 
 SPECTACULAR_SETTINGS = {

@@ -142,7 +142,7 @@ export function versionView(versionId, selectedId) {
       await publishVersion(versionId);
       toast(t('Published v{version}. Respondents can now use it.', { version: version.version }));
     } catch (err) {
-      await db.load();
+      await db.load(db.GROUPS.methodology);
       toast(err.status === 400 ? t('Not published: fix the problems in the checklist first.') : err.message, 'bad');
     }
   };
@@ -462,7 +462,7 @@ async function addStarterCriteria(rule, q, scale, criteria) {
     // eslint-disable-next-line no-await-in-loop
     await db.create('score_criteria', { scoring_rule_id: rule.id, ...condition, score, ...label, sort_order: criteria.length + i }, ['score_criteria']);
   }
-  await db.load();
+  await db.load(db.GROUPS.methodology);
   toast(t('Criteria added: {count}. Check the scores and adjust them.', { count: rows.length }));
 }
 

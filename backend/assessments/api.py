@@ -72,8 +72,21 @@ class AssessmentViewSet(OwnRecordsMixin, QueryFilterMixin, viewsets.ModelViewSet
     serializer_class = serializers.AssessmentSerializer
     permission_classes = [IsAuthenticated]
     filter_params = {'object': 'object_id', 'methodology_version': 'methodology_version_id', 'status': 'status',
-                     'respondent': 'respondent_id'}
-    search_fields = ['title', 'object__name']
+                     'respondent': 'respondent_id', 'methodology': 'methodology_version__methodology_id'}
+    search_fields = ['title', 'object__name', 'respondent__username', 'respondent__first_name', 'respondent__last_name']
+
+    def get_queryset(self):
+        return services.with_progress(super().get_queryset())
+
+    @extend_schema(summary='Counts and the latest assessments, for the dashboard (same filters as the list)')
+    @action(detail=False)
+    def summary(self, request):
+        qs = self.filter_queryset(self.get_queryset())
+        return ApiResponse({
+            'count': qs.count(),
+            'completed': qs.filter(status=AssessmentStatus.COMPLETED).count(),
+            'latest': self.get_serializer(qs[:5], many=True).data,
+        })
 
     def perform_create(self, serializer):
         serializer.save(respondent=self.request.user)

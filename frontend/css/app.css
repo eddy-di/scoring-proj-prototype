@@ -502,3 +502,6 @@ td .row-actions { flex-wrap: nowrap; }
 .topbar { row-gap: 6px; padding-bottom: 6px; }
 .topbar .nav { order: 3; flex: 1 1 100%; gap: 4px 24px; border-top: 1px solid var(--rule); padding-top: 6px; }
 .nav-group { flex-wrap: wrap; min-width: 0; }
+
+/* Paged lists */
+.pager { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }

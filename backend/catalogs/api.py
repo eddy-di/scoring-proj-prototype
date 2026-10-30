@@ -1,4 +1,5 @@
 """Admin panel API for catalogs (admin flow A1–A4)."""
+from django.db.models import Count
 from rest_framework import viewsets
 
 from config.api import QueryFilterMixin
@@ -27,6 +28,13 @@ class AssessmentObjectViewSet(QueryFilterMixin, viewsets.ModelViewSet):
     permission_classes = [RolePermissionOrAnyoneCreates]
     filter_params = {'object_type': 'object_type_id'}
     search_fields = ['name', 'external_ref']
+
+    def get_queryset(self):
+        qs = super().get_queryset()
+        # How many assessments use each object, for roles that may see everyone's assessments.
+        if self.request.user.has_perm('assessments.view_all_assessments'):
+            qs = qs.annotate(assessment_count=Count('assessments'))
+        return qs
 
     def perform_create(self, serializer):
         serializer.save(created_by=self.request.user)

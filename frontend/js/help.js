@@ -116,7 +116,7 @@ export const glossary = () => ({
   object_type: {
     term: t('Object type / Object'),
     short: t('Object type = the kind of thing assessed. Object = one concrete thing.'),
-    text: t('A methodology is written for one object type, e.g. residential buildings. Objects are the actual things respondents assess, e.g. “Block A, Riverside residential complex”.'),
+    text: t('A methodology is written for one object type, e.g. residential buildings or suppliers. Objects are the actual things respondents assess, e.g. “Block A, Riverside residential complex” or “Ala-Too Packaging LLC”.'),
   },
   question: {
     term: t('Question (library)'),

@@ -2,11 +2,21 @@
 from django.db.models import ProtectedError
 from django.utils.translation import gettext as _
 from rest_framework import filters, status
+from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.response import Response
 from rest_framework.views import exception_handler as drf_exception_handler
 from rest_framework.views import set_rollback
 
 from methodologies.services import VersionLocked
+
+
+class OptionalPagination(LimitOffsetPagination):
+    """Pages only when the request asks: ?limit=50&offset=100 returns {count, next, previous, results}.
+
+    Without ?limit= a list is returned whole, as before, so small reference tables stay one request.
+    """
+
+    max_limit = 500
 
 
 class QueryFilterMixin:

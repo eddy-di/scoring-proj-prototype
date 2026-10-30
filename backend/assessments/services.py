@@ -4,12 +4,14 @@ There is no respondent API yet; these functions are what it will call. The
 example-assessment fixture was generated with them.
 """
 from django.db import transaction
+from django.db.models import Count, OuterRef, Q, Subquery
+from django.db.models.functions import Coalesce
 from django.utils import timezone
 from django.utils.translation import gettext as _
 
 from library.models import AnswerType
 from methodologies import formulas
-from methodologies.models import NodeType
+from methodologies.models import MethodologyNode, NodeType
 from methodologies.scoring import Answer, aggregate, has_answer, nearest_level, score_answer
 
 from .models import AssessmentStatus, NodeResult, Response, ResponseOption
@@ -147,3 +149,26 @@ def reopen(assessment):
     assessment.total_scale_level = None
     assessment.completed_at = None
     assessment.save()
+
+
+# A response that counts as answered: the same rule as has_answer() and completion_issues(), in SQL.
+ANSWERED = (
+    Q(is_not_applicable=True)
+    | Q(node__question__answer_type=AnswerType.NUMERIC, numeric_value__isnull=False)
+    | Q(node__question__answer_type=AnswerType.BOOLEAN, boolean_value__isnull=False)
+    | Q(node__question__answer_type=AnswerType.SINGLE_CHOICE, option__isnull=False)
+    | Q(node__question__answer_type=AnswerType.MULTI_CHOICE, selected_options__isnull=False)
+    | Q(node__question__answer_type=AnswerType.SCALE_LEVEL, scale_level__isnull=False)
+    | (Q(node__question__answer_type=AnswerType.TEXT, text_value__isnull=False) & ~Q(text_value=''))
+)
+
+
+def with_progress(queryset):
+    """Adds answered_count and question_count to an Assessment queryset: two subqueries, no per-row queries,
+    so lists can show progress without loading every response."""
+    answered = (Response.objects.filter(assessment=OuterRef('pk'), node__node_type=NodeType.QUESTION).filter(ANSWERED)
+                .order_by().values('assessment').annotate(n=Count('pk', distinct=True)).values('n'))
+    questions = (MethodologyNode.objects.filter(version=OuterRef('methodology_version'), node_type=NodeType.QUESTION)
+                 .order_by().values('version').annotate(n=Count('pk')).values('n'))
+    return queryset.annotate(answered_count=Coalesce(Subquery(answered), 0),
+                             question_count=Coalesce(Subquery(questions), 0))

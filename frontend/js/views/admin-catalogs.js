@@ -134,7 +134,7 @@ function levelsCard(scale) {
       fields: [
         { name: 'value', label: t('Value'), type: 'number', required: true, value: edit?.value, help: t('The number this level stands for. Scores are shown with the nearest level.') },
         { name: 'label', label: t('Label'), required: true, translated: true, row: edit, hint: t('e.g. Good') },
-        { name: 'description', label: t('Meaning'), translated: true, row: edit, help: t('What this level means in practice, e.g. “Minor defects; no repair needed now”.') },
+        { name: 'description', label: t('Meaning'), translated: true, row: edit, help: t('What this level means in practice, e.g. “Minor shortcomings; no action needed now”.') },
       ],
       onSubmit: async (v) => {
         const saved = edit
@@ -211,7 +211,7 @@ function objectTypesTab() {
   return [
     tip('cat-otypes', t('Object types: what kind of thing is assessed'),
       h('p', {}, t('Each methodology is written for one object type. Respondents can only use a methodology for objects of that type, so a building methodology can’t be applied to a product by mistake.'))),
-    example(t('Residential building, Office building.')),
+    example(t('Residential building, Office building, Supplier.')),
     stored('object_types'),
     crud({
       tableName: 'object_types',
@@ -244,8 +244,8 @@ function objectsTab() {
   const types = db.all('object_types');
   return [
     tip('cat-objects', t('Objects: the concrete things being assessed'),
-      h('p', {}, t('An object is one real building, apartment or product. Respondents pick an object when they start an assessment, and they can also register new objects themselves.')),
-      h('p', {}, t('The reference is your own identifier, such as a cadastral number. Attributes are free notes like the year built. Object names are not translated.'))),
+      h('p', {}, t('An object is one real thing being assessed: a building, a supplier, a product. Respondents pick an object when they start an assessment, and they can also register new objects themselves.')),
+      h('p', {}, t('The reference is your own identifier, such as a cadastral number or a supplier code. Attributes are free notes like the year built or the country. Object names are not translated.'))),
     stored('assessment_objects'),
     crud({
       tableName: 'assessment_objects', labelOf: (o) => o.name,
@@ -254,12 +254,12 @@ function objectsTab() {
         [t('Name'), (o) => o.name], [t('Type'), (o) => db.get('object_types', o.object_type_id)?.name ?? '–'],
         [t('Reference'), (o) => muted(o.external_ref)],
         [t('Attributes'), (o) => (o.attributes ? Object.entries(o.attributes).map(([k, v]) => `${k}: ${v}`).join(' · ') : muted(null))],
-        [t('Assessments'), (o) => String(db.all('assessments', (a) => a.object_id === o.id).length)],
+        [t('Assessments'), (o) => (o.assessment_count == null ? '–' : String(o.assessment_count))],
       ],
       fields: (o) => [
         { name: 'object_type_id', label: t('Object type'), type: 'select', numeric: true, required: true, value: o?.object_type_id, options: types.map((x) => ({ value: x.id, label: x.name })) },
         { name: 'name', label: t('Name'), required: true, value: o?.name, hint: t('e.g. Block A, Riverside residential complex') },
-        { name: 'external_ref', label: t('Reference'), value: o?.external_ref, hint: t('Cadastral number, inventory code…') },
+        { name: 'external_ref', label: t('Reference'), value: o?.external_ref, hint: t('Cadastral number, supplier code, SKU…') },
         { name: 'attributes', label: t('Attributes'), type: 'textarea', rows: 3, wide: true, value: attributesText(o?.attributes), hint: t('One per line, e.g. year_built = 1987') },
       ],
       prepare: (v) => ({ ...v, attributes: parseAttributes(v.attributes) }),

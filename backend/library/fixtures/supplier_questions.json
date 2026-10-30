@@ -1,0 +1,404 @@
+[
+{
+  "model": "library.questioncategory",
+  "pk": 5,
+  "fields": {
+    "parent": null,
+    "name": "Supplier evaluation",
+    "name_en": "Supplier evaluation",
+    "name_ru": "Оценка поставщиков",
+    "name_ky": "Жабдуучуларды баалоо",
+    "description": "Questions about companies that supply goods",
+    "description_en": "Questions about companies that supply goods",
+    "description_ru": "Вопросы о компаниях-поставщиках товаров",
+    "description_ky": "Товар жеткирүүчү компаниялар жөнүндө суроолор"
+  }
+},
+{
+  "model": "library.questioncategory",
+  "pk": 6,
+  "fields": {
+    "parent": 5,
+    "name": "Delivery",
+    "name_en": "Delivery",
+    "name_ru": "Поставки",
+    "name_ky": "Жеткирүү",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "library.questioncategory",
+  "pk": 7,
+  "fields": {
+    "parent": 5,
+    "name": "Product quality",
+    "name_en": "Product quality",
+    "name_ru": "Качество продукции",
+    "name_ky": "Продукциянын сапаты",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "library.questioncategory",
+  "pk": 8,
+  "fields": {
+    "parent": 5,
+    "name": "Price and cooperation",
+    "name_en": "Price and cooperation",
+    "name_ru": "Цена и сотрудничество",
+    "name_ky": "Баа жана кызматташуу",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "library.questioncategory",
+  "pk": 9,
+  "fields": {
+    "parent": 5,
+    "name": "Compliance",
+    "name_en": "Compliance",
+    "name_ru": "Соответствие требованиям",
+    "name_ky": "Талаптарга шайкештик",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "library.question",
+  "pk": 9,
+  "fields": {
+    "category": 6,
+    "code": "SUP_ON_TIME",
+    "text": "What share of deliveries in the last 12 months arrived on time?",
+    "text_en": "What share of deliveries in the last 12 months arrived on time?",
+    "text_ru": "Какая доля поставок за последние 12 месяцев пришла вовремя?",
+    "text_ky": "Акыркы 12 айдагы жеткирүүлөрдүн канча бөлүгү өз убагында келди?",
+    "description": "On time means on or before the date agreed in the order.",
+    "description_en": "On time means on or before the date agreed in the order.",
+    "description_ru": "Вовремя — в согласованную в заказе дату или раньше.",
+    "description_ky": "Өз убагында — буйрутмада макулдашылган күнү же андан эрте.",
+    "answer_type": "numeric",
+    "unit": 3,
+    "default_scale": null,
+    "is_active": true,
+    "created_at": "2026-10-01T09:00:00Z"
+  }
+},
+{
+  "model": "library.question",
+  "pk": 10,
+  "fields": {
+    "category": 6,
+    "code": "SUP_LEAD_TIME",
+    "text": "What is the average lead time from order to delivery?",
+    "text_en": "What is the average lead time from order to delivery?",
+    "text_ru": "Каков средний срок от заказа до поставки?",
+    "text_ky": "Буйрутмадан жеткирүүгө чейин орточо канча убакыт кетет?",
+    "description": "Calendar days, averaged over the last 12 months.",
+    "description_en": "Calendar days, averaged over the last 12 months.",
+    "description_ru": "Календарные дни, в среднем за последние 12 месяцев.",
+    "description_ky": "Календардык күндөр, акыркы 12 айдагы орточо.",
+    "answer_type": "numeric",
+    "unit": 5,
+    "default_scale": null,
+    "is_active": true,
+    "created_at": "2026-10-01T09:00:00Z"
+  }
+},
+{
+  "model": "library.question",
+  "pk": 11,
+  "fields": {
+    "category": 7,
+    "code": "SUP_REJECT_RATE",
+    "text": "What share of delivered batches was rejected at incoming inspection?",
+    "text_en": "What share of delivered batches was rejected at incoming inspection?",
+    "text_ru": "Какая доля поставленных партий была забракована при входном контроле?",
+    "text_ky": "Жеткирилген партиялардын канча бөлүгү кирүү текшерүүсүндө жараксыз деп табылды?",
+    "description": "Rejected batches ÷ all batches received in the last 12 months × 100.",
+    "description_en": "Rejected batches ÷ all batches received in the last 12 months × 100.",
+    "description_ru": "Забракованные партии ÷ все партии за последние 12 месяцев × 100.",
+    "description_ky": "Жараксыз партиялар ÷ акыркы 12 айдагы бардык партиялар × 100.",
+    "answer_type": "numeric",
+    "unit": 3,
+    "default_scale": null,
+    "is_active": true,
+    "created_at": "2026-10-01T09:00:00Z"
+  }
+},
+{
+  "model": "library.question",
+  "pk": 12,
+  "fields": {
+    "category": 7,
+    "code": "SUP_QMS_CERT",
+    "text": "Does the supplier hold a valid ISO 9001 certificate?",
+    "text_en": "Does the supplier hold a valid ISO 9001 certificate?",
+    "text_ru": "Есть ли у поставщика действующий сертификат ISO 9001?",
+    "text_ky": "Жабдуучуда жарактуу ISO 9001 сертификаты барбы?",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "answer_type": "boolean",
+    "unit": null,
+    "default_scale": null,
+    "is_active": true,
+    "created_at": "2026-10-01T09:00:00Z"
+  }
+},
+{
+  "model": "library.question",
+  "pk": 13,
+  "fields": {
+    "category": 7,
+    "code": "SUP_INCIDENTS",
+    "text": "Which problems occurred in the last 12 months?",
+    "text_en": "Which problems occurred in the last 12 months?",
+    "text_ru": "Какие проблемы были за последние 12 месяцев?",
+    "text_ky": "Акыркы 12 айда кандай көйгөйлөр болду?",
+    "description": "Select every problem that happened at least once.",
+    "description_en": "Select every problem that happened at least once.",
+    "description_ru": "Отметьте все проблемы, которые случались хотя бы раз.",
+    "description_ky": "Жок дегенде бир жолу болгон бардык көйгөйлөрдү белгилеңиз.",
+    "answer_type": "multi_choice",
+    "unit": null,
+    "default_scale": null,
+    "is_active": true,
+    "created_at": "2026-10-01T09:00:00Z"
+  }
+},
+{
+  "model": "library.question",
+  "pk": 14,
+  "fields": {
+    "category": 8,
+    "code": "SUP_PRICE_LEVEL",
+    "text": "How do the supplier’s prices compare with the market average?",
+    "text_en": "How do the supplier’s prices compare with the market average?",
+    "text_ru": "Как цены поставщика соотносятся со средними по рынку?",
+    "text_ky": "Жабдуучунун баалары рыноктогу орточо баага салыштырмалуу кандай?",
+    "description": "Supplier price ÷ average market price × 100. 100 % is the market average.",
+    "description_en": "Supplier price ÷ average market price × 100. 100 % is the market average.",
+    "description_ru": "Цена поставщика ÷ средняя рыночная цена × 100. 100 % — средняя по рынку.",
+    "description_ky": "Жабдуучунун баасы ÷ рыноктогу орточо баа × 100. 100 % — рыноктогу орточо.",
+    "answer_type": "numeric",
+    "unit": 3,
+    "default_scale": null,
+    "is_active": true,
+    "created_at": "2026-10-01T09:00:00Z"
+  }
+},
+{
+  "model": "library.question",
+  "pk": 15,
+  "fields": {
+    "category": 8,
+    "code": "SUP_PAYMENT_TERMS",
+    "text": "What payment terms does the supplier offer?",
+    "text_en": "What payment terms does the supplier offer?",
+    "text_ru": "Какие условия оплаты предлагает поставщик?",
+    "text_ky": "Жабдуучу кандай төлөө шарттарын сунуштайт?",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "answer_type": "single_choice",
+    "unit": null,
+    "default_scale": null,
+    "is_active": true,
+    "created_at": "2026-10-01T09:00:00Z"
+  }
+},
+{
+  "model": "library.question",
+  "pk": 16,
+  "fields": {
+    "category": 8,
+    "code": "SUP_COMMUNICATION",
+    "text": "How would you rate the supplier’s responsiveness and communication?",
+    "text_en": "How would you rate the supplier’s responsiveness and communication?",
+    "text_ru": "Как вы оцениваете оперативность и качество общения поставщика?",
+    "text_ky": "Жабдуучунун ыкчамдыгын жана байланышын кандай баалайсыз?",
+    "description": "Think of answers to requests, warnings about delays and handling of claims.",
+    "description_en": "Think of answers to requests, warnings about delays and handling of claims.",
+    "description_ru": "Учитывайте ответы на запросы, предупреждения о задержках и работу с претензиями.",
+    "description_ky": "Сурамдарга жооп берүүнү, кечигүүлөр тууралуу эскертүүнү жана дооматтар менен иштөөнү эске алыңыз.",
+    "answer_type": "scale_level",
+    "unit": null,
+    "default_scale": 1,
+    "is_active": true,
+    "created_at": "2026-10-01T09:00:00Z"
+  }
+},
+{
+  "model": "library.question",
+  "pk": 17,
+  "fields": {
+    "category": 9,
+    "code": "SUP_DOCS_VALID",
+    "text": "Are the contract, business registration and required licences valid?",
+    "text_en": "Are the contract, business registration and required licences valid?",
+    "text_ru": "Действуют ли договор, регистрация компании и необходимые лицензии?",
+    "text_ky": "Келишим, компаниянын каттоосу жана керектүү лицензиялар жарактуубу?",
+    "description": "A missing or expired document means the supplier cannot be used.",
+    "description_en": "A missing or expired document means the supplier cannot be used.",
+    "description_ru": "Отсутствующий или просроченный документ означает, что работать с поставщиком нельзя.",
+    "description_ky": "Документ жок же мөөнөтү бүткөн болсо, жабдуучу менен иштөөгө болбойт.",
+    "answer_type": "boolean",
+    "unit": null,
+    "default_scale": null,
+    "is_active": true,
+    "created_at": "2026-10-01T09:00:00Z"
+  }
+},
+{
+  "model": "library.question",
+  "pk": 18,
+  "fields": {
+    "category": 5,
+    "code": "SUP_REMARKS",
+    "text": "Any other remarks about the supplier?",
+    "text_en": "Any other remarks about the supplier?",
+    "text_ru": "Другие замечания по поставщику?",
+    "text_ky": "Жабдуучу боюнча башка эскертүүлөр барбы?",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "answer_type": "text",
+    "unit": null,
+    "default_scale": null,
+    "is_active": true,
+    "created_at": "2026-10-01T09:00:00Z"
+  }
+},
+{
+  "model": "library.questionoption",
+  "pk": 9,
+  "fields": {
+    "question": 15,
+    "code": "prepayment",
+    "label": "Full prepayment",
+    "label_en": "Full prepayment",
+    "label_ru": "Полная предоплата",
+    "label_ky": "Толук алдын ала төлөө",
+    "sort_order": 0
+  }
+},
+{
+  "model": "library.questionoption",
+  "pk": 10,
+  "fields": {
+    "question": 15,
+    "code": "partial_prepayment",
+    "label": "Partial prepayment",
+    "label_en": "Partial prepayment",
+    "label_ru": "Частичная предоплата",
+    "label_ky": "Жарым-жартылай алдын ала төлөө",
+    "sort_order": 1
+  }
+},
+{
+  "model": "library.questionoption",
+  "pk": 11,
+  "fields": {
+    "question": 15,
+    "code": "net_30",
+    "label": "Payment within 30 days of delivery",
+    "label_en": "Payment within 30 days of delivery",
+    "label_ru": "Оплата в течение 30 дней после поставки",
+    "label_ky": "Жеткирүүдөн кийин 30 күндүн ичинде төлөө",
+    "sort_order": 2
+  }
+},
+{
+  "model": "library.questionoption",
+  "pk": 12,
+  "fields": {
+    "question": 15,
+    "code": "net_60",
+    "label": "Payment within 60 days or more",
+    "label_en": "Payment within 60 days or more",
+    "label_ru": "Оплата в течение 60 дней и более",
+    "label_ky": "60 күндүн же андан көп убакыттын ичинде төлөө",
+    "sort_order": 3
+  }
+},
+{
+  "model": "library.questionoption",
+  "pk": 13,
+  "fields": {
+    "question": 13,
+    "code": "none",
+    "label": "No problems",
+    "label_en": "No problems",
+    "label_ru": "Проблем не было",
+    "label_ky": "Көйгөй болгон жок",
+    "sort_order": 0
+  }
+},
+{
+  "model": "library.questionoption",
+  "pk": 14,
+  "fields": {
+    "question": 13,
+    "code": "late_documents",
+    "label": "Late or incorrect documents",
+    "label_en": "Late or incorrect documents",
+    "label_ru": "Документы с опозданием или с ошибками",
+    "label_ky": "Документтер кечигип же ката менен келген",
+    "sort_order": 1
+  }
+},
+{
+  "model": "library.questionoption",
+  "pk": 15,
+  "fields": {
+    "question": 13,
+    "code": "short_delivery",
+    "label": "Wrong quantity delivered",
+    "label_en": "Wrong quantity delivered",
+    "label_ru": "Поставлено не то количество",
+    "label_ky": "Туура эмес саны жеткирилген",
+    "sort_order": 2
+  }
+},
+{
+  "model": "library.questionoption",
+  "pk": 16,
+  "fields": {
+    "question": 13,
+    "code": "damaged",
+    "label": "Damaged goods",
+    "label_en": "Damaged goods",
+    "label_ru": "Повреждённый товар",
+    "label_ky": "Бузулган товар",
+    "sort_order": 3
+  }
+},
+{
+  "model": "library.questionoption",
+  "pk": 17,
+  "fields": {
+    "question": 13,
+    "code": "non_conforming",
+    "label": "Goods not matching the specification",
+    "label_en": "Goods not matching the specification",
+    "label_ru": "Товар не соответствует спецификации",
+    "label_ky": "Товар спецификацияга туура келбейт",
+    "sort_order": 4
+  }
+}
+]

@@ -7,6 +7,7 @@ from methodologies.models import Methodology, MethodologyNode, NodeType
 from methodologies.services import latest_published_versions
 
 from .models import Assessment, NodeResult, Response, ResponseEvidence, ResponseOption
+from .services import with_progress
 
 
 class AssessmentSerializer(serializers.ModelSerializer):
@@ -17,13 +18,29 @@ class AssessmentSerializer(serializers.ModelSerializer):
         queryset=Methodology.objects.all(), write_only=True, required=False,
         help_text='Create only. Optional when only one questionnaire exists for the object type.')
     respondent_name = serializers.CharField(source='respondent.display_name', read_only=True, default=None)
+    answered_count = serializers.SerializerMethodField()
+    question_count = serializers.SerializerMethodField()
 
     class Meta:
         model = Assessment
         fields = ['id', 'respondent', 'respondent_name', 'object', 'methodology', 'methodology_version', 'status',
-                  'title', 'assessed_at', 'total_score', 'total_scale_level', 'notes', 'created_at', 'completed_at']
+                  'title', 'assessed_at', 'total_score', 'total_scale_level', 'notes', 'created_at', 'completed_at',
+                  'answered_count', 'question_count']
         read_only_fields = ['respondent', 'methodology_version', 'status', 'total_score', 'total_scale_level',
                             'created_at', 'completed_at']
+
+    # Progress, from services.with_progress(); an instance that wasn't loaded through it is counted on its own.
+    def _progress(self, obj):
+        if not hasattr(obj, 'answered_count'):
+            counts = with_progress(Assessment.objects.filter(pk=obj.pk)).values('answered_count', 'question_count').first()
+            obj.answered_count, obj.question_count = counts['answered_count'], counts['question_count']
+        return obj
+
+    def get_answered_count(self, obj) -> int:
+        return self._progress(obj).answered_count
+
+    def get_question_count(self, obj) -> int:
+        return self._progress(obj).question_count
 
     def validate(self, attrs):
         if self.instance is not None:

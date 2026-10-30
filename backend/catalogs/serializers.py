@@ -20,10 +20,17 @@ class ObjectTypeSerializer(TranslatedSerializerMixin, serializers.ModelSerialize
 
 
 class AssessmentObjectSerializer(serializers.ModelSerializer):
+    # Only for roles that see every assessment (see AssessmentObjectViewSet); null otherwise.
+    assessment_count = serializers.SerializerMethodField()
+
     class Meta:
         model = AssessmentObject
-        fields = ['id', 'object_type', 'name', 'external_ref', 'attributes', 'created_by', 'created_at']
+        fields = ['id', 'object_type', 'name', 'external_ref', 'attributes', 'created_by', 'created_at',
+                  'assessment_count']
         read_only_fields = ['created_by', 'created_at']
+
+    def get_assessment_count(self, obj) -> int | None:
+        return getattr(obj, 'assessment_count', None)
 
 
 class AssessmentMethodSerializer(TranslatedSerializerMixin, serializers.ModelSerializer):

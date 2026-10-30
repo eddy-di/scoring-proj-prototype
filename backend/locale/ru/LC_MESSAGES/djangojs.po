@@ -24,7 +24,7 @@ msgstr "+ группа"
 msgid "+ question"
 msgstr "+ вопрос"
 
-#: js/views/respondent.js:76
+#: js/views/respondent.js:67
 msgid ""
 "1. Click “New assessment” and choose a questionnaire or the object you are "
 "assessing. The newest version of the questionnaire is used automatically. 2."
@@ -109,13 +109,13 @@ msgstr ""
 
 #: js/help.js:119
 msgid ""
-"A methodology is written for one object type, e.g. residential buildings. "
-"Objects are the actual things respondents assess, e.g. “Block A, Riverside "
-"residential complex”."
+"A methodology is written for one object type, e.g. residential buildings or "
+"suppliers. Objects are the actual things respondents assess, e.g. “Block A, "
+"Riverside residential complex” or “Ala-Too Packaging LLC”."
 msgstr ""
-"Методика пишется для одного типа объектов, например жилых зданий. Объекты — "
-"это конкретные вещи, которые оценивают респонденты, например «Корпус А, ЖК "
-"„Riverside“»."
+"Методика пишется для одного типа объектов, например жилых зданий или "
+"поставщиков. Объекты — это конкретные вещи, которые оценивают респонденты, "
+"например «Корпус А, ЖК „Riverside“» или «Ala-Too Packaging LLC»."
 
 #: js/views/help.js:33
 msgid "A methodology works like an exam."
@@ -147,7 +147,7 @@ msgstr ""
 "баллов даёт, решается внутри каждой методики. Так один вопрос можно "
 "использовать во многих методиках, и каждая оценивает его по-своему."
 
-#: js/views/data.js:57
+#: js/views/data.js:76
 msgid ""
 "A read-only look at the raw database rows behind the screens, with the same "
 "table and column names as schema.dbml. Useful to understand where each piece"
@@ -338,7 +338,7 @@ msgstr "Добавлено: {name}."
 msgid "Admin"
 msgstr "Администрирование"
 
-#: js/views/dashboard.js:117
+#: js/views/dashboard.js:119
 msgid "Admin dashboard"
 msgstr "Панель администратора"
 
@@ -354,13 +354,12 @@ msgstr "Администратор: обычный порядок работы"
 msgid "Aggregation"
 msgstr "Свёртка"
 
-#: js/views/respondent.js:218 js/views/respondent.js:220
-#: js/views/respondent.js:222
+#: js/views/respondent.js:235 js/views/respondent.js:237
 msgid "All"
 msgstr "Все"
 
-#: js/main.js:47 js/views/respondent.js:212 js/views/respondent.js:280
-#: js/views/respondent.js:510
+#: js/main.js:47 js/views/respondent.js:229 js/views/respondent.js:301
+#: js/views/respondent.js:532
 msgid "All assessments"
 msgstr "Все оценки"
 
@@ -376,7 +375,7 @@ msgstr "Все вопросы"
 msgid "All siblings weigh the same."
 msgstr "У всех соседних узлов одинаковый вес."
 
-#: js/views/dashboard.js:127
+#: js/views/dashboard.js:129
 msgid ""
 "All steps are done. You can still go back and change anything; published "
 "versions need a new version first."
@@ -426,13 +425,13 @@ msgstr "Экспертная оценка от 1 до 5."
 
 #: js/views/admin-catalogs.js:247
 msgid ""
-"An object is one real building, apartment or product. Respondents pick an "
-"object when they start an assessment, and they can also register new objects"
-" themselves."
+"An object is one real thing being assessed: a building, a supplier, a "
+"product. Respondents pick an object when they start an assessment, and they "
+"can also register new objects themselves."
 msgstr ""
-"Объект — это одно реальное здание, квартира или изделие. Респонденты "
-"выбирают объект, когда начинают оценку, и могут сами регистрировать новые "
-"объекты."
+"Объект — это одна реальная вещь, которую оценивают: здание, поставщик, "
+"изделие. Респонденты выбирают объект, когда начинают оценку, и могут сами "
+"регистрировать новые объекты."
 
 #: js/views/admin-methodologies.js:21
 msgid "Another method; describe it in the notes."
@@ -442,7 +441,7 @@ msgstr "Другой способ; опишите его в заметках."
 msgid "Answer"
 msgstr "Ответ"
 
-#: js/views/respondent.js:529
+#: js/views/respondent.js:551
 msgid "Answer and reason"
 msgstr "Ответ и обоснование"
 
@@ -455,12 +454,12 @@ msgstr "Варианты ответа"
 msgid "Answer type"
 msgstr "Тип ответа"
 
-#: js/views/respondent.js:86 js/views/respondent.js:90
-#: js/views/respondent.js:223 js/views/respondent.js:313
+#: js/views/respondent.js:77 js/views/respondent.js:81
+#: js/views/respondent.js:242 js/views/respondent.js:334
 msgid "Answered"
 msgstr "Отвечено"
 
-#: js/views/respondent.js:308
+#: js/views/respondent.js:329
 msgid "Answering"
 msgstr "Ответы"
 
@@ -500,17 +499,17 @@ msgstr ""
 "Спрашивайте только об одном. «Ширина самой широкой трещины» лучше, чем "
 "«Трещины и их размер»."
 
-#: js/help.js:132 js/views/data.js:28 js/views/respondent.js:86
-#: js/views/respondent.js:90 js/views/respondent.js:223
+#: js/help.js:132 js/views/data.js:28 js/views/respondent.js:77
+#: js/views/respondent.js:81 js/views/respondent.js:242
 msgid "Assessment"
 msgstr "Оценка"
 
-#: js/views/dashboard.js:150 js/views/respondent.js:53
-#: js/views/respondent.js:301
+#: js/views/dashboard.js:152 js/views/respondent.js:44
+#: js/views/respondent.js:322
 msgid "Assessment #{id}"
 msgstr "Оценка №{id}"
 
-#: js/views/respondent.js:290
+#: js/views/respondent.js:311
 msgid "Assessment completed."
 msgstr "Оценка завершена."
 
@@ -534,16 +533,16 @@ msgstr "Методы оценки"
 msgid "Assessment methods: how a value is obtained"
 msgstr "Методы оценки: как получается значение"
 
-#: js/views/respondent.js:272 js/views/respondent.js:465
+#: js/views/respondent.js:293 js/views/respondent.js:487
 msgid "Assessment not found."
 msgstr "Оценка не найдена."
 
-#: js/views/respondent.js:105
+#: js/views/respondent.js:96
 msgid "Assessment started."
 msgstr "Оценка начата."
 
 #: js/views/account.js:83 js/views/admin-catalogs.js:257
-#: js/views/dashboard.js:145
+#: js/views/dashboard.js:147
 msgid "Assessments"
 msgstr "Оценки"
 
@@ -551,7 +550,7 @@ msgstr "Оценки"
 msgid "At least 8 characters; not only digits and not a common password."
 msgstr "Не менее 8 символов; не только цифры и не распространённый пароль."
 
-#: js/views/respondent.js:523
+#: js/views/respondent.js:545
 msgid ""
 "At least one critical question scored below its threshold, so the object "
 "fails regardless of the total."
@@ -567,20 +566,20 @@ msgstr "При этом значении и выше — минимальный 
 msgid "At or below this value, the lowest score."
 msgstr "При этом значении и ниже — минимальный балл."
 
-#: js/views/respondent.js:397
+#: js/views/respondent.js:418
 msgid "Attach"
 msgstr "Прикрепить"
 
-#: js/views/respondent.js:395
+#: js/views/respondent.js:416
 msgid "Attach evidence ({count})"
 msgstr "Прикрепить подтверждение ({count})"
 
 #: js/views/admin-catalogs.js:256 js/views/admin-catalogs.js:263
-#: js/views/respondent.js:116
+#: js/views/respondent.js:107
 msgid "Attributes"
 msgstr "Атрибуты"
 
-#: js/views/respondent.js:272 js/views/respondent.js:465
+#: js/views/respondent.js:293 js/views/respondent.js:487
 msgid "Back to assessments"
 msgstr "Назад к оценкам"
 
@@ -592,7 +591,7 @@ msgstr "Назад к методикам"
 msgid "Back to the library"
 msgstr "Назад в библиотеку"
 
-#: js/views/respondent.js:473
+#: js/views/respondent.js:495
 msgid "Back to the questionnaire"
 msgstr "Назад к анкете"
 
@@ -620,7 +619,7 @@ msgstr "От {lo} до {hi}"
 msgid "Block A, October 2026 inspection: total 3.9, “Good”."
 msgstr "Корпус А, проверка в октябре 2026: итог 3,9, «Хорошо»."
 
-#: js/views/respondent.js:528
+#: js/views/respondent.js:550
 msgid "Breakdown"
 msgstr "Разбивка"
 
@@ -640,23 +639,23 @@ msgstr "Постройте дерево слева: добавьте групп�
 msgid "Building quality → Structural condition → Crack width."
 msgstr "Качество здания → Состояние конструкций → Ширина трещин."
 
-#: js/views/respondent.js:190
+#: js/views/respondent.js:181
 msgid "By object"
 msgstr "По объекту"
 
-#: js/views/respondent.js:190
+#: js/views/respondent.js:181
 msgid "By questionnaire"
 msgstr "По анкете"
 
-#: js/views/admin-catalogs.js:262 js/views/respondent.js:115
-msgid "Cadastral number, inventory code…"
-msgstr "Кадастровый номер, инвентарный код…"
+#: js/views/admin-catalogs.js:262 js/views/respondent.js:106
+msgid "Cadastral number, supplier code, SKU…"
+msgstr "Кадастровый номер, код поставщика, артикул…"
 
 #: js/views/data.js:33
 msgid "Calculated score of every node on completion."
 msgstr "Рассчитанный балл каждого узла при завершении."
 
-#: js/dom.js:368 js/views/respondent.js:146
+#: js/dom.js:368 js/views/respondent.js:137
 msgid "Cancel"
 msgstr "Отмена"
 
@@ -714,7 +713,7 @@ msgstr "Вопрос с выбором, вариантов: {count}; нужно 
 msgid "Choices for choice questions."
 msgstr "Варианты для вопросов с выбором."
 
-#: js/views/respondent.js:149
+#: js/views/respondent.js:140
 msgid "Choose"
 msgstr "Выбрать"
 
@@ -734,18 +733,18 @@ msgstr ""
 msgid "Choose the kind of answer."
 msgstr "Выберите тип ответа."
 
-#: js/views/respondent.js:143
+#: js/views/respondent.js:134
 msgid "Choose the object first."
 msgstr "Сначала выберите объект."
 
-#: js/views/respondent.js:189
+#: js/views/respondent.js:180
 msgid ""
 "Choose what to assess. Start from a questionnaire or from the object itself."
 msgstr "Выберите, что оценивать. Начните с анкеты или с самого объекта."
 
 #: js/dom.js:218 js/views/admin-methodologies.js:565
 #: js/views/admin-methodologies.js:569 js/views/admin-methodologies.js:580
-#: js/views/respondent.js:137
+#: js/views/respondent.js:128
 msgid "Choose…"
 msgstr "Выберите…"
 
@@ -759,7 +758,7 @@ msgstr ""
 
 #: js/views/admin-catalogs.js:127 js/views/admin-methodologies.js:358
 #: js/views/admin-methodologies.js:502 js/views/admin-questions.js:94
-#: js/views/admin-questions.js:226 js/views/respondent.js:393
+#: js/views/admin-questions.js:226 js/views/respondent.js:414
 msgid "Click again"
 msgstr "Нажмите ещё раз"
 
@@ -823,7 +822,7 @@ msgstr "Цветовая тема"
 msgid "Combine children with"
 msgstr "Как объединять дочерние узлы"
 
-#: js/views/respondent.js:387
+#: js/views/respondent.js:408
 msgid "Comment"
 msgstr "Комментарий"
 
@@ -831,20 +830,20 @@ msgstr "Комментарий"
 msgid "Complete"
 msgstr "Завершите"
 
-#: js/views/respondent.js:328
+#: js/views/respondent.js:349
 msgid "Complete assessment"
 msgstr "Завершить оценку"
 
-#: js/views/account.js:84 js/views/respondent.js:81
+#: js/views/account.js:84 js/views/respondent.js:72
 msgid "Completed"
 msgstr "Завершено"
 
-#: js/views/respondent.js:319
+#: js/views/respondent.js:340
 msgid "Completed. Answers are locked; reopen the assessment to change them."
 msgstr ""
 "Завершено. Ответы заблокированы; откройте оценку заново, чтобы их изменить."
 
-#: js/views/dashboard.js:145
+#: js/views/dashboard.js:147
 msgid "Completed: {count}"
 msgstr "Завершено: {count}"
 
@@ -856,7 +855,7 @@ msgstr ""
 "При завершении проверяется, что на обязательные вопросы есть ответы, затем "
 "рассчитываются все группы и итог."
 
-#: js/views/respondent.js:327
+#: js/views/respondent.js:348
 msgid ""
 "Completing checks the mandatory questions, then calculates every group and "
 "saves the total."
@@ -883,7 +882,7 @@ msgid ""
 msgstr ""
 "Содержимое — вопросы, варианты, критерии — нужно вводить на языках: {list}."
 
-#: js/views/respondent.js:61 js/views/respondent.js:84
+#: js/views/respondent.js:52 js/views/respondent.js:75
 msgid "Continue"
 msgstr "Продолжить"
 
@@ -1021,7 +1020,7 @@ msgstr "Своя формула"
 msgid "Dashboard"
 msgstr "Панель"
 
-#: js/main.js:53 js/views/data.js:55
+#: js/main.js:53 js/views/data.js:74
 msgid "Data tables"
 msgstr "Таблицы данных"
 
@@ -1078,7 +1077,7 @@ msgstr "Демо-учётные записи"
 #: js/views/admin-catalogs.js:202 js/views/admin-catalogs.js:219
 #: js/views/admin-catalogs.js:223 js/views/admin-methodologies.js:83
 #: js/views/admin-methodologies.js:262 js/views/admin-methodologies.js:494
-#: js/views/admin-methodologies.js:516 js/views/respondent.js:401
+#: js/views/admin-methodologies.js:516 js/views/respondent.js:422
 msgid "Description"
 msgstr "Описание"
 
@@ -1152,7 +1151,7 @@ msgstr ""
 "применять методику только к объектам этого типа, поэтому методику для зданий"
 " нельзя по ошибке применить к изделию."
 
-#: js/views/respondent.js:154
+#: js/views/respondent.js:145
 msgid ""
 "Each questionnaire is the newest published version of a methodology. Choose "
 "one, then the object you are assessing."
@@ -1160,7 +1159,7 @@ msgstr ""
 "Каждая анкета — это самая новая опубликованная версия методики. Выберите "
 "анкету, затем оцениваемый объект."
 
-#: js/views/respondent.js:526
+#: js/views/respondent.js:548
 msgid ""
 "Each row is a node of the tree. “Weighted” is the node’s contribution to its"
 " parent (score × weight). The last column shows the answer and the criterion"
@@ -1251,7 +1250,7 @@ msgstr ""
 "Каждая начатая оценка остаётся в вашей истории вместе с ответами и "
 "результатами."
 
-#: js/views/respondent.js:213
+#: js/views/respondent.js:230
 msgid ""
 "Every assessment you have started, newest first. Open one to see your "
 "answers and the result."
@@ -1288,7 +1287,7 @@ msgstr ""
 "Любой балл — это число на шкале. У версии методики есть шкала результата для"
 " итогового балла; её узлы используют ту же шкалу, если не задать им свою."
 
-#: js/views/data.js:55
+#: js/views/data.js:74
 msgid ""
 "Every table from schema.dbml, as stored in the database. Watch the rows "
 "change while you work through the admin and respondent screens."
@@ -1297,7 +1296,7 @@ msgstr ""
 "как меняются строки, пока вы работаете на экранах администратора и "
 "респондента."
 
-#: js/views/respondent.js:213
+#: js/views/respondent.js:230
 msgid ""
 "Every user’s assessments. You can open them read-only; only their respondent"
 " can change answers."
@@ -1313,7 +1312,7 @@ msgstr "Подтверждения"
 msgid "Evidence to collect"
 msgstr "Что нужно собрать"
 
-#: js/views/respondent.js:375
+#: js/views/respondent.js:396
 msgid "Evidence:"
 msgstr "Подтверждения:"
 
@@ -1330,7 +1329,7 @@ msgid "Example data restored."
 msgstr "Демо-данные восстановлены."
 
 #: js/dom.js:228 js/help.js:23 js/views/admin-methodologies.js:420
-#: js/views/help.js:81
+#: js/views/help.js:82
 msgid "Example:"
 msgstr "Пример:"
 
@@ -1354,11 +1353,11 @@ msgstr "Внешний вид фасада от 1 «Недопустимо» д�
 msgid "Facade defects: stains, peeling, missing elements."
 msgstr "Дефекты фасада: пятна, отслоения, отсутствующие элементы."
 
-#: js/views/respondent.js:523
+#: js/views/respondent.js:545
 msgid "Failed on a knock-out criterion."
 msgstr "Не прошёл по критическому показателю."
 
-#: js/views/respondent.js:400
+#: js/views/respondent.js:421
 msgid "File name or link"
 msgstr "Имя файла или ссылка"
 
@@ -1381,7 +1380,7 @@ msgstr "Если оставить пустым, заполняется авто�
 msgid "Filter questions…"
 msgstr "Фильтр вопросов…"
 
-#: js/views/respondent.js:165
+#: js/views/respondent.js:156
 msgid ""
 "Find the object you are assessing. The questionnaires that apply to its type"
 " are shown next to it, always in their newest version."
@@ -1451,7 +1450,7 @@ msgstr ""
 "Для каждого узла-вопроса: привяжите вопрос из библиотеки, добавьте метод "
 "оценки и задайте правило оценки."
 
-#: js/views/admin-methodologies.js:56 js/views/respondent.js:132
+#: js/views/admin-methodologies.js:56 js/views/respondent.js:123
 msgid "For: {type}"
 msgstr "Для: {type}"
 
@@ -1486,7 +1485,7 @@ msgstr ""
 msgid "Give every child the same weight"
 msgstr "Дать всем дочерним узлам одинаковый вес"
 
-#: js/views/help.js:78
+#: js/views/help.js:79
 msgid "Glossary"
 msgstr "Глоссарий"
 
@@ -1518,7 +1517,7 @@ msgstr "Потребление тепла"
 msgid "Heat use: 250 or more → 1, 90 or less → 5, 170 → 3."
 msgstr "Потребление тепла: 250 и больше → 1, 90 и меньше → 5, 170 → 3."
 
-#: js/views/respondent.js:72
+#: js/views/respondent.js:63
 msgid "Hello, {name}"
 msgstr "Здравствуйте, {name}"
 
@@ -1562,8 +1561,8 @@ msgstr "Чем больше значение, тем лучше."
 msgid "Highest score"
 msgstr "Максимальный балл"
 
-#: js/main.js:52 js/views/help.js:58 js/views/respondent.js:212
-#: js/views/respondent.js:280 js/views/respondent.js:510
+#: js/main.js:52 js/views/help.js:58 js/views/respondent.js:229
+#: js/views/respondent.js:301 js/views/respondent.js:532
 msgid "History"
 msgstr "История"
 
@@ -1591,7 +1590,7 @@ msgstr "Как исходный ответ переводится в балл."
 msgid "How a value is obtained: measuring, inspecting, reading documents…"
 msgstr "Как получается значение: измерение, осмотр, анализ документов…"
 
-#: js/views/respondent.js:75
+#: js/views/respondent.js:66
 msgid "How an assessment works"
 msgstr "Как проходит оценка"
 
@@ -1629,7 +1628,7 @@ msgstr "Как назначены веса"
 msgid "How to assess"
 msgstr "Как оценивать"
 
-#: js/views/respondent.js:371
+#: js/views/respondent.js:392
 msgid "How to assess:"
 msgstr "Как оценивать:"
 
@@ -1681,7 +1680,7 @@ msgstr "На экзамене"
 msgid "In plain words"
 msgstr "Простыми словами"
 
-#: js/views/respondent.js:80
+#: js/views/respondent.js:71
 msgid "In progress"
 msgstr "В работе"
 
@@ -1705,7 +1704,7 @@ msgstr "Установлена и работает"
 msgid "Instructions"
 msgstr "Инструкция"
 
-#: js/views/respondent.js:516
+#: js/views/respondent.js:538
 msgid "Integral quality"
 msgstr "Интегральное качество"
 
@@ -1729,7 +1728,7 @@ msgstr "Установлена ли исправная пожарная сигн
 msgid "Keep the proportions, make the sum 1"
 msgstr "Сохранить пропорции, сделать сумму равной 1"
 
-#: js/views/respondent.js:399
+#: js/views/respondent.js:420
 msgid "Kind"
 msgstr "Вид"
 
@@ -1745,7 +1744,7 @@ msgstr "Виды оцениваемых объектов."
 msgid "Knock-out threshold"
 msgstr "Критический порог"
 
-#: js/views/respondent.js:317
+#: js/views/respondent.js:338
 msgid "Knock-out:"
 msgstr "Критический показатель:"
 
@@ -1767,11 +1766,11 @@ msgstr "Языки"
 msgid "Last name"
 msgstr "Фамилия"
 
-#: js/views/dashboard.js:148
+#: js/views/dashboard.js:150
 msgid "Latest assessments"
 msgstr "Последние оценки"
 
-#: js/views/respondent.js:89
+#: js/views/respondent.js:80
 msgid "Latest results"
 msgstr "Последние результаты"
 
@@ -1796,7 +1795,7 @@ msgid "Letters, digits and @ . + - _ only."
 msgstr "Только буквы, цифры и @ . + - _"
 
 #: js/views/admin-methodologies.js:494 js/views/admin-methodologies.js:514
-#: js/views/respondent.js:520 js/views/respondent.js:529
+#: js/views/respondent.js:542 js/views/respondent.js:551
 msgid "Level"
 msgstr "Уровень"
 
@@ -1854,7 +1853,8 @@ msgstr "Линейно к целевому значению"
 msgid "Linear: 250 → 1, 90 → 5"
 msgstr "Линейно: 250 → 1, 90 → 5"
 
-#: js/views/respondent.js:192
+#: js/views/data.js:87 js/views/respondent.js:183 js/views/respondent.js:241
+#: js/views/respondent.js:291 js/views/respondent.js:485
 msgid "Loading…"
 msgstr "Загрузка…"
 
@@ -1938,7 +1938,7 @@ msgstr "Метод удалён."
 msgid "Method saved."
 msgstr "Метод сохранён."
 
-#: js/views/respondent.js:383
+#: js/views/respondent.js:404
 msgid "Method used"
 msgstr "Использованный метод"
 
@@ -1960,7 +1960,7 @@ msgstr "Методик: {count}"
 msgid "Methodology"
 msgstr "Методика"
 
-#: js/views/dashboard.js:143
+#: js/views/dashboard.js:145
 msgid "Methodology versions"
 msgstr "Версии методик"
 
@@ -1992,7 +1992,7 @@ msgstr "Выше"
 msgid "Multiple choice"
 msgstr "Несколько вариантов"
 
-#: js/main.js:52 js/views/respondent.js:188
+#: js/main.js:52 js/views/respondent.js:179
 msgid "My assessments"
 msgstr "Мои оценки"
 
@@ -2006,11 +2006,11 @@ msgstr "Моя работа"
 #: js/views/admin-catalogs.js:219 js/views/admin-catalogs.js:222
 #: js/views/admin-catalogs.js:254 js/views/admin-catalogs.js:261
 #: js/views/admin-methodologies.js:79 js/views/admin-methodologies.js:249
-#: js/views/admin-questions.js:100 js/views/respondent.js:114
+#: js/views/admin-questions.js:100 js/views/respondent.js:105
 msgid "Name"
 msgstr "Название"
 
-#: js/views/respondent.js:167
+#: js/views/respondent.js:158
 msgid "Name or reference"
 msgstr "Название или идентификатор"
 
@@ -2052,12 +2052,12 @@ msgstr ""
 msgid "Nearest to the score"
 msgstr "Ближайший к баллу"
 
-#: js/views/dashboard.js:136
+#: js/views/dashboard.js:138
 msgid "Needs attention"
 msgstr "Требует внимания"
 
-#: js/main.js:52 js/views/respondent.js:73 js/views/respondent.js:188
-#: js/views/respondent.js:189 js/views/respondent.js:214
+#: js/main.js:52 js/views/respondent.js:64 js/views/respondent.js:179
+#: js/views/respondent.js:180 js/views/respondent.js:231
 msgid "New assessment"
 msgstr "Новая оценка"
 
@@ -2065,7 +2065,7 @@ msgstr "Новая оценка"
 msgid "New here?"
 msgstr "Впервые здесь?"
 
-#: js/views/dashboard.js:119
+#: js/views/dashboard.js:121
 msgid "New here? Start with this page"
 msgstr "Впервые здесь? Начните с этой страницы"
 
@@ -2082,21 +2082,25 @@ msgstr "Новый пароль"
 msgid "New question"
 msgstr "Новый вопрос"
 
-#: js/views/dashboard.js:127
+#: js/views/data.js:69 js/views/respondent.js:218
+msgid "Next"
+msgstr "Далее"
+
+#: js/views/dashboard.js:129
 msgid "Next step:"
 msgstr "Следующий шаг:"
 
 #: js/scoring.js:99 js/views/admin-methodologies.js:486
 #: js/views/admin-methodologies.js:564 js/views/admin-questions.js:255
-#: js/views/respondent.js:427 js/views/respondent.js:455
+#: js/views/respondent.js:448 js/views/respondent.js:476
 msgid "No"
 msgstr "Нет"
 
-#: js/views/respondent.js:225
-msgid "No assessments yet."
-msgstr "Оценок пока нет."
+#: js/views/respondent.js:244
+msgid "No assessments found."
+msgstr "Оценки не найдены."
 
-#: js/views/respondent.js:225
+#: js/views/respondent.js:244
 msgid "No assessments yet. Start one with “New assessment”."
 msgstr "Оценок пока нет. Начните первую кнопкой «Новая оценка»."
 
@@ -2135,11 +2139,11 @@ msgstr "Методов пока нет. Добавьте первый ниже."
 msgid "No object types yet. Add the first one below."
 msgstr "Типов объектов пока нет. Добавьте первый ниже."
 
-#: js/views/respondent.js:179
+#: js/views/respondent.js:170
 msgid "No objects found."
 msgstr "Объекты не найдены."
 
-#: js/views/respondent.js:137
+#: js/views/respondent.js:128
 msgid "No objects of this type yet"
 msgstr "Объектов этого типа пока нет"
 
@@ -2155,11 +2159,11 @@ msgstr "Вариантов пока нет. Добавьте минимум дв
 msgid "No question matches"
 msgstr "Подходящих вопросов нет"
 
-#: js/views/respondent.js:176
+#: js/views/respondent.js:167
 msgid "No questionnaire for this type yet"
 msgstr "Для этого типа пока нет анкеты"
 
-#: js/views/respondent.js:155
+#: js/views/respondent.js:146
 msgid "No questionnaires are published yet. Ask an admin to publish one."
 msgstr ""
 "Опубликованных анкет пока нет. Попросите администратора опубликовать анкету."
@@ -2172,7 +2176,7 @@ msgstr "Нет вопросов, подходящих под фильтры."
 msgid "No questions yet. Click “New question” to write the first one."
 msgstr "Вопросов пока нет. Нажмите «Новый вопрос», чтобы написать первый."
 
-#: js/views/respondent.js:400
+#: js/views/respondent.js:421
 msgid "No real upload in this prototype"
 msgstr "В прототипе файлы не загружаются"
 
@@ -2180,7 +2184,7 @@ msgstr "В прототипе файлы не загружаются"
 msgid "No root node."
 msgstr "Нет корневого узла."
 
-#: js/views/data.js:68
+#: js/views/data.js:89
 msgid "No rows yet."
 msgstr "Строк пока нет."
 
@@ -2196,7 +2200,7 @@ msgstr "Правила оценки пока нет."
 msgid "No units yet. Add the first one below."
 msgstr "Единиц измерения пока нет. Добавьте первую ниже."
 
-#: js/help.js:66 js/views/respondent.js:529
+#: js/help.js:66 js/views/respondent.js:551
 msgid "Node"
 msgstr "Узел"
 
@@ -2212,19 +2216,19 @@ msgstr "Настройки узла"
 msgid "Nodes"
 msgstr "Узлы"
 
-#: js/views/respondent.js:450
+#: js/views/respondent.js:471
 msgid "Not answered"
 msgstr "Нет ответа"
 
-#: js/views/respondent.js:353
+#: js/views/respondent.js:374
 msgid "Not answered yet."
 msgstr "Ответа пока нет."
 
-#: js/views/respondent.js:382 js/views/respondent.js:451
+#: js/views/respondent.js:403 js/views/respondent.js:472
 msgid "Not applicable"
 msgstr "Неприменимо"
 
-#: js/views/respondent.js:353
+#: js/views/respondent.js:374
 msgid "Not applicable: left out."
 msgstr "Неприменимо: не учитывается."
 
@@ -2240,7 +2244,7 @@ msgstr "Не используется ни в одной методике"
 msgid "Not used yet. Add it to a methodology from the methodology’s tree."
 msgstr "Пока не используется. Добавьте его в методику через её дерево."
 
-#: js/views/dashboard.js:142
+#: js/views/dashboard.js:144
 msgid "Not used yet: {count}"
 msgstr "Пока не используются: {count}"
 
@@ -2252,11 +2256,11 @@ msgstr "Заметки"
 msgid "Nothing here yet."
 msgstr "Здесь пока пусто."
 
-#: js/views/respondent.js:87
+#: js/views/respondent.js:78
 msgid "Nothing in progress. Start a new assessment."
 msgstr "Незавершённых оценок нет. Начните новую."
 
-#: js/views/dashboard.js:139
+#: js/views/dashboard.js:141
 msgid "Nothing needs attention."
 msgstr "Всё в порядке."
 
@@ -2270,8 +2274,8 @@ msgid ""
 msgstr ""
 "Числа с равным шагом, но без настоящего нуля, например температура в °C."
 
-#: js/views/respondent.js:86 js/views/respondent.js:90
-#: js/views/respondent.js:168 js/views/respondent.js:223
+#: js/views/respondent.js:77 js/views/respondent.js:81
+#: js/views/respondent.js:159 js/views/respondent.js:242
 msgid "Object"
 msgstr "Объект"
 
@@ -2299,11 +2303,11 @@ msgstr "Типы, которые используются объектами и�
 msgid "Object types: what kind of thing is assessed"
 msgstr "Типы объектов: что именно оценивается"
 
-#: js/views/dashboard.js:144
+#: js/views/dashboard.js:146
 msgid "Object types: {count}"
 msgstr "Типов объектов: {count}"
 
-#: js/views/admin-catalogs.js:17 js/views/dashboard.js:144
+#: js/views/admin-catalogs.js:17 js/views/dashboard.js:146
 msgid "Objects"
 msgstr "Объекты"
 
@@ -2330,7 +2334,7 @@ msgstr ""
 msgid "One methodology version applied to one object."
 msgstr "Одна версия методики, применённая к одному объекту."
 
-#: js/views/admin-catalogs.js:263 js/views/respondent.js:116
+#: js/views/admin-catalogs.js:263 js/views/respondent.js:107
 msgid "One per line, e.g. year_built = 1987"
 msgstr "По одному на строку, например year_built = 1987"
 
@@ -2358,7 +2362,7 @@ msgstr ""
 "Открывайте приложение через сервер Django (python manage.py runserver, затем"
 " http://localhost:8000), а не из файла или с другого веб-сервера."
 
-#: js/views/respondent.js:309
+#: js/views/respondent.js:330
 msgid ""
 "Open “How to assess” on each question for the instructions. Each answer is "
 "saved and scored shortly after you enter it."
@@ -2491,7 +2495,7 @@ msgstr "Исправьте выделенные поля."
 msgid "Position"
 msgstr "Позиция"
 
-#: js/views/dashboard.js:117
+#: js/views/dashboard.js:119
 msgid ""
 "Prepare everything respondents need to assess objects: reference lists, "
 "questions and published methodologies."
@@ -2502,6 +2506,10 @@ msgstr ""
 #: js/views/admin-questions.js:261
 msgid "Preview"
 msgstr "Предпросмотр"
+
+#: js/views/data.js:67 js/views/respondent.js:216
+msgid "Previous"
+msgstr "Назад"
 
 #: js/views/admin-methodologies.js:123
 msgid "Problems to fix before publishing: {count}"
@@ -2523,7 +2531,7 @@ msgstr "Профиль сохранён."
 msgid "Property tree"
 msgstr "Дерево свойств"
 
-#: js/views/respondent.js:314
+#: js/views/respondent.js:335
 msgid "Provisional total"
 msgstr "Предварительный итог"
 
@@ -2540,7 +2548,7 @@ msgid "Published v{version}. Respondents can now use it."
 msgstr ""
 "Версия v{version} опубликована. Теперь респонденты могут её использовать."
 
-#: js/views/respondent.js:132
+#: js/views/respondent.js:123
 msgid "Published {date}"
 msgstr "Опубликована {date}"
 
@@ -2552,7 +2560,7 @@ msgstr ""
 "Опубликована: заблокирована, чтобы прошлые баллы можно было воспроизвести. "
 "Респонденты могут начинать по ней оценки."
 
-#: js/views/dashboard.js:143
+#: js/views/dashboard.js:145
 msgid "Published: {count}"
 msgstr "Опубликовано: {count}"
 
@@ -2625,21 +2633,21 @@ msgstr ""
 "Текст вопроса: EN «Is an automatic fire alarm installed?», RU и KY — своими "
 "словами."
 
-#: js/views/respondent.js:86 js/views/respondent.js:90
-#: js/views/respondent.js:219 js/views/respondent.js:223
+#: js/views/respondent.js:77 js/views/respondent.js:81
+#: js/views/respondent.js:236 js/views/respondent.js:242
 msgid "Questionnaire"
 msgstr "Анкета"
 
-#: js/views/respondent.js:168
+#: js/views/respondent.js:159
 msgid "Questionnaires"
 msgstr "Анкеты"
 
-#: js/views/respondent.js:82
+#: js/views/respondent.js:73
 msgid "Questionnaires available"
 msgstr "Доступно анкет"
 
 #: js/main.js:45 js/views/admin-questions.js:55 js/views/admin-questions.js:89
-#: js/views/dashboard.js:55 js/views/dashboard.js:142 js/views/help.js:45
+#: js/views/dashboard.js:55 js/views/dashboard.js:144 js/views/help.js:45
 msgid "Questions"
 msgstr "Вопросы"
 
@@ -2659,7 +2667,7 @@ msgstr ""
 "выбор, да/нет…). Насколько он важен и как оценивается, решается в каждой "
 "методике."
 
-#: js/views/respondent.js:132
+#: js/views/respondent.js:123
 msgid "Questions: {count}"
 msgstr "Вопросов: {count}"
 
@@ -2699,7 +2707,7 @@ msgstr "Исходный ответ, использованный метод, б
 msgid "Read the result"
 msgstr "Изучите результат"
 
-#: js/views/respondent.js:525
+#: js/views/respondent.js:547
 msgid "Reading the result"
 msgstr "Как читать результат"
 
@@ -2708,24 +2716,24 @@ msgid "Ready to publish: no problems found."
 msgstr "Готово к публикации: проблем не найдено."
 
 #: js/views/admin-catalogs.js:255 js/views/admin-catalogs.js:262
-#: js/views/respondent.js:115 js/views/respondent.js:168
+#: js/views/respondent.js:106 js/views/respondent.js:159
 msgid "Reference"
 msgstr "Идентификатор"
 
-#: js/views/respondent.js:180
+#: js/views/respondent.js:171
 msgid "Register an object"
 msgstr "Зарегистрировать объект"
 
-#: js/views/respondent.js:111
+#: js/views/respondent.js:102
 msgid "Register object"
 msgstr "Зарегистрировать объект"
 
-#: js/views/respondent.js:120
+#: js/views/respondent.js:111
 msgid "Registered {name}."
 msgstr "Зарегистрирован объект {name}."
 
 #: js/views/admin-methodologies.js:358 js/views/admin-methodologies.js:502
-#: js/views/respondent.js:393
+#: js/views/respondent.js:414
 msgid "Remove"
 msgstr "Убрать"
 
@@ -2733,11 +2741,11 @@ msgstr "Убрать"
 msgid "Rename"
 msgstr "Переименовать"
 
-#: js/views/respondent.js:304
+#: js/views/respondent.js:325
 msgid "Reopen"
 msgstr "Открыть заново"
 
-#: js/views/respondent.js:304
+#: js/views/respondent.js:325
 msgid "Reopened: you can change answers again."
 msgstr "Открыто заново: ответы снова можно менять."
 
@@ -2774,11 +2782,10 @@ msgid "Reset demo data"
 msgstr "Сбросить демо-данные"
 
 #: js/views/admin-catalogs.js:214
-msgid "Residential building, Office building."
-msgstr "Жилое здание, Офисное здание."
+msgid "Residential building, Office building, Supplier."
+msgstr "Жилое здание, Офисное здание, Поставщик."
 
-#: js/views/respondent.js:221 js/views/respondent.js:223
-#: js/views/respondent.js:512
+#: js/views/respondent.js:242 js/views/respondent.js:534
 msgid "Respondent"
 msgstr "Респондент"
 
@@ -2798,12 +2805,12 @@ msgstr ""
 msgid "Respondents see this name when they start an assessment."
 msgstr "Респонденты видят это название, когда начинают оценку."
 
-#: js/views/respondent.js:61 js/views/respondent.js:510
-#: js/views/respondent.js:511
+#: js/views/respondent.js:52 js/views/respondent.js:532
+#: js/views/respondent.js:533
 msgid "Result"
 msgstr "Результат"
 
-#: js/views/respondent.js:472
+#: js/views/respondent.js:494
 msgid "Result not ready"
 msgstr "Результат ещё не готов"
 
@@ -2812,7 +2819,7 @@ msgstr "Результат ещё не готов"
 msgid "Result scale"
 msgstr "Шкала результата"
 
-#: js/views/respondent.js:472
+#: js/views/respondent.js:494
 msgid "Results are calculated when the assessment is completed."
 msgstr "Результаты рассчитываются при завершении оценки."
 
@@ -2947,7 +2954,7 @@ msgstr ""
 "нельзя."
 
 #: js/views/admin-methodologies.js:494 js/views/admin-methodologies.js:513
-#: js/views/help.js:67 js/views/respondent.js:529
+#: js/views/help.js:67 js/views/respondent.js:551
 msgid "Score"
 msgstr "Балл"
 
@@ -2980,7 +2987,8 @@ msgstr "Правило оценки"
 msgid "Scoring rules"
 msgstr "Правила оценки"
 
-#: js/views/admin-questions.js:57 js/views/respondent.js:166
+#: js/views/admin-questions.js:57 js/views/respondent.js:157
+#: js/views/respondent.js:238
 msgid "Search"
 msgstr "Поиск"
 
@@ -2988,7 +2996,7 @@ msgstr "Поиск"
 msgid "Sections"
 msgstr "Разделы"
 
-#: js/views/respondent.js:91
+#: js/views/respondent.js:82
 msgid "See your full history"
 msgstr "Вся история"
 
@@ -3008,7 +3016,7 @@ msgstr "Укажите худшее и лучшее значения."
 msgid "Set up the catalogs"
 msgstr "Заполните справочники"
 
-#: js/views/dashboard.js:120
+#: js/views/dashboard.js:122
 msgid ""
 "Setting up an assessment goes in four steps, shown below in the usual order."
 " Each step opens a page that explains what to do. Words with a dotted "
@@ -3024,7 +3032,7 @@ msgstr ""
 msgid "Settings saved."
 msgstr "Настройки сохранены."
 
-#: js/views/dashboard.js:126
+#: js/views/dashboard.js:128
 msgid "Setup steps"
 msgstr "Шаги подготовки"
 
@@ -3096,22 +3104,22 @@ msgstr "Обычные пользователи"
 msgid "Start"
 msgstr "Начните"
 
-#: js/views/respondent.js:141
+#: js/views/respondent.js:132
 msgid "Start assessment"
 msgstr "Начать оценку"
 
-#: js/views/respondent.js:175
+#: js/views/respondent.js:166
 msgid "Start “{name}”"
 msgstr "Начать «{name}»"
 
-#: js/views/respondent.js:86 js/views/respondent.js:90
-#: js/views/respondent.js:223
+#: js/views/respondent.js:77 js/views/respondent.js:81
+#: js/views/respondent.js:242
 msgid "Started"
 msgstr "Начата"
 
 #: js/views/admin-methodologies.js:61 js/views/admin-questions.js:198
-#: js/views/respondent.js:86 js/views/respondent.js:90
-#: js/views/respondent.js:217 js/views/respondent.js:223
+#: js/views/respondent.js:77 js/views/respondent.js:81
+#: js/views/respondent.js:234 js/views/respondent.js:242
 msgid "Status"
 msgstr "Статус"
 
@@ -3210,7 +3218,7 @@ msgstr "Текстовые ответы не оцениваются."
 msgid "Text answers are stored but never scored."
 msgstr "Текстовые ответы сохраняются, но не оцениваются."
 
-#: js/views/dashboard.js:122
+#: js/views/dashboard.js:124
 msgid ""
 "Texts such as names and questions are entered in every language: English, "
 "Russian and Kyrgyz."
@@ -3258,7 +3266,7 @@ msgstr ""
 msgid "The app could not start."
 msgstr "Приложение не запустилось."
 
-#: js/views/respondent.js:326
+#: js/views/respondent.js:347
 msgid "The assessment can’t be completed yet:"
 msgstr "Оценку пока нельзя завершить:"
 
@@ -3300,7 +3308,7 @@ msgstr "Варианты, из которых выбирает респонде�
 msgid "The exam programme: which questions, how many points each"
 msgstr "Программа экзамена: какие вопросы и сколько баллов за каждый"
 
-#: js/views/dashboard.js:121
+#: js/views/dashboard.js:123
 msgid ""
 "The example data already contains a complete, published methodology. Open it"
 " to see how a finished one looks before you build your own."
@@ -3407,7 +3415,7 @@ msgstr ""
 "Число, которому соответствует уровень. Баллы показываются с ближайшим "
 "уровнем."
 
-#: js/views/respondent.js:147
+#: js/views/respondent.js:138
 msgid "The object is not in the list? Register it"
 msgstr "Объекта нет в списке? Зарегистрируйте его"
 
@@ -3447,11 +3455,13 @@ msgstr ""
 
 #: js/views/admin-catalogs.js:248
 msgid ""
-"The reference is your own identifier, such as a cadastral number. Attributes"
-" are free notes like the year built. Object names are not translated."
+"The reference is your own identifier, such as a cadastral number or a "
+"supplier code. Attributes are free notes like the year built or the country."
+" Object names are not translated."
 msgstr ""
-"Идентификатор — ваш собственный номер, например кадастровый. Атрибуты — "
-"свободные заметки, например год постройки. Названия объектов не переводятся."
+"Идентификатор — ваш собственный номер, например кадастровый номер или код "
+"поставщика. Атрибуты — свободные заметки, например год постройки или страна."
+" Названия объектов не переводятся."
 
 #: js/views/admin-questions.js:170
 msgid "The respondent picks one of this scale’s levels."
@@ -3480,6 +3490,18 @@ msgstr ""
 "Свод правил для оценки одного вида объектов. Методика расставляет вопросы из"
 " библиотеки в дерево, задаёт каждой части вес и описывает, как каждый ответ "
 "превращается в балл. У методик есть версии."
+
+#: js/views/help.js:76
+msgid ""
+"The same rules work for any kind of object. The example data also has "
+"supplier reviews (SUPPLIER_EVAL): Ala-Too Packaging scores 4.3, “Good”. Silk"
+" Road Ingredients fails: 9 % of its batches were rejected, which scores 1.4,"
+" below the knock-out threshold of 2."
+msgstr ""
+"Те же правила работают для любых объектов. В примерах есть и оценки "
+"поставщиков (SUPPLIER_EVAL): Ala-Too Packaging получает 4,3 — «Хорошо». Silk"
+" Road Ingredients не проходит: забраковано 9 % партий, это 1,4 балла — ниже "
+"критического порога 2."
 
 #: js/views/admin-methodologies.js:188
 msgid ""
@@ -3512,7 +3534,7 @@ msgid ""
 "questions."
 msgstr "Структура методики: группы, содержащие подгруппы и вопросы."
 
-#: js/views/respondent.js:320
+#: js/views/respondent.js:341
 msgid ""
 "The total is provisional: unanswered questions are left out and the "
 "remaining weights rescaled until you complete the assessment."
@@ -3566,7 +3588,7 @@ msgid ""
 "language."
 msgstr "Именно это респонденты видят рядом с полем ввода, на любом языке."
 
-#: js/views/respondent.js:306
+#: js/views/respondent.js:327
 msgid ""
 "This is {name}’s assessment. You can read it, but only they can change the "
 "answers."
@@ -3603,7 +3625,7 @@ msgid "Tick all options that apply. The lowest of their scores counts."
 msgstr ""
 "Отметьте все подходящие варианты. Учитывается наименьший из их баллов."
 
-#: js/views/respondent.js:310
+#: js/views/respondent.js:331
 msgid ""
 "Tick “Not applicable” when a question doesn’t apply to this object: it is "
 "left out and the other weights are rescaled."
@@ -3614,6 +3636,10 @@ msgstr ""
 #: js/help.js:11
 msgid "Tip"
 msgstr "Подсказка"
+
+#: js/views/respondent.js:239
+msgid "Title, object or respondent"
+msgstr "Название, объект или респондент"
 
 #: js/views/admin-methodologies.js:47
 msgid ""
@@ -3633,8 +3659,8 @@ msgstr "Исправить в этом узле:"
 msgid "To make changes, click “Create new version”."
 msgstr "Чтобы внести изменения, нажмите «Создать новую версию»."
 
-#: js/views/respondent.js:86 js/views/respondent.js:90
-#: js/views/respondent.js:223
+#: js/views/respondent.js:77 js/views/respondent.js:81
+#: js/views/respondent.js:242
 msgid "Total"
 msgstr "Итог"
 
@@ -3642,11 +3668,11 @@ msgstr "Итог"
 msgid "Total = 0.5 × 3.4 + 0.3 × 5 + 0.2 × 3.5 = 3.9, “Good”."
 msgstr "Итог = 0,5 × 3,4 + 0,3 × 5 + 0,2 × 3,5 = 3,9, «Хорошо»."
 
-#: js/views/respondent.js:314
+#: js/views/respondent.js:335
 msgid "Total score"
 msgstr "Итоговый балл"
 
-#: js/views/data.js:57
+#: js/views/data.js:76
 msgid ""
 "Translated texts have one column per language, e.g. name_en, name_ru, "
 "name_ky. The column without a suffix shows the current language."
@@ -3679,7 +3705,7 @@ msgid "Two outcomes only, such as Pass / Fail."
 msgstr "Только два исхода, например Зачёт / Незачёт."
 
 #: js/views/admin-catalogs.js:163 js/views/admin-catalogs.js:254
-#: js/views/respondent.js:113 js/views/respondent.js:168
+#: js/views/respondent.js:104 js/views/respondent.js:159
 msgid "Type"
 msgstr "Тип"
 
@@ -3725,7 +3751,7 @@ msgstr ""
 "Единицы, шкалы с уровнями, методы оценки, типы объектов и объекты. Обычно "
 "заполняются один раз."
 
-#: js/views/respondent.js:443
+#: js/views/respondent.js:464
 msgid "Unsupported answer type."
 msgstr "Неподдерживаемый тип ответа."
 
@@ -3808,7 +3834,7 @@ msgstr "Статус версии"
 msgid "Versions: {count}"
 msgstr "Версий: {count}"
 
-#: js/views/respondent.js:303
+#: js/views/respondent.js:324
 msgid "View result"
 msgstr "Посмотреть результат"
 
@@ -3821,12 +3847,12 @@ msgid "Warnings:"
 msgstr "Предупреждения:"
 
 #: js/help.js:71 js/views/admin-methodologies.js:219
-#: js/views/admin-methodologies.js:252 js/views/respondent.js:338
-#: js/views/respondent.js:529
+#: js/views/admin-methodologies.js:252 js/views/respondent.js:359
+#: js/views/respondent.js:551
 msgid "Weight"
 msgstr "Вес"
 
-#: js/views/respondent.js:529
+#: js/views/respondent.js:551
 msgid "Weighted"
 msgstr "Взвешенный"
 
@@ -3878,7 +3904,7 @@ msgstr "Что спрашивается и какой ответ допусти�
 msgid "What is asked and which answer is valid."
 msgstr "Что спрашивается и какой ответ допустим."
 
-#: js/views/data.js:56
+#: js/views/data.js:75
 msgid "What is this page?"
 msgstr "Что это за страница?"
 
@@ -3902,11 +3928,11 @@ msgstr "Что измеряет группа, например «Состоян�
 
 #: js/views/admin-catalogs.js:137
 msgid ""
-"What this level means in practice, e.g. “Minor defects; no repair needed "
-"now”."
+"What this level means in practice, e.g. “Minor shortcomings; no action "
+"needed now”."
 msgstr ""
-"Что уровень означает на практике, например «Небольшие дефекты; ремонт пока "
-"не нужен»."
+"Что уровень означает на практике, например «Небольшие недостатки; сейчас "
+"меры не нужны»."
 
 #: js/views/admin-methodologies.js:61
 msgid "What this means"
@@ -3925,7 +3951,7 @@ msgstr ""
 msgid "When the checklist below is green, click Publish."
 msgstr "Когда список проверки ниже станет зелёным, нажмите «Опубликовать»."
 
-#: js/views/dashboard.js:123
+#: js/views/dashboard.js:125
 msgid ""
 "When you know your way around, turn the explanations off with the Helpers "
 "switch at the top right. You can turn them on again at any time."
@@ -3933,7 +3959,7 @@ msgstr ""
 "Когда освоитесь, выключите пояснения переключателем «Подсказки» в правом "
 "верхнем углу. Включить их снова можно в любой момент."
 
-#: js/views/respondent.js:135
+#: js/views/respondent.js:126
 msgid "Which object are you assessing?"
 msgstr "Какой объект вы оцениваете?"
 
@@ -4000,7 +4026,7 @@ msgstr "Напишите вопросы"
 
 #: js/scoring.js:99 js/views/admin-methodologies.js:486
 #: js/views/admin-methodologies.js:564 js/views/admin-questions.js:255
-#: js/views/help.js:70 js/views/respondent.js:426 js/views/respondent.js:455
+#: js/views/help.js:70 js/views/respondent.js:447 js/views/respondent.js:476
 msgid "Yes"
 msgstr "Да"
 
@@ -4030,7 +4056,7 @@ msgstr "Вы вышли из системы. Войдите снова."
 msgid "You can change everything. Respondents can’t use it yet."
 msgstr "Можно менять всё. Респонденты пока не могут её использовать."
 
-#: js/views/respondent.js:77
+#: js/views/respondent.js:68
 msgid ""
 "You can stop at any time: answers are saved as soon as you enter them. "
 "Everything you have filled in stays in your history."
@@ -4045,11 +4071,11 @@ msgstr ""
 "У вас нет прав на это действие. Изменять эти данные могут только "
 "администраторы."
 
-#: js/views/respondent.js:168
+#: js/views/respondent.js:159
 msgid "Your assessments"
 msgstr "Ваши оценки"
 
-#: js/views/respondent.js:72
+#: js/views/respondent.js:63
 msgid ""
 "Your assessments in one place: continue where you left off, start a new one "
 "or look back at earlier results."
@@ -4076,7 +4102,7 @@ msgstr ""
 "Ваши роли определяют, какие разделы панели администратора вам доступны. Роли"
 " меняет суперпользователь в Django admin."
 
-#: js/views/respondent.js:317
+#: js/views/respondent.js:338
 msgid "a critical question is below its threshold."
 msgstr "критический вопрос ниже порога."
 
@@ -4088,7 +4114,7 @@ msgstr ""
 "роль персонала с полным доступом к справочникам, вопросам, методикам и всем "
 "оценкам, но не к пользователям."
 
-#: js/views/admin-methodologies.js:56 js/views/respondent.js:132
+#: js/views/admin-methodologies.js:56 js/views/respondent.js:123
 msgid "any object type"
 msgstr "любой тип объектов"
 
@@ -4096,7 +4122,7 @@ msgstr "любой тип объектов"
 msgid "archived"
 msgstr "в архиве"
 
-#: js/views/respondent.js:492
+#: js/views/respondent.js:514
 msgid "below {threshold}"
 msgstr "ниже {threshold}"
 
@@ -4112,15 +4138,15 @@ msgstr "бинарная"
 msgid "cancelled"
 msgstr "отменена"
 
-#: js/dom.js:64 js/views/respondent.js:511
+#: js/dom.js:64 js/views/respondent.js:533
 msgid "completed"
 msgstr "завершена"
 
-#: js/views/respondent.js:12
+#: js/views/respondent.js:11
 msgid "document"
 msgstr "документ"
 
-#: js/views/dashboard.js:131
+#: js/views/dashboard.js:133
 msgid "done"
 msgstr "готово"
 
@@ -4140,7 +4166,7 @@ msgstr "например, 5"
 msgid "e.g. 5-point quality"
 msgstr "например, 5-балльное качество"
 
-#: js/views/admin-catalogs.js:261 js/views/respondent.js:114
+#: js/views/admin-catalogs.js:261 js/views/respondent.js:105
 msgid "e.g. Block A, Riverside residential complex"
 msgstr "например, Корпус А, ЖК «Riverside»"
 
@@ -4176,7 +4202,7 @@ msgstr "например, Визуальный осмотр"
 msgid "e.g. mm, m², %"
 msgstr "например, mm, m², %"
 
-#: js/views/respondent.js:498
+#: js/views/respondent.js:520
 msgid "evidence: {count}"
 msgstr "подтверждений: {count}"
 
@@ -4204,11 +4230,11 @@ msgstr "неактивен"
 msgid "interval"
 msgstr "интервальная"
 
-#: js/views/respondent.js:341 js/views/respondent.js:492
+#: js/views/respondent.js:362 js/views/respondent.js:514
 msgid "knock-out"
 msgstr "критический провал"
 
-#: js/views/respondent.js:12
+#: js/views/respondent.js:11
 msgid "link"
 msgstr "ссылка"
 
@@ -4224,7 +4250,7 @@ msgstr ""
 "управляет пользователями и ролями в Django admin. Там же в любой момент "
 "можно добавить новые роли с более узкими правами."
 
-#: js/views/respondent.js:12
+#: js/views/respondent.js:11
 msgid "measurement protocol"
 msgstr "протокол измерений"
 
@@ -4232,7 +4258,7 @@ msgstr "протокол измерений"
 msgid "needs options"
 msgstr "нужны варианты"
 
-#: js/views/dashboard.js:131
+#: js/views/dashboard.js:133
 msgid "next"
 msgstr "следующий"
 
@@ -4256,7 +4282,7 @@ msgstr "выкл."
 msgid "on"
 msgstr "вкл."
 
-#: js/views/admin-catalogs.js:197 js/views/respondent.js:362
+#: js/views/admin-catalogs.js:197 js/views/respondent.js:383
 msgid "optional"
 msgstr "необязательно"
 
@@ -4264,11 +4290,11 @@ msgstr "необязательно"
 msgid "ordinal"
 msgstr "порядковая"
 
-#: js/views/respondent.js:12
+#: js/views/respondent.js:11
 msgid "photo"
 msgstr "фото"
 
-#: js/views/admin-methodologies.js:353 js/views/respondent.js:373
+#: js/views/admin-methodologies.js:353 js/views/respondent.js:394
 msgid "primary"
 msgstr "основной"
 
@@ -4284,7 +4310,7 @@ msgstr "вопрос"
 msgid "ratio"
 msgstr "отношений"
 
-#: js/views/admin-catalogs.js:197 js/views/respondent.js:362
+#: js/views/admin-catalogs.js:197 js/views/respondent.js:383
 msgid "required"
 msgstr "обязательно"
 
@@ -4317,7 +4343,7 @@ msgid "superuser: also manages users and roles in Django admin"
 msgstr ""
 "суперпользователь: также управляет пользователями и ролями в Django admin"
 
-#: js/views/dashboard.js:153
+#: js/views/dashboard.js:155
 msgid "total"
 msgstr "итог"
 
@@ -4329,7 +4355,7 @@ msgstr "единица"
 msgid "veto"
 msgstr "порог"
 
-#: js/views/respondent.js:362
+#: js/views/respondent.js:383
 msgid "weight"
 msgstr "вес"
 
@@ -4340,6 +4366,10 @@ msgstr "сумма весов {sum}"
 #: js/views/admin-catalogs.js:111 js/views/admin-catalogs.js:111
 msgid "worse"
 msgstr "хуже"
+
+#: js/views/data.js:68 js/views/respondent.js:217
+msgid "{from}–{to} of {count}"
+msgstr "{from}–{to} из {count}"
 
 #: js/views/dashboard.js:23
 msgid ""

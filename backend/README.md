@@ -28,7 +28,7 @@ uv pip install -p .venv/bin/python -r requirements.txt
 | --- | --- | --- | --- |
 | `root` | `root` | superuser | everything, including users and roles in Django admin |
 | `admin` | `admin` | Admin | catalogs, questions, methodologies (incl. publishing) and all assessments; not users |
-| `expert` | `expert` | none (standard user) | fill in assessments, see own history; owns the two example assessments |
+| `expert` | `expert` | none (standard user) | fill in assessments, see own history; owns the example assessments |
 
 Anyone can create a standard account on the sign-in page.
 
@@ -149,14 +149,21 @@ Models set `db_table` to the schema's table names, and their fields use the sche
 
 ## Fixtures
 
+The example data covers two unrelated kinds of object, to show that nothing in the model is specific to buildings:
+the same tables, engine and screens assess **residential buildings** (`TECH_RES`) and **suppliers** (`SUPPLIER_EVAL`).
+
 | Fixture | Contents |
 | --- | --- |
 | `catalogs` | Units (mm, kWh/m²·yr, %, pcs), the `quality_5` and `pass_fail` scales with levels, 5 assessment methods, 2 object types, and the buildings "Block A, Riverside residential complex" (RC-0042) and "House 7, Green Lane" (GL-0007) |
+| `supplier_catalogs` | The unit `day`, the object type `supplier`, the assessment method `survey`, and three suppliers: "Ala-Too Packaging LLC" (SUP-0101), "Silk Road Ingredients Ltd" (SUP-0102) and "Tian Shan Print" (SUP-0103) |
 | `question_library` | 4 categories and 8 questions. Four are used by the methodology: `STR_CRACK_WIDTH`, `STR_ROOF_STATE`, `SAF_FIRE_ALARM`, `EN_HEAT_USE`. Four are in the library only: `COM_INDOOR_HUMIDITY`, `COM_FACADE_RATING`, `COM_FACADE_DEFECTS`, `GEN_REMARKS` |
+| `supplier_questions` | The category "Supplier evaluation" with four subcategories, and 10 questions using every answer type: `SUP_ON_TIME`, `SUP_LEAD_TIME`, `SUP_REJECT_RATE`, `SUP_PRICE_LEVEL` (numeric), `SUP_QMS_CERT`, `SUP_DOCS_VALID` (yes/no), `SUP_PAYMENT_TERMS` (single choice), `SUP_INCIDENTS` (multiple choice), `SUP_COMMUNICATION` (scale level) and `SUP_REMARKS` (text, library only) |
 | `tech_res_methodology` | `TECH_RES` v1.0 (published): the tree STR 0.5 / SAF 0.3 / EN 0.2, plus assessment methods, scoring rules and criteria |
+| `supplier_methodology` | `SUPPLIER_EVAL` v1.0 (published) for the `supplier` type: Delivery 0.35 / Product quality 0.35 / Price and cooperation 0.2 / Compliance 0.1. It uses every scoring method (criteria ranges and options, linear between worst and best, linear towards a target, formula, the answer as the score), three aggregations (weighted average, weighted geometric mean, minimum), an optional question and two knock-out thresholds |
 | `example_assessments` | The worked example, completed. **Block A**: crack 1.2 mm → 3, roof minor wear → 4, fire alarm yes → 5, heat 150 → 3.5, giving a total of **3.9 "Good"**. **House 7**: the same answers but no fire alarm, giving **2.7**, and the root is vetoed by the knock-out threshold |
+| `supplier_assessments` | **Ala-Too Packaging**, completed: **4.34 "Good"**. **Silk Road Ingredients**, completed: 9 % rejected batches scores 1.4 by the formula `hi - min(x, 10) / 10 * (hi - lo)`, below the threshold of 2, so the supplier fails with a total of 2.69. **Tian Shan Print**: in progress, 3 of 9 questions answered |
 
-Load them in the order shown, or together in one `loaddata` call. Each fixture refers to records in the ones before it.
+Load them in the order `setup_demo` uses (`config/demo.py`), or together in one `loaddata` call. Each fixture refers to records in the ones before it.
 Every translated field is filled in English, Russian and Kyrgyz.
 
 ## Admin panel API
@@ -166,6 +173,12 @@ Any signed-in user can read what their role may see; changes need the matching D
 object records who created it. Session and HTTP Basic auth are enabled. Every
 collection supports list, create, retrieve, update (`PATCH`/`PUT`) and delete, unless noted otherwise.
 Lists accept `?search=` and `?ordering=`, plus the filters shown.
+
+**Paging.** Every list (both APIs) returns all rows by default. Add `?limit=` (at most 500) and optionally
+`?offset=` to get one page instead: `{count, next, previous, results}`.
+
+**Caching.** Every response has an ETag, and API responses say `Cache-Control: private, no-cache`. A
+browser that sends the ETag back (`If-None-Match`) gets an empty `304 Not Modified` when nothing changed.
 
 | Endpoint | Filters | Notes |
 | --- | --- | --- |
@@ -219,13 +232,17 @@ Mounted at `/api/respondent/`. Any signed-in user can use it for **their own** a
 | Endpoint | Notes |
 | --- | --- |
 | `GET questionnaires/` | The latest published version of every methodology. `?object=<id>` limits it to the object's type |
-| `assessments/` | List, create, update and delete. Create with `{object, methodology?}`: the latest published version of that methodology for the object's type is used. `methodology` can be left out when only one questionnaire fits. `respondent` is the signed-in user |
+| `assessments/` | List, create, update and delete. Create with `{object, methodology?}`: the latest published version of that methodology for the object's type is used. `methodology` can be left out when only one questionnaire fits. `respondent` is the signed-in user. Filters: `?status=`, `?respondent=`, `?object=`, `?methodology=`, `?methodology_version=`; `?search=` over title, object and respondent. Each row has `answered_count` and `question_count`, counted in SQL |
+| `GET assessments/summary/` | `{count, completed, latest}` (latest five) for the dashboard. Takes the same filters |
 | `POST assessments/{id}/answer/` | Saves part of an answer (`node` plus only the fields you send) and scores it. `options` replaces a multi-choice selection. Returns 409 once the assessment is completed |
 | `GET assessments/{id}/evaluation/` | Provisional score of every node from the answers so far |
 | `POST assessments/{id}/complete/` | 400 with `issues` if mandatory answers are missing; otherwise saves the node results and the total |
 | `POST assessments/{id}/reopen/` | Deletes the computed results so answers can change again |
 | `responses/`, `response-options/`, `node-results/` | Read only. Filter with `?assessment=` |
-| `response-evidence/` | List, create and delete |
+| `response-evidence/` | List, create and delete. Filter with `?assessment=` |
+
+`assessment-objects/` rows also carry `assessment_count` for roles with `assessments.view_all_assessments`
+(`null` for others).
 
 ## Sign-in
 

@@ -110,7 +110,9 @@ export default function dashboard() {
   const steps = setupSteps();
   const next = steps.find((s) => !s.done);
   const issues = attention();
-  const assessments = db.all('assessments');
+  // Counted by the server: the dashboard never loads every assessment.
+  const summary = db.assessmentSummary();
+  const latest = summary?.latest ?? [];
   const versions = db.all('methodology_versions');
 
   return h('div', { class: 'page' },
@@ -142,11 +144,11 @@ export default function dashboard() {
       tile(t('Questions'), db.all('questions').length, t('Not used yet: {count}', { count: db.all('questions', (q) => !db.find('methodology_nodes', (n) => n.question_id === q.id)).length }), '/admin/questions'),
       tile(t('Methodology versions'), versions.length, t('Published: {count}', { count: versions.filter((v) => v.status === 'published').length }), '/admin/methodologies'),
       tile(t('Objects'), db.all('assessment_objects').length, t('Object types: {count}', { count: db.all('object_types').length }), '/admin/catalogs/objects'),
-      tile(t('Assessments'), assessments.length, t('Completed: {count}', { count: assessments.filter((a) => a.status === 'completed').length }), '/admin/assessments')),
+      tile(t('Assessments'), summary?.count ?? '…', summary && t('Completed: {count}', { count: summary.completed }), '/admin/assessments')),
 
-    assessments.length > 0 && h('section', { class: 'block' },
+    latest.length > 0 && h('section', { class: 'block' },
       h('h2', {}, t('Latest assessments')),
-      h('ul', { class: 'plain-list' }, assessments.slice(0, 5).map((a) => h('li', {},
+      h('ul', { class: 'plain-list' }, latest.map((a) => h('li', {},
         link(a.status === 'completed' ? `/respondent/assessments/${a.id}/result` : `/respondent/assessments/${a.id}`, a.title ?? t('Assessment #{id}', { id: a.id })), ' ',
         a.respondent_name && h('span', { class: 'muted' }, `${a.respondent_name} · `),
         statusChip(a.status),

@@ -1,0 +1,93 @@
+[
+{
+  "model": "catalogs.unit",
+  "pk": 5,
+  "fields": {
+    "code": "day",
+    "name": "Day",
+    "name_en": "Day",
+    "name_ru": "День",
+    "name_ky": "Күн",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.objecttype",
+  "pk": 3,
+  "fields": {
+    "code": "supplier",
+    "name": "Supplier",
+    "name_en": "Supplier",
+    "name_ru": "Поставщик",
+    "name_ky": "Жабдуучу",
+    "description": "A company that supplies goods or materials",
+    "description_en": "A company that supplies goods or materials",
+    "description_ru": "Компания, которая поставляет товары или материалы",
+    "description_ky": "Товарларды же материалдарды жеткирип берүүчү компания"
+  }
+},
+{
+  "model": "catalogs.assessmentmethod",
+  "pk": 6,
+  "fields": {
+    "code": "survey",
+    "name": "Survey",
+    "name_en": "Survey",
+    "name_ru": "Опрос",
+    "name_ky": "Сурамжылоо",
+    "description": "Ratings collected from the people who work with the object",
+    "description_en": "Ratings collected from the people who work with the object",
+    "description_ru": "Оценки людей, которые работают с объектом",
+    "description_ky": "Объект менен иштеген адамдардын баалары",
+    "requires_evidence": false
+  }
+},
+{
+  "model": "catalogs.assessmentobject",
+  "pk": 3,
+  "fields": {
+    "object_type": 3,
+    "name": "Ala-Too Packaging LLC",
+    "external_ref": "SUP-0101",
+    "attributes": {
+      "country": "Kyrgyzstan",
+      "supplies": "cardboard boxes",
+      "partner_since": 2019
+    },
+    "created_at": "2026-10-01T09:00:00Z"
+  }
+},
+{
+  "model": "catalogs.assessmentobject",
+  "pk": 4,
+  "fields": {
+    "object_type": 3,
+    "name": "Silk Road Ingredients Ltd",
+    "external_ref": "SUP-0102",
+    "attributes": {
+      "country": "Kazakhstan",
+      "supplies": "dried fruit",
+      "partner_since": 2024
+    },
+    "created_at": "2026-10-01T09:00:00Z"
+  }
+},
+{
+  "model": "catalogs.assessmentobject",
+  "pk": 5,
+  "fields": {
+    "object_type": 3,
+    "name": "Tian Shan Print",
+    "external_ref": "SUP-0103",
+    "attributes": {
+      "country": "Kyrgyzstan",
+      "supplies": "labels",
+      "partner_since": 2022
+    },
+    "created_at": "2026-10-01T09:00:00Z"
+  }
+}
+]

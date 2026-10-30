@@ -54,7 +54,8 @@ export async function request(method, url, body) {
       mode: 'same-origin',
       credentials: 'same-origin',
       redirect: 'error',
-      cache: 'no-store',
+      // Revalidate with the server's ETag: an unchanged list comes back as an empty 304.
+      cache: 'no-cache',
       headers: { Accept: 'application/json', 'Content-Type': 'application/json', 'X-CSRFToken': csrfToken() },
       body: body === undefined ? undefined : JSON.stringify(body),
     });

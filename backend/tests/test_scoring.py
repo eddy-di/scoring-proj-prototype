@@ -7,6 +7,7 @@ from methodologies.models import MethodologyNode
 from methodologies.scoring import Answer, aggregate, score_answer
 
 FIXTURES = ['catalogs', 'question_library', 'tech_res_methodology', 'example_assessments']
+SUPPLIER_FIXTURES = FIXTURES + ['supplier_catalogs', 'supplier_questions', 'supplier_methodology', 'supplier_assessments']
 
 
 class WorkedExampleTests(TestCase):
@@ -72,6 +73,52 @@ class RuleTests(TestCase):
         self.assertIsNone(score_answer(node, Answer(is_not_applicable=True)).score)
         self.assertEqual(score_answer(node, Answer()).note, 'Not answered yet.')
 
+
+
+class SupplierExampleTests(TestCase):
+    """The second example domain: suppliers instead of buildings, same engine."""
+    fixtures = SUPPLIER_FIXTURES
+
+    def recompute(self, assessment):
+        for response in assessment.responses.all():
+            services.rescore(response)
+        _root, results = services.evaluate(assessment)
+        return {n.code: results[n.id] for n in assessment.methodology_version.nodes.all()}
+
+    def node(self, code):
+        return MethodologyNode.objects.get(version__methodology__code='SUPPLIER_EVAL', code=code)
+
+    def test_reliable_supplier_scores_good(self):
+        a = Assessment.objects.get(object__external_ref='SUP-0101')
+        r = self.recompute(a)
+        self.assertEqual({c: round(r[c]['score'], 4) for c in ('DEL', 'QUA', 'PRC', 'CMP', 'ROOT')},
+                         {'DEL': 4.12, 'QUA': 4.3867, 'PRC': 4.3285, 'CMP': 5, 'ROOT': 4.3431})
+        self.assertFalse(r['ROOT']['is_vetoed'])
+        self.assertEqual(a.total_scale_level.label, 'Good')
+
+    def test_high_reject_rate_knocks_the_supplier_out(self):
+        a = Assessment.objects.get(object__external_ref='SUP-0102')
+        r = self.recompute(a)
+        self.assertAlmostEqual(r['SUP_REJECT_RATE']['score'], 1.4)
+        self.assertTrue(r['QUA']['is_vetoed'])
+        self.assertTrue(r['ROOT']['is_vetoed'])
+        self.assertFalse(r['DEL']['is_vetoed'])
+
+    def test_unfinished_review_lists_the_missing_answers(self):
+        a = Assessment.objects.get(object__external_ref='SUP-0103')
+        self.assertEqual(len(services.complete(a)), 5)  # 9 questions, 3 answered, the certificate is optional
+
+    def test_rules(self):
+        reject = self.node('SUP_REJECT_RATE')  # formula
+        self.assertEqual([score_answer(reject, Answer(numeric_value=x)).score for x in (0, 5, 10, 30)], [5, 3, 1, 1])
+        price = self.node('SUP_PRICE_LEVEL')  # linear_target
+        self.assertEqual([score_answer(price, Answer(numeric_value=x)).score for x in (95, 70, 130, 60)], [5, 1, 1, 1])
+        lead = self.node('SUP_LEAD_TIME')  # criteria lookup, lower is better
+        self.assertEqual([score_answer(lead, Answer(numeric_value=x)).score for x in (3, 7, 29, 90)], [5, 4, 3, 1])
+        incidents = self.node('SUP_INCIDENTS')  # multi_choice: the worst selected option applies
+        self.assertEqual(score_answer(incidents, Answer(option_ids=[14, 17])).score, 1)
+        communication = self.node('SUP_COMMUNICATION')  # the scale level is the score
+        self.assertEqual(score_answer(communication, Answer(scale_level_id=4)).score, 4)
 
 class AggregationAndFormulaTests(TestCase):
     def test_weights_are_rescaled_over_scored_children(self):
