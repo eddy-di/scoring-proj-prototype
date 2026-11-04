@@ -257,6 +257,7 @@ fieldset.plain:disabled .btn, fieldset.plain:disabled .form-foot, fieldset.plain
 .qcard.na { opacity: .7; }
 .qcard-head { display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
 .qcard-head > div:first-child { flex: 1 1 320px; }
+.qcard-head > .chip { align-self: flex-start; }
 .qcard-head h3 { font-size: 16px; font-weight: 600; margin-top: 2px; }
 .howto { background: var(--accent-soft); border-radius: var(--radius); padding: 8px 12px; font-size: 14px; }
 .howto summary { cursor: pointer; font-weight: 500; color: var(--accent); }
@@ -502,6 +503,47 @@ td .row-actions { flex-wrap: nowrap; }
 .topbar { row-gap: 6px; padding-bottom: 6px; }
 .topbar .nav { order: 3; flex: 1 1 100%; gap: 4px 24px; border-top: 1px solid var(--rule); padding-top: 6px; }
 .nav-group { flex-wrap: wrap; min-width: 0; }
+
+/* Questionnaire: one page per section */
+/* Keeps the progress bar from covering whatever is scrolled or tabbed to. */
+html { --progress-h: 46px; scroll-padding-top: calc(var(--topbar-h, 0px) + var(--progress-h) + 12px); }
+.fill-split { grid-template-columns: minmax(230px, 280px) minmax(0, 1fr); }
+.fill-main { display: grid; gap: 14px; min-width: 0; }
+.fill-nav { padding: 10px; top: calc(var(--topbar-h, 89px) + var(--progress-h) + 12px); max-height: calc(100vh - var(--topbar-h, 89px) - var(--progress-h) - 28px); max-height: calc(100dvh - var(--topbar-h, 89px) - var(--progress-h) - 28px); }
+.step-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.step-heading { font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); padding: 12px 8px 4px; }
+.step-heading:first-child { padding-top: 2px; }
+.step-link { display: flex; align-items: baseline; gap: 8px; padding: 6px 8px; border-radius: var(--radius); color: var(--ink); text-decoration: none; font-size: 14px; }
+.step-link:hover { background: var(--panel); }
+.step-link.current { background: var(--accent-soft); font-weight: 600; }
+.step-name { flex: 1 1 auto; min-width: 0; }
+.step-count { font-size: 12px; color: var(--ink-soft); white-space: nowrap; }
+.step-link.done .step-count { color: var(--ok); font-weight: 600; }
+.step-last { border-top: 1px solid var(--rule); margin-top: 8px; padding-top: 8px; }
+.step-questions { display: grid; gap: 14px; }
+#step-title:focus { outline: none; }
+.step-buttons { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.step-slot { min-width: 96px; }
+.step-slot.end { display: flex; justify-content: flex-end; }
+.summary-progress { position: sticky; top: var(--topbar-h, 89px); z-index: 5; height: var(--progress-h); margin-bottom: 14px; display: flex; align-items: center; gap: 12px; padding: 0 16px; background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius); }
+.summary-progress .eyebrow { margin: 0; }
+.summary-progress strong { white-space: nowrap; }
+.progress-total { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+.progress-track { flex: 1 1 auto; min-width: 40px; height: 6px; border-radius: 3px; background: var(--panel); overflow: hidden; }
+.progress-fill { height: 100%; background: var(--accent); }
+/* Narrow screens: the counter and the score on one row, the bar under them. */
+@media (max-width: 860px) {
+  html { --progress-h: 62px; }
+  .summary-progress { flex-wrap: wrap; align-content: center; gap: 6px 10px; padding: 0 12px; }
+  .progress-total { margin-left: auto; }
+  .progress-total .eyebrow { display: none; }
+  .progress-track { order: 3; flex: 1 1 100%; }
+}
+@media (max-width: 360px) { .progress-total .chip ~ .muted, .progress-total .muted:has(+ .chip) { display: none; } }
+@media (max-width: 860px) {
+  .fill-split { grid-template-columns: minmax(0, 1fr); }
+  .fill-nav { position: relative; top: 0; max-height: 220px; overflow: auto; }
+}
 
 /* Paged lists */
 .pager { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }

@@ -106,7 +106,7 @@ so that the amount doesn't grow with the number of assessments:
 Each change goes to the API and then reloads only what it can have changed: the written table's group
 (`GROUPS` in `store.js`), or for answers just that assessment (`db.forAssessment(id)`). Lists show their
 previous rows while they refresh. Every GET revalidates with the server's ETag, so an unchanged list costs
-an empty `304`. Answers typed into the questionnaire are saved shortly after you stop typing.
+an empty `304`. Answers typed into the questionnaire are saved shortly after you stop typing. The questionnaire shows one section at a time (`#/respondent/assessments/<id>/step/<n>`), and opening an assessment continues at the first section with something unanswered. Respondents see only the overall score, in the sticky progress bar and on the result page; question codes, weights and section or question scores are shown to people with admin access. This is display only: the API sends the same data to everyone.
 
 When adding a screen: read reference data with `db.all()`/`db.get()`; read assessments of other people
 with `db.page()`; call `db.assessmentReady(id)` before reading one assessment's answers.
