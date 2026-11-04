@@ -60,6 +60,786 @@
   }
 },
 {
+  "model": "catalogs.unit",
+  "pk": 6,
+  "fields": {
+    "code": "m",
+    "name": "Metre",
+    "name_en": "Metre",
+    "name_ru": "Метр",
+    "name_ky": "Метр",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 7,
+  "fields": {
+    "code": "km",
+    "name": "Kilometre",
+    "name_en": "Kilometre",
+    "name_ru": "Километр",
+    "name_ky": "Километр",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 8,
+  "fields": {
+    "code": "h",
+    "name": "Hour",
+    "name_en": "Hour",
+    "name_ru": "Час",
+    "name_ky": "Саат",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 9,
+  "fields": {
+    "code": "min",
+    "name": "Minute",
+    "name_en": "Minute",
+    "name_ru": "Минута",
+    "name_ky": "Мүнөт",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 5,
+  "fields": {
+    "code": "day",
+    "name": "Day",
+    "name_en": "Day",
+    "name_ru": "День",
+    "name_ky": "Күн",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 10,
+  "fields": {
+    "code": "cm",
+    "name": "Centimetre",
+    "name_en": "Centimetre",
+    "name_ru": "Сантиметр",
+    "name_ky": "Сантиметр",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 11,
+  "fields": {
+    "code": "m²",
+    "name": "Square metre",
+    "name_en": "Square metre",
+    "name_ru": "Квадратный метр",
+    "name_ky": "Чарчы метр",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 12,
+  "fields": {
+    "code": "m³",
+    "name": "Cubic metre",
+    "name_en": "Cubic metre",
+    "name_ru": "Кубический метр",
+    "name_ky": "Куб метр",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 13,
+  "fields": {
+    "code": "L",
+    "name": "Litre",
+    "name_en": "Litre",
+    "name_ru": "Литр",
+    "name_ky": "Литр",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 14,
+  "fields": {
+    "code": "kg",
+    "name": "Kilogram",
+    "name_en": "Kilogram",
+    "name_ru": "Килограмм",
+    "name_ky": "Килограмм",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 15,
+  "fields": {
+    "code": "s",
+    "name": "Second",
+    "name_en": "Second",
+    "name_ru": "Секунда",
+    "name_ky": "Секунд",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 16,
+  "fields": {
+    "code": "ms",
+    "name": "Millisecond",
+    "name_en": "Millisecond",
+    "name_ru": "Миллисекунда",
+    "name_ky": "Миллисекунд",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 17,
+  "fields": {
+    "code": "week",
+    "name": "Week",
+    "name_en": "Week",
+    "name_ru": "Неделя",
+    "name_ky": "Жума",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 18,
+  "fields": {
+    "code": "mo",
+    "name": "Month",
+    "name_en": "Month",
+    "name_ru": "Месяц",
+    "name_ky": "Ай",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 19,
+  "fields": {
+    "code": "yr",
+    "name": "Year",
+    "name_en": "Year",
+    "name_ru": "Год",
+    "name_ky": "Жыл",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 20,
+  "fields": {
+    "code": "°",
+    "name": "Degree (angle)",
+    "name_en": "Degree (angle)",
+    "name_ru": "Градус (угол)",
+    "name_ky": "Градус (бурч)",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 21,
+  "fields": {
+    "code": "°C",
+    "name": "Degree Celsius",
+    "name_en": "Degree Celsius",
+    "name_ru": "Градус Цельсия",
+    "name_ky": "Цельсий градусу",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 22,
+  "fields": {
+    "code": "cur",
+    "name": "Local currency",
+    "name_en": "Local currency",
+    "name_ru": "Местная валюта",
+    "name_ky": "Жергиликтүү валюта",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 23,
+  "fields": {
+    "code": "cur/m²",
+    "name": "Local currency per m²",
+    "name_en": "Local currency per m²",
+    "name_ru": "Местная валюта за м²",
+    "name_ky": "м² үчүн жергиликтүү валюта",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 24,
+  "fields": {
+    "code": "cur/mo",
+    "name": "Local currency per month",
+    "name_en": "Local currency per month",
+    "name_ru": "Местная валюта в месяц",
+    "name_ky": "Айына жергиликтүү валюта",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 25,
+  "fields": {
+    "code": "cur/yr",
+    "name": "Local currency per year",
+    "name_en": "Local currency per year",
+    "name_ru": "Местная валюта в год",
+    "name_ky": "Жылына жергиликтүү валюта",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 26,
+  "fields": {
+    "code": "cur/m²/mo",
+    "name": "Local currency per m² per month",
+    "name_en": "Local currency per m² per month",
+    "name_ru": "Местная валюта за м² в месяц",
+    "name_ky": "Айына м² үчүн жергиликтүү валюта",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 27,
+  "fields": {
+    "code": "cur/m²/yr",
+    "name": "Local currency per m² per year",
+    "name_en": "Local currency per m² per year",
+    "name_ru": "Местная валюта за м² в год",
+    "name_ky": "Жылына м² үчүн жергиликтүү валюта",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 28,
+  "fields": {
+    "code": "Mbps",
+    "name": "Megabits per second",
+    "name_en": "Megabits per second",
+    "name_ru": "Мегабит в секунду",
+    "name_ky": "Секундасына мегабит",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 29,
+  "fields": {
+    "code": "dB",
+    "name": "Decibel",
+    "name_en": "Decibel",
+    "name_ru": "Децибел",
+    "name_ky": "Децибел",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 30,
+  "fields": {
+    "code": "dB(A)",
+    "name": "A-weighted decibel",
+    "name_en": "A-weighted decibel",
+    "name_ru": "Децибел по шкале А",
+    "name_ky": "А шкаласы боюнча децибел",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 31,
+  "fields": {
+    "code": "lux",
+    "name": "Lux",
+    "name_en": "Lux",
+    "name_ru": "Люкс",
+    "name_ky": "Люкс",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 32,
+  "fields": {
+    "code": "µg/m³",
+    "name": "Micrograms per m³",
+    "name_en": "Micrograms per m³",
+    "name_ru": "Микрограммов на м³",
+    "name_ky": "м³ үчүн микрограмм",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 33,
+  "fields": {
+    "code": "ppm",
+    "name": "Parts per million",
+    "name_en": "Parts per million",
+    "name_ru": "Частей на миллион",
+    "name_ky": "Миллиондогу үлүш",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 34,
+  "fields": {
+    "code": "ppb",
+    "name": "Parts per billion",
+    "name_en": "Parts per billion",
+    "name_ru": "Частей на миллиард",
+    "name_ky": "Миллиарддагы үлүш",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 35,
+  "fields": {
+    "code": "m/s",
+    "name": "Metres per second",
+    "name_en": "Metres per second",
+    "name_ru": "Метров в секунду",
+    "name_ky": "Секундасына метр",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 36,
+  "fields": {
+    "code": "m/s²",
+    "name": "Metres per second squared",
+    "name_en": "Metres per second squared",
+    "name_ru": "Метров в секунду в квадрате",
+    "name_ky": "Секундасына квадрат метр",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 37,
+  "fields": {
+    "code": "L/min",
+    "name": "Litres per minute",
+    "name_en": "Litres per minute",
+    "name_ru": "Литров в минуту",
+    "name_ky": "Мүнөтүнө литр",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 38,
+  "fields": {
+    "code": "m³/h",
+    "name": "Cubic metres per hour",
+    "name_en": "Cubic metres per hour",
+    "name_ru": "Кубических метров в час",
+    "name_ky": "Саатына куб метр",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 39,
+  "fields": {
+    "code": "m³/day",
+    "name": "Cubic metres per day",
+    "name_en": "Cubic metres per day",
+    "name_ru": "Кубических метров в сутки",
+    "name_ky": "Суткасына куб метр",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 40,
+  "fields": {
+    "code": "m³/mo",
+    "name": "Cubic metres per month",
+    "name_en": "Cubic metres per month",
+    "name_ru": "Кубических метров в месяц",
+    "name_ky": "Айына куб метр",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 41,
+  "fields": {
+    "code": "ACH",
+    "name": "Air changes per hour",
+    "name_en": "Air changes per hour",
+    "name_ru": "Воздухообменов в час",
+    "name_ky": "Саатына аба алмашуу",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 42,
+  "fields": {
+    "code": "bar",
+    "name": "Bar",
+    "name_en": "Bar",
+    "name_ru": "Бар",
+    "name_ky": "Бар",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 43,
+  "fields": {
+    "code": "kPa",
+    "name": "Kilopascal",
+    "name_en": "Kilopascal",
+    "name_ru": "Килопаскаль",
+    "name_ky": "Килопаскаль",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 44,
+  "fields": {
+    "code": "MPa",
+    "name": "Megapascal",
+    "name_en": "Megapascal",
+    "name_ru": "Мегапаскаль",
+    "name_ky": "Мегапаскаль",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 45,
+  "fields": {
+    "code": "V",
+    "name": "Volt",
+    "name_en": "Volt",
+    "name_ru": "Вольт",
+    "name_ky": "Вольт",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 46,
+  "fields": {
+    "code": "A",
+    "name": "Ampere",
+    "name_en": "Ampere",
+    "name_ru": "Ампер",
+    "name_ky": "Ампер",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 47,
+  "fields": {
+    "code": "mA",
+    "name": "Milliampere",
+    "name_en": "Milliampere",
+    "name_ru": "Миллиампер",
+    "name_ky": "Миллиампер",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 48,
+  "fields": {
+    "code": "Ω",
+    "name": "Ohm",
+    "name_en": "Ohm",
+    "name_ru": "Ом",
+    "name_ky": "Ом",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 49,
+  "fields": {
+    "code": "kW",
+    "name": "Kilowatt",
+    "name_en": "Kilowatt",
+    "name_ru": "Киловатт",
+    "name_ky": "Киловатт",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 50,
+  "fields": {
+    "code": "kWh/mo",
+    "name": "Kilowatt-hours per month",
+    "name_en": "Kilowatt-hours per month",
+    "name_ru": "Киловатт-часов в месяц",
+    "name_ky": "Айына киловатт-саат",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 51,
+  "fields": {
+    "code": "Gcal",
+    "name": "Gigacalorie",
+    "name_en": "Gigacalorie",
+    "name_ru": "Гигакалория",
+    "name_ky": "Гигакалория",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 52,
+  "fields": {
+    "code": "Gcal/mo",
+    "name": "Gigacalories per month",
+    "name_en": "Gigacalories per month",
+    "name_ru": "Гигакалорий в месяц",
+    "name_ky": "Айына гигакалория",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 53,
+  "fields": {
+    "code": "W/m²",
+    "name": "Watts per m²",
+    "name_en": "Watts per m²",
+    "name_ru": "Ватт на м²",
+    "name_ky": "м² үчүн ватт",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 54,
+  "fields": {
+    "code": "W/(m²·K)",
+    "name": "Thermal transmittance (U-value)",
+    "name_en": "Thermal transmittance (U-value)",
+    "name_ru": "Коэффициент теплопередачи (U)",
+    "name_ky": "Жылуулук өткөрүү коэффициенти (U)",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 55,
+  "fields": {
+    "code": "m²·K/W",
+    "name": "Thermal resistance",
+    "name_en": "Thermal resistance",
+    "name_ru": "Термическое сопротивление",
+    "name_ky": "Термикалык каршылык",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
+  "model": "catalogs.unit",
+  "pk": 56,
+  "fields": {
+    "code": "kg/m³",
+    "name": "Kilograms per m³",
+    "name_en": "Kilograms per m³",
+    "name_ru": "Килограммов на м³",
+    "name_ky": "м³ үчүн килограмм",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null
+  }
+},
+{
   "model": "catalogs.objecttype",
   "pk": 1,
   "fields": {
@@ -87,6 +867,36 @@
     "description_en": null,
     "description_ru": null,
     "description_ky": null
+  }
+},
+{
+  "model": "catalogs.objecttype",
+  "pk": 4,
+  "fields": {
+    "code": "apartment_existing",
+    "name": "Existing apartment",
+    "name_en": "Existing apartment",
+    "name_ru": "Готовая квартира",
+    "name_ky": "Даяр батир",
+    "description": "An apartment in a completed building",
+    "description_en": "An apartment in a completed building",
+    "description_ru": "Квартира в построенном доме",
+    "description_ky": "Курулуп бүткөн үйдөгү батир"
+  }
+},
+{
+  "model": "catalogs.objecttype",
+  "pk": 5,
+  "fields": {
+    "code": "apartment_development",
+    "name": "Apartment under development",
+    "name_en": "Apartment under development",
+    "name_ru": "Квартира в строящемся доме",
+    "name_ky": "Курулуп жаткан үйдөгү батир",
+    "description": "An apartment in a building that is not yet completed",
+    "description_en": "An apartment in a building that is not yet completed",
+    "description_ru": "Квартира в доме, строительство которого ещё не завершено",
+    "description_ky": "Курулушу али бүтө элек үйдөгү батир"
   }
 },
 {
@@ -127,6 +937,106 @@
     "description_en": null,
     "description_ru": null,
     "description_ky": null
+  }
+},
+{
+  "model": "catalogs.ratingscale",
+  "pk": 3,
+  "fields": {
+    "code": "agreement_5",
+    "name": "5-point agreement",
+    "name_en": "5-point agreement",
+    "name_ru": "5-балльная шкала согласия",
+    "name_ky": "5 баллдык макулдук шкаласы",
+    "scale_type": "ordinal",
+    "min_value": "1.0000",
+    "max_value": "5.0000",
+    "step": "1.0000",
+    "higher_is_better": true,
+    "description": "Likert scale: how far the respondent agrees with a statement",
+    "description_en": "Likert scale: how far the respondent agrees with a statement",
+    "description_ru": "Шкала Лайкерта: насколько респондент согласен с утверждением",
+    "description_ky": "Лайкерт шкаласы: респондент билдирүү менен канчалык макул"
+  }
+},
+{
+  "model": "catalogs.ratingscale",
+  "pk": 4,
+  "fields": {
+    "code": "frequency_5",
+    "name": "5-point frequency",
+    "name_en": "5-point frequency",
+    "name_ru": "5-балльная шкала частоты",
+    "name_ky": "5 баллдык жыштык шкаласы",
+    "scale_type": "ordinal",
+    "min_value": "1.0000",
+    "max_value": "5.0000",
+    "step": "1.0000",
+    "higher_is_better": true,
+    "description": "How often something happens",
+    "description_en": "How often something happens",
+    "description_ru": "Как часто что-либо происходит",
+    "description_ky": "Бир нерсе канчалык көп болот"
+  }
+},
+{
+  "model": "catalogs.ratingscale",
+  "pk": 5,
+  "fields": {
+    "code": "quality_10",
+    "name": "10-point quality",
+    "name_en": "10-point quality",
+    "name_ru": "10-балльное качество",
+    "name_ky": "10 баллдык сапат",
+    "scale_type": "ordinal",
+    "min_value": "1.0000",
+    "max_value": "10.0000",
+    "step": "1.0000",
+    "higher_is_better": true,
+    "description": "Quality scale with finer steps than the 5-point one",
+    "description_en": "Quality scale with finer steps than the 5-point one",
+    "description_ru": "Шкала качества с более мелкими шагами, чем 5-балльная",
+    "description_ky": "5 баллдыкка караганда майдараак кадамдары бар сапат шкаласы"
+  }
+},
+{
+  "model": "catalogs.ratingscale",
+  "pk": 6,
+  "fields": {
+    "code": "quality_0_5",
+    "name": "0–5 quality",
+    "name_en": "0–5 quality",
+    "name_ru": "Качество 0–5",
+    "name_ky": "Сапат 0–5",
+    "scale_type": "ordinal",
+    "min_value": "0.0000",
+    "max_value": "5.0000",
+    "step": "1.0000",
+    "higher_is_better": true,
+    "description": "Quality scale with a separate level for critical failures",
+    "description_en": "Quality scale with a separate level for critical failures",
+    "description_ru": "Шкала качества с отдельным уровнем для критических проблем",
+    "description_ky": "Критикалык көйгөйлөр үчүн өзүнчө деңгээли бар сапат шкаласы"
+  }
+},
+{
+  "model": "catalogs.ratingscale",
+  "pk": 7,
+  "fields": {
+    "code": "evidence_confidence_5",
+    "name": "5-point evidence confidence",
+    "name_en": "5-point evidence confidence",
+    "name_ru": "5-балльная надёжность подтверждений",
+    "name_ky": "Далилдердин ишенимдүүлүгүнүн 5 баллдык шкаласы",
+    "scale_type": "ordinal",
+    "min_value": "1.0000",
+    "max_value": "5.0000",
+    "step": "1.0000",
+    "higher_is_better": true,
+    "description": "How reliable the evidence behind an answer is",
+    "description_en": "How reliable the evidence behind an answer is",
+    "description_ru": "Насколько надёжны подтверждения ответа",
+    "description_ky": "Жоопту тастыктаган далилдер канчалык ишенимдүү"
   }
 },
 {
@@ -249,6 +1159,533 @@
   }
 },
 {
+  "model": "catalogs.scalelevel",
+  "pk": 8,
+  "fields": {
+    "scale": 3,
+    "value": "1.0000",
+    "label": "Strongly disagree",
+    "label_en": "Strongly disagree",
+    "label_ru": "Полностью не согласен",
+    "label_ky": "Такыр макул эмесмин",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "sort_order": 0
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 9,
+  "fields": {
+    "scale": 3,
+    "value": "2.0000",
+    "label": "Disagree",
+    "label_en": "Disagree",
+    "label_ru": "Не согласен",
+    "label_ky": "Макул эмесмин",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "sort_order": 1
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 10,
+  "fields": {
+    "scale": 3,
+    "value": "3.0000",
+    "label": "Neither agree nor disagree",
+    "label_en": "Neither agree nor disagree",
+    "label_ru": "Ни согласен, ни не согласен",
+    "label_ky": "Макул да, каршы да эмесмин",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "sort_order": 2
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 11,
+  "fields": {
+    "scale": 3,
+    "value": "4.0000",
+    "label": "Agree",
+    "label_en": "Agree",
+    "label_ru": "Согласен",
+    "label_ky": "Макулмун",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "sort_order": 3
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 12,
+  "fields": {
+    "scale": 3,
+    "value": "5.0000",
+    "label": "Strongly agree",
+    "label_en": "Strongly agree",
+    "label_ru": "Полностью согласен",
+    "label_ky": "Толук макулмун",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "sort_order": 4
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 13,
+  "fields": {
+    "scale": 4,
+    "value": "1.0000",
+    "label": "Never",
+    "label_en": "Never",
+    "label_ru": "Никогда",
+    "label_ky": "Эч качан",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "sort_order": 0
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 14,
+  "fields": {
+    "scale": 4,
+    "value": "2.0000",
+    "label": "Rarely",
+    "label_en": "Rarely",
+    "label_ru": "Редко",
+    "label_ky": "Сейрек",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "sort_order": 1
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 15,
+  "fields": {
+    "scale": 4,
+    "value": "3.0000",
+    "label": "Sometimes",
+    "label_en": "Sometimes",
+    "label_ru": "Иногда",
+    "label_ky": "Кээде",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "sort_order": 2
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 16,
+  "fields": {
+    "scale": 4,
+    "value": "4.0000",
+    "label": "Often",
+    "label_en": "Often",
+    "label_ru": "Часто",
+    "label_ky": "Көп учурда",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "sort_order": 3
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 17,
+  "fields": {
+    "scale": 4,
+    "value": "5.0000",
+    "label": "Always",
+    "label_en": "Always",
+    "label_ru": "Всегда",
+    "label_ky": "Ар дайым",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "sort_order": 4
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 18,
+  "fields": {
+    "scale": 5,
+    "value": "1.0000",
+    "label": "Unacceptable",
+    "label_en": "Unacceptable",
+    "label_ru": "Недопустимо",
+    "label_ky": "Жол берилгис",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "sort_order": 0
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 19,
+  "fields": {
+    "scale": 5,
+    "value": "2.0000",
+    "label": "Very poor",
+    "label_en": "Very poor",
+    "label_ru": "Очень плохо",
+    "label_ky": "Өтө начар",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "sort_order": 1
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 20,
+  "fields": {
+    "scale": 5,
+    "value": "3.0000",
+    "label": "Poor",
+    "label_en": "Poor",
+    "label_ru": "Плохо",
+    "label_ky": "Начар",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "sort_order": 2
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 21,
+  "fields": {
+    "scale": 5,
+    "value": "4.0000",
+    "label": "Below average",
+    "label_en": "Below average",
+    "label_ru": "Ниже среднего",
+    "label_ky": "Орточодон төмөн",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "sort_order": 3
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 22,
+  "fields": {
+    "scale": 5,
+    "value": "5.0000",
+    "label": "Average",
+    "label_en": "Average",
+    "label_ru": "Средне",
+    "label_ky": "Орточо",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "sort_order": 4
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 23,
+  "fields": {
+    "scale": 5,
+    "value": "6.0000",
+    "label": "Satisfactory",
+    "label_en": "Satisfactory",
+    "label_ru": "Удовлетворительно",
+    "label_ky": "Канааттандырарлык",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "sort_order": 5
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 24,
+  "fields": {
+    "scale": 5,
+    "value": "7.0000",
+    "label": "Good",
+    "label_en": "Good",
+    "label_ru": "Хорошо",
+    "label_ky": "Жакшы",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "sort_order": 6
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 25,
+  "fields": {
+    "scale": 5,
+    "value": "8.0000",
+    "label": "Very good",
+    "label_en": "Very good",
+    "label_ru": "Очень хорошо",
+    "label_ky": "Абдан жакшы",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "sort_order": 7
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 26,
+  "fields": {
+    "scale": 5,
+    "value": "9.0000",
+    "label": "Excellent",
+    "label_en": "Excellent",
+    "label_ru": "Отлично",
+    "label_ky": "Эң жакшы",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "sort_order": 8
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 27,
+  "fields": {
+    "scale": 5,
+    "value": "10.0000",
+    "label": "Outstanding",
+    "label_en": "Outstanding",
+    "label_ru": "Превосходно",
+    "label_ky": "Мыкты",
+    "description": null,
+    "description_en": null,
+    "description_ru": null,
+    "description_ky": null,
+    "sort_order": 9
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 28,
+  "fields": {
+    "scale": 6,
+    "value": "0.0000",
+    "label": "Critical",
+    "label_en": "Critical",
+    "label_ru": "Критично",
+    "label_ky": "Критикалык",
+    "description": "Unacceptable condition, material failure, or serious unresolved concern",
+    "description_en": "Unacceptable condition, material failure, or serious unresolved concern",
+    "description_ru": "Недопустимое состояние, существенный отказ или серьёзная нерешённая проблема",
+    "description_ky": "Жол берилгис абал, олуттуу бузулуу же чечилбеген олуттуу көйгөй",
+    "sort_order": 0
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 29,
+  "fields": {
+    "scale": 6,
+    "value": "1.0000",
+    "label": "Poor",
+    "label_en": "Poor",
+    "label_ru": "Плохо",
+    "label_ky": "Начар",
+    "description": "Significant deficiencies; substantial cost or risk",
+    "description_en": "Significant deficiencies; substantial cost or risk",
+    "description_ru": "Значительные недостатки; существенные затраты или риск",
+    "description_ky": "Олуттуу кемчиликтер; чоң чыгым же тобокел",
+    "sort_order": 1
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 30,
+  "fields": {
+    "scale": 6,
+    "value": "2.0000",
+    "label": "Below average",
+    "label_en": "Below average",
+    "label_ru": "Ниже среднего",
+    "label_ky": "Орточодон төмөн",
+    "description": "Notable weaknesses; mitigation may be possible",
+    "description_en": "Notable weaknesses; mitigation may be possible",
+    "description_ru": "Заметные слабые места; возможно, их удастся смягчить",
+    "description_ky": "Байкалган алсыз жактар; аларды азайтууга болушу мүмкүн",
+    "sort_order": 2
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 31,
+  "fields": {
+    "scale": 6,
+    "value": "3.0000",
+    "label": "Acceptable",
+    "label_en": "Acceptable",
+    "label_ru": "Приемлемо",
+    "label_ky": "Алгылыктуу",
+    "description": "Meets the defined minimum expectation",
+    "description_en": "Meets the defined minimum expectation",
+    "description_ru": "Соответствует установленному минимальному ожиданию",
+    "description_ky": "Белгиленген минималдуу күтүүгө жооп берет",
+    "sort_order": 3
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 32,
+  "fields": {
+    "scale": 6,
+    "value": "4.0000",
+    "label": "Good",
+    "label_en": "Good",
+    "label_ru": "Хорошо",
+    "label_ky": "Жакшы",
+    "description": "Better than the defined minimum expectation",
+    "description_en": "Better than the defined minimum expectation",
+    "description_ru": "Лучше установленного минимального ожидания",
+    "description_ky": "Белгиленген минималдуу күтүүдөн жакшыраак",
+    "sort_order": 4
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 33,
+  "fields": {
+    "scale": 6,
+    "value": "5.0000",
+    "label": "Excellent",
+    "label_en": "Excellent",
+    "label_ru": "Отлично",
+    "label_ky": "Эң жакшы",
+    "description": "Strong, verified performance with no material weakness",
+    "description_en": "Strong, verified performance with no material weakness",
+    "description_ru": "Высокий подтверждённый результат без существенных слабых мест",
+    "description_ky": "Олуттуу алсыз жагы жок, ырасталган жогорку натыйжа",
+    "sort_order": 5
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 34,
+  "fields": {
+    "scale": 7,
+    "value": "1.0000",
+    "label": "Unverified statement",
+    "label_en": "Unverified statement",
+    "label_ru": "Непроверенное заявление",
+    "label_ky": "Текшерилбеген билдирүү",
+    "description": "Seller or developer statement, or informal verbal information only",
+    "description_en": "Seller or developer statement, or informal verbal information only",
+    "description_ru": "Только заявление продавца или застройщика либо неформальная устная информация",
+    "description_ky": "Сатуучунун же курулуш салуучунун билдирүүсү же расмий эмес оозеки маалымат гана",
+    "sort_order": 0
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 35,
+  "fields": {
+    "scale": 7,
+    "value": "2.0000",
+    "label": "Informal supporting evidence",
+    "label_en": "Informal supporting evidence",
+    "label_ru": "Неформальные подтверждения",
+    "label_ky": "Расмий эмес далилдер",
+    "description": "Photographs, marketing materials, or third-party statements not independently validated",
+    "description_en": "Photographs, marketing materials, or third-party statements not independently validated",
+    "description_ru": "Фотографии, рекламные материалы или заявления третьих лиц без независимой проверки",
+    "description_ky": "Көз карандысыз текшерилбеген сүрөттөр, жарнамалык материалдар же үчүнчү жактардын билдирүүлөрү",
+    "sort_order": 1
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 36,
+  "fields": {
+    "scale": 7,
+    "value": "3.0000",
+    "label": "Document checked",
+    "label_en": "Document checked",
+    "label_ru": "Документ проверен",
+    "label_ky": "Документ текшерилген",
+    "description": "Relevant document obtained and reviewed, but not confirmed with the issuer or authority",
+    "description_en": "Relevant document obtained and reviewed, but not confirmed with the issuer or authority",
+    "description_ru": "Документ получен и изучен, но не подтверждён выдавшей его организацией или органом",
+    "description_ky": "Документ алынып, каралып чыккан, бирок аны берген уюм же орган тастыктаган эмес",
+    "sort_order": 2
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 37,
+  "fields": {
+    "scale": 7,
+    "value": "4.0000",
+    "label": "Independently verified",
+    "label_en": "Independently verified",
+    "label_ru": "Независимо проверено",
+    "label_ky": "Көз карандысыз текшерилген",
+    "description": "Checked with an independent professional, issuing body, registry, site inspection, or test",
+    "description_en": "Checked with an independent professional, issuing body, registry, site inspection, or test",
+    "description_ru": "Проверено независимым специалистом, выдавшим органом, по реестру, осмотром на месте или испытанием",
+    "description_ky": "Көз карандысыз адис, берген орган, реестр, жеринде текшерүү же сыноо менен текшерилген",
+    "sort_order": 3
+  }
+},
+{
+  "model": "catalogs.scalelevel",
+  "pk": 38,
+  "fields": {
+    "scale": 7,
+    "value": "5.0000",
+    "label": "Multiple independent sources",
+    "label_en": "Multiple independent sources",
+    "label_ru": "Несколько независимых источников",
+    "label_ky": "Бир нече көз карандысыз булак",
+    "description": "Independently verified and corroborated by more than one reliable source",
+    "description_en": "Independently verified and corroborated by more than one reliable source",
+    "description_ru": "Независимо проверено и подтверждено более чем одним надёжным источником",
+    "description_ky": "Көз карандысыз текшерилген жана бирден ашык ишенимдүү булак менен тастыкталган",
+    "sort_order": 4
+  }
+},
+{
   "model": "catalogs.assessmentmethod",
   "pk": 1,
   "fields": {
@@ -326,36 +1763,6 @@
     "description_ru": "Оценивается напрямую квалифицированным экспертом",
     "description_ky": "Квалификациялуу эксперт түздөн-түз баалайт",
     "requires_evidence": false
-  }
-},
-{
-  "model": "catalogs.assessmentobject",
-  "pk": 1,
-  "fields": {
-    "object_type": 1,
-    "name": "Block A, Riverside residential complex",
-    "external_ref": "RC-0042",
-    "attributes": {
-      "year_built": 1987,
-      "floors": 9,
-      "wall_material": "brick"
-    },
-    "created_at": "2026-10-01T09:00:00Z"
-  }
-},
-{
-  "model": "catalogs.assessmentobject",
-  "pk": 2,
-  "fields": {
-    "object_type": 1,
-    "name": "House 7, Green Lane",
-    "external_ref": "GL-0007",
-    "attributes": {
-      "year_built": 2015,
-      "floors": 3,
-      "wall_material": "aerated concrete"
-    },
-    "created_at": "2026-10-01T09:00:00Z"
   }
 }
 ]

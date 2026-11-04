@@ -1,20 +1,5 @@
 [
 {
-  "model": "catalogs.unit",
-  "pk": 5,
-  "fields": {
-    "code": "day",
-    "name": "Day",
-    "name_en": "Day",
-    "name_ru": "День",
-    "name_ky": "Күн",
-    "description": null,
-    "description_en": null,
-    "description_ru": null,
-    "description_ky": null
-  }
-},
-{
   "model": "catalogs.objecttype",
   "pk": 3,
   "fields": {

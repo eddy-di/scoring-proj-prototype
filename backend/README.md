@@ -45,8 +45,10 @@ works while `DEMO_RESET_ENABLED` is on (by default whenever `DEBUG` is on).
 | <http://localhost:8000/rosetta/> | Rosetta: translate interface texts (superusers) |
 
 SQLite is used by default. It runs in WAL mode with immediate transactions, so the parallel requests the
-frontend sends don't fail with "database is locked". To use PostgreSQL, install `psycopg[binary]` and set
-`POSTGRES_DB`, plus `POSTGRES_USER`, `POSTGRES_PASSWORD`, `POSTGRES_HOST` and `POSTGRES_PORT` as needed.
+frontend sends don't fail with "database is locked". To use PostgreSQL, set `POSTGRES_DB`, plus `POSTGRES_USER`,
+`POSTGRES_PASSWORD`, `POSTGRES_HOST` and `POSTGRES_PORT` as needed. Settings can go in `backend/.env`, which git
+ignores and which real environment variables override. To force SQLite while it sets `POSTGRES_DB`, run a command
+with an empty value: `POSTGRES_DB= .venv/bin/python manage.py test`.
 SQLite compares only Latin letters case-insensitively, so API `?search=` on Russian or Kyrgyz text is
 case-sensitive there. PostgreSQL doesn't have this limitation, and the frontend's own search works either way.
 
@@ -154,8 +156,8 @@ the same tables, engine and screens assess **residential buildings** (`TECH_RES`
 
 | Fixture | Contents |
 | --- | --- |
-| `catalogs` | Units (mm, kWh/m²·yr, %, pcs), the `quality_5` and `pass_fail` scales with levels, 5 assessment methods, 2 object types, and the buildings "Block A, Riverside residential complex" (RC-0042) and "House 7, Green Lane" (GL-0007) |
-| `supplier_catalogs` | The unit `day`, the object type `supplier`, the assessment method `survey`, and three suppliers: "Ala-Too Packaging LLC" (SUP-0101), "Silk Road Ingredients Ltd" (SUP-0102) and "Tian Shan Print" (SUP-0103) |
+| `catalogs` | 56 units (lengths, areas, time, currency, noise, air, flow, pressure, electrical, thermal and more), 7 scales with levels (`quality_5`, `pass_fail`, `agreement_5`, `frequency_5`, `quality_10`, `quality_0_5`, `evidence_confidence_5`), 5 assessment methods, and the object types `residential_building`, `office_building`, `apartment_existing` and `apartment_development`. No objects |
+| `supplier_catalogs` | The object type `supplier`, the assessment method `survey`, and three suppliers: "Ala-Too Packaging LLC" (SUP-0101), "Silk Road Ingredients Ltd" (SUP-0102) and "Tian Shan Print" (SUP-0103) |
 | `question_library` | 4 categories and 8 questions. Four are used by the methodology: `STR_CRACK_WIDTH`, `STR_ROOF_STATE`, `SAF_FIRE_ALARM`, `EN_HEAT_USE`. Four are in the library only: `COM_INDOOR_HUMIDITY`, `COM_FACADE_RATING`, `COM_FACADE_DEFECTS`, `GEN_REMARKS` |
 | `supplier_questions` | The category "Supplier evaluation" with four subcategories, and 10 questions using every answer type: `SUP_ON_TIME`, `SUP_LEAD_TIME`, `SUP_REJECT_RATE`, `SUP_PRICE_LEVEL` (numeric), `SUP_QMS_CERT`, `SUP_DOCS_VALID` (yes/no), `SUP_PAYMENT_TERMS` (single choice), `SUP_INCIDENTS` (multiple choice), `SUP_COMMUNICATION` (scale level) and `SUP_REMARKS` (text, library only) |
 | `tech_res_methodology` | `TECH_RES` v1.0 (published): the tree STR 0.5 / SAF 0.3 / EN 0.2, plus assessment methods, scoring rules and criteria |
@@ -165,6 +167,27 @@ the same tables, engine and screens assess **residential buildings** (`TECH_RES`
 
 Load them in the order `setup_demo` uses (`config/demo.py`), or together in one `loaddata` call. Each fixture refers to records in the ones before it.
 Every translated field is filled in English, Russian and Kyrgyz.
+
+### Apartment assessments
+
+These are not part of `setup_demo`. Load them yourself, after `catalogs`:
+
+```bash
+.venv/bin/python manage.py loaddata apartment_questions apartment_existing_methodology apartment_development_methodology
+```
+
+| Fixture | Contents |
+| --- | --- |
+| `apartment_questions` | All 284 questions from `docs/apartment_question_catalogue.md`, with their categories and options |
+| `apartment_existing_methodology` | `APT_EXISTING` v1.0 (draft) for the object type `apartment_existing`: 167 questions |
+| `apartment_development_methodology` | `APT_DEVELOPMENT` v1.0 (draft) for the object type `apartment_development`: 193 questions |
+
+Both methodologies are drafts: their weights and scoring values are starting proposals to review before publishing. Only the
+knock-out questions are mandatory, so an unknown answer can be left blank and stays out of the score. The 10 questions
+in absolute currency amounts are in the library but not in either tree, because they need amounts set for your currency.
+Only the 4 starter questions and their categories and options are translated; other texts are English only for now and
+fall back to English in Russian and Kyrgyz. No objects are included. Editing a node's weight or a question then fails on the
+missing translations, so add `REQUIRED_CONTENT_LANGUAGES=en` to `backend/.env` until they're translated.
 
 ## Admin panel API
 

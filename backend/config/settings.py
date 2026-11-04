@@ -6,7 +6,12 @@ POSTGRES_* variables) to use PostgreSQL, the database schema.dbml targets.
 import os
 from pathlib import Path
 
+from dotenv import load_dotenv
+
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Local settings from backend/.env. Real environment variables take precedence.
+load_dotenv(BASE_DIR / '.env')
 
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-dev-only-change-me')
 DEBUG = os.environ.get('DJANGO_DEBUG', '1') == '1'
