@@ -34,7 +34,7 @@ const routes = [
   [/^\/admin\/questions\/(\d+)$/, guard(() => session.canManage('library'), (m) => questionEditor(Number(m[1])))],
   [/^\/admin\/methodologies$/, guard(session.seesMethodologies, () => methodologyList())],
   [/^\/admin\/versions\/(\d+)(?:\/node\/(\d+))?$/, guard(session.seesMethodologies, (m) => versionView(Number(m[1]), m[2] ? Number(m[2]) : null))],
-  [/^\/respondent\/assessments\/(\d+)$/, (m) => fillView(Number(m[1]))],
+  [/^\/respondent\/assessments\/(\d+)(?:\/step\/(\d+))?$/, (m) => fillView(Number(m[1]), m[2] ? Number(m[2]) : null)],
   [/^\/respondent\/assessments\/(\d+)\/result$/, (m) => resultView(Number(m[1]))],
   [/^\/data(?:\/(\w+))?$/, guard(session.isStaff, (m) => dataView(m[1]))],
 ];
@@ -71,7 +71,7 @@ function helpersSwitch() {
 }
 
 function resetButton() {
-  if (!session.isStaff() || !session.current().demo_reset_enabled) return null;
+  if (!session.isSuperuser() || !session.current().demo_reset_enabled) return null;
   return h('button', {
     type: 'button', class: 'btn small ghost',
     title: t('Replace all data on the server with the example data'),

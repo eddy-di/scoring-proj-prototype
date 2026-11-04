@@ -18,6 +18,10 @@ const versionLabel = (v) => `${db.get('methodologies', v?.methodology_id)?.name 
 const responseOf = (a, node) => db.find('responses', (x) => x.assessment_id === a.id && x.node_id === node.id);
 
 // Counted by the server (assessments.answered_count / question_count), so lists don't need the answers.
+// Scoring details (codes, weights, scores per question or section, thresholds) are for people with
+// admin access. Respondents see the questions and the overall score. Display only: the API still sends everything.
+const seesScoring = () => session.usesAdmin();
+
 const progress = (a) => ({ done: a.answered_count ?? 0, total: a.question_count ?? 0 });
 
 function parseAttributes(text) {
@@ -287,7 +291,135 @@ async function saveAnswer(a, node, patch = {}, optionIds) {
   }
 }
 
-export function fillView(id) {
+// ── One page per section ──
+// A step is a group's own questions, so a big methodology is filled in section by
+// section instead of one long scroll. Works for any tree depth.
+function stepsOf(versionId, root) {
+  const steps = [];
+  const walk = (group, path) => {
+    const kids = childrenOf(versionId, group.id);
+    const questions = kids.filter((n) => n.node_type === 'question' && db.get('questions', n.question_id));
+    if (questions.length) steps.push({ node: group, path, questions });
+    kids.filter((n) => n.node_type !== 'question').forEach((n) => walk(n, group === root ? [] : [...path, group]));
+  };
+  if (root) walk(root, []);
+  return steps;
+}
+
+const isAnswered = (node, r) => !!r && (r.is_not_applicable || hasAnswer(db.get('questions', node.question_id), answerOf(r)));
+const stepUrl = (a, n) => `/respondent/assessments/${a.id}/step/${n}`;
+
+// The list of sections beside the questions. `current` is 1-based; steps.length + 1 is the review page.
+function stepNav(a, steps, current, counts, evaluation, locked) {
+  let heading = null;
+  const items = [];
+  steps.forEach((step, i) => {
+    const top = step.path[0]?.name ?? null;
+    if (top !== heading) {
+      heading = top;
+      if (top) items.push(h('li', { class: 'step-heading' }, top));
+    }
+    const { done, total } = counts[i];
+    const name = [...step.path.slice(1).map((n) => n.name), step.node.name].join(' › ');
+    items.push(h('li', {}, h('a', {
+      href: `#${stepUrl(a, i + 1)}`,
+      class: `step-link ${current === i + 1 ? 'current' : ''} ${done === total ? 'done' : ''}`,
+      'aria-current': current === i + 1 ? 'step' : null,
+    },
+    h('span', { class: 'step-name' }, name),
+    seesScoring() && evaluation?.nodes[step.node.id]?.is_vetoed && chip(t('knock-out'), 'bad'),
+    h('span', { class: 'step-count num' }, `${done}/${total}`))));
+  });
+  if (!locked) {
+    const review = steps.length + 1;
+    items.push(h('li', { class: 'step-last' }, h('a', {
+      href: `#${stepUrl(a, review)}`, class: `step-link ${current === review ? 'current' : ''}`, 'aria-current': current === review ? 'step' : null,
+    }, h('span', { class: 'step-name' }, t('Review and complete')))));
+  }
+  return h('nav', { class: 'tree-panel fill-nav', id: 'fill-nav', 'aria-label': t('Sections') }, h('ol', { class: 'step-list' }, items));
+}
+
+function stepButtons(a, steps, current, locked) {
+  const last = locked ? steps.length : steps.length + 1;
+  const prev = current > 1 && link(stepUrl(a, current - 1), t('Previous'), { class: 'btn' });
+  const nextLabel = !locked && current === steps.length ? t('Review and complete') : t('Next');
+  const next = current < last && link(stepUrl(a, current + 1), nextLabel, { class: 'btn primary' });
+  return h('div', { class: 'step-buttons' },
+    h('span', { class: 'step-slot' }, prev),
+    current <= steps.length && h('span', { class: 'muted small' }, t('Section {n} of {total}', { n: current, total: steps.length })),
+    h('span', { class: 'step-slot end' }, next));
+}
+
+function stepPage(a, steps, step, evaluation, locked) {
+  const res = evaluation?.nodes[step.node.id];
+  return h('section', { class: 'qgroup depth-0' },
+    h('header', { class: 'qgroup-head' },
+      h('div', {},
+        step.path.length > 0 && h('p', { class: 'eyebrow' }, step.path.map((n) => n.name).join(' › ')),
+        h('h2', { id: 'step-title', tabindex: -1 }, step.node.name),
+        seesScoring() && h('p', { class: 'small muted' }, `${t('Weight')} ${fmt(step.node.weight, 3)} · ${labelOf(aggregations(), step.node.aggregation_type)}`)),
+      seesScoring() && h('div', { class: 'qgroup-score' },
+        h('strong', { class: 'num' }, fmt(res?.score)),
+        res?.is_vetoed && chip(t('knock-out'), 'bad'))),
+    step.node.description && h('p', { class: 'small' }, step.node.description),
+    h('fieldset', { class: 'plain step-questions', disabled: locked }, step.questions.map((n) => questionCard(a, n))));
+}
+
+function reviewPage(a, steps, answered, issues, complete) {
+  const missing = [];
+  steps.forEach((step, i) => step.questions.forEach((node) => {
+    if (node.is_mandatory && !answered.has(node.id)) missing.push({ node, step: i + 1 });
+  }));
+  const stepOfCode = new Map(steps.flatMap((step, i) => step.questions.map((n) => [n.code, i + 1])));
+  const missingCodes = new Set(missing.map((m) => m.node.code));
+  const other = issues.filter((x) => !missingCodes.has(x.split(':')[0]));
+  const optional = steps.flatMap((s) => s.questions).filter((n) => !n.is_mandatory && !answered.has(n.id)).length;
+  return h('section', { class: 'qgroup depth-0' },
+    h('h2', { id: 'step-title', tabindex: -1 }, t('Review and complete')),
+    missing.length > 0
+      ? h('div', { class: 'check warn' }, h('strong', {}, t('Required questions still unanswered:')),
+        h('ul', {}, missing.map((m) => h('li', {}, link(stepUrl(a, m.step), db.get('questions', m.node.question_id).text)))))
+      : h('div', { class: 'check ok' }, t('All required questions are answered.')),
+    optional > 0 && h('p', {}, t('{count} optional questions are unanswered: they are left out of the score.', { count: optional })),
+    other.length > 0 && h('div', { class: 'check bad' }, h('strong', {}, t('The assessment can’t be completed yet:')),
+      h('ul', {}, other.map((x) => {
+        const n = stepOfCode.get(x.split(':')[0]);
+        return h('li', {}, n ? link(stepUrl(a, n), x) : x);
+      }))),
+    help(seesScoring()
+      ? t('Completing checks the mandatory questions, then calculates every group and saves the total.')
+      : t('Completing checks the required questions and locks your answers.')),
+    asyncButton(t('Complete assessment'), complete, { class: 'btn primary big', id: `complete-${a.id}`, disabled: missing.length > 0 }));
+}
+
+// After moving between sections: land on the questions, not the page header, move keyboard
+// focus there, and keep the section's link visible in the list.
+let lastStep = null;
+
+// The progress bar sticks right below the top bar, whose height depends on how its rows wrap.
+function syncTopbarHeight() {
+  const bar = document.querySelector('.topbar');
+  if (!bar) return;
+  const height = getComputedStyle(bar).position === 'sticky' ? bar.offsetHeight : 0;
+  document.documentElement.style.setProperty('--topbar-h', `${height}px`);
+}
+window.addEventListener('resize', syncTopbarHeight);
+
+function afterStepRender(assessmentId, step) {
+  requestAnimationFrame(() => {
+    syncTopbarHeight();
+    const list = document.getElementById('fill-nav');
+    const cur = list?.querySelector('.step-link.current');
+    if (list && cur) list.scrollTop = Math.max(0, cur.offsetTop - list.clientHeight / 3);
+    if (lastStep?.assessmentId === assessmentId && lastStep.step !== step) {
+      document.querySelector('.fill-main')?.scrollIntoView({ block: 'start' });
+      document.getElementById('step-title')?.focus({ preventScroll: true });
+    }
+    lastStep = { assessmentId, step };
+  });
+}
+
+export function fillView(id, requested = null) {
   if (!db.assessmentReady(id)) return h('div', { class: 'page' }, h('p', { class: 'loading' }, t('Loading…')));
   const a = db.get('assessments', id);
   if (!a) return h('div', { class: 'page' }, h('p', {}, t('Assessment not found.'), ' '), link('/respondent', t('Back to assessments')));
@@ -300,9 +432,24 @@ export function fillView(id) {
   const locked = done || !own;
   const back = own ? ['/history', t('History')] : ['/admin/assessments', t('All assessments')];
   const evaluation = db.evaluationOf(a.id);
-  const p = progress(a);
   const issues = issuesByAssessment.get(a.id) ?? [];
   const url = db.urlOf('assessments', a.id);
+
+  const responses = new Map(db.all('responses', (x) => x.assessment_id === a.id).map((r) => [r.node_id, r]));
+  const steps = stepsOf(version.id, root);
+  const answered = new Set(steps.flatMap((s) => s.questions).filter((n) => isAnswered(n, responses.get(n.id))).map((n) => n.id));
+  const counts = steps.map((s) => ({ done: s.questions.filter((n) => answered.has(n.id)).length, total: s.questions.length }));
+  const total = counts.reduce((sum, c) => sum + c.total, 0);
+  const lastStep = locked ? steps.length : steps.length + 1;
+
+  // Opening an assessment continues at the first section with something left to answer.
+  if (requested == null) {
+    const resume = locked ? 1 : (counts.findIndex((c) => c.done < c.total) + 1 || lastStep);
+    location.replace(`#${stepUrl(a, Math.max(1, resume))}`);
+    return h('div', { class: 'page' }, h('p', { class: 'loading' }, t('Loading…')));
+  }
+  const current = Math.min(Math.max(requested, 1), Math.max(lastStep, 1));
+  afterStepRender(a.id, current);
 
   const complete = async () => {
     try {
@@ -317,6 +464,7 @@ export function fillView(id) {
     }
   };
 
+  const onReview = !locked && current === steps.length + 1;
   return h('div', { class: 'page' },
     h('p', { class: 'crumbs' }, link(...back), ' / ', a.title ?? `#${a.id}`),
     pageHead(a.title ?? t('Assessment #{id}', { id: a.id }), `${obj?.name} · ${versionLabel(version)}`,
@@ -327,41 +475,39 @@ export function fillView(id) {
     !own && h('p', { class: 'banner' }, t('This is {name}’s assessment. You can read it, but only they can change the answers.', { name: a.respondent_name ?? '?' })),
 
     !locked && tip('r-fill', t('Answering'),
-      h('p', {}, t('Open “How to assess” on each question for the instructions. Each answer is saved and scored shortly after you enter it.')),
-      h('p', {}, t('Tick “Not applicable” when a question doesn’t apply to this object: it is left out and the other weights are rescaled.'))),
+      h('p', {}, t('The questions are split into sections. Answers are saved as you go, so you can leave and continue later, in any order.')),
+      h('p', {}, seesScoring()
+        ? t('Open “How to assess” on each question for the instructions. Each answer is saved and scored shortly after you enter it.')
+        : t('Open “How to assess” on each question for the instructions. Each answer is saved shortly after you enter it.')),
+      h('p', {}, seesScoring()
+        ? t('Tick “Not applicable” when a question doesn’t apply to this object: it is left out and the other weights are rescaled.')
+        : t('Tick “Not applicable” when a question doesn’t apply to this object.'))),
 
-    h('div', { class: 'summary' },
-      h('div', {}, h('span', { class: 'eyebrow' }, t('Answered')), h('strong', { class: 'big num' }, `${p.done} / ${p.total}`)),
-      h('div', {}, h('span', { class: 'eyebrow' }, done ? t('Total score') : t('Provisional total')),
-        h('strong', { class: 'big num' }, fmt(done ? a.total_score : evaluation?.total)),
-        h('span', { class: 'muted' }, ' ', (done ? db.get('scale_levels', a.total_scale_level_id)?.label : evaluation?.level?.label) ?? '')),
-      evaluation?.is_vetoed && h('div', { class: 'bad-text' }, h('strong', {}, t('Knock-out:')), ' ', t('a critical question is below its threshold.')),
-      help(done
+    (done || (seesScoring() && (evaluation?.is_vetoed || onReview))) && h('div', { class: 'summary' },
+      seesScoring() && evaluation?.is_vetoed && h('div', { class: 'bad-text' }, h('strong', {}, t('Knock-out:')), ' ', t('a critical question is below its threshold.')),
+      (done || (onReview && seesScoring())) && help(done
         ? t('Completed. Answers are locked; reopen the assessment to change them.')
         : t('The total is provisional: unanswered questions are left out and the remaining weights rescaled until you complete the assessment.'))),
 
-    h('fieldset', { class: 'plain', disabled: locked },
-      root && childrenOf(version.id, root.id).map((n) => renderNode(a, n, evaluation, 0))),
-
-    !locked && h('div', { class: 'complete-bar' },
-      issues.length > 0 && h('div', { class: 'check bad' }, h('strong', {}, t('The assessment can’t be completed yet:')), h('ul', {}, issues.map((x) => h('li', {}, x)))),
-      help(t('Completing checks the mandatory questions, then calculates every group and saves the total.')),
-      asyncButton(t('Complete assessment'), complete, { class: 'btn primary big', id: `complete-${a.id}` })));
-}
-
-function renderNode(a, node, evaluation, depth) {
-  if (node.node_type === 'question') return questionCard(a, node);
-  const res = evaluation?.nodes[node.id];
-  return h('section', { class: `qgroup depth-${depth}` },
-    h('header', { class: 'qgroup-head' },
-      h('div', {},
-        h('h2', {}, node.name),
-        h('p', { class: 'small muted' }, `${t('Weight')} ${fmt(node.weight, 3)} · ${labelOf(aggregations(), node.aggregation_type)}`)),
-      h('div', { class: 'qgroup-score' },
-        h('strong', { class: 'num' }, fmt(res?.score)),
-        res?.is_vetoed && chip(t('knock-out'), 'bad'))),
-    node.description && h('p', { class: 'small' }, node.description),
-    childrenOf(node.version_id, node.id).map((c) => renderNode(a, c, evaluation, depth + 1)));
+    // A wrapper, not a .page child: a sticky grid item can't leave its own grid row.
+    h('div', { class: 'fill-body' },
+      h('div', { class: 'summary-progress' },
+        h('span', { class: 'eyebrow' }, t('Answered')),
+        h('strong', { class: 'num' }, `${answered.size} / ${total}`),
+        h('div', { class: 'progress-track', role: 'progressbar', 'aria-valuemin': 0, 'aria-valuemax': total, 'aria-valuenow': answered.size, 'aria-label': t('Answered') },
+          h('div', { class: 'progress-fill', style: { width: `${total ? (answered.size / total) * 100 : 0}%` } })),
+        h('div', { class: 'progress-total' },
+          h('span', { class: 'eyebrow' }, done ? t('Total score') : t('Provisional total')),
+          h('strong', { class: 'num' }, fmt(done ? a.total_score : evaluation?.total)),
+          h('span', { class: 'muted' }, (done ? db.get('scale_levels', a.total_scale_level_id)?.label : evaluation?.level?.label) ?? ''),
+          evaluation?.is_vetoed && chip(t('knock-out'), 'bad'))),
+      h('div', { class: 'split fill-split' },
+        stepNav(a, steps, current, counts, evaluation, locked),
+        h('div', { class: 'fill-main' },
+          onReview
+            ? reviewPage(a, steps, answered, issues, complete)
+            : steps[current - 1] && stepPage(a, steps, steps[current - 1], evaluation, locked),
+          stepButtons(a, steps, current, locked)))));
 }
 
 function questionCard(a, node) {
@@ -380,9 +526,13 @@ function questionCard(a, node) {
   return h('article', { class: `qcard ${na ? 'na' : ''}` },
     h('div', { class: 'qcard-head' },
       h('div', {},
-        h('p', { class: 'eyebrow' }, node.code, ' · ', node.is_mandatory ? t('required') : t('optional'), ` · ${t('weight')} ${fmt(node.weight, 3)}`),
+        seesScoring()
+          ? h('p', { class: 'eyebrow' }, node.code, ' · ', node.is_mandatory ? t('required') : t('optional'), ` · ${t('weight')} ${fmt(node.weight, 3)}`)
+          : h('p', { class: 'eyebrow' }, node.is_mandatory ? t('required') : t('optional')),
         h('h3', {}, q.text)),
-      scoreBadge(node, shown)),
+      seesScoring()
+        ? scoreBadge(node, shown)
+        : (na ? chip(t('Not applicable'), 'muted') : hasAnswer(q, ans) && chip(t('Answered'), 'ok'))),
     q.description && h('p', { class: 'small' }, q.description),
 
     methods.length > 0 && h('details', {
@@ -401,7 +551,7 @@ function questionCard(a, node) {
       h('label', { class: 'check-inline' },
         h('input', { type: 'checkbox', id: `${pid}-na`, checked: na, onchange: (e) => save({ is_not_applicable: e.target.checked }) }),
         ' ', t('Not applicable')),
-      methods.length > 0 && h('label', { class: 'inline' }, t('Method used'), ' ',
+      (seesScoring() ? methods.length > 0 : methods.length > 1) && h('label', { class: 'inline' }, t('Method used'), ' ',
         selectEl(methods.map((m) => ({ value: m.assessment_method_id, label: methodName(m) })),
           r?.assessment_method_id ?? methods[0].assessment_method_id,
           { id: `${pid}-method`, onchange: (e) => save({ assessment_method_id: num(e.target.value) }) })),
@@ -505,6 +655,15 @@ export function resultView(id) {
     const crit = db.get('score_criteria', resp?.matched_criterion_id);
     const evidenceCount = resp ? db.all('response_evidence', (e) => e.response_id === resp.id).length : 0;
     const belowVeto = res?.score != null && node.veto_threshold != null && res.score < node.veto_threshold;
+    // Respondents see the overall score above and their answers here; the rest is for admins.
+    if (!seesScoring()) {
+      rows.push([
+        h('span', { class: `indent d${depth} ${isQ ? '' : 'grp'}` }, node.name),
+        isQ && h('span', { class: 'small' }, h('strong', {}, answerText(q, resp))),
+      ]);
+      if (!isQ) childrenOf(version.id, node.id).forEach((c) => walk(c, depth + 1));
+      return;
+    }
     rows.push([
       h('span', { class: `indent d${depth} ${isQ ? '' : 'grp'}` }, node.name),
       node.parent_id == null ? '–' : h('span', { class: 'num' }, fmt(node.weight, 3)),
@@ -544,10 +703,12 @@ export function resultView(id) {
         level?.description && h('span', { class: 'muted' }, level.description)),
       rootRes?.is_vetoed && h('div', { class: 'hero-fail' }, h('strong', {}, t('Failed on a knock-out criterion.')), ' ', t('At least one critical question scored below its threshold, so the object fails regardless of the total.'))),
 
-    tip('r-result', t('Reading the result'),
+    seesScoring() && tip('r-result', t('Reading the result'),
       h('p', {}, t('Each row is a node of the tree. “Weighted” is the node’s contribution to its parent (score × weight). The last column shows the answer and the criterion that explains the score.'), ' ', term('criteria'))),
 
-    section(t('Breakdown'), null,
-      table([t('Node'), t('Weight'), t('Score'), t('Weighted'), t('Level'), '', t('Answer and reason')], rows),
-      stored('node_results')));
+    section(seesScoring() ? t('Breakdown') : t('Your answers'), null,
+      seesScoring()
+        ? table([t('Node'), t('Weight'), t('Score'), t('Weighted'), t('Level'), '', t('Answer and reason')], rows)
+        : table([t('Section or question'), t('Answer')], rows),
+      seesScoring() && stored('node_results')));
 }

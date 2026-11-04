@@ -7,9 +7,9 @@ from accounts.models import RoleProfile
 from assessments.models import Assessment
 from catalogs.models import AssessmentObject, Unit
 from methodologies.models import MethodologyNode
-from tests.helpers import make_admin, make_user
+from tests.helpers import BUILDING_FIXTURES, make_admin, make_user
 
-FIXTURES = ['catalogs', 'question_library', 'tech_res_methodology', 'example_assessments']
+FIXTURES = BUILDING_FIXTURES
 API = '/api/respondent'
 
 
@@ -256,19 +256,34 @@ class SupplierExampleTests(APITestCase):
 class DemoTests(APITestCase):
     fixtures = FIXTURES
 
+    def superuser(self):
+        return get_user_model().objects.create_superuser('root', 'root@example.com', 'pw-Example-123')
+
     @override_settings(DEMO_RESET_ENABLED=True)
     def test_demo_reset(self):
-        self.client.force_authenticate(make_admin())
-        Unit.objects.create(code='m', name='Metre')
+        self.client.force_authenticate(self.superuser())
+        Unit.objects.create(code='ft', name='Foot')
         Assessment.objects.all().delete()
         self.assertEqual(self.client.post('/api/demo/reset/').status_code, 204)
-        self.assertFalse(Unit.objects.filter(code='m').exists())
-        self.assertEqual(Assessment.objects.count(), 5)
+        self.assertFalse(Unit.objects.filter(code='ft').exists())
+        # The demo data has the supplier reviews, and no objects other than the suppliers.
+        self.assertEqual(Assessment.objects.count(), 3)
+        self.assertEqual(set(AssessmentObject.objects.values_list('object_type__code', flat=True)), {'supplier'})
+
+    @override_settings(DEMO_RESET_ENABLED=True)
+    def test_only_superusers_can_reset(self):
+        count = Assessment.objects.count()
+        for user in (make_admin(), make_user('someone')):
+            self.client.force_authenticate(user)
+            self.assertEqual(self.client.post('/api/demo/reset/').status_code, 403, user.username)
+        self.assertEqual(Assessment.objects.count(), count)
 
     @override_settings(DEMO_RESET_ENABLED=False)
     def test_demo_reset_can_be_disabled(self):
-        self.client.force_authenticate(make_admin())
+        count = Assessment.objects.count()
+        self.client.force_authenticate(self.superuser())
         self.assertEqual(self.client.post('/api/demo/reset/').status_code, 403)
+        self.assertEqual(Assessment.objects.count(), count)
 
     def test_frontend_is_served(self):
         self.assertContains(self.client.get('/'), '<div id="app">')

@@ -4,9 +4,9 @@ from django.test import TestCase
 from django.urls import reverse
 
 from methodologies.models import MethodologyNode, MethodologyVersion
-from tests.helpers import make_admin
+from tests.helpers import BUILDING_FIXTURES, make_admin
 
-FIXTURES = ['catalogs', 'question_library', 'tech_res_methodology', 'example_assessments']
+FIXTURES = BUILDING_FIXTURES
 
 
 class DjangoAdminTests(TestCase):

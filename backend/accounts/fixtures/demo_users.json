@@ -1,0 +1,72 @@
+[
+{
+  "model": "accounts.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$fwFuoKlPx9HHIbFJH2WxiJ$U5khpE9F/skU8TzMO54IMNjlSoZhd9E59kL/byMsvUE=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "root",
+    "first_name": "",
+    "last_name": "",
+    "email": "root@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-10-27T04:13:52.689Z",
+    "organization": "",
+    "position": "",
+    "phone": "",
+    "preferred_language": "en",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$Fq7YEh59TkgJ7ruigVhUc3$Aad5i4TNSjNd9Jkia0Mmlfh1XelPDr72wvOjjxrgNdU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "admin",
+    "first_name": "Admin",
+    "last_name": "",
+    "email": "admin@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-10-27T04:13:53.334Z",
+    "organization": "",
+    "position": "",
+    "phone": "",
+    "preferred_language": "ru",
+    "groups": [
+      [
+        "Admin"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$OP7CmliI1JYAJLmEP1gx7y$fm2Ikz00QA0+VnaPYB7Y01NGGGziu/wRg/9lbqlI2D0=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "expert",
+    "first_name": "Expert",
+    "last_name": "",
+    "email": "expert@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-10-27T04:13:53.920Z",
+    "organization": "",
+    "position": "",
+    "phone": "",
+    "preferred_language": "ru",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
