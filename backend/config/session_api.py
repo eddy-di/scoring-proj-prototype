@@ -8,13 +8,14 @@ from django.views.decorators.csrf import ensure_csrf_cookie
 from drf_spectacular.utils import extend_schema
 from rest_framework import serializers, status
 from rest_framework.decorators import api_view, permission_classes
-from rest_framework.permissions import AllowAny, IsAdminUser, IsAuthenticated
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 
 from assessments.models import Assessment, AssessmentStatus
 
 from .demo import reset_demo_data
 from .i18n import languages_payload
+from .permissions import IsSuperuser
 
 User = get_user_model()
 PROFILE_FIELDS = ['first_name', 'last_name', 'email', 'organization', 'position', 'phone', 'preferred_language']
@@ -189,7 +190,7 @@ def change_password(request):
 
 @extend_schema(request=None, responses={204: None}, summary='Replace all data with the example data (demo only)')
 @api_view(['POST'])
-@permission_classes([IsAdminUser])
+@permission_classes([IsSuperuser])
 def demo_reset(request):
     if not settings.DEMO_RESET_ENABLED:
         return Response({'detail': _('Demo reset is turned off on this server.')}, status=status.HTTP_403_FORBIDDEN)

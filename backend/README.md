@@ -32,9 +32,11 @@ uv pip install -p .venv/bin/python -r requirements.txt
 
 Anyone can create a standard account on the sign-in page.
 
-Run it again at any time to start over. Users and their passwords are kept. Signed-in admins can do
+Run it again at any time to start over. Users and their passwords are kept. Signed-in superusers can do
 the same from the app with **Reset demo data**. That button calls `POST /api/demo/reset/`, which only
-works while `DEMO_RESET_ENABLED` is on (by default whenever `DEBUG` is on).
+works while `DEMO_RESET_ENABLED` is on (by default whenever `DEBUG` is on). Set `DEMO_RESET_ENABLED=0` in
+`backend/.env` to hide the button and block the reset for everyone. It doesn't affect `setup_demo`, which
+always replaces the data, including anything loaded from fixtures outside the demo list.
 
 | URL | What |
 | --- | --- |

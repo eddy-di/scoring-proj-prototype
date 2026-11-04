@@ -71,7 +71,7 @@ function helpersSwitch() {
 }
 
 function resetButton() {
-  if (!session.isStaff() || !session.current().demo_reset_enabled) return null;
+  if (!session.isSuperuser() || !session.current().demo_reset_enabled) return null;
   return h('button', {
     type: 'button', class: 'btn small ghost',
     title: t('Replace all data on the server with the example data'),
