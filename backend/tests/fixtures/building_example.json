@@ -1,5 +1,35 @@
 [
 {
+  "model": "catalogs.assessmentobject",
+  "pk": 1,
+  "fields": {
+    "object_type": 1,
+    "name": "Block A, Riverside residential complex",
+    "external_ref": "RC-0042",
+    "attributes": {
+      "year_built": 1987,
+      "floors": 9,
+      "wall_material": "brick"
+    },
+    "created_at": "2026-10-01T09:00:00Z"
+  }
+},
+{
+  "model": "catalogs.assessmentobject",
+  "pk": 2,
+  "fields": {
+    "object_type": 1,
+    "name": "House 7, Green Lane",
+    "external_ref": "GL-0007",
+    "attributes": {
+      "year_built": 2015,
+      "floors": 3,
+      "wall_material": "aerated concrete"
+    },
+    "created_at": "2026-10-01T09:00:00Z"
+  }
+},
+{
   "model": "assessments.assessment",
   "pk": 1,
   "fields": {
@@ -466,4 +496,3 @@
   }
 }
 ]
-

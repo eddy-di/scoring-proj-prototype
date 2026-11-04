@@ -63,7 +63,7 @@ export default function helpView(focus) {
         h('li', {}, h('strong', {}, t('Admin')), ' – ', t('a staff role with full access to catalogs, questions, methodologies and all assessments, but not to users.')),
         h('li', {}, h('strong', {}, t('Superuser')), ' – ', t('manages users and roles in Django admin. New roles with narrower permissions can be added there at any time.')))),
 
-    section(t('Worked example'), t('The example data contains this completed assessment of Block A.'),
+    section(t('Worked example'), t('How a completed assessment of a residential building is scored.'),
       table([t('Question'), t('Answer'), t('Score'), t('Why')], [
         [t('Crack width'), '1.2 mm', '3', t('Criterion 0.5–2 mm: local cracks')],
         [t('Roof condition'), t('Minor wear'), '4', t('Criterion for this option')],
@@ -73,7 +73,7 @@ export default function helpView(focus) {
       h('p', {}, t('Structural condition = 0.6 × 3 + 0.4 × 4 = 3.4. Fire safety = 5. Energy efficiency = 3.5.')),
       h('p', {}, t('Total = 0.5 × 3.4 + 0.3 × 5 + 0.2 × 3.5 = 3.9, “Good”.')),
       h('p', {}, t('House 7 has the same answers but no fire alarm. The alarm scores 1, below its knock-out threshold of 2, so the building fails even though its total is 2.7.')),
-      h('p', {}, t('The same rules work for any kind of object. The example data also has supplier reviews (SUPPLIER_EVAL): Ala-Too Packaging scores 4.3, “Good”. Silk Road Ingredients fails: 9 % of its batches were rejected, which scores 1.4, below the knock-out threshold of 2.'))),
+      h('p', {}, t('The same rules work for any kind of object. The example data has supplier reviews (SUPPLIER_EVAL): Ala-Too Packaging scores 4.3, “Good”. Silk Road Ingredients fails: 9 % of its batches were rejected, which scores 1.4, below the knock-out threshold of 2.'))),
 
     h('section', { class: 'block', id: 'glossary' },
       h('h2', {}, t('Glossary')),

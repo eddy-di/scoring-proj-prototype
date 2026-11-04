@@ -153,6 +153,7 @@ Models set `db_table` to the schema's table names, and their fields use the sche
 
 The example data covers two unrelated kinds of object, to show that nothing in the model is specific to buildings:
 the same tables, engine and screens assess **residential buildings** (`TECH_RES`) and **suppliers** (`SUPPLIER_EVAL`).
+There are no building objects or assessments in the example data; the tests use their own in `tests/fixtures/building_example.json`.
 
 | Fixture | Contents |
 | --- | --- |
@@ -162,7 +163,6 @@ the same tables, engine and screens assess **residential buildings** (`TECH_RES`
 | `supplier_questions` | The category "Supplier evaluation" with four subcategories, and 10 questions using every answer type: `SUP_ON_TIME`, `SUP_LEAD_TIME`, `SUP_REJECT_RATE`, `SUP_PRICE_LEVEL` (numeric), `SUP_QMS_CERT`, `SUP_DOCS_VALID` (yes/no), `SUP_PAYMENT_TERMS` (single choice), `SUP_INCIDENTS` (multiple choice), `SUP_COMMUNICATION` (scale level) and `SUP_REMARKS` (text, library only) |
 | `tech_res_methodology` | `TECH_RES` v1.0 (published): the tree STR 0.5 / SAF 0.3 / EN 0.2, plus assessment methods, scoring rules and criteria |
 | `supplier_methodology` | `SUPPLIER_EVAL` v1.0 (published) for the `supplier` type: Delivery 0.35 / Product quality 0.35 / Price and cooperation 0.2 / Compliance 0.1. It uses every scoring method (criteria ranges and options, linear between worst and best, linear towards a target, formula, the answer as the score), three aggregations (weighted average, weighted geometric mean, minimum), an optional question and two knock-out thresholds |
-| `example_assessments` | The worked example, completed. **Block A**: crack 1.2 mm → 3, roof minor wear → 4, fire alarm yes → 5, heat 150 → 3.5, giving a total of **3.9 "Good"**. **House 7**: the same answers but no fire alarm, giving **2.7**, and the root is vetoed by the knock-out threshold |
 | `supplier_assessments` | **Ala-Too Packaging**, completed: **4.34 "Good"**. **Silk Road Ingredients**, completed: 9 % rejected batches scores 1.4 by the formula `hi - min(x, 10) / 10 * (hi - lo)`, below the threshold of 2, so the supplier fails with a total of 2.69. **Tian Shan Print**: in progress, 3 of 9 questions answered |
 
 Load them in the order `setup_demo` uses (`config/demo.py`), or together in one `loaddata` call. Each fixture refers to records in the ones before it.

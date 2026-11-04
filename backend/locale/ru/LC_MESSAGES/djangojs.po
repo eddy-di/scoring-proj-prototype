@@ -1587,6 +1587,10 @@ msgstr ""
 " балл — ниже критического порога 2, поэтому здание не проходит, хотя итог "
 "2,7."
 
+#: js/views/help.js:66
+msgid "How a completed assessment of a residential building is scored."
+msgstr "Как рассчитывается завершённая оценка жилого здания."
+
 #: js/help.js:78
 msgid ""
 "How a group combines the scores of its children, usually a weighted average."
@@ -3354,10 +3358,6 @@ msgstr ""
 "В демо-данных уже есть полная опубликованная методика. Откройте её, чтобы "
 "увидеть, как выглядит готовая, прежде чем создавать свою."
 
-#: js/views/help.js:66
-msgid "The example data contains this completed assessment of Block A."
-msgstr "В демо-данных есть эта завершённая оценка корпуса А."
-
 #: js/views/admin-methodologies.js:507
 msgid ""
 "The first option gets the highest score and the last the lowest; adjust the "
@@ -3539,12 +3539,12 @@ msgstr ""
 
 #: js/views/help.js:76
 msgid ""
-"The same rules work for any kind of object. The example data also has "
-"supplier reviews (SUPPLIER_EVAL): Ala-Too Packaging scores 4.3, “Good”. Silk"
-" Road Ingredients fails: 9 % of its batches were rejected, which scores 1.4,"
-" below the knock-out threshold of 2."
+"The same rules work for any kind of object. The example data has supplier "
+"reviews (SUPPLIER_EVAL): Ala-Too Packaging scores 4.3, “Good”. Silk Road "
+"Ingredients fails: 9 % of its batches were rejected, which scores 1.4, below"
+" the knock-out threshold of 2."
 msgstr ""
-"Те же правила работают для любых объектов. В примерах есть и оценки "
+"Те же правила работают для любых объектов. В примерах есть оценки "
 "поставщиков (SUPPLIER_EVAL): Ala-Too Packaging получает 4,3 — «Хорошо». Silk"
 " Road Ingredients не проходит: забраковано 9 % партий, это 1,4 балла — ниже "
 "критического порога 2."

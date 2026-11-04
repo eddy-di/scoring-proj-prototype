@@ -1596,6 +1596,10 @@ msgstr ""
 "балл алат — 2 критикалык босогосунан төмөн, ошондуктан жыйынтык 2,7 болсо да"
 " имарат өтпөйт."
 
+#: js/views/help.js:66
+msgid "How a completed assessment of a residential building is scored."
+msgstr "Турак жай имаратынын аяктаган баалоосу кантип эсептелет."
+
 #: js/help.js:78
 msgid ""
 "How a group combines the scores of its children, usually a weighted average."
@@ -3372,10 +3376,6 @@ msgstr ""
 "Мисал маалыматтарында толук, жарыяланган методика бар. Өзүңүздүкүн түзүүдөн "
 "мурун даяр методика кандай экенин көрүү үчүн аны ачыңыз."
 
-#: js/views/help.js:66
-msgid "The example data contains this completed assessment of Block A."
-msgstr "Мисал маалыматтарында А корпусунун ушул аяктаган баалоосу бар."
-
 #: js/views/admin-methodologies.js:507
 msgid ""
 "The first option gets the highest score and the last the lowest; adjust the "
@@ -3550,15 +3550,15 @@ msgstr ""
 
 #: js/views/help.js:76
 msgid ""
-"The same rules work for any kind of object. The example data also has "
-"supplier reviews (SUPPLIER_EVAL): Ala-Too Packaging scores 4.3, “Good”. Silk"
-" Road Ingredients fails: 9 % of its batches were rejected, which scores 1.4,"
-" below the knock-out threshold of 2."
+"The same rules work for any kind of object. The example data has supplier "
+"reviews (SUPPLIER_EVAL): Ala-Too Packaging scores 4.3, “Good”. Silk Road "
+"Ingredients fails: 9 % of its batches were rejected, which scores 1.4, below"
+" the knock-out threshold of 2."
 msgstr ""
 "Ошол эле эрежелер ар кандай объекттер үчүн иштейт. Мисалдарда жабдуучуларды "
-"баалоо да бар (SUPPLIER_EVAL): Ala-Too Packaging 4,3 алат — «Жакшы». Silk "
-"Road Ingredients өтпөйт: партиялардын 9 % жараксыз деп табылган, бул 1,4 "
-"балл — критикалык босого 2ден төмөн."
+"баалоо бар (SUPPLIER_EVAL): Ala-Too Packaging 4,3 алат — «Жакшы». Silk Road "
+"Ingredients өтпөйт: партиялардын 9 % жараксыз деп табылган, бул 1,4 балл — "
+"критикалык босого 2ден төмөн."
 
 #: js/views/admin-methodologies.js:188
 msgid ""

@@ -3,9 +3,9 @@ from django.contrib.auth import get_user_model
 from rest_framework.test import APITestCase
 
 from methodologies.models import MethodologyNode, MethodologyVersion
-from tests.helpers import make_admin, make_user
+from tests.helpers import BUILDING_FIXTURES, make_admin, make_user
 
-FIXTURES = ['catalogs', 'question_library', 'tech_res_methodology', 'example_assessments']
+FIXTURES = BUILDING_FIXTURES
 API = '/api/admin'
 
 
@@ -200,11 +200,11 @@ class MethodologyTests(AdminApiTestCase):
 
 class TranslationTests(AdminApiTestCase):
     def test_required_texts_need_every_language(self):
-        r = self.client.post(f'{API}/units/', {'code': 'm', 'name_en': 'Metre', 'name_ru': 'Метр'}, format='json')
+        r = self.client.post(f'{API}/units/', {'code': 'ft', 'name_en': 'Foot', 'name_ru': 'Фут'}, format='json')
         self.assertEqual(r.status_code, 400)
         self.assertEqual(list(r.json()), ['name_ky'])
         # Optional texts stay optional.
-        r = self.client.post(f'{API}/units/', {'code': 'm', **tr('name', 'Metre', 'Метр', 'Метр')}, format='json')
+        r = self.client.post(f'{API}/units/', {'code': 'ft', **tr('name', 'Foot', 'Фут', 'Фут')}, format='json')
         self.assertEqual(r.status_code, 201, r.content)
         self.assertIsNone(r.json()['description_ky'])
         # Blanking a required translation later is refused too.
@@ -220,7 +220,7 @@ class TranslationTests(AdminApiTestCase):
 
     def test_messages_follow_the_language_cookie(self):
         self.client.cookies['django_language'] = 'ru'
-        r = self.client.post(f'{API}/units/', {'code': 'm', 'name_en': 'Metre'}, format='json')
+        r = self.client.post(f'{API}/units/', {'code': 'ft', 'name_en': 'Foot'}, format='json')
         self.assertEqual(r.json()['name_ru'], 'Обязательно на языке: Русский.')
         validation = self.client.get(f'{API}/versions/{self.v1.id}/validation/').json()
         self.assertTrue(validation['can_publish'])

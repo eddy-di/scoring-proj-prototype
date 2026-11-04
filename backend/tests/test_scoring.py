@@ -5,8 +5,9 @@ from assessments.models import Assessment
 from methodologies import formulas
 from methodologies.models import MethodologyNode
 from methodologies.scoring import Answer, aggregate, score_answer
+from tests.helpers import BUILDING_FIXTURES
 
-FIXTURES = ['catalogs', 'question_library', 'tech_res_methodology', 'example_assessments']
+FIXTURES = BUILDING_FIXTURES
 SUPPLIER_FIXTURES = FIXTURES + ['supplier_catalogs', 'supplier_questions', 'supplier_methodology', 'supplier_assessments']
 
 
